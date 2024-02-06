@@ -1,0 +1,29 @@
+.container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.header {
+    background: #02bc77;
+    height: 80px;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header-center {
+    color: white;
+    font-size: 28px;
+}
+
+.header-end {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    margin-right: 8px;
+}
