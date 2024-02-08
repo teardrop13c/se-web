@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
+import NamelistPage from "../../page/NamelistPage";
 
 function Namelist() {
   return (
@@ -8,8 +9,7 @@ function Namelist() {
       <Navbar />
       <Sidebar />
       <div>
-        <h1>Content Namelist Page</h1>
-        <h2>Hello World</h2>
+      <NamelistPage />
       </div>
     </section>
   );

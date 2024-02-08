@@ -29,7 +29,7 @@ function EditCoursepage() {
     };
   
     const handleAdditionalButtonClick = (buttonId) => {
-      // ค้นหาปุ่มที่ถูกคลิกด้วย id และเรียกใช้ handleUpload, handleDownload, หรือ handleDelete
+      
       const clickedButton = additionalButtons.find((button) => button.id === buttonId);
   
       if (clickedButton) {
