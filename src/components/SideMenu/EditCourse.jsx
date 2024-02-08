@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
+import EditCoursepage  from "../../page/EditCoursePage";
 
 function EditCourse() {
   return (
@@ -8,8 +9,7 @@ function EditCourse() {
       <Navbar />
       <Sidebar />
       <div>
-        <h1>Content EditCourse Page</h1>
-        <h2>Hello World</h2>
+      <EditCoursepage />
       </div>
     </section>
   );
