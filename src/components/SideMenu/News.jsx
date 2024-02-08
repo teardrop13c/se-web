@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Sidebar from "../Sidebar";
+import NewsPage  from "../../page/NewsPage";
 
 function News() {
   return (
@@ -8,8 +9,7 @@ function News() {
       <Navbar />
       <Sidebar />
       <div>
-        <h1>Content News Page</h1>
-        <h2>Hello World</h2>
+      <NewsPage />
       </div>
     </section>
   );
