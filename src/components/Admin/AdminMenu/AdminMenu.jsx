@@ -1,12 +1,22 @@
 import React from "react";
-import "./Sidebar.css"
+import "./AdminMenu.css"
 import { Link } from "react-router-dom";
 
-function Sidebar() {
+function AdminMenu() {
   return (
     <section id="sidebar">
     <div className="sidebar">
-      <Link to="/" className="item">
+    <Link to="/HomeAdmin" className="item">
+        <div className="icon">
+        <img
+        src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2073.png?alt=media&token=274beb4d-0b29-4f61-bbfc-a3cf27b7b00f"
+        alt="homeAdmin"
+        style={{ width: "50px", height: "50px" }}
+      />
+        </div>
+        <div className="text">HOME</div>
+      </Link>
+      <Link to="/Schedule" className="item">
         <div className="icon">
         <img
         src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2063.png?alt=media&token=bfc8773c-b82c-47ab-8c54-2ef1078bcf0c"
@@ -46,9 +56,19 @@ function Sidebar() {
         </div>
         <div className="text">NEWS</div>
       </Link>
+      <Link to="/RegisterTime" className="item">
+        <div className="icon">
+        <img
+        src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2063.png?alt=media&token=bfc8773c-b82c-47ab-8c54-2ef1078bcf0c"
+        alt="RegisterTime"
+        style={{ width: "55px", height: "55px" }}
+      />
+        </div>
+        <div className="text">REGISTER TIME</div>
+      </Link>
     </div> 
     </section>
   );
 }
 
-export default Sidebar;
+export default AdminMenu;
