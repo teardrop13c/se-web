@@ -1,15 +1,14 @@
 import React from 'react'
 import Navbar from '../../Navbar'
 import UserMenu from '../UserMenu/UserMenu'
+import RegisterContent from './ContentPage/RegisterContent'
 
 function UserRegister() {
   return (
     <section id="main-layout">
       <Navbar />
       <UserMenu />
-      <div className="content">
-        <h2>Register Page</h2>
-      </div>
+      <RegisterContent />
     </section>
   )
 }

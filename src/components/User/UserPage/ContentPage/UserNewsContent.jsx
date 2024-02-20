@@ -4,10 +4,7 @@ function UserNewsContent() {
   return (
     <>
       <div className="rounded-rectangle">
-        <p className="faculty-text">ข่าวสาร</p>
-        <div className="file-upload">
-          <label htmlFor="fileInput">สร้างข่าว</label>
-        </div>
+        <h2>News Page</h2>
       </div>
     </>
   )

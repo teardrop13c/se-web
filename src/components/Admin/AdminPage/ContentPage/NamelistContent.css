@@ -1,0 +1,26 @@
+.namelist-rounded-rectangle {
+    width: auto;
+    height: auto;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    margin: 30px;
+  }
+
+  .moved-text {
+    position: absolute;
+    top: 150px; /* Adjust the top value to move the text up or down */
+    left: 30%; /* Adjust the left value to move the text left or right */
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 24px;
+  }
+  .move-textemail {
+    position: absolute;
+    top: 150px; /* Adjust the top value to move the text up or down */
+    left: 70%; /* Adjust the left value to move the text left or right */
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 24px;
+  }
