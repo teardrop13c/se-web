@@ -56,6 +56,7 @@ function Login() {
           style={{ width: "180px", height: "180px" }}
         />
         <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
+        <br />
         {profile ? (
           checkAdmin() ? (
             <div>
