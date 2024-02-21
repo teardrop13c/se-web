@@ -2,7 +2,9 @@ import React from 'react'
 
 function UserScheduleContent() {
   return (
-    <div>UserScheduleContent</div>
+    <div>
+      <h2>UserScheduleContent</h2>      
+    </div>
   )
 }
 
