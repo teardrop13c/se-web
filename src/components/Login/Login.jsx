@@ -47,68 +47,70 @@ function Login() {
     }
   };
   return (
-    <div className="login-container">
-      {/* //profile.emailสามารถใช้ไรเทียบแทนได้  ดึงข้อมูลทำหลังการ login*/}
-      <div className="incontainer">
-        <img
-          src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
-          alt="KU Logo"
-          style={{ width: "180px", height: "180px" }}
-        />
-        <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
-        <br />
-        {profile ? (
-          checkAdmin() ? (
-            <div>
-              <img src={profile.imageUrl} alt="user image" />
-              <h3>admin Logged in</h3>
-              <p>Name: {profile.name}</p>
-              <p>Email: {profile.email}</p>
-              <br />
-              <br />
-              {/* ลิงค์หน้าHomeUser */}
-              <Link to="/HomeAdmin" className="item">
-                Welcome admin
-              </Link>
-              {/* ปุ่มlogout */}
-              <GoogleLogout
-                clientId={clientId}
-                buttonText="Log out"
-                onLogoutSuccess={logOut}
-              />
-            </div>
-          ) : (
-            <div>
-              <img src={profile.imageUrl} alt="user image" />
-              <h3>userLogged in</h3>
-              <p>Name: {profile.name}</p>
-              <p>Email: {profile.email}</p>
-              <br />
-              <br />
-              {/* ลิงค์หน้าHomeUser */}
-              <Link to="/HomeUser" className="item">
-                Welcome user
-              </Link>
-
-              {/* ปุ่มlogout */}
-              <GoogleLogout
-                clientId={clientId}
-                buttonText="Log out"
-                onLogoutSuccess={logOut}
-              />
-            </div>
-          )
-        ) : (
-          // กรณีไม่มี email นี้ใน ฐานข้อมูล
-          <GoogleLogin
-            clientId={clientId}
-            buttonText="Sign in with Google"
-            onSuccess={onSucess}
-            onFailure={onFailure}
-            cookiePolicy={"single_host_origin"}
-            isSignedIn={true}
+    <div className="bg">
+      <div className="login-container">
+        {/* //profile.emailสามารถใช้ไรเทียบแทนได้  ดึงข้อมูลทำหลังการ login*/}
+        <div className="incontainer">
+          <img
+            src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
+            alt="KU Logo"
+            style={{ width: "180px", height: "180px" }}
           />
-        )}
+          <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
+          <br />
+          {profile ? (
+            checkAdmin() ? (
+              <div>
+                <img src={profile.imageUrl} alt="user image" />
+                <h3>admin Logged in</h3>
+                <p>Name: {profile.name}</p>
+                <p>Email: {profile.email}</p>
+                <br />
+                <br />
+                {/* ลิงค์หน้าHomeUser */}
+                <Link to="/HomeAdmin" className="item">
+                  Welcome admin
+                </Link>
+                {/* ปุ่มlogout */}
+                <GoogleLogout
+                  clientId={clientId}
+                  buttonText="Log out"
+                  onLogoutSuccess={logOut}
+                />
+              </div>
+            ) : (
+              <div>
+                <img src={profile.imageUrl} alt="user image" />
+                <h3>userLogged in</h3>
+                <p>Name: {profile.name}</p>
+                <p>Email: {profile.email}</p>
+                <br />
+                <br />
+                {/* ลิงค์หน้าHomeUser */}
+                <Link to="/HomeUser" className="item">
+                  Welcome user
+                </Link>
+
+                {/* ปุ่มlogout */}
+                <GoogleLogout
+                  clientId={clientId}
+                  buttonText="Log out"
+                  onLogoutSuccess={logOut}
+                />
+              </div>
+            )
+          ) : (
+            // กรณีไม่มี email นี้ใน ฐานข้อมูล
+            <GoogleLogin
+              clientId={clientId}
+              buttonText="Sign in with Google"
+              onSuccess={onSucess}
+              onFailure={onFailure}
+              cookiePolicy={"single_host_origin"}
+              isSignedIn={true}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
