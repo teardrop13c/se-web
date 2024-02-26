@@ -13,19 +13,19 @@ function Login() {
   const [profile, setProfile] = useState(null);
 
   //stateเช็คการlogin
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
 
   
   // การนำค่าgoogleมาใช้
-  useEffect(() => {
+  useEffect(()  => {
     const initClient = () => {
       gapi.client.init({
         clientId: clientId,
-        scope: "",
-      });
-    };
-    gapi.load("client:auth2", initClient);
-  },);
+        scope: ''
+      })
+    }
+    gapi.load("client:auth2",initClient)
+  })
 
 
   //loginได้
@@ -42,7 +42,7 @@ function Login() {
 
   //ทำให้ค่าreset setProfile
   const logOut = () => {
-    setIsLoggedIn(false);
+    setIsLoggedIn(null);
     setProfile(null);
   };
 
@@ -88,11 +88,13 @@ function Login() {
         <h3>userLogged in</h3>
         <p>Name: {profile.name}</p>
         <p>Email: {profile.email}</p>
-        <br />
-        <br />
+        <p>Tel: <textarea name="" id="" cols="30" rows="1"></textarea></p>
         <Link to="/HomeUser" className="item">
           Welcome user
         </Link>
+        <br />
+        <button type="button" >Welcome User</button>
+        <br />
         <GoogleLogout
           clientId={clientId}
           buttonText="Log out"
@@ -112,7 +114,8 @@ function Login() {
         onSuccess={onSucess}
         onFailure={onFailure}
         cookiePolicy={"single_host_origin"}
-        isSignedIn={true}
+        // เข้าสู่ระบบอัตโนมัติ
+        // isSignedIn={true}
       />
     );
 
@@ -128,11 +131,12 @@ function Login() {
         />
         <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
         <br />
+        
         {isLoggedIn ? (
           checkAdmin() ? (
-            accountAdmin()
+            (isLoggedIn ? (accountAdmin()) : LoginPage())
           ) : (
-            accountUser()
+            (isLoggedIn ? (accountUser()) : LoginPage())
           )
         ) : (
           LoginPage()
