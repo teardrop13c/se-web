@@ -1,22 +1,17 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
-import React from "react";
 import { gapi } from "gapi-script";
-import { BrowserRouter, Link, Route, Routes, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
+
 function Login() {
-  //ตัวที่ขอใช้google
   const clientId = "547931595657-oaphvpiui1527babqslkcbb93a9p938o.apps.googleusercontent.com";
-
-  //ต้องใช้nullไม่งั้นจะเกิดบัค
   const [profile, setProfile] = useState(null);
-
-  //stateเช็คการlogin
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showPhoneNumberModal, setShowPhoneNumberModal] = useState(false);
+  const [userPhoneNumber, setUserPhoneNumber] = useState("");
 
-  
-  // การนำค่าgoogleมาใช้
   useEffect(() => {
     const initClient = () => {
       gapi.client.init({
@@ -25,30 +20,24 @@ function Login() {
       });
     };
     gapi.load("client:auth2", initClient);
-  },);
+  }, []);
 
-
-  //loginได้
-  const onSucess = (res) => {
+  const onSuccess = (res) => {
     setIsLoggedIn(true);
     setProfile(res.profileObj);
-    console.log("sucess", res);
+    setShowPhoneNumberModal(true);
   };
 
-  //loginไม่ได้
   const onFailure = (res) => {
     console.log("failed", res);
   };
 
-  //ทำให้ค่าreset setProfile
   const logOut = () => {
     setIsLoggedIn(false);
     setProfile(null);
   };
 
-  // เช็คว่าเป็นadminไหม
   const checkAdmin = () => {
-    //email sql
     if (profile && profile.email === "imgayhaveverbigk@gmail.com") {
       return true;
     } else {
@@ -56,7 +45,23 @@ function Login() {
     }
   };
 
-  //โยงไปหน้าaccountAdmin True
+  const savePhoneNumber = () => {
+    // รอเก็บเบอร์เข้า data base
+    console.log("Phone Number saved:", userPhoneNumber);
+  
+    setShowPhoneNumberModal(false);
+    // ถ้ามีเบอร์ใน data base แล้วให้ navigate ไปยังหน้าของ User/Admin
+    // navigate("/HomeUser"); 
+  };
+
+  const openPhoneNumberModal = () => {
+    setShowPhoneNumberModal(true);
+  };
+
+  const closePhoneNumberModal = () => {
+    setShowPhoneNumberModal(false);
+  };
+
   function accountAdmin() {
     return (
       <div>
@@ -76,57 +81,54 @@ function Login() {
         />
       </div>
     );
-
   }
 
-  //โยงมาหน้าaccountUser Fasle
   function accountUser() {
-    console.log("LoginUser : ",isLoggedIn)
+    console.log("LoginUser : ", isLoggedIn);
     return (
-      <div>
-        <img src={profile.imageUrl} alt="user image" />
-        <h3>userLogged in</h3>
-        <p>Name: {profile.name}</p>
-        <p>Email: {profile.email}</p>
-        <br />
-        <br />
-        <Link to="/HomeUser" className="item">
+      <div className="user-info-container">
+        <img src={profile.imageUrl} alt="user image" className="user-image" />
+        <div className="user-details">
+          <h3>userLogged in</h3>
+          <p>Name: {profile.name}</p>
+          <p>Email: {profile.email}</p>
+          <p>Phone Number: {userPhoneNumber}</p>
+        </div>
+        <Link to="/HomeUser" className="welcome-button">
           Welcome user
         </Link>
-        <GoogleLogout
-          clientId={clientId}
-          buttonText="Log out"
-          onLogoutSuccess={logOut}
-        />
+        <span className="logout-button">
+          <GoogleLogout
+            clientId={clientId}
+            buttonText="Log out"
+            onLogoutSuccess={logOut}
+          />
+        </span>
       </div>
     );
   }
 
-
-  // กรณีไม่มี email นี้ใน ฐานข้อมูล and ถ้ายังไม่ล็อคอินต้องมาตรงนี้
   function LoginPage() {
     return (
       <GoogleLogin
         clientId={clientId}
         buttonText="Sign in with Google"
-        onSuccess={onSucess}
+        onSuccess={onSuccess}
         onFailure={onFailure}
         cookiePolicy={"single_host_origin"}
         isSignedIn={true}
       />
     );
-
   }
+
   return (
     <div className="login-container">
-      {/* //profile.emailสามารถใช้ไรเทียบแทนได้  ดึงข้อมูลทำหลังการ login*/}
       <div className="incontainer">
         <img
           src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
           alt="KU Logo"
           style={{ width: "180px", height: "180px" }}
         />
-        <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
         <br />
         {isLoggedIn ? (
           checkAdmin() ? (
@@ -136,6 +138,24 @@ function Login() {
           )
         ) : (
           LoginPage()
+        )}
+
+        {showPhoneNumberModal && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2>กรุณากรอกเบอร์โทรศัพท์</h2>
+              <input
+                type="text"
+                placeholder="Phone Number"
+                value={userPhoneNumber}
+                onChange={(e) => setUserPhoneNumber(e.target.value)}
+              />
+              <div className="modal-actions">
+                <button onClick={savePhoneNumber}>Save</button>
+                <button onClick={closePhoneNumberModal}>Cancel</button>
+              </div>
+            </div>
+          </div>
         )}
       </div>
     </div>
