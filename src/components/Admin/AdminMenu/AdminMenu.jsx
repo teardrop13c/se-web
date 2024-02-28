@@ -59,7 +59,7 @@ function AdminMenu() {
       <Link to="/RegisterTime" className="item">
         <div className="icon">
         <img
-        src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2063.png?alt=media&token=bfc8773c-b82c-47ab-8c54-2ef1078bcf0c"
+        src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/Group.png?alt=media&token=ec25a841-716a-4152-9654-cef5c112d441"
         alt="RegisterTime"
         style={{ width: "55px", height: "55px" }}
       />
