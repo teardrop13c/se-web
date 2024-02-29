@@ -33,6 +33,7 @@ function Login() {
     setIsLoggedIn(true);
     setProfile(res.profileObj);
     console.log("sucess", res);
+    console.log("loginStateOnsucess : ",isLoggedIn); //
   };
 
   //loginไม่ได้
@@ -79,9 +80,12 @@ function Login() {
 
   }
 
+
   //โยงมาหน้าaccountUser Fasle
   function accountUser() {
-    console.log("LoginUser : ",isLoggedIn)
+    console.log("LoginUserState : ",isLoggedIn)
+    console.log("UserEmail : ",profile.email)
+    console.log("UserEName : ",profile.name)
     return (
       <div>
         <img src={profile.imageUrl} alt="user image" />
