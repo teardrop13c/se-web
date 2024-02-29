@@ -55,44 +55,71 @@ function Login() {
   };
 
   const openPhoneNumberModal = () => {
-    setShowPhoneNumberModal(true);
+    if (!checkAdmin() && isLoggedIn) {
+      setShowPhoneNumberModal(true);
+    }
   };
-
   const closePhoneNumberModal = () => {
     setShowPhoneNumberModal(false);
   };
+  
+  const welcomeMessage = (
+    <h2 className="welcome-message">ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
+  );
 
   function accountAdmin() {
     return (
-      <div>
-        <img src={profile.imageUrl} alt="user image" />
-        <h3>admin Logged in</h3>
-        <p>Name: {profile.name}</p>
-        <p>Email: {profile.email}</p>
-        <br />
-        <br />
-        <Link to="/HomeAdmin" className="item">
+      <div className="account-info-container">
+        <img src={profile.imageUrl} alt="user image" className="admin-image" />
+        <div className="admin-details">
+          <p className="admin-details-text">Name: {profile.name}</p>
+          <p className="admin-details-text">Email: {profile.email}</p>
+        </div>
+        <Link to="/HomeAdmin" className="welcome-button">
           Welcome admin
         </Link>
-        <GoogleLogout
-          clientId={clientId}
-          buttonText="Log out"
-          onLogoutSuccess={logOut}
-        />
+        <span className="logout-button">
+          <GoogleLogout
+            clientId={clientId}
+            buttonText="Log out"
+            onLogoutSuccess={logOut}
+          />
+        </span>
       </div>
     );
   }
-
+  
   function accountUser() {
-    console.log("LoginUser : ", isLoggedIn);
     return (
       <div className="user-info-container">
         <img src={profile.imageUrl} alt="user image" className="user-image" />
         <div className="user-details">
-          <h3>userLogged in</h3>
           <p>Name: {profile.name}</p>
           <p>Email: {profile.email}</p>
-          <p>Phone Number: {userPhoneNumber}</p>
+          {!checkAdmin() && (
+            <>
+              <p>Phone Number: {userPhoneNumber}</p>
+              {!checkAdmin() && (
+                showPhoneNumberModal && (
+                  <div className="modal">
+                    <div className="modal-content">
+                      <h2>กรุณากรอกเบอร์โทรศัพท์</h2>
+                      <input
+                        type="text"
+                        placeholder="Phone Number"
+                        value={userPhoneNumber}
+                        onChange={(e) => setUserPhoneNumber(e.target.value)}
+                      />
+                      <div className="modal-actions">
+                        <button onClick={savePhoneNumber}>Save</button>
+                        <button onClick={closePhoneNumberModal}>Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              )}
+            </>
+          )}
         </div>
         <Link to="/HomeUser" className="welcome-button">
           Welcome user
@@ -107,6 +134,8 @@ function Login() {
       </div>
     );
   }
+  
+  
 
   function LoginPage() {
     return (
@@ -123,6 +152,18 @@ function Login() {
 
   return (
     <div className="login-container">
+      {checkAdmin() && (
+        <>
+          {welcomeMessage}
+        </>
+      )}
+  
+      {!checkAdmin() && (
+        <>
+          {welcomeMessage}
+        </>
+      )}
+  
       <div className="incontainer">
         <img
           src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
@@ -139,24 +180,24 @@ function Login() {
         ) : (
           LoginPage()
         )}
-
-        {showPhoneNumberModal && (
-          <div className="modal">
-            <div className="modal-content">
-              <h2>กรุณากรอกเบอร์โทรศัพท์</h2>
-              <input
-                type="text"
-                placeholder="Phone Number"
-                value={userPhoneNumber}
-                onChange={(e) => setUserPhoneNumber(e.target.value)}
-              />
-              <div className="modal-actions">
-                <button onClick={savePhoneNumber}>Save</button>
-                <button onClick={closePhoneNumberModal}>Cancel</button>
-              </div>
-            </div>
-          </div>
-        )}
+  
+  {!checkAdmin() && showPhoneNumberModal && (
+  <div className="modal">
+    <div className="modal-content">
+      <h2 className="phone-instruction">กรุณากรอกเบอร์โทรศัพท์</h2>
+      <input
+        type="text"
+        placeholder="Phone Number"
+        value={userPhoneNumber}
+        onChange={(e) => setUserPhoneNumber(e.target.value)}
+      />
+      <div className="modal-actions">
+        <button onClick={savePhoneNumber}>Save</button>
+        <button onClick={closePhoneNumberModal}>Cancel</button>
+      </div>
+    </div>
+  </div>
+)}
       </div>
     </div>
   );
