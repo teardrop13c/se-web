@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import React from "react";
 import { gapi } from "gapi-script";
-import { BrowserRouter, Link, Route, Routes, Navigate } from "react-router-dom";
+import { useDispatch } from 'react-redux'; // เพิ่มการ import useDispatch
+import { useSelector } from 'react-redux'; // เพิ่มการ import useSelector
+import {  Link } from "react-router-dom";
 import "./Login.css";
+import { whenLogin ,whenLogout} from "../../store/authSlice";
 
 function Login() {
   //ตัวที่ขอใช้google
   const clientId = "547931595657-oaphvpiui1527babqslkcbb93a9p938o.apps.googleusercontent.com";
 
-  //ต้องใช้nullไม่งั้นจะเกิดบัค
-  const [profile, setProfile] = useState(null);
+  const dispatch = useDispatch(); // เพิ่มการใช้ dispatch
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); // เข้าถึงค่า isLoggedIn จาก Redux store
+  const profile = useSelector((state) => state.auth.profile); // เข้าถึงค่า profile จาก Redux store
 
-  //stateเช็คการlogin
-  const [isLoggedIn, setIsLoggedIn] = useState(null);
-
-  
   // การนำค่าgoogleมาใช้
   useEffect(()  => {
     const initClient = () => {
@@ -30,10 +30,8 @@ function Login() {
 
   //loginได้
   const onSucess = (res) => {
-    setIsLoggedIn(true);
-    setProfile(res.profileObj);
+    dispatch(whenLogin(res.profileObj)); // เรียกใช้ action login และส่งข้อมูล profile ไปยัง Redux store
     console.log("sucess", res);
-    console.log("loginStateOnsucess : ",isLoggedIn); //
   };
 
   //loginไม่ได้
@@ -43,10 +41,11 @@ function Login() {
 
   //ทำให้ค่าreset setProfile
   const logOut = () => {
-    setIsLoggedIn(null);
-    setProfile(null);
+    dispatch(whenLogout()); // เรียกใช้ action logout จาก Redux store
+
   };
 
+  
   // เช็คว่าเป็นadminไหม
   const checkAdmin = () => {
     //email sql
@@ -77,10 +76,7 @@ function Login() {
         />
       </div>
     );
-
   }
-
-
   //โยงมาหน้าaccountUser Fasle
   function accountUser() {
     console.log("LoginUserState : ",isLoggedIn)
@@ -138,9 +134,9 @@ function Login() {
         
         {isLoggedIn ? (
           checkAdmin() ? (
-            (isLoggedIn ? (accountAdmin()) : LoginPage())
+            accountAdmin()
           ) : (
-            (isLoggedIn ? (accountUser()) : LoginPage())
+            accountUser()
           )
         ) : (
           LoginPage()
@@ -151,3 +147,5 @@ function Login() {
 }
 
 export default Login;
+
+
