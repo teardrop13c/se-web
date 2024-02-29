@@ -61,7 +61,7 @@ function AdminMenu() {
         <img
         src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/Group.png?alt=media&token=ec25a841-716a-4152-9654-cef5c112d441"
         alt="RegisterTime"
-        style={{ width: "55px", height: "55px" }}
+        style={{ width: "50px", height: "50px" }}
       />
         </div>
         <div className="text">REGISTER TIME</div>
