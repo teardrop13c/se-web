@@ -45,7 +45,8 @@ function Login() {
 
   };
 
-  
+
+
   // เช็คว่าเป็นadminไหม
   const checkAdmin = () => {
     //email sql
@@ -55,6 +56,9 @@ function Login() {
       return false;
     }
   };
+
+
+ 
 
   //โยงไปหน้าaccountAdmin True
   function accountAdmin() {
@@ -115,7 +119,7 @@ function Login() {
         onFailure={onFailure}
         cookiePolicy={"single_host_origin"}
         // เข้าสู่ระบบอัตโนมัติ
-        // isSignedIn={true}
+        isSignedIn={true}
       />
     );
 

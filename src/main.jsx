@@ -10,7 +10,7 @@ import HomeUser from './components/User/UserPage/HomeUser.jsx'
 import UserSchedule from './components/User/UserPage/UserSchedule'
 import UserRegister from './components/User/UserPage/UserRegister'
 import UserNews from './components/User/UserPage/UserNews'
-import HomeAdmin from './components/Admin/HomeAdmin'
+import HomeAdmin from './components/Admin/AdminPage/HomeAdmin.jsx'
 import RegisterTime from './components/Admin/AdminPage/RegisterTime'
 import Login from './components/Login/Login'
 
