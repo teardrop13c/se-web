@@ -48,7 +48,7 @@ function Login() {
   const savePhoneNumber = () => {
     // รอเก็บเบอร์เข้า data base
     console.log("Phone Number saved:", userPhoneNumber);
-  
+
     setShowPhoneNumberModal(false);
     // ถ้ามีเบอร์ใน data base แล้วให้ navigate ไปยังหน้าของ User/Admin
     // navigate("/HomeUser"); 
@@ -62,7 +62,7 @@ function Login() {
   const closePhoneNumberModal = () => {
     setShowPhoneNumberModal(false);
   };
-  
+
   const welcomeMessage = (
     <h2 className="welcome-message">ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
   );
@@ -88,7 +88,7 @@ function Login() {
       </div>
     );
   }
-  
+
   function accountUser() {
     return (
       <div className="user-info-container">
@@ -134,8 +134,8 @@ function Login() {
       </div>
     );
   }
-  
-  
+
+
 
   function LoginPage() {
     return (
@@ -157,13 +157,13 @@ function Login() {
           {welcomeMessage}
         </>
       )}
-  
+
       {!checkAdmin() && (
         <>
           {welcomeMessage}
         </>
       )}
-  
+
       <div className="incontainer">
         <img
           src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
@@ -180,24 +180,24 @@ function Login() {
         ) : (
           LoginPage()
         )}
-  
-  {!checkAdmin() && showPhoneNumberModal && (
-  <div className="modal">
-    <div className="modal-content">
-      <h2 className="phone-instruction">กรุณากรอกเบอร์โทรศัพท์</h2>
-      <input
-        type="text"
-        placeholder="Phone Number"
-        value={userPhoneNumber}
-        onChange={(e) => setUserPhoneNumber(e.target.value)}
-      />
-      <div className="modal-actions">
-        <button onClick={savePhoneNumber}>Save</button>
-        <button onClick={closePhoneNumberModal}>Cancel</button>
-      </div>
-    </div>
-  </div>
-)}
+
+        {!checkAdmin() && showPhoneNumberModal && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2 className="phone-instruction">กรุณากรอกเบอร์โทรศัพท์</h2>
+              <input
+                type="text"
+                placeholder="Phone Number"
+                value={userPhoneNumber}
+                onChange={(e) => setUserPhoneNumber(e.target.value)}
+              />
+              <div className="modal-actions">
+                <button onClick={savePhoneNumber}>Save</button>
+                <button onClick={closePhoneNumberModal}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
