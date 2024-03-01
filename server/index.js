@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     user: "root",
     host: "localhost",
     password: "12345678",
-    database: "senew"
+    database: "kusrc_course"
 })
 
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
