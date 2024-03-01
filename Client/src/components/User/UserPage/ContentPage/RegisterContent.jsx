@@ -73,7 +73,6 @@ function RegisterContent() {
     })
   }
 
-
   return (
     <div className="top-regis">
       <Row gutter={16} style={{ flexDirection: "row" }}>
@@ -81,6 +80,7 @@ function RegisterContent() {
           <h3>คณะ</h3>
           <Form name="คณะ">
             <Input placeholder="วิศวกรรมศาสตร์" />
+//             <Input placeholder="เลือกคณะ" />
           </Form>
         </Col>
         <Col span={4}>
@@ -97,12 +97,14 @@ function RegisterContent() {
           <h3>ปีการศึกษา</h3>
           <Form>
             <Input placeholder="2567" />
+//             <Input placeholder="เลือกปีการศึกษา" />
           </Form>
         </Col>
         <Col span={4}>
           <h3>ภาคการศึกษา</h3>
           <Form>
             <Input placeholder="ภาคปลาย" />
+//             <Input placeholder="เลือกภาคการศึกษา" />
           </Form>
         </Col>
       </Row>

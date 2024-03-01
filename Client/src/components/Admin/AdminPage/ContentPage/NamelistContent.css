@@ -1,26 +1,86 @@
 .namelist-rounded-rectangle {
-    width: auto;
-    height: auto;
-    background-color: #D9D9D9;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    margin: 30px;
-  }
+  width: auto;
+  height: auto;
+  background-color: #D9D9D9;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  margin: 30px;
+  
+}
+.namelist-divider {
+  height: 100%; /* Set height to 100% to match the container's height */
+  width: 0.5px; /* Adjust the width of the divider */
+  background-color: #000; /* Color of the dividing line */
+  margin: 0px; /* Adjust the spacing on each side of the line */
+}
+.moved-text {
+  position: absolute;
+  top: 150px; 
+  left: 30%; 
+  margin: 0; 
+  font-size: 24px;
+}
 
-  .moved-text {
-    position: absolute;
-    top: 150px; /* Adjust the top value to move the text up or down */
-    left: 30%; /* Adjust the left value to move the text left or right */
-    margin: 0; /* Remove default margin for the paragraph */
-    font-size: 24px;
-  }
-  .move-textemail {
-    position: absolute;
-    top: 150px; /* Adjust the top value to move the text up or down */
-    left: 70%; /* Adjust the left value to move the text left or right */
-    margin: 0; /* Remove default margin for the paragraph */
-    font-size: 24px;
-  }
+.move-textemail {
+  position: absolute;
+  top: 150px; 
+  left: 70%; 
+  margin: 0; 
+  font-size: 24px;
+}
+
+.schedule-icon,
+.comment-icon,
+.bin-icon {
+  font-size: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.schedule-icon:hover,
+.comment-icon:hover,
+.bin-icon:hover {
+  background-color: #ffffff;
+}
+
+.schedule-icon {
+  top: 630px;
+  left: 1300px;
+}
+
+.comment-icon {
+  top: 630px;
+  left: 1200px;
+}
+.bin-icon{
+  top: 630px;
+  left: 1400px;
+}
+.user-frame {
+  font-size: 20px;
+  padding: 10px; /* Increase padding to add space */
+  border-radius: 5px;
+  position: absolute;
+  top: 220px;
+  left: 32%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column; /* Stack user names vertically */
+}
+.user-name-wrapper {
+  margin-bottom: 30px; /* Adjust margin for more space */
+  border: 5px solid white;
+  background-color: white;
+}
+
+.user-name {
+  margin: 0;
+}
