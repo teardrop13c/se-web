@@ -118,13 +118,14 @@ function Login() {
 
   }
   return (
-    <div className="login-container">
-      {/* //profile.emailสามารถใช้ไรเทียบแทนได้  ดึงข้อมูลทำหลังการ login*/}
-      <div className="incontainer">
-        <img
-          src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
-          alt="KU Logo"
-          style={{ width: "180px", height: "180px" }}
+    <div className="bg">
+      <div className="login-container">
+        {/* //profile.emailสามารถใช้ไรเทียบแทนได้  ดึงข้อมูลทำหลังการ login*/}
+        <div className="incontainer">
+          <img
+            src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
+            alt="KU Logo"
+            style={{ width: "180px", height: "180px" }}
         />
         <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
         <br />
@@ -138,6 +139,7 @@ function Login() {
           LoginPage()
         )}
       </div>
+    </div>
     </div>
   );
 }
