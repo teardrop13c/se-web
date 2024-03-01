@@ -1,0 +1,7 @@
+.select-date {
+    width: 600px;
+    margin: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+  }

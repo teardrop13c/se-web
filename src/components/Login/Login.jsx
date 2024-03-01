@@ -151,24 +151,14 @@ function Login() {
   }
 
   return (
-    <div className="login-container">
-      {checkAdmin() && (
-        <>
-          {welcomeMessage}
-        </>
-      )}
-
-      {!checkAdmin() && (
-        <>
-          {welcomeMessage}
-        </>
-      )}
-
-      <div className="incontainer">
-        <img
-          src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
-          alt="KU Logo"
-          style={{ width: "180px", height: "180px" }}
+    <div className="bg">
+      <div className="login-container">
+        {/* //profile.emailสามารถใช้ไรเทียบแทนได้  ดึงข้อมูลทำหลังการ login*/}
+        <div className="incontainer">
+          <img
+            src="https://edureq.src.ku.ac.th/image/KU_SRC_Color_bg_white.jpg"
+            alt="KU Logo"
+            style={{ width: "180px", height: "180px" }}
         />
         <br />
         {isLoggedIn ? (
@@ -199,6 +189,7 @@ function Login() {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }

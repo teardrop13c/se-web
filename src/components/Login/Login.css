@@ -1,15 +1,19 @@
-body {
-    background-image: url(../../assets/login-bg.png);
-}
-.welcome-message {
-  position: absolute;
-  top: 50px; /* ปรับตำแหน่งตามที่ต้องการ */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  color: #000000; /* สีตัวอักษร */
-  font-size: 24px; /* ขนาดตัวอักษร */
-}
+    .bg {
+      background-image: url(../../assets/login-bg.png);
+      background-size: contain;
+      width: 100%;
+    }
+
+    .welcome-message {
+      position: absolute;
+      top: 50px; /* ปรับตำแหน่งตามที่ต้องการ */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      color: #000000; /* สีตัวอักษร */
+      font-size: 24px; /* ขนาดตัวอักษร */
+    }
+
     .login-container {
         width: 550px;
         height: 350px;

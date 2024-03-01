@@ -1,15 +1,14 @@
 import React from "react";
 import Navbar from "../Navbar";
 import UserMenu from "./UserMenu/UserMenu";
+import Clock from "../Clock";
 
 function HomeUser() {
   return (
     <section id="main-layout">
       <Navbar />
       <UserMenu />
-      <div className="content">
-        <h2>Home User</h2>
-      </div>
+      <Clock />
     </section>
   );
 }

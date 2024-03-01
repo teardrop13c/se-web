@@ -27,7 +27,7 @@ html {
   
   #sidebar {
     grid-area: s;
-    background-color: #999999;
+    background-color: #bebebe;
   }
   
   #content {
