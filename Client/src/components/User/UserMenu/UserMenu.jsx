@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function UserMenu() {
   return (
     <section id="sidebar">
-      <div className="sidebar">
+    <div className="sidebar">
         <Link to="/HomeUser" className="item">
           <div className="icon">
             <img
@@ -55,7 +55,7 @@ function UserMenu() {
           </div>
           <div className="text">NEWS</div>
         </Link>
-      </div>
+      </div> 
     </section>
   );
 }

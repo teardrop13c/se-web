@@ -13,7 +13,7 @@ import UserNews from './components/User/UserPage/UserNews'
 import HomeAdmin from './components/Admin/HomeAdmin'
 import RegisterTime from './components/Admin/AdminPage/RegisterTime'
 import Login from './components/Login/Login'
-import UserDatePick from './components/User/UserPage/UserDatePick'
+import UserDatePick from './components/User/UserPage/UserDatePick.jsx'
 
 
 const router = createBrowserRouter([
