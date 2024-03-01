@@ -49,7 +49,7 @@
       }
     
       .create-news-button:hover {
-        background-color: #1df376;
+        background-color: #02bc77;
       }
     
       .modal {
@@ -112,7 +112,7 @@
       }
 
       .welcome-button {
-        background-color: #1df376;
+        background-color: #02bc77;
         color: #fff;
         padding: 10px 15px;
         font-size: 18px;
@@ -128,7 +128,7 @@
       }
       
       .welcome-button:hover {
-        background-color: #0fa45d;
+        background-color: #02bc77;
       }
 
       .user-details {
