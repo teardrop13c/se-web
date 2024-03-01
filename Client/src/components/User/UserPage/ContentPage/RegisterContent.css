@@ -20,7 +20,10 @@
     background-color: #02bc77;
     /* border-color: #999999; */
 }
-
+.delete-button {
+    color: #ffffff;
+    background-color: #c94040;
+}
 .button-add {
     color: #000;
     background-color: #bebebe;
