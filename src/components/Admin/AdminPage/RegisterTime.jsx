@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../Navbar'
 import AdminMenu from '../AdminMenu/AdminMenu'
+import RegisterTimePage from "./ContentPage/RegisterTimePage";
 
 function RegisterTime() {
   return (
@@ -8,7 +9,7 @@ function RegisterTime() {
       <Navbar />
       <AdminMenu />
       <div className="content">
-        <h2>RegisterTime Page</h2>
+      <RegisterTimePage/>
       </div>
     </section>
   )
