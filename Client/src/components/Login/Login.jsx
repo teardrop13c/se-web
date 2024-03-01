@@ -4,7 +4,6 @@ import { gapi } from "gapi-script";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
-
 function Login() {
   const clientId = "547931595657-oaphvpiui1527babqslkcbb93a9p938o.apps.googleusercontent.com";
   const [profile, setProfile] = useState(null);
@@ -44,7 +43,6 @@ function Login() {
       return false;
     }
   };
-
   const savePhoneNumber = () => {
     // รอเก็บเบอร์เข้า data base
     console.log("Phone Number saved:", userPhoneNumber);
@@ -160,6 +158,7 @@ function Login() {
             alt="KU Logo"
             style={{ width: "180px", height: "180px" }}
         />
+        <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
         <br />
         {isLoggedIn ? (
           checkAdmin() ? (

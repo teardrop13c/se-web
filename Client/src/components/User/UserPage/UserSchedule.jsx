@@ -82,7 +82,6 @@ const MyTable = () => {
     }
   };
 
-
   return (
     <section id="main-layout">
       <Navbar />
