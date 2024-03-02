@@ -1,13 +1,53 @@
 import { Button, Select } from "antd";
-import React from "react";
+import React, { useState,useEffect } from 'react';
+
+
 import "./DatePick.css";
 
 function DatePick() {
+  const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
+
+
+  const dayChange = (value) => {
+    setSelectedDay(value);
+  };
+  const timeChange = (value) => {
+    setSelectedTime(value);
+  };
+ 
+  function sendDataToServer(selectedDay, selectedTime) {
+    const data = { selectedDay, selectedTime };
+  
+    fetch('http://localhost:3001/api/data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to send data');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Data sent successfully:', data);
+    })
+    .catch(error => {
+      console.error('Error sending data:', error);
+    });
+  }
+  
+
   return (
     <div className="select-date">
       <Select
         style={{ width: "200px" }}
         placeholder="เลือกวัน"
+        value={selectedDay} // แก้เป็น selectedDay แทน setSelectedDay
+        onChange={dayChange}
         options={[
           {
             value: "monday",
@@ -44,6 +84,8 @@ function DatePick() {
       <Select
         style={{ width: "200px" }}
         placeholder="เลือกเวลา"
+        value={selectedTime}
+        onChange={timeChange}
         options={[
           {
             value: "8:00 - 11:00",
@@ -68,7 +110,7 @@ function DatePick() {
         ]}
       />
       <Button type="defult" className="button-add"> + </Button>
-      <Button type="defult" className="submit-button">ยืนยัน</Button>
+      <Button type="defult" className="submit-button" onClick={() => sendDataToServer(selectedDay, selectedTime)}>ยืนยัน</Button>
     </div>
   );
 }
