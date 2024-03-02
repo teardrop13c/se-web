@@ -69,6 +69,36 @@ function Login() {
     <h2 className="welcome-message">ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
   );
 
+  useEffect(() => {
+    const sendProfileName = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/api/profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name: profile?.name,email: profile?.email }) // ส่งชื่อของโปรไฟล์ไปยังเซิร์ฟเวอร์
+        });
+  
+        if (response.ok) {
+          console.log('Profile name sent successfully');
+        } else {
+          throw new Error('Failed to send profile name');
+        }
+      } catch (error) {
+        console.error('Error sending profile name:', error.message);
+      }
+    };
+  
+    if (profile !== null) {
+      sendProfileName();
+    } else {
+      console.log("profile is null");
+    }
+  }, [profile]);
+  
+
+
   function accountAdmin() {
     return (
       <div className="account-info-container">

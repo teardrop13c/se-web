@@ -60,6 +60,31 @@ app.delete('/delete/:reg_id', (req,res)=> {
         }
     })
 })
+
+app.post('/api/profile', (req, res) => {
+    const profileName = req.body.name;
+    const profileEmail = req.body.email;
+    console.log('Received profile name:', profileName);
+    console.log('Received profile email:', profileEmail);
+    
+    // สร้างออบเจ็กต์ JSON ที่มีข้อมูลทั้งชื่อและอีเมลของโปรไฟล์
+    const responseData = {
+      name: profileName,
+      email: profileEmail
+    };
+    
+    // ส่งออก JSON กลับไปยังไคลเอ็นต์
+    res.json(responseData);
+  });
+
+  app.post('/api/data', (req, res) => {
+    const { selectedDay, selectedTime } = req.body;
+    console.log('Received selectedDay:', selectedDay);
+    console.log('Received selectedTime:', selectedTime);
+    // ทำอะไรกับข้อมูลต่อไป
+    res.json({ message: 'Data received successfully' });
+  });
+
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001
 app.listen('3001', () => {
     console.log('Server is running on port 3001');
