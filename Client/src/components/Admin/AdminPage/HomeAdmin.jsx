@@ -1,13 +1,12 @@
 import React from "react";
 import Navbar from "../../Navbar";
 import AdminMenu from "../AdminMenu/AdminMenu";
-import NewsContent from "./ContentPage/NewsContent";
 import { useSelector } from 'react-redux'; 
 import { Navigate } from "react-router-dom";
 
-function News() {
+function HomeAdmin() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-
+  
   if (!isLoggedIn) {
     return <Navigate to="/" />;
   }
@@ -16,9 +15,11 @@ function News() {
     <section id="main-layout">
       <Navbar />
       <AdminMenu />
-      <NewsContent />
+      <div className="content">
+        <h2>Home Admin</h2>
+      </div>
     </section>
   );
 }
 
-export default News;
+export default HomeAdmin;
