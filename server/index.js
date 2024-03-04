@@ -7,10 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    user: "root",
     host: "localhost",
-    password: "12345678",
-    database: "kusrc_course"
+    user: 'root',
+    password:'',
+    database: 'kusrc_course'
 })
 
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
@@ -77,13 +77,29 @@ app.post('/api/profile', (req, res) => {
     res.json(responseData);
   });
 
-  app.post('/api/data', (req, res) => {
-    const { selectedDay, selectedTime } = req.body;
-    console.log('Received selectedDay:', selectedDay);
-    console.log('Received selectedTime:', selectedTime);
-    // ทำอะไรกับข้อมูลต่อไป
-    res.json({ message: 'Data received successfully' });
-  });
+  app.post('/api/timeData', async (req, res) => {
+    const timeArray = req.body.timeArray;
+    console.log('Received time array:', timeArray);
+
+    try {
+        for (const data of timeArray) {
+            const day = data[0].day;
+            const time = data[0].time;
+            const email = data[0].name;
+            const query = 'INSERT INTO useravailability (day, time, user_email) VALUES (?,?,?)';
+            await db.query(query, [day, time, email]);
+            console.log('Data inserted successfully:', data);
+        }
+        res.send('Data inserted successfully');
+    } catch (err) {
+        console.error('Error inserting data:', err);
+        res.status(500).send('Error inserting data');
+    }
+});
+
+
+
+
 
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001
 app.listen('3001', () => {
