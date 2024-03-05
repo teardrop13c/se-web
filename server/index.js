@@ -1,16 +1,19 @@
 const express = require('express');
+const fileUpload = require('express-fileupload');
+const xlsx = require('xlsx');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
+app.use(fileUpload());
 
 const db = mysql.createConnection({
-    user: "root",
     host: "localhost",
-    password: "12345678",
-    database: "kusrc_course"
+    user: 'root',
+    password:'',
+    database: 'kusrc_course'
 })
 
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
@@ -61,6 +64,7 @@ app.delete('/delete/:reg_id', (req,res)=> {
     })
 })
 
+/////////user_name and email //////////////////
 app.post('/api/profile', (req, res) => {
     const profileName = req.body.name;
     const profileEmail = req.body.email;
@@ -76,14 +80,76 @@ app.post('/api/profile', (req, res) => {
     // ส่งออก JSON กลับไปยังไคลเอ็นต์
     res.json(responseData);
   });
+//////////////////////////////////////////////////
+/////////////////date and time///////////////////
+  app.post('/api/timeData', async (req, res) => {
+    const timeArray = req.body.timeArray;
+    console.log('Received time array:', timeArray);
 
-  app.post('/api/data', (req, res) => {
-    const { selectedDay, selectedTime } = req.body;
-    console.log('Received selectedDay:', selectedDay);
-    console.log('Received selectedTime:', selectedTime);
-    // ทำอะไรกับข้อมูลต่อไป
-    res.json({ message: 'Data received successfully' });
-  });
+    try {
+        for (const data of timeArray) {
+            const day = data[0].day;
+            const time = data[0].time;
+            const email = data[0].name;
+            const query = 'INSERT INTO useravailability (day, time, user_email) VALUES (?,?,?)';
+            await db.query(query, [day, time, email]);
+            console.log('Data inserted successfully:', data);
+        }
+        res.send('Data inserted successfully');
+    } catch (err) {
+        console.error('Error inserting data:', err);
+        res.status(500).send('Error inserting data');
+    }
+});
+////////////////////////////////////////////////////////////
+///////////////////////uploads//////////////////////////////
+app.post('/uploads', (req, res) => {
+    if (!req.files || Object.keys(req.files).length === 0) {
+        return res.status(400).send('No files were uploaded.');
+    }
+
+    // รับไฟล์ที่อัปโหลดจาก client
+    let uploadedFile = req.files.file;
+
+    // เก็บชื่อไฟล์เดิม
+    const filename = uploadedFile.name;
+
+    // บันทึกไฟล์ลงในโฟลเดอร์ uploads/ โดยใช้ชื่อไฟล์เดิม
+    uploadedFile.mv('uploads/' + filename, (err) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+
+        // อ่านไฟล์ Excel
+        const workbook = xlsx.readFile('uploads/' + filename);
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+
+        // แปลงข้อมูลในแผ่นงานเป็น JSON
+        const jsonData = xlsx.utils.sheet_to_json(worksheet);
+
+        // สร้าง values array จาก jsonData
+        const values = jsonData.map(row => [row.รหัสวิชา, row.ชื่อวิชา, row.หน่วยกิจ]);
+
+        const sql = 'INSERT INTO course (subject_ID, subjact_name, credite) VALUES ?';
+
+        db.query(sql, [values], (err, result) => {
+            if (err) {
+                console.error('Error inserting data:', err);
+                res.status(500).json({ error: 'Error inserting data' });
+                return;
+            }
+            console.log('Data inserted successfully:', result);
+
+            // ส่งการตอบกลับหลังจากที่แทรกข้อมูลลงในฐานข้อมูลเรียบร้อยแล้ว
+            res.json({ message: 'Data received and inserted successfully' });
+        });
+    }); 
+});
+//////////////////////////////////////////////////////////////////////////
+
+
+
 
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001
 app.listen('3001', () => {
