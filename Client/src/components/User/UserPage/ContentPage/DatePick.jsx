@@ -1,41 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Select } from 'antd';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
 import './DatePick.css';
 
-
 function DatePick() {
-  const [selectedDay, setSelectedDay] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedDay, setSelectedDay] = useState("เลือกวัน");
+  const [selectedTime, setSelectedTime] = useState("เลือกเวลา");
+  const days = ["เลือกวัน", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const times = ["เลือกเวลา", "8.00", "8.30", "9.00", "9.30", "10.00", "10.30", "11.00", "11.30", "12.00", "12.30", "13.00",
+    "13.30", "14.00", "14.30", "15.00", "15.30", "16.00", "16.30", "17.00", "17.30", "18.00", "18.30", "19.00", "19.30", "20.00"];
 
-  const [timeArray, setTimeArray] = useState([]);
-
-  const dispatch = useDispatch();
-  const profile = useSelector((state) => state.auth.profile);
- 
-  const dayChange = (value) => {
-    setSelectedDay(value);
+  const handleDayChange = (event) => {
+    setSelectedDay(event.target.value);
   };
 
-  const timeChange = (value) => {
-    setSelectedTime(value);
+  const handleTimeChange = (event) => {
+    setSelectedTime(event.target.value);
   };
 
-  function sendDataToServer(newTimeArray) {
-    if (!Array.isArray(newTimeArray) || newTimeArray.length === 0) {
-      console.error('Error sending data: Empty or invalid time array');
+  function sendDataToServer(selectedData) {
+    if (!selectedData || !Array.isArray(selectedData) || selectedData.length !== 2) {
+      console.error('Error sending data: Invalid data format');
       return;
     }
-
-    console.log('Data to be sent:', { timeArray: newTimeArray });
-
+  
+    console.log('Data to be sent:', selectedData);
+  
     fetch('http://localhost:3001/api/timeData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ timeArray: newTimeArray })
+      body: JSON.stringify(selectedData)
     })
       .then(response => {
         if (!response.ok) {
@@ -50,81 +44,350 @@ function DatePick() {
         console.error('Error sending data:', error);
       });
   }
+  
 
-  function setTimeData(selectedDay, selectedTime) {
-    if (!selectedDay || !selectedTime) {
-      console.error('Error adding time data: Invalid day or time');
-      return;
-    }
+  const handleAdd = () => {
+    // ตรวจสอบว่าวันและเวลาได้ถูกเลือกแล้วหรือไม่
+    if (selectedDay !== "เลือกวัน" && selectedTime !== "เลือกเวลา") {
+      // หาตำแหน่งของวันและเวลาที่เลือกในอาร์เรย์
+      const dayIndex = days.indexOf(selectedDay);
+      const timeIndex = times.indexOf(selectedTime);
 
-    if (!profile || !profile.name) {
-      console.error('Error adding time data: Profile name is missing');
-      return;
-    }
+      // ถ้าหากตำแหน่งของวันและเวลาที่เลือกในอาร์เรย์ถูกพบ
+      if (dayIndex !== -1 && timeIndex !== -1) {
+        // อัพเดทข้อมูลในตาราง
+        const table = document.querySelector('.my-table');
+        if (table) {
+          // เรียกใช้งานเซลที่ต้องการอัพเดท
+          const row = table.rows[dayIndex - 1 + 1]; // เพิ่ม 1 เนื่องจากแถวแรกใช้สำหรับหัวตาราง
+          const cell = row.cells[timeIndex - 1 + 1]; // เพิ่ม 1 เนื่องจากเซลแรกใช้สำหรับชื่อวัน
+          cell.textContent = ""; // You can customize the content if needed
+          cell.classList.add(days[dayIndex]);
 
-    const newTimeArray = [...timeArray];
-    const newTimeData = { day: selectedDay, time: selectedTime ,name: profile.name };
+          // รวบรวมข้อมูลทั้งหมดที่เลือกไว้
+          const selectedData = {
+            day: selectedDay,
+            time: selectedTime,
+          };
 
-    if (!newTimeData.name || !newTimeData.day || !newTimeData.time) {
-      console.error('Error adding time data: Invalid time data structure');
-      return;
-    }
-
-    const emptyIndex = newTimeArray.findIndex(subArray => subArray.length === 0);
-
-    if (emptyIndex !== -1) {
-      newTimeArray[emptyIndex] = [newTimeData];
+          // ส่งข้อมูลไปยัง backend
+          sendDataToServer(selectedData);
+        }
+      } else {
+        console.log("ไม่พบวันหรือเวลาที่เลือกในตาราง");
+      }
     } else {
-      newTimeArray.push([newTimeData]);
+      console.log("โปรดเลือกวันและเวลา");
     }
+  };
 
-    console.log('New time array:', newTimeArray);
+  // เพิ่มฟังก์ชัน handleDelete
+  const handleDelete = () => {
+    // ตรวจสอบว่ามีวันและเวลาที่ถูกเลือกหรือไม่
+    if (selectedDay !== "เลือกวัน" && selectedTime !== "เลือกเวลา") {
+      // หาตำแหน่งของวันและเวลาที่เลือกในอาร์เรย์
+      const dayIndex = days.indexOf(selectedDay);
+      const timeIndex = times.indexOf(selectedTime);
 
-    setTimeArray(newTimeArray);
-    setSelectedDay(null);
-    setSelectedTime(null);
-  }
+      // ถ้าหากตำแหน่งของวันและเวลาที่เลือกในอาร์เรย์ถูกพบ
+      if (dayIndex !== -1 && timeIndex !== -1) {
+        // อัพเดทข้อมูลในตาราง
+        const table = document.querySelector('.my-table');
+        if (table) {
+          // เรียกใช้งานเซลที่ต้องการอัพเดท
+          const row = table.rows[dayIndex - 1 + 1]; // เพิ่ม 1 เนื่องจากแถวแรกใช้สำหรับหัวตาราง
+          const cell = row.cells[timeIndex - 1 + 1]; // เพิ่ม 1 เนื่องจากเซลแรกใช้สำหรับชื่อวัน
+          cell.textContent = "";
+          cell.classList.remove(days[dayIndex]);
+        }
+
+        // เคลียร์การเลือก
+        setSelectedDay("เลือกวัน");
+        setSelectedTime("เลือกเวลา");
+      } else {
+        console.log("ไม่พบวันหรือเวลาที่เลือกในตาราง");
+      }
+    } else {
+      console.log("โปรดเลือกวันและเวลาที่ต้องการลบ");
+    }
+  };
+
+  const handleConfirm = () => {
+    // แสดงหน้าต่าง confirm และรอการยืนยันจากผู้ใช้
+    const confirmed = window.confirm("คุณต้องการดำเนินการต่อหรือไม่?");
+
+    // ตรวจสอบว่าผู้ใช้ได้กด "ตกลง" หรือ "ยกเลิก" บนหน้าต่าง confirm
+    if (confirmed) {
+      // ถ้าผู้ใช้กด "ตกลง" ทำสิ่งที่คุณต้องการทำต่อ
+      console.log("ผู้ใช้กดตกลง");
+      // เพิ่มโค้ดการดำเนินการต่อที่นี่
+      sendDataToServer([selectedDay, selectedTime]);
+    } else {
+      // ถ้าผู้ใช้กด "ยกเลิก" ไม่ต้องทำอะไร
+      console.log("ผู้ใช้กดยกเลิก");
+    }
+  };
+
 
 
   return (
-    <div className="select-date">
-      <Select
-        style={{ width: "200px" }}
-        placeholder="เลือกวัน"
-        value={selectedDay}
-        onChange={dayChange}
-        options={[
-          { value: "monday", label: "วันจันทร์" },
-          { value: "tuesday", label: "วันอังคาร" },
-          { value: "wednesday", label: "วันพุธ" },
-          { value: "thursday", label: "วันพฤหัสบดี" },
-          { value: "friday", label: "วันศุกร์" },
-          { value: "saturday", label: "วันเสาร์" },
-          { value: "sunday", label: "วันอาทิตย์" },
-        ]}
-      />
+    <section id="main-layout">
+      <div>
+        <div className="DropdownDay">
+          <select value={selectedDay} onChange={handleDayChange}>
+            {days.map((day) => (
+              <option key={day} value={day}>
+                {day}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="dropdownTime">
+          <select value={selectedTime} onChange={handleTimeChange}>
+            {times.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <Select
-        style={{ width: "200px" }}
-        placeholder="เลือกเวลา"
-        value={selectedTime}
-        onChange={timeChange}
-        options={[
-          { value: "8:00 - 11:00", label: "8:00 - 11:00" },
-          { value: "8:30 - 11:30", label: "8:30 - 11:30" },
-          { value: "9:00 - 12:00", label: "9:00 - 12:00" },
-          { value: "13:00 - 16:00", label: "13:00 - 16:00" },
-          { value: "16:30 - 19:30", label: "16:30 - 19:30" },
-        ]}
-      />
+        <button className="add-button" onClick={handleAdd}>+</button>
+        <button className="clear-button" onClick={handleDelete}>ลบ</button>
+        <button className="confirm-button" onClick={handleConfirm}>ยืนยัน</button>
 
-      <Button type="default" className="button-add" onClick={() => setTimeData(selectedDay, selectedTime)}> + </Button>
+        <table className="my-table"> {/* ถ้าใส่cssแล้วลบ border=1 ออก */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>8.00</th>
+              <th>8.30</th>
+              <th>9.00</th>
+              <th>9.30</th>
+              <th>10.00</th>
+              <th>10.30</th>
+              <th>11.00</th>
+              <th>11.30</th>
+              <th>12.00</th>
+              <th>12.30</th>
+              <th>13.00</th>
+              <th>13.30</th>
+              <th>14.00</th>
+              <th>14.30</th>
+              <th>15.00</th>
+              <th>15.30</th>
+              <th>16.00</th>
+              <th>16.30</th>
+              <th>17.00</th>
+              <th>17.30</th>
+              <th>18.00</th>
+              <th>18.30</th>
+              <th>19.00</th>
+              <th>19.30</th>
+              <th>20.00</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Mon</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Tues</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Wed</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Thu</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Fri</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Sat</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Sun</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-      <Button type="default" className="submit-button" onClick={() => sendDataToServer(timeArray)}>ยืนยัน</Button>
-
-
-    </div>
   );
-}
-
-export default DatePick;
+}; export default DatePick;
