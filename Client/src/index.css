@@ -1,0 +1,35 @@
+html {
+    font-size: 13px;
+  }
+  
+  body {
+    margin: 0;
+    background-color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  #main-layout {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template:
+      "h h" 80px
+      "s c" / 80px;
+  }
+  
+  #header {
+    grid-area: h;
+  }
+  
+  #sidebar {
+    grid-area: s;
+    background-color: #bebebe;
+  }
+  
+  #content {
+    grid-area: c;
+  }

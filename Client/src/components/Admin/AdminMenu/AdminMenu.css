@@ -1,0 +1,14 @@
+.sidebar {
+    display: grid;
+    grid-auto-rows: 80px;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #bebebe;
+}
+
+.item {
+    display: grid;
+    align-items: center;
+    padding: 1;
+}
