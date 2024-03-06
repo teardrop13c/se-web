@@ -30,7 +30,7 @@ app.get('/registerteacher', (req, res) => {
 // กำหนดเส้นทาง POST /create เพื่อเพิ่มข้อมูลลงทะเบียนการสอน
 app.post('/create', (req, res) => { 
     const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking,user_email } = req.body
-    db.query("INSERT INTO user_reg (subjectReg_id, lec_group, lab_group,major_year,roomReg_ranking,user_email) VALUES (?,?,?,?,?,'mfvch0258@gmail.com')",
+    db.query("INSERT INTO user_reg (subjectReg_id, lec_num, lab_num,major_year,roomReg_ranking,user_email) VALUES (?,?,?,?,?,?)",
         [subjectReg_id, lec_group, lab_group,major_year,roomReg_ranking,user_email],
         (err, result) => {
             if (err) {
@@ -147,7 +147,15 @@ app.post('/uploads', (req, res) => {
     }); 
 });
 //////////////////////////////////////////////////////////////////////////
-
+//// DB to back/////
+app.get('/users',(req, res)=> {
+    const sql = "SELECT * FROM course";
+    db.query(sql,(err, data)=> {
+        if(err) return res.json(err);
+        return res.json(data);
+    })
+})
+////////////////////
 
 
 
