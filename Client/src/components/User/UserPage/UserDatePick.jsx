@@ -3,13 +3,13 @@ import Navbar from '../../Navbar'
 import UserMenu from '../UserMenu/UserMenu'
 import DatePick from './ContentPage/DatePick'
 import { useSelector } from 'react-redux'; 
-import { Navigate } from "react-router-dom";
+import Login from "../../Login/Login";
 
 function UserDatePick() {
+    //authuser
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); 
-
   if (!isLoggedIn) {
-    return <Navigate to="/" />;
+    return <Login />;
   }
   return (
     <section id="main-layout">

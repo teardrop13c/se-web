@@ -3,14 +3,15 @@ import Navbar from "../../Navbar"
 import UserMenu from "../UserMenu/UserMenu"
 import "./UserSchedule.css"
 import { useSelector } from 'react-redux'; 
-import { Navigate } from "react-router-dom";
+import Login from "../../Login/Login";
 
 const MyTable = () => {
+  //authuser
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); 
-  
   if (!isLoggedIn) {
-    return <Navigate to="/" />;
+    return <Login />;
   }
+
   const [selectedDay, setSelectedDay] = useState("เลือกวัน");
   const [selectedTime, setSelectedTime] = useState("เลือกเวลา");
   const days = ["Mon", "Tues", "Wed", "Thu", "Fri", "Sat", "Sun"];
