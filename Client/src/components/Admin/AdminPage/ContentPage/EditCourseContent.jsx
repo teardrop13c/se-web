@@ -125,7 +125,6 @@ function EditCourseContent() {
             // Update frontend state after successful deletion
             const updatedData = tableData.filter(item => item.รหัสวิชา !== record.รหัสวิชา);
             setTableData(updatedData);
-
             Swal.fire({
                 icon: 'success',
                 title: 'การลบข้อมูลเสร็จสมบูรณ์',
