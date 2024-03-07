@@ -61,21 +61,26 @@ app.post('/create', (req, res) => {
 
 app.put('/update', (req, res) => {
     const { id_course, subject_ID, subjact_name, credite, typeSubject } = req.body;
+
+    console.log('Received update request with data:', req.body);
+
     db.query("UPDATE course SET subject_ID = ?, subjact_name = ?, credite = ?, typeSubject = ? WHERE id_course = ?",
         [subject_ID, subjact_name, credite, typeSubject, id_course],
         (err, result) => {
             if (err) {
-                console.log(err);
+                console.error('Error updating data:', err);
                 res.status(500).json({ error: 'Error updating data' });
             } else {
+                console.log('Data updated successfully');
+
                 res.json({ message: 'Data updated successfully' });
             }
         }
     );
 });
 
-app.delete('/delete/:id_course', (req, res) => {
-    const subject_ID = req.params.id_course;  // Assuming subject_ID is the correct field name
+app.delete('/delete/:subject_ID', (req, res) => {
+    const subject_ID = req.params.subject_ID;
 
     if (!subject_ID) {
         console.error('Error: No subject_ID parameter provided in the DELETE request.');
