@@ -11,3 +11,5 @@ Currently, two official plugins are available:
 
 npm install
 npm i react-google-login gapi-script --force
+npm install react-redux --force
+npm install axios --force

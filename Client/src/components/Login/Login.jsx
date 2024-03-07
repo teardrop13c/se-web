@@ -2,15 +2,19 @@ import React, { useState, useEffect } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { gapi } from "gapi-script";
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import "./Login.css";
+import { whenLogin,whenLogout } from "../../../Store/authSlice";
 
 function Login() {
   const clientId = "547931595657-oaphvpiui1527babqslkcbb93a9p938o.apps.googleusercontent.com";
-  const [profile, setProfile] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const profile = useSelector((state) => state.auth.profile);
   const [showPhoneNumberModal, setShowPhoneNumberModal] = useState(false);
   const [userPhoneNumber, setUserPhoneNumber] = useState("");
-
+  
   useEffect(() => {
     const initClient = () => {
       gapi.client.init({
@@ -22,7 +26,7 @@ function Login() {
   }, []);
 
   const onSuccess = (res) => {
-    setIsLoggedIn(true);
+    dispatch(whenLogin(res.profileObj));
     setProfile(res.profileObj);
     setShowPhoneNumberModal(true);
   };
@@ -32,7 +36,7 @@ function Login() {
   };
 
   const logOut = () => {
-    setIsLoggedIn(false);
+    dispatch(whenLogout());
     setProfile(null);
   };
 
@@ -64,6 +68,36 @@ function Login() {
   const welcomeMessage = (
     <h2 className="welcome-message">ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
   );
+
+  useEffect(() => {
+    const sendProfileName = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/api/profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name: profile?.name,email: profile?.email }) // ส่งชื่อของโปรไฟล์ไปยังเซิร์ฟเวอร์
+        });
+  
+        if (response.ok) {
+          console.log('Profile name sent successfully');
+        } else {
+          throw new Error('Failed to send profile name');
+        }
+      } catch (error) {
+        console.error('Error sending profile name:', error.message);
+      }
+    };
+  
+    if (profile !== null) {
+      sendProfileName();
+    } else {
+      console.log("profile is null");
+    }
+  }, [profile]);
+  
+
 
   function accountAdmin() {
     return (
