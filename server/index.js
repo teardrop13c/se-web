@@ -28,7 +28,6 @@ app.get('/register', (req, res) => {
     });
 });
 
-
 ////////////////////////////////////////////////////////////
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
 app.get('/registerteacher', (req, res) => {
