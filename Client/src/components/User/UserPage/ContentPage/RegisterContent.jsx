@@ -70,7 +70,7 @@ function RegisterContent() {
   }, []);
 
   const addRegister = () => {
-    if (!labelString || !lec_group || !lab_group || !roomReg_ranking || !profile.name ) {
+    if (!labelString || !lec_group || !lab_group || !roomReg_ranking || !profile.email ) {
       console.log('โปรดกรอกข้อมูลให้ครบทุกช่อง');
       return; // หยุดการทำงานทันทีถ้าข้อมูลไม่ครบ
     }
@@ -81,7 +81,7 @@ function RegisterContent() {
       lab_group: lab_group,
       major_year: major_year,
       roomReg_ranking: roomReg_ranking,
-      user_email: profile.name
+      user_email: profile.email
     }).then(() => {
       getRegister();
     }).catch(error => {
@@ -206,7 +206,7 @@ function RegisterContent() {
         <Button className="submit-button" onClick={addRegister}>ยืนยัน</Button>
         <br />
       </Card>
-      {registerteacherList.map((val, index) => {
+      {/* {registerteacherList.map((val, index) => {
         return (
           <Card style={{ background: "#d9d9d9" }} key={index}>
             <div className='employee card'>
@@ -219,6 +219,20 @@ function RegisterContent() {
             </div>
           </Card>
         )
+      })} */}
+      {registerteacherList.map((val) => {
+      return (
+        <Card style={{ background: "#d9d9d9" }} key={val.reg_id}>
+          <div className='employee card'>
+            <p>วิชา : {val.subjectReg_id}</p>
+            <p>บรรยายและจำนานนิสิต : {val.lec_group}</p>
+            <p>ปฎิบัติและจำนวนนิสิต : {val.lab_group}</p>
+            <p>สาขา : {val.major_year}</p>
+            <p>ห้องปฎิบัติ : {val.roomReg_ranking}</p>
+            <Button className='delete-button' onClick={() => { deleteRegister(val.reg_id) }}>ลบ</Button>
+          </div>
+        </Card>
+      )
       })}
     </div>
   );

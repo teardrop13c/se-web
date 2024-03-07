@@ -57,15 +57,15 @@ function DatePick() {
       return;
     }
 
-    if (!profile || !profile.name) {
+    if (!profile || !profile.email) {
       console.error('Error adding time data: Profile name is missing');
       return;
     }
 
     const newTimeArray = [...timeArray];
-    const newTimeData = { day: selectedDay, time: selectedTime ,name: profile.name };
+    const newTimeData = { day: selectedDay, time: selectedTime ,email: profile.email };
 
-    if (!newTimeData.name || !newTimeData.day || !newTimeData.time) {
+    if (!newTimeData.email || !newTimeData.day || !newTimeData.time) {
       console.error('Error adding time data: Invalid time data structure');
       return;
     }

@@ -29,6 +29,7 @@ function RegisterTimePage() {
     };
 
     return dateTime.toLocaleString('th', options);
+    
   };
 
   useEffect(() => {
@@ -41,11 +42,13 @@ function RegisterTimePage() {
 
   const handleOpeningTimeChange = (date) => {
     setOpeningTime(date);
+    console.log('OPEN: ',openingTime);
     if (error) setError('');
   };
 
   const handleClosingTimeChange = (date) => {
     setClosingTime(date);
+    console.log('CLOSE:',closingTime);
     if (error) setError('');
   };
 
@@ -57,16 +60,48 @@ function RegisterTimePage() {
     closingDatePickerRef.current.setOpen(true);
   };
 
-  const handleConfirmButtonClick = () => {
+  // const handleConfirmButtonClick = () => {
+  //   if (closingTime <= openingTime) {
+  //     setError('เวลาปิดการลงทะเบียนต้องมาทีหลังเวลาเปิดการลงทะเบียน');
+  //     showErrorMessage();
+  //   } else {
+  //     hideErrorMessage();
+  //     console.log('open:',openingTime);
+  //     console.log('close: ',closingTime);
+  //     console.log('Registration confirmed!');
+  //     // Proceed with registration logic
+  //   }
+  // };
+  const handleConfirmButtonClick = async () => {
     if (closingTime <= openingTime) {
       setError('เวลาปิดการลงทะเบียนต้องมาทีหลังเวลาเปิดการลงทะเบียน');
       showErrorMessage();
     } else {
       hideErrorMessage();
+      console.log('open:', openingTime);
+      console.log('close: ', closingTime);
       console.log('Registration confirmed!');
-      // Proceed with registration logic
+  
+      try {
+        const response = await fetch('http://localhost:3001/api/registration', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ openingTime, closingTime })
+        });
+  
+        if (response.ok) {
+          console.log('Registration data sent successfully');
+        } else {
+          throw new Error('Failed to send registration data');
+        }
+      } catch (error) {
+        console.error('Error sending registration data:', error.message);
+      }
     }
   };
+  
 
   const showErrorMessage = () => {
     const alertContainer = document.getElementById('alert-container');
