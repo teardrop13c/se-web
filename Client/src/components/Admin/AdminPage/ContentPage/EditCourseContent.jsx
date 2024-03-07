@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { UploadOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Button, message, Upload, Table, Input, Form } from 'antd';
 import axios from 'axios';
-import Papa from 'papaparse';
 import "./EditCourseContent.css";
 import Swal from 'sweetalert2';
 
@@ -91,31 +90,32 @@ function EditCourseContent() {
 
   const handleUpdateData = (values) => {
     const updatedData = tableData.map((data) =>
-      data.ลำดับ === formData.ลำดับ ? { ...data, ...values } : data
+        data.ลำดับ === formData.ลำดับ ? { ...data, ...values } : data
     );
     setTableData(updatedData);
-  
+
     axios.put('http://localhost:3001/update', { ...formData, ...values })
-      .then(response => {
-        console.log(response.data);
-        Swal.fire({
-          icon: 'success',
-          title: 'การแก้ไขข้อมูลเสร็จสมบูรณ์',
-          text: 'ข้อมูลได้รับการแก้ไขเรียบร้อยแล้ว!',
+        .then(response => {
+            console.log(response.data);
+            Swal.fire({
+                icon: 'success',
+                title: 'การแก้ไขข้อมูลเสร็จสมบูรณ์',
+                text: 'ข้อมูลได้รับการแก้ไขเรียบร้อยแล้ว!',
+            });
+        })
+        .catch(error => {
+            console.error(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'ข้อผิดพลาดในการแก้ไขข้อมูล',
+                text: 'เกิดข้อผิดพลาดในการแก้ไขข้อมูล โปรดลองอีกครั้ง!',
+            });
         });
-      })
-      .catch(error => {
-        console.error(error);
-        Swal.fire({
-          icon: 'error',
-          title: 'ข้อผิดพลาดในการแก้ไขข้อมูล',
-          text: 'เกิดข้อผิดพลาดในการแก้ไขข้อมูล โปรดลองอีกครั้ง!',
-        });
-      });
-  
+
     form.resetFields();
-  };
-  
+};
+
+
   const handleDeleteData = (record) => {
     console.log('Deleting record:', record);
 
