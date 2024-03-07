@@ -1,0 +1,1290 @@
+﻿ลำดับ,รหัสวิชา,ชื่อวิชา,หน่วยกิจ,ประเภทวิชา
+1,03600014-60,"Creative Problem Solving and Critical Thinking Skills
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6),หมวดวิชาศึกษาทั่วไป 
+2,03600014-65,"Creative Problem Solving and Critical Thinking Skills 
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6),หมวดวิชาศึกษาทั่วไป 
+3,01999021-60,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+4,01999021-65,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+5,03600013-60,"Essential Computer Tools and Skills
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2),หมวดวิชาศึกษาทั่วไป
+6,03600013-65,"Essential Computer Tools and Skills
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2),หมวดวิชาศึกษาทั่วไป
+7,03754111-60,"Fundamental English I 
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+8,03754111-65,"Fundamental English I 
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+9,03754112-60,"Fundamental English II 
+ภาษาอังกฤษ II",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+10,03754112-65,"Fundamental English II 
+ภาษาอังกฤษ II",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+11,03754113-60,"Fundamental English III
+ภาษาอังกฤษ III",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+12,03754113-65,"Fundamental English III
+ภาษาอังกฤษ III",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+13,01999111-60,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4),หมวดวิชาศึกษาทั่วไป
+14,01999111-65,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4),หมวดวิชาศึกษาทั่วไป
+15,03600012-60,"Green Technology 
+เทคโนโลยีสีเขียว",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+16,03600012-65,"Green Technology 
+เทคโนโลยีสีเขียว",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+17,01417167-60,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6),หมวดวิชาเฉพาะ
+18,01417167-65,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6),หมวดวิชาเฉพาะ
+19,01417168-60,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6),หมวดวิชาเฉพาะ
+20,01417168-65,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6),หมวดวิชาเฉพาะ
+21,01417267-60,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6),หมวดวิชาเฉพาะ
+22,01417267-65,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6),หมวดวิชาเฉพาะ
+23,01420111-60,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6),หมวดวิชาเฉพาะ
+24,01420111-65,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6),หมวดวิชาเฉพาะ
+25,01420112-60,"General Physics II 
+ฟิสิกส์ทั่วไป II",3(3-0-6),หมวดวิชาเฉพาะ
+26,01420112-65,"General Physics II 
+ฟิสิกส์ทั่วไป II",3(3-0-6),หมวดวิชาเฉพาะ
+27,01420113-60,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2),หมวดวิชาเฉพาะ
+28,01420113-65,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2),หมวดวิชาเฉพาะ
+29,01420114-60,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ II",1(0-3-2),หมวดวิชาเฉพาะ
+30,01420114-65,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ II",1(0-3-2),หมวดวิชาเฉพาะ
+31,03601204-60,"Electric Circuit Analysis for Computer Engineers
+การวิเคราะห์วงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),หมวดวิชาเฉพาะ
+32,03601204-65,"Electric Circuit Analysis for Computer Engineers
+การวิเคราะห์วงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),หมวดวิชาเฉพาะ
+33,03601205-60,"Electric Circuit Laboratory for Computer Engineers
+ปฏิบัติการวงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),หมวดวิชาเฉพาะ
+34,03601205-65,"Electric Circuit Laboratory for Computer Engineers
+ปฏิบัติการวงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),หมวดวิชาเฉพาะ
+35,03603111-60,"Programming Fundamentals I
+หลักการโปรแกรมเบื้องต้น l",3(2-3-6),หมวดวิชาเฉพาะ
+36,03603111-65,"Programming Fundamentals I
+หลักการโปรแกรมเบื้องต้น l",3(2-3-6),หมวดวิชาเฉพาะ
+37,03603112-60,"Programming Fundamentals II
+หลักการโปรแกรมเบื้องต้น II",3(2-3-6),หมวดวิชาเฉพาะ
+38,03603112-65,"Programming Fundamentals II
+หลักการโปรแกรมเบื้องต้น II",3(2-3-6),หมวดวิชาเฉพาะ
+39,03604111-60,"Engineering Drawing 
+การเขียนแบบทางวิศวกรรม",3(2-3-6),หมวดวิชาเฉพาะ
+40,03604111-65,"Engineering Drawing 
+การเขียนแบบทางวิศวกรรม",3(2-3-6),หมวดวิชาเฉพาะ
+41,03602211-60,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6),หมวดวิชาเฉพาะ
+42,03602211-65,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6),หมวดวิชาเฉพาะ
+43,03603101-60,"Introduction to Computer Programming 
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6),หมวดวิชาเฉพาะ
+44,03603101-65,"Introduction to Computer Programming 
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6),หมวดวิชาเฉพาะ
+45,01213212-65,"	Materials Science for Engineers
+วัสดุศาสตร์สำหรับวิศวกร","3(3-0-6)	",หมวดวิชาเฉพาะ
+46,01355111-60,"Foundation English I
+ภาษาอังกฤษ 1",-,หมวดวิชาศึกษาทั่วไป
+47,01355112-60,"Foundation English II 
+ภาษาอังกฤษ II",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+48,01355113-60,"Foundation English III 
+ภาษาอังกฤษ III",3(3-0-6),หมวดวิชาศึกษาทั่วไป
+49,01403114-60,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2),หมวดวิชาเฉพาะ
+50,01403117-60,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6),หมวดวิชาเฉพาะ
+51,01204111-60,"Computers and Programming 
+คอมพิวเตอร์และการโปรแกรม",3(2-3-6),หมวดวิชาเฉพาะ
+52,01208111-60,"Engineering Drawing 
+การเขียนแบบวิศวกรรม",3(2-3-6),หมวดวิชาเฉพาะ
+53,01208221-60,"Engineering Mechanics I 
+กลศาสตร์วิศวกรรม I",3(3-0-6),หมวดวิชาเฉพาะ
+54,01213211-60,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6),หมวดวิชาเฉพาะ
+55,03600390-65,"Co-operative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6),วิชาสหกิจศึกษา
+56,03600490-65,"Co-operative Education
+สหกิจศึกษา",6,วิชาสหกิจศึกษา
+57,01203211-60,"Surveying 
+การสำรวจ",3(2-3-6),T05
+58,01203212-60,"Survey Camp 
+การฝึกงานสำรวจ",1,T05
+59,01203221-60,"Mechanics of Materials I 
+กลศาสตร์ของวัสดุ I",3(3-0-6),T05
+60,01203222-60,"Structural Analysis I 
+การวิเคราะห์โครงสร้าง I",3(3-0-6),T05
+61,01203223-60,"Mechanics of Materials II 
+กลศาสตร์ของวัสดุ II",3(3-0-6),T05
+62,01203224-60,"Applied Mathematics for Civil Engineering 
+คณิตศาสตร์ประยุกต์สำหรับวิศวกรรมโยธา",3(3-0-6),T05
+63,01203231-60,"Concrete and Engineering Materials 
+คอนกรีตและวัสดุวิศวกรรม",3(2-3-6),T05
+64,01203251-60,"Engineering Geology 
+ธรณีวิทยาทางวิศวกรรม",3(3-0-6),T05
+65,01203322-60,"Civil Engineering Materials Testing Laboratory 
+ปฏิบัติการทดสอบวัสดุวิศวกรรมโยธา",1(0-3-2),T05
+66,01203323-60,"Structural Analysis II 
+การวิเคราะห์โครงสร้าง III",3(3-0-6),T05
+67,01203331-60,"Reinforced Concrete Design 
+การออกแบบคอนกรีตเสริมเหล็ก",4(3-3-8),T05
+68,01203333-60,"Design of Timber and Steel Structures 
+การออกแบบโครงสร้างไม้และเหล็ก",4(3-3-8),T05
+69,01203352-60,"Soil Mechanics 
+ปฐพีกลศาสตร์",3(3-0-6),T05
+70,01203353-60,"Soil Mechanics Laboratory
+ปฏิบัติการปฐพีกลศาสตร์",1(0-3-2),T05
+71,01203354-60,"Foundation Design 
+การออกแบบฐานราก",3(3-0-6),T05
+72,01203361-60,"Construction Engineering and Management 
+วิศวกรรมก่อสร้างและการจัดการ",3(3-0-6),T05
+73,01203371-60,"Transportation Engineering 
+วิศวกรรมขนส่ง",3(3-0-6),T05
+74,01203381-60,"Computer Applications in Civil Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโยธา",1(0-3-2),T05
+75,01203399-60,"Internship 
+การฝึกงาน",1,T05
+76,01203471-60,"Highway Engineering 
+วิศวกรรมการทาง",3(3-0-6),T05
+77,01203495-60,"Civil Engineering Project Preparation 
+การเตรียมการโครงงานวิศวกรรมโยธา",1(0-3-2),T05
+78,01203497-60,"Seminar 
+สัมมนา",1,T05
+79,01203499-60,"Civil Engineering Project 
+โครงงานวิศวกรรมโยธา",1(0-3-2),T05
+80,01204112-60,"Information Technology for Engineers 
+เทคโนโลยีสารสนเทศสำหรับวิศวกร",1(1-2-0),T05
+81,01209211-60,"Fluid Mechanics 
+กลศาสตร์ของของไหล",3(3-0-6),T05
+82,01209312-60,"Laboratory for Fluid Mechanics 
+ปฏิบัติการสำหรับวิชากลศาสตร์ของของไหล",1(0-3-2),T05
+83,01209242-60,"Hydrology for Civil Engineering 
+อุทกวิทยาสำหรับวิศวกรรมโยธา",2(2-0-4),T05
+84,01209423-60,"Hydraulic Engineering 
+วิศวกรรมชลศาสตร์",3(3-0-6),T05
+85,01203311-60,"Engineering Surveying Technology 
+เทคโนโลยีการสำรวจทางวิศวกรรม",3(2-3-6),T05
+86,01203312-60,"Photogrammetry 
+การสำรวจด้วยภาพถ่าย",3(2-3-6),T05
+87,01203411-60,"Aerial Photography Interpretation 
+การแปลภาพถ่ายทางอากาศ",3(2-3-6),T05
+88,01203415-60,"Remote Sensing for Engineers 
+การสำรวจข้อมูลระยะไกลสำหรับวิศวกร",3(2-3-6),T05
+89,01203416-60,"Geographic Information Systems for Engineers 
+ระบบสารสนเทศภูมิศาสตร์สำหรับวิศวกร",3(2-3-6),T05
+90,01203417-60,"Satellite Surveying for Engineers 
+การสำรวจด้วยดาวเทียมสำหรับวิศวกร",3(2-3-6),T05
+91,01203490-60,"Co-operative Education 
+สหกิจศึกษา",6,T05
+92,01203496-60,"Selected Topics in Civil Engineering 
+เรื่องเฉพาะทางวิศวกรรมโยธา",45352,T05
+93,01203421-60,"Computer Applications in Structural Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโครงสร้าง",3(2-3-6),T05
+94,01203422-60,"Structural Damage and Rehabilitation 
+ความเสียหายของโครงสร้างและการฟื้นฟูสภาพ",3(3-0-6),T05
+95,01203431-60,"Prestressed Concrete Design 
+การออกแบบคอนกรีตอัดแรง",3(3-0-6),T05
+96,01203432-60,"Bridge Structural Design 
+การออกแบบโครงสร้างสะพาน",3(3-0-6),T05
+97,01203433-60,"Building Structural Design 
+การออกแบบโครงสร้างอาคาร",3(2-3-6),T05
+98,01203434-60,"Structural Steel Technology 
+เทคโนโลยีของเหล็กโครงสร้าง",3(3-0-6),T05
+99,01203451-60,"Analysis and Design of Earth Structures 
+การวิเคราะห์และออกแบบโครงสร้างดิน",3(3-0-6),T05
+100,01203452-60,"Engineering Soil Exploration 
+การสำรวจดินทางวิศวกรรม",3(2-3-6),T05
+101,01203453-60,"Principles of Geomechanics 
+หลักการธรณีกลศาสตร์",3(3-0-6),T05
+102,01203454-60,"Computer Applications in Geotechnical Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมปฐพี",3(2-3-6),T05
+103,01203455-60,"Principles of Rock Mechanics and Tunneling 
+หลักการกลศาสตร์ของหินและงานอุโมงค์",3(2-3-6),T05
+104,01203456-60,"Geo-environmental Engineering 
+วิศวกรรมปฐพีสิ่งแวดล้อม",3(3-0-6),T05
+105,01203461-60,"Construction Equipment 
+เครื่องมือในงานก่อสร้าง",3(3-0-6),T05
+106,01203462-60,"Contract, Specification and Construction Estimation 
+สัญญา ข้อกำหนดและการประมาณการก่อสร้าง",3(3-0-6),T05
+107,01203463-60,"Sustainable Construction 
+การก่อสร้างอย่างยั่งยืน",3(3-0-6),T05
+108,01203464-60,"Materials and Methods of Construction 
+วัสดุและวิธีการก่อสร้าง",3(3-0-6),T05
+109,01203465-60,"Computer Applications in Construction 
+การประยุกต์คอมพิวเตอร์ในงานก่อสร้าง",3(2-3-6),T05
+110,01203466-60,"Construction Project Analysis 
+การวิเคราะห์โครงการก่อสร้าง",3(3-0-6),T05
+111,01203467-60,"Supervision and Inspection in Construction 
+การควบคุมและตรวจสอบงานก่อสร้าง",3(3-0-6),T05
+112,01203470-60,"Freight Transportation Planning and Logistics 
+การวางแผนการขนส่งสินค้าและโลจิสติกส์",3(3-0-6),T05
+113,01203472-60,"Highway Materials 
+วัสดุการทาง",3(2-3-6),T05
+114,01203473-60,"Traffic Engineering 
+วิศวกรรมจราจร",3(3-0-6),T05
+115,01203474-60,"Urban Transportation Planning 
+การวางแผนการขนส่งเขตเมือง",3(3-0-6),T05
+116,01203475-60,"Urban Mass Transportation Planning 
+การวางแผนการขนส่งมวลชนเขตเมือง",3(3-0-6),T05
+117,01203476-60,"Airport Planning and Design 
+การวางแผนและการออกแบบสนามบิน",3(3-0-6),T05
+118,01203477-60,"Pavement Structures 
+โครงสร้างพื้นผิวทาง",3(3-0-6),T05
+119,01203478-60,"Traffic Design and Operations 
+การออกแบบและการดำเนินงานการจราจร",3(2-3-6),T05
+120,01203479-60,"Computer applications in transport engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมขนส่ง",3(3-0-6),T05
+121,01200434-60,"Rail Infrastructure 
+โครงสร้างพื้นฐานระบบราง",3(3-0-6),T05
+122,01200435-60,"Rail System Operation and Maintenance 
+การปฏิบัติการและการซ่อมบำรุงระบบราง",3(3-0-6),T05
+123,01203481-60,"Sanitary Engineering and Water Supply 
+วิศวกรรมสุขภิบาลและการประปา",3(3-0-6),T05
+124,01175xxx-65,กิจกรรมพลศึกษา,1(0-2-1),T05
+125,01355xxx-65,กลุ่มวิชาภาษาอังกฤษ,3(3-0-6),T05
+126,01403114-65,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2),T05
+127,01403117-65,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6),T05
+128,01204111-65,"Computers and Programming 
+คอมพิวเตอร์และการโปรแกรม",3(2-3-6),T05
+129,01208111-65,"Engineering Drawing 
+การเขียนแบบวิศวกรรม",3(2-3-6),T05
+130,01208221-65,"Engineering Mechanics I 
+กลศาสตร์วิศวกรรม I",3(3-0-6),T05
+131,01213211-65,"Materials Science for Engineers
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6),T05
+132,01203111-65,"Applied Statistics for Civil Engineering 
+สถิติประยุกต์สำหรับวิศวกรรมโยธา",2(2-0-4),T05
+133,01203211-65,"Surveying 
+การสำรวจ",3(2-3-6),T05
+134,01203212-65,"Survey Camp 
+การฝึกงานสำรวจ",1,T05
+135,01203221-65,"Mechanics of Materials I 
+กลศาสตร์ของวัสดุ I",3(3-0-6),T05
+136,01203222-65,"Structural Analysis I 
+การวิเคราะห์โครงสร้าง I",3(3-0-6),T05
+137,01203223-65,"Mechanics of Materials II 
+กลศาสตร์ของวัสดุ II",3(3-0-6),T05
+138,01203224-65,"Applied Mathematics for Civil Engineering 
+คณิตศาสตร์ประยุกต์สำหรับวิศวกรรมโยธา",3(3-0-6),T05
+139,01203231-65,"Concrete and Engineering Materials 
+คอนกรีตและวัสดุวิศวกรรม",3(2-3-6),T05
+140,01203251-65,"Engineering Geology 
+ธรณีวิทยาทางวิศวกรรม",3(3-0-6),T05
+141,01203322-65,"Civil Engineering Materials Testing Laboratory 
+ปฏิบัติการทดสอบวัสดุวิศวกรรมโยธา",1(0-3-2),T05
+142,01203323-65,"Structural Analysis II 
+การวิเคราะห์โครงสร้าง III",3(3-0-6),T05
+143,01203331-65,"Reinforced Concrete Design 
+การออกแบบคอนกรีตเสริมเหล็ก",4(3-3-8),T05
+144,01203333-65,"Design of Timber and Steel Structures 
+การออกแบบโครงสร้างไม้และเหล็ก",4(3-3-8),T05
+145,01203352-65,"Soil Mechanics 
+ปฐพีกลศาสตร์",3(3-0-6),T05
+146,01203353-65,"Soil Mechanics Laboratory
+ปฏิบัติการปฐพีกลศาสตร์",1(0-3-2),T05
+147,01203354-65,"Foundation Design 
+การออกแบบฐานราก",3(3-0-6),T05
+148,01203361-65,"Construction Engineering and Management 
+วิศวกรรมก่อสร้างและการจัดการ",3(3-0-6),T05
+149,01203371-65,"Transportation Engineering 
+วิศวกรรมขนส่ง",3(3-0-6),T05
+150,01203381-65,"Computer Applications in Civil Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโยธา",1(0-3-2),T05
+151,01203399-65,"Internship 
+การฝึกงาน",1,T05
+152,01203471-65,"Highway Engineering 
+วิศวกรรมการทาง",3(3-0-6),T05
+153,01203472-65,"Smart Cities 
+เมืองอัจฉริยะ",3(3-0-6),T05
+154,01203495-65,"Civil Engineering Project Preparation 
+การเตรียมการโครงงานวิศวกรรมโยธา",1(0-3-2),T05
+155,01203497-65,"Seminar 
+สัมมนา",1,T05
+156,01203499-65,"Civil Engineering Project 
+โครงงานวิศวกรรมโยธา",1(0-3-2),T05
+157,01209211-65,"Fluid Mechanics 
+กลศาสตร์ของของไหล",3(3-0-6),T05
+158,01209312-65,"Laboratory for Fluid Mechanics 
+ปฏิบัติการสำหรับวิชากลศาสตร์ของของไหล",1(0-3-2),T05
+159,01209242-65,"Hydrology for Civil Engineering 
+อุทกวิทยาสำหรับวิศวกรรมโยธา",2(2-0-4),T05
+160,01209423-65,"Hydraulic Engineering 
+วิศวกรรมชลศาสตร์",3(3-0-6),T05
+161,01203311-65,"Engineering Surveying Technology 
+เทคโนโลยีการสำรวจทางวิศวกรรม",3(2-3-6),T05
+162,01203312-65,"Photogrammetry 
+การสำรวจด้วยภาพถ่าย",3(2-3-6),T05
+163,01203411-65,"Aerial Photography Interpretation 
+การแปลภาพถ่ายทางอากาศ",3(2-3-6),T05
+164,01203415-65,"Remote Sensing for Engineers 
+การสำรวจข้อมูลระยะไกลสำหรับวิศวกร",3(2-3-6),T05
+165,01203416-65,"Geographic Information Systems for Engineers 
+ระบบสารสนเทศภูมิศาสตร์สำหรับวิศวกร",3(2-3-6),T05
+166,01203417-65,"Satellite Surveying for Engineers 
+การสำรวจด้วยดาวเทียมสำหรับวิศวกร",3(2-3-6),T05
+167,01203421-65,"Computer Applications in Structural Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโครงสร้าง",3(2-3-6),T05
+168,01203422-65,"Structural Damage and Rehabilitation 
+ความเสียหายของโครงสร้างและการฟื้นฟูสภาพ",3(3-0-6),T05
+169,01203431-65,"Prestressed Concrete Design 
+การออกแบบคอนกรีตอัดแรง",3(3-0-6),T05
+170,01203432-65,"Bridge Structural Design 
+การออกแบบโครงสร้างสะพาน",3(3-0-6),T05
+171,01203433-65,"Building Structural Design 
+การออกแบบโครงสร้างอาคาร",3(2-3-6),T05
+172,01203434-65,"Structural Steel Technology 
+เทคโนโลยีของเหล็กโครงสร้าง",3(3-0-6),T05
+173,01203451-65,"Analysis and Design of Earth Structures 
+การวิเคราะห์และออกแบบโครงสร้างดิน",3(3-0-6),T05
+174,01203452-65,"Engineering Soil Exploration 
+การสำรวจดินทางวิศวกรรม",3(2-3-6),T05
+175,01203453-65,"Principles of Geomechanics 
+หลักการธรณีกลศาสตร์",3(3-0-6),T05
+176,01203454-65,"Computer Applications in Geotechnical Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมปฐพี",3(2-3-6),T05
+177,01203455-65,"Principles of Rock Mechanics and Tunneling 
+หลักการกลศาสตร์ของหินและงานอุโมงค์",3(2-3-6),T05
+178,01203456-65,"Geo-environmental Engineering 
+วิศวกรรมปฐพีสิ่งแวดล้อม",3(3-0-6),T05
+179,01203461-65,"Construction Equipment 
+เครื่องมือในงานก่อสร้าง",3(3-0-6),T05
+180,01203462-65,"Contract, Specification and Construction Estimation 
+สัญญา ข้อกำหนดและการประมาณการก่อสร้าง",3(3-0-6),T05
+181,01203463-65,"Sustainable Construction 
+การก่อสร้างอย่างยั่งยืน",3(3-0-6),T05
+182,01203464-65,"Materials and Methods of Construction 
+วัสดุและวิธีการก่อสร้าง",3(3-0-6),T05
+183,01203465-65,"Computer Applications in Construction 
+การประยุกต์คอมพิวเตอร์ในงานก่อสร้าง",3(2-3-6),T05
+184,01203466-65,"Construction Project Analysis 
+การวิเคราะห์โครงการก่อสร้าง",3(3-0-6),T05
+185,01203467-65,"Supervision and Inspection in Construction 
+การควบคุมและตรวจสอบงานก่อสร้าง",3(3-0-6),T05
+186,01203470-65,"Freight Transportation Planning and Logistics
+การวางแผนการขนส่งสินค้าและโลจิสติกส์",3(3-0-6),T05
+187,01203473-65,"Traffic Engineering 
+วิศวกรรมจราจร",3(3-0-6),T05
+188,01203474-65,"Urban Transportation Planning 
+การวางแผนการขนส่งเขตเมือง",3(3-0-6),T05
+189,01203475-65,"Urban Mass Transportation Planning 
+การวางแผนการขนส่งมวลชนเขตเมือง",3(3-0-6),T05
+190,01203476-65,"Airport Planning and Design 
+การวางแผนและการออกแบบสนามบิน",3(3-0-6),T05
+191,01203477-65,"Pavement Structures 
+โครงสร้างพื้นผิวทาง",3(3-0-6),T05
+192,01203478-65,"Traffic Design and Operation 
+การออกแบบและการดำเนินงานการจราจร",3(2-3-6),T05
+193,01203479-65,"Computer Applications in Transport Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมขนส่ง",3(3-0-6),T05
+194,01203481-65,"Sanitary Engineering and Water Supply 
+วิศวกรรมสุขภิบาลและการประปา",3(3-0-6),T05
+195,01203490-65,"Co-operative 
+สหกิจศึกษา",6,T05
+196,01203496-65,"Selected Topics in Civil Engineering 
+เรื่องเฉพาะทางวิศวกรรมโยธา",1-3,T05
+197,01200434-65,"Rail Infrastructure 
+โครงสร้างพื้นฐานระบบราง",3(3-0-6),T05
+198,01200435-65,"Rail System Operation and Maintenance 
+การปฏิบัติการและการซ่อมบำรุงระบบราง",3(3-0-6),T05
+199,03606421-65,"Advanced Concrete Technology 
+เทคโนโลยีคอนกรีตขั้นสูง",3(3-0-6),T05
+200,03606461-65,"Applications of Building Information Modeling in Construction 
+การประยุกต์แบบจำลองสารสนเทศอาคารในงานก่อสร้าง",3(2-3-6),T05
+201,03606481-65,"Coastal Engineering 
+วิศวกรรมชายฝั่งทะเล",3(3-0-6),T05
+202,03603171-60,"Introduction to Computer Engineering and Informatics
+วิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์เบื้องต้น",3(3-0-6),T12
+203,03603352-60,"Laws and Ethics in Information Technology
+กฏหมายและจริยธรรทางเทคโนโลยีสารสนเทศ",3(3-0-6),T12
+204,03603251-60,"Database Systems
+ระบบฐานข้อมูล",3(3-0-6),T12
+205,03603252-60,"Database Systems Laboratory
+ปฏิบัติการระบบฐานข้อมูล",1(0-3-2),T12
+206,03603212-60,"Abstract Data Types and Problem Solving
+แบบชนิดข้อมูลนามธรรมและการแก้ปัญหา",3(3-0-6),T12
+207,03603213-60,"Algorithm Design and Analysis
+การออกแบบและวิเคราะห์ขั้นตอนวิธี",3(3-0-6),T12
+208,03603214-60,"Programming Skills Development Laboratory
+ปฏิบัติการพัฒนาทักษะการโปรแกรม",1(0-3-2),T12
+209,03603341-60,"Software Engineering
+วิศวกรรมซอฟต์แวร์",4(3-3-8),T12
+210,03603211-60,"Discrete Mathematics
+วิยุตคณิต",3(3-0-6),T12
+211,03603312-60,"Probability and Statistics for Informatics
+ความน่าจะเป็นและสถิติสำหรับสารสนเทศศาสตร์",3(3-0-6),T12
+212,03603325-60,"Data Communications and Computer Networks
+การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",3(3-0-6),T12
+213,03603332-60,"Operating Systems
+ระบบปฏิบัติการ",3(3-0-6),T12
+214,03601203-60,"Electronics for Computer Engineers
+อิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),T12
+215,03601303-60,"Electronics Laboratory for Computer Engineers
+ปฏิบัติการอิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),T12
+216,03603221-60,"Digital Systems Design
+การออกแบบระบบดิจิทัล",3(3-0-6),T12
+217,03603222-60,"Logic Circuit Laboratory
+ปฏิบัติการวงจรตรรก",1(0-3-2),T12
+218,03603223-60,"Computer Architecture and Organization
+สถาปัตยกรรมและการจัดระบบคอมพิวเตอร์",3(3-0-6),T12
+219,03603323-60,"Introduction to Embedded Systems
+ระบบฝังตัวเบื้องต้น",3(3-0-6),T12
+220,03603324-60,"Embedded Systems Laboratory
+ปฏิบัติการระบบฝังตัว",1(0-3-2),T12
+221,03603299-60,"Exploratory Project in Computing
+โครงงานเชิงสำรวจทางวิชาการคอมพิวเตอร์",1(0-3-2),T12
+222,03603497-60,"Seminar
+สัมมนา",1,T12
+223,03603421-60,"Internetworking with TCP/IP
+การเชื่อมต่อเครือข่ายด้วยที่ซีพี/ไอพี",3(3-0-6),T12
+224,03603422-60,"Wireless and Mobile Networks
+เครือข่ายไร้สายและเคลื่อนที่",3(3-0-6),T12
+225,03603423-60,"Network Programming
+การโปรแกรมเครือข่าย",3(3-0-6),T12
+226,03603424-60,"Computer Networks Laboratory I
+ปฏิบัติการเครือข่ายคอมพิวเตอร์ I",1(0-3-2),T12
+227,03603425-60,"Computer Networks Laboratory II
+ปฏิบัติการเครือข่ายคอมพิวเตอร์ II",1(0-3-2),T12
+228,03603426-60,"Computer Security
+ความปลอดภัยในระบบคอมพิวเตอร์",3(3-0-6),T12
+229,03603427-60,"Mobile Computing
+ระบบคอมพิวเตอร์เคลื่อนที่",3(3-0-6),T12
+230,03603428-60,"Internet of Things
+อินเทอร์เน็ตของสรรพสิ่ง",3(3-0-6),T12
+231,03603411-60,"Functional Programming
+การโปรแกรมเชิงฟังชั่น",3(3-0-6),T12
+232,03603435-60,"Cloud Computing
+การคำนวณแบบกลุ่มเมฆ",3(3-0-6),T12
+233,03603436-60,"Web Application Development
+การพัฒนาโปรแกรมประยุกต์บนเว็บ",3(3-0-6),T12
+234,03603437-60,"Mobile Application Development
+การพัฒนาโปรแกรมประยุกต์เคลื่อนที่",3(3-0-6),T12
+235,03603441-60,"Object-Oriented Analysis and Design
+การวิเคราะห์และออกแบบเชิงวัตถุ",3(3-0-6),T12
+236,03603482-60,"User Experience Design
+การออกแบบประสบการณ์ของผู้ใช้",3(3-0-6),T12
+237,03603484-60,"Computer Game Development
+การพัฒนาเกมคอมพิวเตอร์",3(3-0-6),T12
+238,01204213-60,"Theory of Computaiton
+ทฤษฏีการคำนวณ",3(3-0-6),T12
+239,03603351-60,"Introduction to Data Science
+วิทยาศาสตร์ข้อมูลเบื้องต้น",3(3-0-6),T12
+240,03603452-60,"Data Mining
+การทำเหมืองข้อมูล",3(3-0-6),T12
+241,03603461-60,"Artificial Intelligence
+ปัญญาประดิษฐ์",3(3-0-6),T12
+242,03603462-60,"Statistical Learning
+การเรียนรู้เชิงสถิติ",3(3-0-6),T12
+243,03603463-60,"Biologically-Inspired Computational Intelligence
+ปัญญาเชิงคำนวณโดยเลียนแบบวิธีการทางชีวภาพ",3(3-0-6),T12
+244,03603371-60,"Digital Signal Processing for Computer Engineers
+การประมวลผลสัญญาณดิจิทัลสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),T12
+245,03603372-60,"Digital Image Processing
+การประมวลผลภาพดิจิทัล",3(3-0-6),T12
+246,03603464-60,"Computer Vision
+คอมพิวเตอร์วิทัศน์",3(3-0-6),T12
+247,03603481-60,"Computer Graphics
+เรขภาพคอมพิวเตอร์",3(3-0-6),T12
+248,03603485-60,"Digital Audio and Computer Music
+เสียงดิจิทัลและดนตรีคอมพิวเตอร์",3(3-0-6),T12
+249,03603495-60,"Computer Engineering and Informatics Project Preparation
+การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1(0-3-2),T12
+250,03603499-60,"Computer Engineering and Informatics Project
+โครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",2(0-6-3),T12
+251,03603432-60,"Programming Language Concepts
+มโนทัศน์ภาษาโปรแกรม",3(3-0-6),T12
+252,03603451-60,"Information Technology Management
+การจัดการเทคโนโลยีสารสนเทศ",3(3-0-6),T12
+253,03603471-60,"Embedded Systems Interfacing
+การเชื่อมต่อกับระบบฝังตัว",3(3-0-6),T12
+254,03603496-60,"Selected Topics in Computer Engineering and Informatics
+เรื่องเฉพาะทางวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1,T12
+255,03603498-60,"Special Problems
+ปัญหาพิเศษ",1,T12
+256,03600390-60,"Co-operative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6),T12
+257,03600490-60,"Co-operative Education
+สหกิจศึกษา",6,T12
+258,01355101-65,"English for Everyday Life
+ภาษาอังกฤษในชีวิตประจำวัน",3(3-0-6),T12
+259,01355102-65,"English for University Life
+ภาษาอังกฤษในมหาวิทยาลัย",3(3-0-6),T12
+260,01355103-65,"English for Job Opportunities
+ภาษาอังกฤษเพื่อโอกาสในการทำงาน",3(3-0-6),T12
+261,03754xxx-65,กลุ่มวิชาภาษาอังกฤษเลือก (03754xxx),3(3-0-6),T12
+262,03603171-65,"Introduction to Computer Engineering and Informatics
+วิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์เบื้องต้น",3(3-0-6),T12
+263,03603352-65,"Laws and Ethics in Information Technology
+กฏหมายและจริยธรรทางเทคโนโลยีสารสนเทศ",3(3-0-6),T12
+264,03603251-65,"Database Systems
+ระบบฐานข้อมูล",3(3-0-6),T12
+265,03603252-65,"Database Systems Laboratory
+ปฏิบัติการระบบฐานข้อมูล",1(0-3-2),T12
+266,03603212-65,"Abstract Data Types and Problem Solving
+แบบชนิดข้อมูลนามธรรมและการแก้ปัญหา",3(3-0-6),T12
+267,03603213-65,"Algorithm Design and Analysis
+การออกแบบและวิเคราะห์ขั้นตอนวิธี",3(3-0-6),T12
+268,03603214-65,"Programming Skills Development Laboratory
+ปฏิบัติการพัฒนาทักษะการโปรแกรม",1(0-3-2),T12
+269,03603241-65,"Application Development
+การพัฒนาโปรแกรมประยุกต์",3(3-0-6),T12
+270,03603341-65,"Software Engineering
+วิศวกรรมซอฟต์แวร์",4(3-3-8),T12
+271,03603342-65,"Combined Information Technology for Software Development Laboratory
+ปฏิบัตการผสานเทคโนโลยีสารสนเทศเพื่อการพัฒนาซอฟต์แวร์",1(0-3-2),T12
+272,03603211-65,"Discrete Mathematics
+วิยุตคณิต",3(3-0-6),T12
+273,03603312-65,"Probability and Statistics for Informatics
+ความน่าจะเป็นและสถิติสำหรับสารสนเทศศาสตร์",3(3-0-6),T12
+274,03603325-65,"Data Communications and Computer Networks
+การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",3(3-0-6),T12
+275,03603332-65,"Operating Systems
+ระบบปฏิบัติการ",3(3-0-6),T12
+276,03601203-65,"Electronics for Computer Engineers
+อิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),T12
+277,03601303-65,"Electronics Laboratory for Computer Engineers
+ปฏิบัติการอิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),T12
+278,03603221-65,"Digital Systems Design
+การออกแบบระบบดิจิทัล",3(3-0-6),T12
+279,03603222-65,"Logic Circuit Laboratory
+ปฏิบัติการวงจรตรรก",1(0-3-2),T12
+280,03603223-65,"Computer Architecture and Organization
+สถาปัตยกรรมและการจัดระบบคอมพิวเตอร์",3(3-0-6),T12
+281,03603323-65,"Introduction to Embedded Systems
+ระบบฝังตัวเบื้องต้น",3(3-0-6),T12
+282,03603324-65,"Embedded Systems Laboratory
+ปฏิบัติการระบบฝังตัว",1(0-3-2),T12
+283,03603497-65,"Seminar
+สัมมนา",1,T12
+284,03603321-65,"Computer Networks Laboratory
+ปฏิบัติการเครือข่ายคอมพิวเตอรื",3(1-6-6),T12
+285,03603421-65,"Internetworking with TCP/IP
+การเชื่อมต่อเครือข่ายด้วยที่ซีพี/ไอพี",3(3-0-6),T12
+286,03603422-65,"Wireless and Mobile Networks
+เครือข่ายไร้สายและเคลื่อนที่",3(3-0-6),T12
+287,03603423-65,"Network Programming
+การโปรแกรมเครือข่าย",3(3-0-6),T12
+288,03603426-65,"Cyber Security
+ความมั่นคงปลอดภัยไซเบอร์",3(3-0-6),T12
+289,03603427-65,"Mobile Computing
+ระบบคอมพิวเตอร์เคลื่อนที่",3(3-0-6),T12
+290,03603428-65,"Internet of Things
+อินเทอร์เน็ตของสรรพสิ่ง",3(3-0-6),T12
+291,03603429-65,"Cryptography and Blockchain Technology
+วิทยาการเข้ารหัสลับและเทคโนโลยีบบล็อกเชน",3(3-0-6),T12
+292,03603411-65,"Functional Programming
+การโปรแกรมเชิงฟังชั่น",3(3-0-6),T12
+293,03603435-65,"Cloud Computing
+การคำนวณแบบกลุ่มเมฆ",3(3-0-6),T12
+294,03603436-65,"Web Application Development
+การพัฒนาโปรแกรมประยุกต์บนเว็บ",3(3-0-6),T12
+295,03603437-65,"Mobile Application Development
+การพัฒนาโปรแกรมประยุกต์เคลื่อนที่",3(3-0-6),T12
+296,03603482-65,"User Experience Design
+การออกแบบประสบการณ์ของผู้ใช้",3(3-0-6),T12
+297,03603484-65,"Computer Game Development
+การพัฒนาเกมคอมพิวเตอร์",3(3-0-6),T12
+298,03603441-65,"Software Testing
+การทดสอบซอฟต์แวร์",3(3-0-6),T12
+299,01204213-65,"Theory of Computaiton
+ทฤษฏีการคำนวณ",3(3-0-6),T12
+300,03603351-65,"Introduction to Data Science
+วิทยาศาสตร์ข้อมูลเบื้องต้น",3(3-0-6),T12
+301,03603452-65,"Mining Big Data
+การทำเหมืองข้อมูลบิ๊กดาต้า",3(3-0-6),T12
+302,03603461-65,"Artificial Intelligence
+ปัญญาประดิษฐ์",3(3-0-6),T12
+303,03603462-65,"Machine Learning
+การเรียนรู้ของเครื่อง",3(3-0-6),T12
+304,03603463-65,"Biologically-Inspired Computational Intelligence
+ปัญญาเชิงคำนวณโดยเลียนแบบวิธีการทางชีวภาพ",3(3-0-6),T12
+305,03603465-65,"Natural Language Processing
+การประมวลผลภาษาธรรมชาติ",3(3-0-6),T12
+306,03603381-65,"Digital Signal Processing for Computer Engineers
+การประมวลผลสัญญาณดิจิทัลสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),T12
+307,03603382-65,"Digital Image Processing
+การประมวลผลภาพดิจิทัล",3(3-0-6),T12
+308,03603383-65,"Digital Identification
+การระบุตัวตนดิจิทัล",3(3-0-6),T12
+309,03603464-65,"Computer Vision
+คอมพิวเตอร์วิทัศน์",3(3-0-6),T12
+310,03603481-65,"Computer Graphics
+เรขภาพคอมพิวเตอร์",3(3-0-6),T12
+311,03603485-65,"Digital Audio and Computer Music
+เสียงดิจิทัลและดนตรีคอมพิวเตอร์",3(3-0-6),T12
+312,03603371-65,"Application Development for Embedded Devices
+การพัฒนาโปรแกรมประยุกต์บนอุปกรณ์ฝังตัว",3(3-0-6),T12
+313,03603471-65,"Embedded Systems Interfacing
+การเชื่อมต่อกับระบบฝังตัว",3(3-0-6),T12
+314,03603472-65,"Industrial Automation and Control
+ระบบอัตโนมัติและการควบคุมทางอุตสาหกรรม",3(3-0-6),T12
+315,03603473-65,"Digital Circuit Design with VHDL
+การออกแบบวงจรดิจิทัลด้วยวีเอชดีแอล",3(3-0-6),T12
+316,03603474-65,"Real-Time Operating System
+ระบบปฏิบัติการเวลาจริง",3(3-0-6),T12
+317,03603475-65,"Sensors and Transducer
+อุปกรณ์รับรู้และตัวแปรสัญญาณ",3(3-0-6),T12
+318,03603476-65,"Embedded System Circuit Design
+การออกแบบวงจรระบบสมองกลฝังตัว",3(3-0-6),T12
+319,03603495-65,"Computer Engineering and Informatics Project Preparation
+การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1(0-3-2),T12
+320,03603499-65,"Computer Engineering and Informatics Project
+โครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",2(0-6-3),T12
+321,03603432-65,"Programming Language Concepts
+มโนทัศน์ภาษาโปรแกรม",3(3-0-6),T12
+322,03603451-65,"Information Technology Management
+การจัดการเทคโนโลยีสารสนเทศ",3(3-0-6),T12
+323,03603496-65,"Selected Topics in Computer Engineering and Informatics
+เรื่องเฉพาะทางวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1,T12
+324,03603498-65,"Special Problems
+ปัญหาพิเศษ",1,T12
+325,03601201-60,"Introduction to Electrical Engineering
+วิศวกรรมไฟฟ้าเบื้องต้น",3(3-0-6),T13
+326,03601202-60,"Electrical Engineering Laboratory
+ปฏิบัติการวิศวกรรมไฟฟ้า",1(0-3-2),T13
+327,03602311-60,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6),T13
+328,03604211-60,"Computer Aided Mechanical Engineering Design
+การออกแบบใช้คอมพิวเตอร์ช่วยในงานวิศวกรรมเครื่องกล",3(2-3-6),T13
+329,03604221-60,"Engineering Mechanics I
+กลศาสตร์วิศวกรรม I",3(3-0-6),T13
+330,03604222-60,"Engineering Mechanics II
+กลศาสตร์วิศวกรรม II",3(3-0-6),T13
+331,03604241-60,"Thermodynamics I
+อุณหพลศาสตร์ I",3(3-0-6),T13
+332,03604242-60,"Fluid Mechanics
+กลศาสตร์ของไหล",3(3-0-6),T13
+333,03604261-60,"Mechanics of Materials
+กลศาสตร์ของวัสดุ",3(3-0-6),T13
+334,03604271-60,"Introduction to Numerical Methods
+วิธีเชิงตัวเลขเบื้องต้น",3(2-3-6),T13
+335,03604281-60,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2),T13
+336,03604321-60,"Mechanics of Machinery
+กลศาสตร์ของเครื่องจักรกล",3(3-0-6),T13
+337,03604322-60,"Mechanical Vibration
+การสั่นเชิงกล",3(3-0-6),T13
+338,03604323-60,"Engineering Measurements
+การวัดทางวิศวกรรม",3(3-0-6),T13
+339,03604331-60,"Internal Combustion Engines
+เครื่องยนต์เผาไหม้ภายใน",3(3-0-6),T13
+340,03604332-60,"Mechanics of Vehicles
+กลศาสตร์ยานยนต์",3(3-0-6),T13
+341,03604341-60,"Thermodynamics II
+อุณหพลศาสตร์ II",3(3-0-6),T13
+342,03604351-60,"Heat Transfer
+การถ่ายโอนความร้อน",3(3-0-6),T13
+343,03604352-60,"Refrigeration I
+การทำความเย็น I",3(3-0-6),T13
+344,03604361-60,"Machine Design I
+การออกแบบเครื่องจักรกล I",3(3-0-6),T13
+345,03604371-60,"Automatic Control
+การควบคุมอัตโนมัติ",3(3-0-6),T13
+346,03604381-60,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2),T13
+347,03604382-60,"Mechanical Engineering Laboratory II
+ปฏิบัติการวิศวกรรมเครื่องกล II",1(0-3-2),T13
+348,03604441-60,"Fluid Machinery
+เครื่องจักรกลของไหล",3(3-0-6),T13
+349,03604442-60,"Power Plant Engineering
+วิศวกรรมโรงผลิตกำลัง",3(3-0-6),T13
+350,03604451-60,"Air Conditioning
+การปรับอากาศ",3(3-0-6),T13
+351,03604461-60,"Machine Design II
+การออกแบบเครื่องจักรกล II",3(2-3-6),T13
+352,03604497-60,"Seminar
+สัมมนา",1,T13
+353,03604333-60,"Vehicle System Design
+การออกแบบระบบยานยนต์",3(2-3-6),T13
+354,03604334-60,"Safety for Motor Vehicle
+ความปลอดภัยของยานยนต์",3(3-0-6),T13
+355,03604432-60,"Automotive Powertrains
+เพาเวอร์เทรนส์ยานยนต์",3(3-0-6),T13
+356,03604433-60,"Automotive Chassis
+แชสซียานยนต์",3(3-0-6),T13
+357,03604435-60,"Machinery Management
+การจัดการเครื่องจักรกล",3(3-0-6),T13
+358,03604444-60,"Solar Energy
+พลังงานรังสีอาทิตย์",3(3-0-6),T13
+359,03604445-60,"Gas Turbines
+กังหันก๊าซ",3(3-0-6),T13
+360,03604453-60,"Computational Fluid Dynamics
+พลศาสตร์ของไหลเชิงคำนวณ",3(3-0-6),T13
+361,03604462-60,"Principles of Fire Safety
+หลักความปลอดภัยด้านอัคคีภัย",3(3-0-6),T13
+362,03604463-60,"Design of Water-Based Fire Protection Systems
+การออกแบบระบบป้องกันอัคคีภัยที่ใช้น้ำเป็นองค์ประกอบหลัก",3(3-0-6),T13
+363,03604465-60,"Plumbing System Design
+การออกแบบระบบท่อ",3(3-0-6),T13
+364,03604466-60,"Designof Smoke Control Systems
+การออกแบบระบบควบคุมควันไฟ",3(3-0-6),T13
+365,03604495-60,"Mechanical and Design Engineering Project Preparation
+การเตรียมโครงงานวิศวกรรมเครื่องกลและการออกแบบ",1(0-3-2),T13
+366,03604496-60,"Selected Topics in Mechanical and Design Engineering
+เรื่องเฉพาะทางวิศวกรรมเครื่องกลและการออกแบบ",3(3-0-6),T13
+367,03604498-60,"Special Problems
+ปัญหาพิเศษ",45352,T13
+368,03604499-60,"Mechanical and Design Engineering Project
+โครงงานวิศวกรรมเครื่องกลและการออกแบบ",2(0-6-3),T13
+369,03601201-65,"Introduction to Electrical Engineering
+วิศวกรรมไฟฟ้าเบื้องต้น",3(3-0-6),T13
+370,03601202-65,"Electrical Engineering Laboratory
+ปฏิบัติการวิศวกรรมไฟฟ้า",1(0-3-2),T13
+371,03602311-65,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6),T13
+372,03604211-65,"Computer Aided Mechanical Engineering Design
+การออกแบบใช้คอมพิวเตอร์ช่วยในงานวิศวกรรมเครื่องกล",3(2-3-6),T13
+373,03604241-65,"Thermodynamics I
+อุณหพลศาสตร์ I",3(3-0-6),T13
+374,03604242-65,"Fluid Mechanics
+กลศาสตร์ของไหล",3(3-0-6),T13
+375,03604261-65,"Mechanics of Materials
+กลศาสตร์ของวัสดุ",3(3-0-6),T13
+376,03604262-65,"Health Safely and Environment
+อาชีวอนามัย ความปลอดภัย และสิ่งแวดล้อม",3(3-0-6),T13
+377,03604271-65,"Digital Technology in Mechanical Engineering
+เทคโนโลบีดิจิทัลทางวิศวกรรมเครื่องกล",3(2-3-6),T13
+378,03604281-65,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2),T13
+379,03604321-65,"Mechanics of Machinery
+กลศาสตร์ของเครื่องจักรกล",3(3-0-6),T13
+380,03604322-65,"Mechanical Vibration
+การสั่นเชิงกล",3(3-0-6),T13
+381,03604323-65,"Engineering Measurements
+การวัดทางวิศวกรรม",3(3-0-6),T13
+382,03604331-65,"Internal Combustion Engines
+เครื่องยนต์เผาไหม้ภายใน",3(3-0-6),T13
+383,03604341-65,"Thermodynamics II
+อุณหพลศาสตร์ II",3(3-0-6),T13
+384,03604351-65,"Heat Transfer
+การถ่ายโอนความร้อน",3(3-0-6),T13
+385,03604353-65,"Refrigeration and Air Conditioning
+การทำความเย็นและการปรับอากาศ",3(3-0-6),T13
+386,03604361-65,"Machine Design I
+การออกแบบเครื่องจักรกล I",3(3-0-6),T13
+387,03604371-65,"Automatic Control
+การควบคุมอัตโนมัติ",3(3-0-6),T13
+388,03604381-65,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2),T13
+389,03604435-65,"Machinery Management
+การจัดการเครื่องจักรกล",3(3-0-6),T13
+390,03604442-65,"Power Plant Engineering
+วิศวกรรมโรงผลิตกำลัง",3(3-0-6),T13
+391,03604461-65,"Machine Design II
+การออกแบบเครื่องจักรกล II",3(2-3-6),T13
+392,03604463-65,"Design of Water-Based Fire Protection Systems
+การออกแบบระบบป้องกันอัคคีภัยที่ใช้น้ำเป็นองค์ประกอบหลัก",3(3-0-6),T13
+393,03604471-65,"Robots,Artificial Intelligence,and Internet of Things
+หุ่นยนต์ ปัญญาประดิษฐ์ และอินเทอร์เน็ตของสรรพสิ่ง",3(3-0-6),T13
+394,03604497-65,"Seminar
+สัมมนา",1(1-0-2),T13
+395,03604495-65,"Mechanical and Design Engineering Project Preparation
+การเตรียมโครงงานวิศวกรรมเครื่องกลและการออกแบบ",1(0-3-2),T13
+396,03604499-65,"Mechanical and Design Engineering Project
+โครงงานวิศวกรรมเครื่องกลและการออกแบบ",2(0-6-3),T13
+397,03604332-65,"Mechanics of Vehicles
+กลศาสตร์ยานยนต์",3(3-0-6),T13
+398,03604333-65,"Vehicle System Design
+การออกแบบระบบยานยนต์",3(2-3-6),T13
+399,03604334-65,"Safety for Motor Vehicle
+ความปลอดภัยของยานยนต์",3(3-0-6),T13
+400,03604432-65,"Automotive Powertrains
+เพาเวอร์เทรนส์ยานยนต์",3(3-0-6),T13
+401,03604433-65,"Automotive Chassis
+แชสซียานยนต์",3(3-0-6),T13
+402,03604437-65,"Lubrication
+การหล่อลื่น",3(3-0-6),T13
+403,03604441-65,"Fluid Machinery
+เครื่องจักรกลของไหล",3(3-0-6),T13
+404,03604444-65,"Solar Energy
+พลังงานรังสีอาทิตย์",3(3-0-6),T13
+405,03604445-65,"Gas Turbines
+กังหันก๊าซ",3(3-0-6),T13
+406,03604453-65,"Computational Fluid Dynamics
+พลศาสตร์ของไหลเชิงคำนวณ",3(3-0-6),T13
+407,03604462-65,"Principles of Fire Safety
+หลักความปลอดภัยด้านอัคคีภัย",3(3-0-6),T13
+408,03604382-65,"Mechanical Engineering Laboratory II
+ปฏิบัติการวิศวกรรมเครื่องกล II",1(0-3-2),T13
+409,03604465-65,"Plumbing System Design
+การออกแบบระบบท่อ",3(3-0-6),T13
+410,03604466-65,"Design of Smoke Control Systems
+การออกแบบระบบควบคุมควันไฟ",3(3-0-6),T13
+411,03604496-65,"Selected Topics in Mechanical and Design Engineering
+เรื่องเฉพาะทางวิศวกรรมเครื่องกลและการออกแบบ",3(3-0-6),T13
+412,03604498-65,"Special Problems
+ปัญหาพิเศษ",1-3,T13
+413,03601211-60,"Electric Circuit Analysis I 
+การวิเคราะห์วงจรไฟฟ้า I",3(3-0-6),T14
+414,03601212-60,"Electric Circuit Analysis II 
+การวิเคราะห์วงจรไฟฟ้า II",3(3-0-6),T14
+415,03601213-60,"Electric Circuit Laboratory 
+ปฏิบัติการวงจรไฟฟ้า",1(0-3-2),T14
+416,03601214-60,"Applied Linear Algebra in Electrical Engineering 
+พีชคณิตเชิงเส้นประยุกต์ทางวิศวกรรมไฟฟ้า",3(3-0-6),T14
+417,03601215-60,"Applied Probability for Electrical Engineers 
+ความน่าจะเป็นประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6),T14
+418,03601231-60,"Electronic Circuits and Systems I 
+วงจรและระบบอิเล็กทรอนิกส์ I",3(3-0-6),T14
+419,03601232-60,"Digital Circuits and Logic Design 
+การออกแบบวงจรดิจิทัลและตรรกะ",3(3-0-6),T14
+420,03601251-60,"Electromechanical Energy Conversion I 
+การแปลงผันพลังงานเครื่องกลไฟฟา I",3(3-0-6),T14
+421,03601252-60,"Electromechanical Energy Conversion Laboratory I 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟา I",1(0-3-2),T14
+422,03601271-60,"Practice in Electrical Engineering 
+การปฏิบัติงานทางวิศวกรรมไฟฟ้า",1(0-3-2),T14
+423,03601311-60,"Signals and Systems 
+สูญญาณและระบบ",3(3-0-6),T14
+424,03601331-60,"Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์",1(0-3-2),T14
+425,03601332-60,"Microprocessors 
+ไมโครโพรเซสเซอร์",3(3-0-6),T14
+426,03601341-60,"Electromagnetic Fields and Waves I 
+สนามแม่เหล็กไฟฟ้าและคลื่น I",3(3-0-6),T14
+427,03601361-60,"Electrical Instruments and Measurements I 
+เครื่องมือวัดและการวัดทางไฟฟ้า I",3(3-0-6),T14
+428,03601362-60,"Linear Control Systems 
+ระบบควบคุมเชิงเส้น",3(3-0-6),T14
+429,03601371-60,"Internship Preparation 
+การเตรียมความพร้อมก่อนฝึกงาน",1(0-3-2),T14
+430,03601495-60,"Electrical and Electronics Engineering Project I 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ I",1(0-3-2),T14
+431,03601497-60,"Seminar 
+สัมมนา",1,T14
+432,03601499-60,"Electrical and Electronics Engineering Project II 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ II",2(0-6-3),T14
+433,03604201-60,"Basic Principles of Engineering Mechanics 
+หลักพื่นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6),T14
+434,03604281-60,"Workshop Practice 
+การฝึกงานโรงงาน",1(0-3-2),T14
+435,03601314-60,"Digital Signal Processing 
+การประมวลสัญญาณดิจิทัล",3(3-0-6),T14
+436,03601315-60,"Digital Signal Processing Laboratory 
+ปฏิบัติการประมวลสัญญาณดิจิทัล",1(0-3-2),T14
+437,03601321-60,"Principles of Communications 
+หลักการสื่อสาร",3(3-0-6),T14
+438,03601323-60,"Communication Laboratory 
+ปฏิบัติการไฟฟ้าสื่สาร",1(0-3-2),T14
+439,03601333-60,"Microprocessors Laboratory 
+ปฏิบัติการไมโครโพรเซสเซอร์",1(0-3-2),T14
+440,03601334-60,"Electronic Circuits and Systems II 
+วงจรและระบบอิเล็กทรอนิกส์ II",3(3-0-6),T14
+441,03601335-60,"Advanced Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์ขั้นสูง",1(0-3-2),T14
+442,03601351-60,"Electromechanical Energy Conversion II 
+การแปลงผันพลังงานเครื่องกลไฟฟ้า II",3(3-0-6),T14
+443,03601352-60,"Electromechanical Energy Conversion Laboratory II 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟ้า II",1(0-3-2),T14
+444,03601353-60,"Power Systems in Buildings 
+ระบบกำลังในอาคาร",3(3-0-6),T14
+445,03601354-60,"Electric Power Systems Analysis I 
+การวิเคราะห์ระบบไฟฟ้ากำลัง I",3(3-0-6),T14
+446,03601355-60,"High-Voltage Engineering 
+วิศวกรรมไฟฟ้าแรงสูง",3(3-0-6),T14
+447,03601356-60,"Illumination Engineering 
+วิศวกรรมการส่องสว่าง",3(3-0-6),T14
+448,03601363-60,"Control and Measurement Laboratory 
+ปฏิบัติการการควบคุมและการวัด",1(0-3-2),T14
+449,03601364-60,"Industrial Automation Systems 
+ระบบอัตโนมัติทางอุตสาหกรรม",3(3-0-6),T14
+450,03601365-60,"Industrial Automation Systems Laboratory 
+ปฏิบัติการระบบอัตโนมัติทางอุตสาหกรรม",1(0-3-2),T14
+451,03601372-60,"Volunteer Electrical Engineer for Social Development 
+วิศวกรไฟฟ้าอาสาสําหรับการพัฒนาสังคม",3(3-0-6),T14
+452,03601381-60,"Computer Programming for Electrical Engineers 
+การเขียนโปรแกรมคอมพิวเตอร์สําหรับวิศวกรไฟฟ้า",3(3-0-6),T14
+453,03601432-60,"Analog Integrated Circuit Application Designs 
+การออกแบบประยุกต์วงจรรวมแอนะล็อก",3(3-0-6),T14
+454,03601433-60,"Industrial Electronics 
+อิเล็กทรอนิกส์อุตสาหกรรม",3(3-0-6),T14
+455,03601451-60,"Basic Power System Reliability 
+ความเชื่อถือได้เบื่องตนของระบบกำลัง",3(3-0-6),T14
+456,03601452-60,"Electric Power Plants 
+โรงจักรไฟฟ้ากำลัง",3(3-0-6),T14
+457,03601453-60,"Electric Power Systems Analysis II 
+การวิเคราะห์ระบบไฟฟ้ากำลัง II",3(3-0-6),T14
+458,03601454-60,"Electric Power Systems Analysis Laboratory 
+ปฏิบัติการการวิเคราะห์ระบบไฟฟ้า",1(0-3-2),T14
+459,03601456-60,"Power System Protection 
+การป้องกันระบบไฟฟ้ากำลัง",3(3-0-6),T14
+460,03601457-60,"Electrical Systems and Signal Systems in Building 
+ระบบไฟฟ้าและระบบสัญญาณในอาคาร",3(3-0-6),T14
+461,03601458-60,"Electrical Power Generation, Transmission and Distribution 
+การผลิต สูง และจำหน่ายกำลังไฟฟ้า",3(3-0-6),T14
+462,03601459-60,Safety in Electrical Engineering,3(3-0-6),T14
+463,03601461-60,"Process Control 
+การควบคุมกระบวนการ",3(3-0-6),T14
+464,03601462-60,"Industrial Sensors and Control Devices 
+เซนเซอร์ทางอุตสาหกรรมและอุปกรณ์ควบคุม",3(3-0-6),T14
+465,03601463-60,"Computer Control of Machines and Processes 
+การควบคุมเครื่องจักรกลและกระบวนการด้วยคอมพิวเตอร์",3(3-0-6),T14
+466,03601464-60,"Sensors and Transducers 
+เซนเซอร์และตัวแปลงสัญญาณ",3(3-0-6),T14
+467,03601465-60,"Electrical and Electronics Innovation 
+นวัตกรรมทางไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6),T14
+468,03601466-60,"Introduction to Robotic Systems 
+ระบบหุ่นยนต์เบื้องต้น",3(3-0-6),T14
+469,03601471-60,"Analysis and Applications of Electrical Machines 
+การวิเคราะห์และประยุกต์เครื่องจักรไฟฟ้า",3(3-0-6),T14
+470,03601472-60,"Electric Drives 
+การขับเคลื่อนด้วยไฟฟ้า",3(3-0-6),T14
+471,03601473-60,"Power Electronics 
+อิเล็กทรอนิกส์กำลัง",3(3-0-6),T14
+472,03601474-60,"Power Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์กำลัง",1(0-3-2),T14
+473,03601475-60,"Power Electronics for Energy Conservation 
+อิเล็กทรอนิกส์กำลังสำหรับการอนุรักษ์พลังงาน",3(3-0-6),T14
+474,03601476-60,"Distributed Generation Systems 
+ระบบผลิตไฟฟ้าจำหน่าย",3(3-0-6),T14
+475,03601477-60,"Renewable Energy 
+พลังงานหมุนเวียน",3(3-0-6),T14
+476,03601478-60,"Energy Conservation and Management 
+การอนุรักษ์และการจัดการพลังงาน",3(3-0-6),T14
+477,03601479-60,"Electric Vehicle Systems 
+ระบบยานยนต์ไฟฟ้า",3(3-0-6),T14
+478,03601482-60,"Thermal Sciences 
+อุณหศาสตร์",3(3-0-6),T14
+479,03601496-60,"Selected Topics in Electrical and Electronics Engineering 
+เรื่องเฉพาะทางวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6),T14
+480,03601498-60,"Special Problems 
+ปัญหาพิเศษ",45352,T14
+481,03601211-65,"Electric Circuit Analysis I 
+การวิเคราะห์วงจรไฟฟ้า I",3(3-0-6),T14
+482,03601212-65,"Electric Circuit Analysis II 
+การวิเคราะห์วงจรไฟฟ้า II",3(3-0-6),T14
+483,03601213-65,"Electric Circuit Laboratory 
+ปฏิบัติการวงจรไฟฟ้า",1(0-3-2),T14
+484,03601214-65,"Applied Linear Algebra in Electrical Engineering 
+พีชคณิตเชิงเส้นประยุกต์ทางวิศวกรรมไฟฟ้า",3(3-0-6),T14
+485,03601215-65,"Applied Probability for Electrical Engineers 
+ความน่าจะเป็นประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6),T14
+486,03601221-65,"Communication Technology and Smart Grid 
+เทคโนโลยีการสื่อสารและโครงข่ายไฟฟ้าอัจฉริยะ",3(3-0-6),T14
+487,03601231-65,"Electronic Circuits and Systems I 
+วงจรและระบบอิเล็กทรอนิกส์ I",3(3-0-6),T14
+488,03601232-65,"Digital Circuits and Logic Design 
+การออกแบบวงจรดิจิทัลและตรรกะ",3(3-0-6),T14
+489,03601241-65,"Electromagnetic Fields and Waves 
+สนามแม่เหล็กไฟฟ้าและคลื่น",3(3-0-6),T14
+490,03601251-65,"Electromechanical Energy Conversion I 
+การแปลงผันพลังงานเครื่องกลไฟฟา I",3(3-0-6),T14
+491,03601252-65,"Electromechanical Energy Conversion Laboratory I 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟา I",1(0-3-2),T14
+492,03601271-65,"Practice in Electrical Engineering 
+การปฏิบัติงานทางวิศวกรรมไฟฟ้า",1(0-3-2),T14
+493,03601311-65,"Signals and Systems 
+สูญญาณและระบบ",3(3-0-6),T14
+494,03601331-65,"Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์",1(0-3-2),T14
+495,03601332-65,"Microprocessors 
+ไมโครโพรเซสเซอร์",3(3-0-6),T14
+496,03601353-65,"Electrical System Design 
+การออกแบบระบบไฟฟ้า",3(3-0-6),T14
+497,03601361-65,"Electrical Instruments and Measurements I 
+เครื่องมือวัดและการวัดทางไฟฟ้า I",3(3-0-6),T14
+498,03601371-65,"Internship Preparation 
+การเตรียมความพร้อมก่อนฝึกงาน",1(0-3-2),T14
+499,03601458-65,"Electrical Power Generation, Transmission and Distribution 
+การผลิต สูง และจำหน่ายกำลังไฟฟ้า",3(3-0-6),T14
+500,03601459-65,Safety in Electrical Engineering,3(3-0-6),T14
+501,03601473-65,"Power Electronics 
+อิเล็กทรอนิกส์กำลัง",3(3-0-6),T14
+502,03601477-65,"Renewable Energy 
+พลังงานหมุนเวียน",3(3-0-6),T14
+503,03601495-65,"Electrical and Electronics Engineering Project I 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ I",1(0-3-2),T14
+504,03601497-65,"Seminar 
+สัมมนา",1,T14
+505,03601499-65,"Electrical and Electronics Engineering Project II 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ II",2(0-6-3),T14
+506,03602301-65,"Basic Principles of Production Management 
+หลักพื้นฐานการจัดการผลิต",3(3-0-6),T14
+507,03604223-65,"Basic Principles of Engineering Mechanics 
+หลักพื้นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6),T14
+508,03604281-65,"Workshop Practice 
+การฝึกงานโรงงาน",1(0-3-2),T14
+509,03601314-65,"Digital Signal Processing 
+การประมวลสัญญาณดิจิทัล",3(3-0-6),T14
+510,03601315-65,"Digital Signal Processing Laboratory 
+ปฏิบัติการประมวลสัญญาณดิจิทัล",1(0-3-2),T14
+511,03601321-65,"Principles of Communications 
+หลักการสื่อสาร",3(3-0-6),T14
+512,03601323-65,"Communication Laboratory 
+ปฏิบัติการไฟฟ้าสื่สาร",1(0-3-2),T14
+513,03601333-65,"Microprocessors Laboratory 
+ปฏิบัติการไมโครโพรเซสเซอร์",1(0-3-2),T14
+514,03601334-65,"Electronic Circuits and Systems II 
+วงจรและระบบอิเล็กทรอนิกส์ II",3(3-0-6),T14
+515,03601335-65,"Advanced Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์ขั้นสูง",1(0-3-2),T14
+516,03601336-65,"Design and Application of Electronic Circuits 
+การออกแบบและประยุกต์วงจรอิเล็กทรอนิกส์",3(3-0-6),T14
+517,03601351-65,"Electromechanical Energy Conversion II 
+การแปลงผันพลังงานเครื่องกลไฟฟ้า II",3(3-0-6),T14
+518,03601352-65,"Electromechanical Energy Conversion Laboratory II 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟ้า II",1(0-3-2),T14
+519,03601355-65,"High-Voltage Engineering 
+วิศวกรรมไฟฟ้าแรงสูง",3(3-0-6),T14
+520,03601356-65,"Illumination Engineering 
+วิศวกรรมการส่องสว่าง",3(3-0-6),T14
+521,03601357-65,"Electrical Power System 
+ระบบไฟฟ้ากำลัง",3(3-0-6),T14
+522,03601358-65,"High-Voltage Engineering Laboratory 
+ปฏิบัติการวิศวกรรมไฟฟ้าแรงสูง",3(3-0-6),T14
+523,03601363-65,"Control and Measurement Laboratory 
+ปฏิบัติการการควบคุมและการวัด",1(0-3-2),T14
+524,03601364-65,"Industrial Automation Systems 
+ระบบอัตโนมัติทางอุตสาหกรรม",3(3-0-6),T14
+525,03601365-65,"Industrial Automation Systems Laboratory 
+ปฏิบัติการระบบอัตโนมัติทางอุตสาหกรรม",1(0-3-2),T14
+526,03601382-65,"Application Programs for Electrical Engineers 
+โปรแกรมประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6),T14
+527,03601432-65,"Analog Integrated Circuit Application Designs 
+การออกแบบประยุกต์วงจรรวมแอนะล็อก",3(3-0-6),T14
+528,03601433-65,"Industrial Electronics 
+อิเล็กทรอนิกส์อุตสาหกรรม",3(3-0-6),T14
+529,03601434-65,"Computer Aided Electronic System Development 
+การพัฒนาระบบอิเล็กทรอนิกส์โดยใช้คอมพิวเตอร์ช่วย",3(3-0-6),T14
+530,03601451-65,"Basic Power System Reliability 
+ความเชื่อถือได้เบื่องตนของระบบกำลัง",3(3-0-6),T14
+531,03601452-65,"Electric Power Plants 
+โรงจักรไฟฟ้ากำลัง",3(3-0-6),T14
+532,03601454-65,"Electric Power Systems Analysis Laboratory 
+ปฏิบัติการการวิเคราะห์ระบบไฟฟ้า",1(0-3-2),T14
+533,03601456-65,"Power System Protection 
+การป้องกันระบบไฟฟ้ากำลัง",3(3-0-6),T14
+534,03601457-65,"Electrical Systems and Signal Systems in Building 
+ระบบไฟฟ้าและระบบสัญญาณในอาคาร",3(3-0-6),T14
+535,03601461-65,"Process Control 
+การควบคุมกระบวนการ",3(3-0-6),T14
+536,03601462-65,"Industrial Sensors and Control Devices 
+เซนเซอร์ทางอุตสาหกรรมและอุปกรณ์ควบคุม",3(3-0-6),T14
+537,03601463-65,"Computer Control of Machines and Processes 
+การควบคุมเครื่องจักรกลและกระบวนการด้วยคอมพิวเตอร์",3(3-0-6),T14
+538,03601464-65,"Sensors and Transducers 
+เซนเซอร์และตัวแปลงสัญญาณ",3(3-0-6),T14
+539,03601465-65,"ิElectrical and Electronics Innovation 
+นวัตกรรมทางไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6),T14
+540,03601466-65,"Introduction to Robotic Systems 
+ระบบหุ่นยนต์เบื้องต้น",3(3-0-6),T14
+541,03601467-65,"Railway Signaling and Control Systems 
+ระบบอาณัติสัญญาณและควบคุมระบบราง",3(3-0-6),T14
+542,03601471-65,"Analysis and Applications of Electrical Machines 
+การวิเคราะห์และประยุกต์เครื่องจักรไฟฟ้า",3(3-0-6),T14
+543,03601472-65,"Electric Drives 
+การขับเคลื่อนด้วยไฟฟ้า",3(3-0-6),T14
+544,03601474-65,"Power Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์กำลัง",1(0-3-2),T14
+545,03601475-65,"Power Electronics for Energy Conservation 
+อิเล็กทรอนิกส์กำลังสำหรับการอนุรักษ์พลังงาน",3(3-0-6),T14
+546,03601476-65,"Distributed Generation Systems 
+ระบบผลิตไฟฟ้าจำหน่าย",3(3-0-6),T14
+547,03601478-65,"Energy Conservation and Management 
+การอนุรักษ์และการจัดการพลังงาน",3(3-0-6),T14
+548,03601479-65,"Electric Vehicle Systems 
+ระบบยานยนต์ไฟฟ้า",3(3-0-6),T14
+549,03601496-65,"Selected Topics in Electrical and Electronics Engineering 
+เรื่องเฉพาะทางวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6),T14
+550,03601498-65,"Special Problems 
+ปัญหาพิเศษ",3(3-0-6),T14
+551,03602212-60,"Computer-Aided Design
+การออกแบบใช้คอมพิวเตอร์ช่วย",3(2-3-6),T17
+552,03602221-60,"Applied Probability and Statistics for Engineers
+ความน่าจะเป็นและสถิติประยุกต์สำหรับวิศวกร",3(3-0-6),T17
+553,03602222-60,"Parameter Design
+การออกแบบพารามิเตอร์",3(3-0-6),T17
+554,03602251-60,"Engineering Economy
+เศรษฐศาสตร์วิศวกรรม",3(3-0-6),T17
+555,03602311-60,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6),T17
+556,03602312-60,"Introduction to Industrial and Systems Engineering
+วิศวกรรมอุตสาหการและระบบเบื้องต้น",1(0-3-2),T17
+557,03602321-60,"Operations Research for Engineers I
+การวิจัยการดำเนินงานสำหรับวิศวกร I",3(3-0-6),T17
+558,03602322-60,"Quality Control
+การควบคุมคุณภาพ",3(3-0-6),T17
+559,03602341-60,"Industrial Work Study
+การศึกษาการทำงานทางอุตสาหกรรม",3(3-0-6),T17
+560,03602342-60,"Production Planning and Control
+การวางแผนและการควบคุมการผลิต",3(3-0-6),T17
+561,03602343-60,"Industrial Plant Design
+การออกแบบโรงงานอุตสาหกรรม",3(3-0-6),T17
+562,03602361-60,"Computer Applications for Industrial Engineers
+คอมพิวเตอร์ประยุกต์สำหรับวิศวกรอุตสาหการ",3(3-0-6),T17
+563,03602362-60,"Automatic Production System
+ระบบการผลิตอัตโนมัติ",4(3-3-8),T17
+564,03602381-60,"Industrial Engineering Laboratory
+ปฏิบัติการวิศวกรรมอุตสาหการ",1(0-3-2),T17
+565,03602412-60,"Manufacturing System Engineering
+วิศวกรรมระบบการผลิต",3(3-0-6),T17
+566,03602452-60,"Industrial Cost Analysis
+การวิเคราะห์ต้นทุนทางอุตสาหกรรม",3(3-0-6),T17
+567,03602461-60,"Systems Engineering
+วิศวกรรมระบบ",3(3-0-6),T17
+568,03602471-60,"Maintenance Engineering
+วิศวกรรมการซ่อมบำรุง",3(3-0-6),T17
+569,03602472-60,"Industrial Safety
+ความปลอดภัยในอุตสาหกรรม",3(3-0-6),T17
+570,03602497-60,"Seminar
+สัมมนา",1,T17
+571,03604201-60,"Basic Principles of Engineering Mechanics
+หลักพื้นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6),T17
+572,03604203-60,"Introduction to Thermodynamics and Fluid Mechanics
+อุณหพลศาสตร์และกลศาสตร์ของไหลเบื้องต้น",3(3-0-6),T17
+573,03604281-60,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2),T17
+574,03604381-60,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2),T17
+575,03602495-60,"Industrial and Systems Engineering Project Preparation 
+การเตรียมโครงงานวิศวกรรมอุตสาหการและระบบ",1(0-3-2),T17
+576,03602499-60,"Industrial and Systems Engineering Project 
+โครงงานวิศวกรรมอุตสาหการและระบบ",2(0-6-3),T17
+577,03602323-60,"Operations Research for Engineers II
+การวิจัยการดำเนินงานสำหรับวิศวกร II",3(3-0-6),T17
+578,03602411-60,"Industrial Instrumentation and Measurement
+วิชาการเครื่องมือและการวัดทางอุตสาหกรรม",3(3-0-6),T17
+579,03602414-60,"Design for Manufacturing and Assembly
+การออกแบบเพื่อการผลิตและการประกอบ",3(3-0-6),T17
+580,03602415-60,"Industrial Packaging
+การบรรจุทางอุตสาหกรรม",3(3-0-6),T17
+581,03602416-60,"Computer-Aided Design and Manufacturing
+การออกแบบและผลิตใช้คอมพิวเตอร์ช่วย",3(2-3-6),T17
+582,03602417-60,"Computer-aided Engineering and Manufacturing
+คอมพิวเตอร์ช่วยในงานวิศวกรรมและการผลิต",3(3-0-6),T17
+583,03602418-60,"Applied Image Processing for Manufacturing Processes
+การประมวลผลภาพเชิงประยุกต์สำหรับกระบวนการผลิต",3(3-0-6),T17
+584,03602419-60,"Innovative Product Design and Manufacturing
+การออกแบบและการผลิตผลิตภัณฑ์เชิงนวัตกรรม",3(3-0-6),T17
+585,03602421-60,"Simulation
+การจำลองสถานการณ์",3(3-0-6),T17
+586,03602423-60,"Experimental Design for Engineers
+การออกแบบแผนการทดลองสำหรับวิศวกร",3(3-0-6),T17
+587,03602431-60,"Industrial Management
+การจัดการอุตสาหกรรม",3(3-0-6),T17
+588,03602432-60,"Design of Industrial Information System
+การออกแบบระบบสารสนเทศทางอุตสาหกรรม",3(3-0-6),T17
+589,03602442-60,"Energy Management
+การจัดการพลังงาน",3(3-0-6),T17
+590,03602443-60,"Ergonomics
+การยศาสตร์",3(3-0-6),T17
+591,03602444-60,"Industrial Forecasting
+การพยากรณ์ทางอุตสาหกรรม",3(3-0-6),T17
+592,03602445-60,"Value Engineering
+วิศวกรรมคุณค่า",3(3-0-6),T17
+593,03602446-60,"Productivity Measurement and Management
+การวัดและการจัดการผลิตภาพ",3(3-0-6),T17
+594,03602451-60,"Industrial and Commercial Laws
+กฎหมายอุตสาหกรรมและพาณิชยกรรม",3(3-0-6),T17
+595,03602453-60,"Industrial Project Feasibility Study
+การศึกษาความเป็นไปได้ของโครงการอุตสาหกรรม",3(3-0-6),T17
+596,03602462-60,"Logistics Engineering
+วิศวกรรมโลจิสติกส์",3(3-0-6),T17
+597,03602496-60,"Selected Topics in Industrial and Systems Engineering
+เรื่องเฉพาะทางวิศวกรรมอุตสาหการและระบบ",45352,T17
+598,03602498-60,"Special Problems
+ปัญหาพิเศษ",45352,T17
+599,03602212-65,"Computer-Aided Design
+การออกแบบใช้คอมพิวเตอร์ช่วย",3(2-3-6),T17
+600,03602221-65,"Applied Probability and Statistics for Engineers
+ความน่าจะเป็นและสถิติประยุกต์สำหรับวิศวกร",3(3-0-6),T17
+601,03602222-65,"Engineering Experimental Design
+การออกแบบการทดลองเชิงวิศวกรรม",3(3-0-6),T17
+602,03602223-65,"Introduction to Computation and Intelligent Systems
+การคำนวณและระบบอัจฉริยะเบื้องต้น",3(3-0-6),T17
+603,03602251-65,"Engineering Economy
+เศรษฐศาสตร์วิศวกรรม",3(3-0-6),T17
+604,03602311-65,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6),T17
+605,03602312-65,"Introduction to Industrial and Systems Engineering
+วิศวกรรมอุตสาหการและระบบเบื้องต้น",1(0-3-2),T17
+606,03602321-65,"Operations Research for Engineers I
+การวิจัยการดำเนินงานสำหรับวิศวกร I",3(3-0-6),T17
+607,03602322-65,"Quality Control
+การควบคุมคุณภาพ",3(3-0-6),T17
+608,03602331-65,"Industrial Safety
+ความปลอดภัยในอุตสาหกรรม",3(3-0-6),T17
+609,03602341-65,"Industrial Work Study
+การศึกษาการทำงานทางอุตสาหกรรม",3(3-0-6),T17
+610,03602342-65,"Production Planning and Control
+การวางแผนและการควบคุมการผลิต",3(3-0-6),T17
+611,03602343-65,"Industrial Plant and Facilities Design
+การออกแบบโรงงานอุตสหากรรมและสิ่งอำนวยความสะดวก",3(3-0-6),T17
+612,03602351-65,"Industrial Cost Analysis
+การวิเคราะห์ต้นทุนทางอุตสาหกรรม",3(3-0-6),T17
+613,03602361-65,"Computer Applications for Industrial Engineers
+คอมพิวเตอร์ประยุกต์สำหรับวิศวกรอุตสาหการ",3(3-0-6),T17
+614,03602362-65,"Automatic Production System
+ระบบการผลิตอัตโนมัติ",4(3-3-8),T17
+615,03602421-65,"Simulation
+การจำลองสถานการณ์",3(3-0-6),T17
+616,03602433-65,"Maintenance Engineering
+วิศวกรรมการซ่อมบำรุง",3(3-0-6),T17
+617,03602461-65,"Systems Engineering
+วิศวกรรมระบบ",3(3-0-6),T17
+618,03602481-65,"Industrial Engineering Laboratory
+ปฏิบัติการวิศวกรรมอุตสาหการ",1(0-3-2),T17
+619,03602495-65,"Industrial and Systems Engineering Project Preparation
+การเตรียมโครงงานวิศวกรรมอุตสาหการและระบบ",1(0-3-2),T17
+620,03602499-65,"Industrial and Systems Engineering Project
+โครงงานวิศวกรรมอุตสาหการและระบบ",2(0-6-3),T17
+621,03604203-65,"Introduction to Thermodynamics and Fluid Mechanics
+อุณหพลศาสตร์และกลศาสตร์ของไหลเบื้องต้น",3(3-0-6),T17
+622,03604223-65,"Basic Principles of Engineering Mechanics
+หลักพื้นฐานทางกลศาสตร์ของไหลเบื้องต้น",3(3-0-6),T17
+623,03604281-65,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2),T17
+624,03604381-65,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2),T17
+625,03602323-65,"Operations Research for Engineers II
+การวิจัยการดำเนินงานสำหรับวิศวกร II",3(3-0-6),T17
+626,03602412-65,"Manufacturing System Engineering
+วิศวกรรมระบบการผลิต",3(3-0-6),T17
+627,03602413-65,"Industrial Packaging
+การบรรจุภัณฑ์ทางอุตสาหกรรม",3(3-0-6),T17
+628,03602414-65,"Computer-Aided Design and Manufacturing
+การออกแบบและผลิตใช้คอมพิวเตอร์ช่วย",3(2-3-6),T17
+629,03602415-65,"Computer-Aided Engineering and Manufacturing
+คอมพิวเตอร์ช่วนในงานวิศวกรรมและการผลิต",3(2-3-6),T17
+630,03602416-65,"Applied Image Processing for Manufacturing Processes
+การประมวลผลภาพเชิงประยุกต์สำหรับกระบวนการผลิต",3(3-0-6),T17
+631,03602417-65,"Innovative Product Design and Manufacturing
+การออกแบบและการผลิตภัณฑ์เชิงนวัตกรรม",3(3-0-6),T17
+632,03602418-65,"Application of Industrial Internet of Things in Manufacturing Systems
+การประยุกต์อินเตอร์เน็ตสรรพสิ่งสำหรับอุตสาหกรรมในระบบการผลิต",3(3-0-6),T17
+633,03602422-65,"Practical Operations Research
+การวิจัยการดำเนินงานภาคปฏิบัติ",3(3-0-6),T17
+634,03602431-65,"Innovative Industrial Management
+การจัดการนวัตกรรมอุตสาหกรรม",3(3-0-6),T17
+635,03602432-65,"Design of Industrial Information System
+การออกแบบระบบสารสนเทศทางอุตสาหกรรม",3(3-0-6),T17
+636,03602434-65,"Lean Manufacturing
+การจัดการพลังงาน",3(3-0-6),T17
+637,03602441-65,"Shop Floor Management
+การบริหารพื้นที่ผลิต",3(3-0-6),T17
+638,03602442-65,"Energy Management
+การจัดการพลังงาน",3(3-0-6),T17
+639,03602443-65,"Ergonomics
+การยศาสตร์",3(3-0-6),T17
+640,03602445-65,"Value Engineering
+วิศวกรรมคุณค่า",3(3-0-6),T17
+641,03602446-65,"Productivity Measurement and Management
+การวัดและการจัดการผลิตภาพ",3(3-0-6),T17
+642,03602451-65,"Industrial Project Feasibility Study
+การศึกษาความเป็นไปได้ของโครงการอุตสาหกรรม",3(3-0-6),T17
+643,03602471-65,"Logistics Engineering
+วิศวกรรมโลจิสติกส์",3(3-0-6),T17
+644,03602472-65,"Inventory Management and Warehouse Operations
+การจัดการสินค้าคงคลังและการดำเนินงานคลังสินค้า",3(3-0-6),T17
+645,03602473-65,"Strategies for Managing Supply Chains
+กลยุทธ์สำหรับการจัดการโซ่อุปทาน",3(3-0-6),T17
+646,03602496-65,"Selected Topics in Industrial and Systems Engineering
+เรื่องเฉพาะทางวิศวกรรมอุตสาหการและระบบ",3(3-0-6),T17
+647,03602498-65,"Special Problems
+ปัญหาพิเศษ",3(3-0-6),T17
