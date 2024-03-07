@@ -16,6 +16,19 @@ const db = mysql.createConnection({
     database: 'kusrc_course'
 })
 
+////////////////////////////////////////////////////////////
+
+app.get('/register', (req, res) => {
+    db.query("SELECT * FROM register", (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
+////////////////////////////////////////////////////////////
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
 app.get('/registerteacher', (req, res) => {
     db.query("SELECT * FROM user_reg", (err, result) => {
