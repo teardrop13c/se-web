@@ -18,7 +18,7 @@ table {
 th,
 td {
     border: 1px solid hsl(0, 0%, 0%);
-    padding: 8px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -26,78 +26,3 @@ th {
     background-color: #4bba50;
 }
 
-td:first-child {
-    background-color: #ff0000;
-}
-
-/*button*/
-.confirm-button {
-    margin: 0 10px;
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #f2f6f2;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.add-button {
-    margin: 0 10px;
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #f2f6f2;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.clear-button {
-    margin: 0 10px;
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #f2f6f2;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #1c760162;
-}
-
-button:active {
-    background-color: #001b00d8;
-}
-
-.my-table td.Mon {
-    background-color: #FBDD3F;
-    color: #fff;
-}
-
-.my-table td.Tues {
-    background-color: #E372FF;
-    color: #fff;
-}
-
-.my-table td.Wed {
-    background-color: #82FF87;
-    color: #fff;
-}
-
-.my-table td.Thu {
-    background-color: #FF9C64;
-    color: #fff;
-}
-
-.my-table td.Fri {
-    background-color: #27CBFF;
-    color: #fff;
-}
-
-.my-table td.Sat {
-    background-color: #9C4EFF;
-    color: #fff;
-}
-
-.my-table td.Sun {
-    background-color: #FF0000;
-    color: #fff;
-}
