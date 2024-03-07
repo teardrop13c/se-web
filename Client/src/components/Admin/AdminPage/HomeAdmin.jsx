@@ -2,14 +2,16 @@ import React from "react";
 import Navbar from "../../Navbar";
 import AdminMenu from "../AdminMenu/AdminMenu";
 import { useSelector } from 'react-redux'; 
-import { Navigate } from "react-router-dom";
+import Login from "../../Login/Login";
 
 function HomeAdmin() {
+  //auth
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  
-  if (!isLoggedIn) {
-    return <Navigate to="/" />;
+  const profile = useSelector((state) => state.auth.profile);
+  if (!isLoggedIn || (profile?.name !== 'Admin007')) {
+    return <Login />;
   }
+
   
   return (
     <section id="main-layout">

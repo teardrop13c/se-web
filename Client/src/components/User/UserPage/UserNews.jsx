@@ -3,13 +3,13 @@ import Navbar from '../../Navbar'
 import UserMenu from '../UserMenu/UserMenu'
 import UserNewsContent from './ContentPage/UserNewsContent'
 import { useSelector } from 'react-redux'; 
-import { Navigate } from "react-router-dom";
+import Login from "../../Login/Login";
 
 function UserNews() {
+    //authuser
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); 
-  
   if (!isLoggedIn) {
-    return <Navigate to="/" />;
+    return <Login />;
   }
   return (
     <section id="main-layout">
