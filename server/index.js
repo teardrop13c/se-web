@@ -98,7 +98,6 @@ app.put('/update', (req, res) => {
     });
 });
 
-
 app.delete('/delete/:subject_ID', (req, res) => {
     const subject_ID = req.params.subject_ID;
 
