@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../Navbar";
 import AdminMenu from "../AdminMenu/AdminMenu";
+import Clock from "../../Clock";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
 
@@ -17,9 +18,7 @@ function HomeAdmin() {
     <section id="main-layout">
       <Navbar />
       <AdminMenu />
-      <div className="content">
-        <h2>Home Admin</h2>
-      </div>
+      <Clock />
     </section>
   );
 }
