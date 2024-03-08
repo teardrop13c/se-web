@@ -60,8 +60,9 @@ app.post('/create', (req, res) => {
 
 
 app.put('/update', (req, res) => {
-    const { id_course, subject_ID, subjact_name, credite, typeSubject } = req.body;
-
+    const { ลำดับ, รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา } = req.body;
+    
+    // Log the received update request data
     console.log('Received update request with data:', req.body);
 
     db.query("UPDATE course SET subject_ID = ?, subjact_name = ?, credite = ?, typeSubject = ? WHERE id_course = ?",
@@ -72,7 +73,6 @@ app.put('/update', (req, res) => {
                 res.status(500).json({ error: 'Error updating data' });
             } else {
                 console.log('Data updated successfully');
-
                 res.json({ message: 'Data updated successfully' });
             }
         }

@@ -158,9 +158,6 @@ function EditCourseContent() {
       {isEditMode && (
         <div className="data-form-popup">
           <Form form={form} onFinish={handleFinish}>
-            <Form.Item label="ลำดับ" name="ลำดับ">
-              <Input />
-            </Form.Item>
             <Form.Item label="รหัสวิชา" name="รหัสวิชา">
               <Input />
             </Form.Item>
