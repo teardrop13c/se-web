@@ -65,18 +65,37 @@ app.put('/update', (req, res) => {
     // Log the received update request data
     console.log('Received update request with data:', req.body);
 
-    db.query("UPDATE course SET subject_ID = ?, subjact_name = ?, credite = ?, typeSubject = ? WHERE id_course = ?",
-        [subject_ID, subjact_name, credite, typeSubject, id_course],
-        (err, result) => {
-            if (err) {
-                console.error('Error updating data:', err);
-                res.status(500).json({ error: 'Error updating data' });
-            } else {
-                console.log('Data updated successfully');
-                res.json({ message: 'Data updated successfully' });
-            }
+    // Ensure all required fields are present
+    if (!ลำดับ || !รหัสวิชา || !ชื่อวิชา || !หน่วยกิจ || !ประเภทวิชา) {
+        return res.status(400).json({ error: 'Missing required fields for update' });
+    }
+
+    // Construct the SQL query
+    const updateQuery = `
+        UPDATE course 
+        SET subject_ID = ?, subjact_name = ?, credite = ?, typeSubject = ? 
+        WHERE id_course = ?`;
+
+    // Log the generated SQL query
+    console.log('Update Query:', updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, ลำดับ]);
+
+    // Execute the update query
+    db.query(updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, ลำดับ], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Error updating data', details: err.message });
         }
-    );
+
+        // Check if any rows were affected by the update
+        if (result.affectedRows === 0) {
+            console.error(`No record found with id_course: ${ลำดับ}`);
+            return res.status(404).json({ error: 'No record found for update' });
+        }
+
+        // Log success message and respond to the client
+        console.log('Data updated successfully');
+        res.json({ message: 'Data updated successfully' });
+    });
 });
 
 
@@ -103,6 +122,7 @@ app.delete('/delete/:subject_ID', (req, res) => {
         return res.json({ message: 'Data deleted successfully' });
     });
 });
+
 
 
 app.get('/users', (req, res) => {

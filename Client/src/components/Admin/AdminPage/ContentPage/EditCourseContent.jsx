@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { UploadOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Button, message, Upload, Table, Input, Form } from 'antd';
 import axios from 'axios';
+import Papa from 'papaparse';
 import "./EditCourseContent.css";
 import Swal from 'sweetalert2';
 
@@ -35,11 +36,11 @@ function EditCourseContent() {
   };
 
   const columns = [
-    { title: 'NO', dataIndex: 'ลำดับ', key: 'id_course' },
-    { title: 'รหัสวิชา', dataIndex: 'รหัสวิชา', key: 'subject_ID' },
-    { title: 'ชื่อวิชา', dataIndex: 'ชื่อวิชา', key: 'subjact_name' },
-    { title: 'หน่วยกิจ', dataIndex: 'หน่วยกิจ', key: 'credite' },
-    { title: 'ประเภทวิชา', dataIndex: 'ประเภทวิชา', key: 'typeSubject' },
+    { title: 'NO', dataIndex: 'ลำดับ', key: 'ลำดับ' },
+    { title: 'รหัสวิชา', dataIndex: 'รหัสวิชา', key: 'รหัสวิชา' },
+    { title: 'ชื่อวิชา', dataIndex: 'ชื่อวิชา', key: 'ชื่อวิชา' },
+    { title: 'หน่วยกิจ', dataIndex: 'หน่วยกิจ', key: 'หน่วยกิจ' },
+    { title: 'ประเภทวิชา', dataIndex: 'ประเภทวิชา', key: 'ประเภทวิชา' },
     {
       title: 'จัดการ',
       dataIndex: 'operation',
@@ -90,31 +91,30 @@ function EditCourseContent() {
 
   const handleUpdateData = (values) => {
     const updatedData = tableData.map((data) =>
-        data.ลำดับ === formData.ลำดับ ? { ...data, ...values } : data
+      data.ลำดับ === formData.ลำดับ ? { ...data, ...values } : data
     );
     setTableData(updatedData);
 
     axios.put('http://localhost:3001/update', { ...formData, ...values })
-        .then(response => {
-            console.log(response.data);
-            Swal.fire({
-                icon: 'success',
-                title: 'การแก้ไขข้อมูลเสร็จสมบูรณ์',
-                text: 'ข้อมูลได้รับการแก้ไขเรียบร้อยแล้ว!',
-            });
-        })
-        .catch(error => {
-            console.error(error);
-            Swal.fire({
-                icon: 'error',
-                title: 'ข้อผิดพลาดในการแก้ไขข้อมูล',
-                text: 'เกิดข้อผิดพลาดในการแก้ไขข้อมูล โปรดลองอีกครั้ง!',
-            });
+      .then(response => {
+        console.log(response.data);
+        Swal.fire({
+          icon: 'success',
+          title: 'การแก้ไขข้อมูลเสร็จสมบูรณ์',
+          text: 'ข้อมูลได้รับการแก้ไขเรียบร้อยแล้ว!',
         });
+      })
+      .catch(error => {
+        console.error(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'ข้อผิดพลาดในการแก้ไขข้อมูล',
+          text: 'เกิดข้อผิดพลาดในการแก้ไขข้อมูล โปรดลองอีกครั้ง!',
+        });
+      });
 
     form.resetFields();
-};
-
+  };
 
   const handleDeleteData = (record) => {
     console.log('Deleting record:', record);
@@ -125,6 +125,7 @@ function EditCourseContent() {
             // Update frontend state after successful deletion
             const updatedData = tableData.filter(item => item.รหัสวิชา !== record.รหัสวิชา);
             setTableData(updatedData);
+
             Swal.fire({
                 icon: 'success',
                 title: 'การลบข้อมูลเสร็จสมบูรณ์',
@@ -142,6 +143,7 @@ function EditCourseContent() {
 
     form.resetFields();
 };
+
 
   return (
     <div className="rounded-rectangle">
