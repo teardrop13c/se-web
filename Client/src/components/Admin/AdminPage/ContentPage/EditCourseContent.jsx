@@ -36,11 +36,11 @@ function EditCourseContent() {
   };
 
   const columns = [
-    { title: 'NO', dataIndex: 'ลำดับ', key: 'ลำดับ' },
-    { title: 'รหัสวิชา', dataIndex: 'รหัสวิชา', key: 'รหัสวิชา' },
-    { title: 'ชื่อวิชา', dataIndex: 'ชื่อวิชา', key: 'ชื่อวิชา' },
-    { title: 'หน่วยกิจ', dataIndex: 'หน่วยกิจ', key: 'หน่วยกิจ' },
-    { title: 'ประเภทวิชา', dataIndex: 'ประเภทวิชา', key: 'ประเภทวิชา' },
+    { title: 'NO', dataIndex: 'ลำดับ', key: 'id_course' },
+    { title: 'รหัสวิชา', dataIndex: 'รหัสวิชา', key: 'subject_ID' },
+    { title: 'ชื่อวิชา', dataIndex: 'ชื่อวิชา', key: 'subjact_name' },
+    { title: 'หน่วยกิจ', dataIndex: 'หน่วยกิจ', key: 'credite' },
+    { title: 'ประเภทวิชา', dataIndex: 'ประเภทวิชา', key: 'typeSubject' },
     {
       title: 'จัดการ',
       dataIndex: 'operation',
