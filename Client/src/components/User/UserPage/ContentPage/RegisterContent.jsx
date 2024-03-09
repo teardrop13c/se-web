@@ -10,6 +10,9 @@ import {
   Divider,
   Space,
 } from "antd";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import "./RegisterContent.css";
 import Axios from "axios";
 
@@ -25,12 +28,12 @@ function RegisterContent() {
   const profile = useSelector((state) => state.auth.profile);
 
   useEffect(() => {
-    fetch('http://localhost:3001/users')
-      .then(res => res.json())
-      .then(data => {
+    fetch("http://localhost:3001/users")
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
         setData(data);
-        const cascaderOptions = data.map(item => ({
+        const cascaderOptions = data.map((item) => ({
           value: item.subject_ID,
           label: `${item.subject_ID} - ${item.subjact_name} - ${item.credite}`,
         }));
@@ -40,20 +43,20 @@ function RegisterContent() {
   }, [type]);
 
   const findSubjectNameById = (subjectId) => {
-    const subject = data.find(item => item.subject_ID === subjectId);
-    return subject ? subject.subjact_name : '';
+    const subject = data.find((item) => item.subject_ID === subjectId);
+    return subject ? subject.subjact_name : "";
   };
 
   const onChange = (value) => {
     if (value && value.length > 0) {
       const subjectID = value[0];
       const subjectName = findSubjectNameById(subjectID, data);
-      const subjectLabel = data.find(item => item.subject_ID === subjectID);
+      const subjectLabel = data.find((item) => item.subject_ID === subjectID);
       const label = `${subjectLabel.subject_ID} - ${subjectLabel.subjact_name} - ${subjectLabel.credite}`;
       setLabelString(label);
-      console.log('Subject ID:', subjectID);
-      console.log('Subject Name:', subjectName);
-      console.log('Subject Label:', label);
+      console.log("Subject ID:", subjectID);
+      console.log("Subject Name:", subjectName);
+      console.log("Subject Label:", label);
     }
   };
 
@@ -92,20 +95,21 @@ function RegisterContent() {
       console.log('โปรดกรอกข้อมูลให้ครบทุกช่อง');
       return; // หยุดการทำงานทันทีถ้าข้อมูลไม่ครบ
     }
-  
-    Axios.post('http://localhost:3001/create', {
+
+    Axios.post("http://localhost:3001/create", {
       subjectReg_id: labelString, // หรือแก้ให้เป็น subjectID ก็ได้ตามที่คุณต้องการ
       lec_group: lec_group,
       lab_group: lab_group,
       major_year: major_year,
       roomReg_ranking: roomReg_ranking,
-      user_email: profile.email
-    }).then(() => {
-      getRegister();
-    }).catch(error => {
-      console.log('เกิดข้อผิดพลาดในการบันทึกข้อมูล:', error);
-    });
-
+      user_email: profile.name,
+    })
+      .then(() => {
+        getRegister();
+      })
+      .catch((error) => {
+        console.log("เกิดข้อผิดพลาดในการบันทึกข้อมูล:", error);
+      });
   };
 
   const updateRegisterSubject = (reg_id) => {
