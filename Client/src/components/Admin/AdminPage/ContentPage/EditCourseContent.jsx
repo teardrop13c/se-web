@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { UploadOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Button, message, Upload, Table, Input, Form } from 'antd';
 import axios from 'axios';
-import Papa from 'papaparse';
 import "./EditCourseContent.css";
 import Swal from 'sweetalert2';
 
