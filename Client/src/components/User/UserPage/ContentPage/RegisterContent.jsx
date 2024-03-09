@@ -8,53 +8,52 @@ import {
   Cascader,
   Select,
   Divider,
+  Space,
 } from "antd";
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import "./RegisterContent.css";
 import Axios from "axios";
 
 function RegisterContent() {
-  const { Option } = Select;
-
   const [options, setOptions] = useState([]);
   const [data, setData] = useState([]);
-  const [labelString, setLabelString] = useState("");
+  const [labelString, setLabelString] = useState('');
+  const [type, setType] = useState('');
+
+  const { Option } = Select;
 
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.auth.profile);
 
   useEffect(() => {
-    fetch("http://localhost:3001/users")
-      .then((res) => res.json())
-      .then((data) => {
+    fetch('http://localhost:3001/users')
+      .then(res => res.json())
+      .then(data => {
         console.log(data);
         setData(data);
-        const cascaderOptions = data.map((item) => ({
+        const cascaderOptions = data.map(item => ({
           value: item.subject_ID,
           label: `${item.subject_ID} - ${item.subjact_name} - ${item.credite}`,
         }));
         setOptions(cascaderOptions);
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch(err => console.log(err));
+  }, [type]);
 
   const findSubjectNameById = (subjectId) => {
-    const subject = data.find((item) => item.subject_ID === subjectId);
-    return subject ? subject.subjact_name : "";
+    const subject = data.find(item => item.subject_ID === subjectId);
+    return subject ? subject.subjact_name : '';
   };
 
   const onChange = (value) => {
     if (value && value.length > 0) {
       const subjectID = value[0];
       const subjectName = findSubjectNameById(subjectID, data);
-      const subjectLabel = data.find((item) => item.subject_ID === subjectID);
+      const subjectLabel = data.find(item => item.subject_ID === subjectID);
       const label = `${subjectLabel.subject_ID} - ${subjectLabel.subjact_name} - ${subjectLabel.credite}`;
       setLabelString(label);
-      console.log("Subject ID:", subjectID);
-      console.log("Subject Name:", subjectName);
-      console.log("Subject Label:", label);
+      console.log('Subject ID:', subjectID);
+      console.log('Subject Name:', subjectName);
+      console.log('Subject Label:', label);
     }
   };
 
@@ -89,34 +88,24 @@ function RegisterContent() {
   }, []);
 
   const addRegister = () => {
-    if (
-      !labelString ||
-      !lec_group ||
-      !lab_group ||
-      !roomReg_ranking ||
-      !profile.name
-    ) {
-      console.log("โปรดกรอกข้อมูลให้ครบทุกช่อง");
+    if (!labelString || !lec_group || !lab_group || !roomReg_ranking || !profile.email ) {
+      console.log('โปรดกรอกข้อมูลให้ครบทุกช่อง');
       return; // หยุดการทำงานทันทีถ้าข้อมูลไม่ครบ
     }
-
-    Axios.post("http://localhost:3001/create", {
+  
+    Axios.post('http://localhost:3001/create', {
       subjectReg_id: labelString, // หรือแก้ให้เป็น subjectID ก็ได้ตามที่คุณต้องการ
-      lec_num: lec_num,
-      lab_num: lab_num,
-      major: major,
-      regYear: regYear,
-      room1: room1,
-      room2: room2,
-      room3: room3,
-      user_email: profile.name,
-    })
-      .then(() => {
-        getRegister();
-      })
-      .catch((error) => {
-        console.log("เกิดข้อผิดพลาดในการบันทึกข้อมูล:", error);
-      });
+      lec_group: lec_group,
+      lab_group: lab_group,
+      major_year: major_year,
+      roomReg_ranking: roomReg_ranking,
+      user_email: profile.email
+    }).then(() => {
+      getRegister();
+    }).catch(error => {
+      console.log('เกิดข้อผิดพลาดในการบันทึกข้อมูล:', error);
+    });
+
   };
 
   const updateRegisterSubject = (reg_id) => {
@@ -161,6 +150,35 @@ function RegisterContent() {
     setRegYear(regYear);
   };
 
+  const handleChange = (value) => {
+    setType(value);
+    console.log(`selected ${value}`);
+  };
+
+  useEffect(() => {
+    // ตรวจสอบว่า type ไม่ใช่ค่าว่าง
+    if (type.trim() !== '') {
+      sendDataToNode();
+    }
+  }, [type]);
+
+  const sendDataToNode = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/type', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ type })
+      });
+      const data = await response.json();
+      console.log(data); // ประมวลผลผลลัพธ์จาก Node.js
+    } catch (error) {
+      console.error('Error sending data to Node.js:', error);
+    }
+  }
+  
+
   return (
     <div className="top-regis">
       <Row gutter={16} style={{ flexDirection: "row" }}>
@@ -183,22 +201,18 @@ function RegisterContent() {
           <Col span={4}>
             <h3>วิชา</h3>
             <Form>
-              <Cascader
-                style={{ width: "200px" }}
-                options={options}
-                onChange={onChange}
-                placeholder="Please select"
-                showSearch={{
-                  filter: (inputValue, path) =>
-                    path.some(
-                      (option) =>
-                        option.label
-                          .toLowerCase()
-                          .indexOf(inputValue.toLowerCase()) > -1
-                    ),
-                }}
-              />
-            </Form>
+            <Cascader
+            options={options}
+            onChange={onChange}
+            placeholder="Please select"
+            showSearch={{
+              filter: (inputValue, path) =>
+                path.some(option =>
+                  option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1
+                ),
+            }}
+            />
+          </Form>
           </Col>
           <Col span={4}>
             <h3>บรรยายและจำนวนนิสิต</h3>

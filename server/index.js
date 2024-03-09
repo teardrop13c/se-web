@@ -1,6 +1,7 @@
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const xlsx = require('xlsx');
+const { DateTime } = require('luxon');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
@@ -17,19 +18,42 @@ const db = mysql.createConnection({
     database: 'kusrc_course'
 })
 
-////////////////////////////////////////////////////////////
 
-app.get('/register', (req, res) => {
-    db.query("SELECT * FROM register", (err, result) => {
-        if (err) {
-            console.log(err);
+//////////////////user_info/////////////////
+app.post('/api/profile', (req, res) => {
+    const { name, email } = req.body; // รับชื่อและอีเมลที่ส่งมาจากผู้ใช้
+    console.log(email);
+    console.log(name);
+  
+    // ตรวจสอบว่ามีข้อมูลที่ซ้ำกันอยู่แล้วหรือไม่
+    db.query("SELECT * FROM user WHERE user_email = ?", [email], (err, result) => {
+      if (err) {
+        console.error('Error checking for duplicate data:', err);
+        res.status(500).send('Failed to check for duplicate data'); // ส่งข้อความผิดพลาดกลับไปยังผู้ใช้
+      } else {
+        if (result.length > 0) {
+          console.log('Data already exists');
+          res.status(409).send('Data already exists'); // ส่งข้อความว่ามีข้อมูลที่ซ้ำกันอยู่แล้วกลับไปยังผู้ใช้
         } else {
-            res.send(result);
+          // ไม่มีข้อมูลที่ซ้ำกัน จึงทำการแทรกข้อมูลลงในฐานข้อมูล
+          db.query("INSERT INTO user (user_email, user_name) VALUES (?, ?)", [email, name], (err, result) => {
+            if (err) {
+              console.error('Error inserting data:', err);
+              res.status(500).send('Failed to insert data'); // ส่งข้อความผิดพลาดกลับไปยังผู้ใช้
+            } else {
+              console.log('Data inserted successfully');
+              res.status(200).send('Data inserted successfully'); // ส่งข้อความยืนยันการแทรกข้อมูลกลับไปยังผู้ใช้
+            }
+          });
         }
+      }
     });
 });
 
-////////////////////////////////////////////////////////////
+  
+////////////////////////////////////////////
+
+
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
 app.get('/registerteacher', (req, res) => {
     db.query("SELECT * FROM user_reg", (err, result) => {
@@ -41,20 +65,72 @@ app.get('/registerteacher', (req, res) => {
     });
 });
 
-// กำหนดเส้นทาง POST /create เพื่อเพิ่มข้อมูลลงทะเบียนการสอน
+/////////////////////// create //////////////////////////////////////
+let subtype = '';
+
+const setType = (type) => {
+    subtype = type;
+}
+
+app.post('/api/type', (req, res) => {
+    const type = req.body.type;
+    setType(type);
+    console.log('Received data from client:', subtype);
+    // ทำสิ่งที่คุณต้องการกับข้อมูลที่รับมาจาก React
+    res.send('Data received successfully');
+  });
+  
+
+
+
 app.post('/create', (req, res) => { 
-    const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking,user_email } = req.body
-    db.query("INSERT INTO user_reg (subjectReg_id, lec_num, lab_num,major_year,roomReg_ranking,user_email) VALUES (?,?,?,?,?,?)",
-        [subjectReg_id, lec_group, lab_group,major_year,roomReg_ranking,user_email],
-        (err, result) => {
-            if (err) {
-                console.log(err); // แสดงข้อผิดพลาดในกรณีที่เกิดข้อผิดพลาดในการเพิ่มข้อมูล
-            } else {
-                res.send("Values inserted"); // ส่งข้อความยืนยันการเพิ่มข้อมูลกลับไปยัง client
-            }
+    const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, user_email, type} = req.body;
+    // เรียกใช้คำสั่ง SQL เพื่อตั้งค่า reg_id
+    db.query("SET @num := 0;", (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error setting reg_id");
+        } else {
+            console.log("reg_id set successfully");
+            // เรียกใช้คำสั่ง SQL เพื่ออัพเดทค่า reg_id
+            db.query("UPDATE user_reg SET reg_id = @num := (@num+1);", (err, result) => {
+                if (err) {
+                    console.log(err);
+                    res.status(500).send("Error updating reg_id");
+                } else {
+                    console.log("reg_id updated successfully");
+                    // เรียกใช้คำสั่ง SQL เพื่อตั้งค่า AUTO_INCREMENT
+                    db.query("ALTER TABLE user_reg AUTO_INCREMENT = 1;", (err, result) => {
+                        if (err) {
+                            console.log(err);
+                            res.status(500).send("Error setting AUTO_INCREMENT");
+                        } else {
+                            console.log("AUTO_INCREMENT set successfully");
+                            // เรียกใช้คำสั่ง SQL เพื่อเพิ่มข้อมูล
+                            db.query("INSERT INTO user_reg (subjectReg_id, lec_num, lab_num, major_year, roomReg_ranking, user_email) VALUES (?,?,?,?,?,?)",
+                                [subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, user_email],
+                                (err, result) => {
+                                    if (err) {
+                                        console.log(err);
+                                        res.status(500).send("Error inserting values");
+                                    } else {
+                                        console.log("Values inserted successfully");
+                                        res.status(200).send("Values inserted");
+                                    }
+                                }
+                            );
+                        }
+                    });
+                }
+            });
         }
-    )
-})
+    });
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 //// CRUD //////
 
@@ -134,43 +210,40 @@ app.get('/users', (req, res) => {
 
 
 
-/////////user_name and email //////////////////
-app.post('/api/profile', (req, res) => {
-    const profileName = req.body.name;
-    const profileEmail = req.body.email;
-    console.log('Received profile name:', profileName);
-    console.log('Received profile email:', profileEmail);
-    
-    // สร้างออบเจ็กต์ JSON ที่มีข้อมูลทั้งชื่อและอีเมลของโปรไฟล์
-    const responseData = {
-      name: profileName,
-      email: profileEmail
-    };
-    
-    // ส่งออก JSON กลับไปยังไคลเอ็นต์
-    res.json(responseData);
-  });
-//////////////////////////////////////////////////
+
 /////////////////date and time///////////////////
-  app.post('/api/timeData', async (req, res) => {
+app.post('/api/timeData', async (req, res) => {
     const timeArray = req.body.timeArray;
     console.log('Received time array:', timeArray);
 
     try {
+        await db.query("SET @num := 0;");
+        console.log("useravailability_id set successfully");
+
+        await db.query("UPDATE useravailability SET useravailability_id = @num := (@num+1);");
+        console.log("useravailability_id updated successfully");
+
+        await db.query("ALTER TABLE useravailability AUTO_INCREMENT = 1;");
+        console.log("AUTO_INCREMENT set successfully");
+
         for (const data of timeArray) {
             const day = data[0].day;
             const time = data[0].time;
-            const email = data[0].name;
-            const query = 'INSERT INTO useravailability (day, time, user_email) VALUES (?,?,?)';
+            const email = data[0].email;
+            const query = 'INSERT INTO useravailability (day, time_start_end, user_email) VALUES (?,?,?)';
             await db.query(query, [day, time, email]);
             console.log('Data inserted successfully:', data);
         }
+        
         res.send('Data inserted successfully');
     } catch (err) {
         console.error('Error inserting data:', err);
         res.status(500).send('Error inserting data');
     }
 });
+
+
+
 ////////////////////////////////////////////////////////////
 ///////////////////////uploads//////////////////////////////
 app.post('/uploads', (req, res) => {
@@ -199,34 +272,80 @@ app.post('/uploads', (req, res) => {
         const jsonData = xlsx.utils.sheet_to_json(worksheet);
 
         // สร้าง values array จาก jsonData
-        const values = jsonData.map(row => [row.รหัสวิชา, row.ชื่อวิชา, row.หน่วยกิจ]);
+        const values = jsonData.map(row => [row.รหัสวิชา, row.ชื่อวิชา, row.หน่วยกิจ, row.ประเภทวิชา]);
 
-        const sql = 'INSERT INTO course (subject_ID, subjact_name, credite) VALUES ?';
+        const sql = 'INSERT INTO course (subject_ID, subjact_name, credite,typeSubject) VALUES ?';
 
-        db.query(sql, [values], (err, result) => {
-            if (err) {
-                console.error('Error inserting data:', err);
-                res.status(500).json({ error: 'Error inserting data' });
-                return;
-            }
-            console.log('Data inserted successfully:', result);
-
-            // ส่งการตอบกลับหลังจากที่แทรกข้อมูลลงในฐานข้อมูลเรียบร้อยแล้ว
-            res.json({ message: 'Data received and inserted successfully' });
-        });
-    }); 
+        db.query("SET @num := 0;", (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error setting id_course");
+        } else {
+            console.log("id_course set successfully");
+            // เรียกใช้คำสั่ง SQL เพื่ออัพเดทค่า reg_id
+            db.query("UPDATE course SET id_course = @num := (@num+1);", (err, result) => {
+                if (err) {
+                    console.log(err);
+                    res.status(500).send("Error updating id_course");
+                } else {
+                    console.log("id_course updated successfully");
+                    // เรียกใช้คำสั่ง SQL เพื่อตั้งค่า AUTO_INCREMENT
+                    db.query("ALTER TABLE course AUTO_INCREMENT = 1;", (err, result) => {
+                        if (err) {
+                            console.log(err);
+                            res.status(500).send("Error setting AUTO_INCREMENT");
+                        } else {
+                            console.log("AUTO_INCREMENT set successfully");
+                            // เรียกใช้คำสั่ง SQL เพื่อเพิ่มข้อมูล
+                            db.query(sql, [values], (err, result) => {
+                                if (err) {
+                                    console.error('Error inserting data:', err);
+                                    res.status(500).json({ error: 'Error inserting data' });
+                                    return;
+                                }
+                                console.log('Data inserted successfully:', result);
+                    
+                                // ส่งการตอบกลับหลังจากที่แทรกข้อมูลลงในฐานข้อมูลเรียบร้อยแล้ว
+                                res.json({ message: 'Data received and inserted successfully' });
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    });
 });
+}); 
+
 //////////////////////////////////////////////////////////////////////////
 //// DB to back/////
-app.get('/users',(req, res)=> {
-    const sql = "SELECT * FROM course";
-    db.query(sql,(err, data)=> {
-        if(err) return res.json(err);
-        return res.json(data);
-    })
-})
-////////////////////
+app.get('/users', (req, res) => {
+    const sql = "SELECT * FROM course WHERE typeSubject IN (?,?,?,?)";
+    const values = [subtype,'หมวดวิชาศึกษาทั่วไป','หมวดวิชาเฉพาะ','วิชาสหกิจศึกษา'];
 
+    db.query(sql, values, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+////////////////////
+////////OPEN-CLOSE/////////////////
+app.post('/api/registration', (req, res) => {
+    const { openingTime, closingTime } = req.body; // รับข้อมูล openingTime และ closingTime จาก req.body
+    const parsedOpeningTime = DateTime.fromISO(openingTime).setZone('Asia/Bangkok');
+    const parsedClosingTime = DateTime.fromISO(closingTime).setZone('Asia/Bangkok');
+    const formattedDateOpen = parsedOpeningTime.toFormat('yyyy-MM-dd EEE HH:mm:ss');
+    const formattedDateClose = parsedClosingTime.toFormat('yyyy-MM-dd EEE HH:mm:ss');
+
+    console.log('Received openingTime:', formattedDateOpen);
+    console.log('Received closingTime:', formattedDateClose);
+  
+    // ทำสิ่งที่ต้องการกับข้อมูลที่รับมา  เช่น บันทึกลงฐานข้อมูล หรือประมวลผลเพิ่มเติม
+    
+    res.send('Received registration data'); // ส่ง response กลับไปยัง client
+});
+  
+///////////////////////////////////
 
 
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001

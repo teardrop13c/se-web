@@ -47,9 +47,9 @@ function DatePick() {
     }
   
     const newTimeArray = [...timeArray];
-    const newTimeData = { day: selectedDay, time: selectedTime, name: profile.name };
-  
-    if (!newTimeData.name || !newTimeData.day || !newTimeData.time) {
+    const newTimeData = { day: selectedDay, time: selectedTime ,email: profile.email };
+
+    if (!newTimeData.email || !newTimeData.day || !newTimeData.time) {
       console.error('Error adding time data: Invalid time data structure');
       return;
     }
