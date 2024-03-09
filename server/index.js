@@ -17,6 +17,7 @@ const db = mysql.createConnection({
     database: 'kusrc_course'
 })
 
+
 //////////////////user_info/////////////////
 app.post('/api/profile', (req, res) => {
     const { name, email } = req.body; // รับชื่อและอีเมลที่ส่งมาจากผู้ใช้
@@ -63,10 +64,26 @@ app.get('/registerteacher', (req, res) => {
     });
 });
 
+/////////////////////// create //////////////////////////////////////
+let subtype = '';
+
+const setType = (type) => {
+    subtype = type;
+}
+
+app.post('/api/type', (req, res) => {
+    const type = req.body.type;
+    setType(type);
+    console.log('Received data from client:', subtype);
+    // ทำสิ่งที่คุณต้องการกับข้อมูลที่รับมาจาก React
+    res.send('Data received successfully');
+  });
+  
+
+
 
 app.post('/create', (req, res) => { 
-    const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, user_email } = req.body;
-    
+    const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, user_email, type} = req.body;
     // เรียกใช้คำสั่ง SQL เพื่อตั้งค่า reg_id
     db.query("SET @num := 0;", (err, result) => {
         if (err) {
@@ -110,6 +127,7 @@ app.post('/create', (req, res) => {
 });
 
 
+////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -244,13 +262,15 @@ app.post('/uploads', (req, res) => {
 
 //////////////////////////////////////////////////////////////////////////
 //// DB to back/////
-app.get('/users',(req, res)=> {
-    const sql = "SELECT * FROM course";
-    db.query(sql,(err, data)=> {
-        if(err) return res.json(err);
-        return res.json(data);
-    })
-})
+app.get('/users', (req, res) => {
+    const sql = "SELECT * FROM course WHERE typeSubject IN (?,?,?,?)";
+    const values = [subtype,'หมวดวิชาศึกษาทั่วไป','หมวดวิชาเฉพาะ','วิชาสหกิจศึกษา'];
+
+    db.query(sql, values, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
 ////////////////////
 ////////OPEN-CLOSE/////////////////
 app.post('/api/registration', (req, res) => {

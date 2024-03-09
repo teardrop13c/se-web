@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row, Card, Cascader } from "antd";
+import { Button, Col, Form, Input, Row, Card, Cascader,Select,Space } from "antd";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
@@ -9,6 +9,8 @@ function RegisterContent() {
   const [options, setOptions] = useState([]);
   const [data, setData] = useState([]);
   const [labelString, setLabelString] = useState('');
+  const [type, setType] = useState('');
+
 
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.auth.profile);
@@ -26,7 +28,7 @@ function RegisterContent() {
         setOptions(cascaderOptions);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [type]);
 
   const findSubjectNameById = (subjectId) => {
     const subject = data.find(item => item.subject_ID === subjectId);
@@ -120,6 +122,35 @@ function RegisterContent() {
     })
   }
 
+  const handleChange = (value) => {
+    setType(value);
+    console.log(`selected ${value}`);
+  };
+
+  useEffect(() => {
+    // ตรวจสอบว่า type ไม่ใช่ค่าว่าง
+    if (type.trim() !== '') {
+      sendDataToNode();
+    }
+  }, [type]);
+
+  const sendDataToNode = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/api/type', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ type })
+      });
+      const data = await response.json();
+      console.log(data); // ประมวลผลผลลัพธ์จาก Node.js
+    } catch (error) {
+      console.error('Error sending data to Node.js:', error);
+    }
+  }
+  
+
   return (
     <div className="top-regis">
       <Row gutter={16} style={{ flexDirection: "row" }}>
@@ -132,11 +163,42 @@ function RegisterContent() {
         <Col span={4}>
           <h3>สาขา</h3>
           <Form>
-            <Input placeholder="เลือกสาขา"
+            {/* <Input placeholder="เลือกสาขา"
               onChange={(event) => {
                 setMajor_year(event.target.value)
               }}
-            />
+            /> */}
+        <Space wrap>
+        <Select
+          placeholder="สาขาวิชา"
+          style={{
+            width: 120,
+          }}
+          onChange={handleChange}
+          options={[
+            {
+              value: 'T05',
+              label: 't05',
+            },
+            {
+              value: 'T12',
+              label: 't12',
+            },
+            {
+              value: 'T13',
+              label: 't13',
+            },
+            {
+              value: 'T14',
+              label: 't14',
+            },
+            {
+              value: 'T17',
+              label: 't17',
+            },
+          ]}
+          />
+          </Space>
           </Form>
         </Col>
         <Col span={4}>
