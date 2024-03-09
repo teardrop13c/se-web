@@ -195,7 +195,7 @@ function Login() {
         />
         <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
         <br />
-        {isLoggedIn ? (
+        {profile ? (
           checkAdmin() ? (
             accountAdmin()
           ) : (

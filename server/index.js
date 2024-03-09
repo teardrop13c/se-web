@@ -7,13 +7,14 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 app.use(cors());
-app.use(express.json());
 app.use(fileUpload());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
     host: "localhost",
     user: 'root',
-    password:'',
+    password: '',
     database: 'kusrc_course'
 })
 
@@ -131,27 +132,83 @@ app.post('/create', (req, res) => {
 
 
 
-app.put('/update',(req,res) => {
-    const {reg_id, subjectReg_id} = req.body;
-    db.query("UPDATE user_reg SET subjectReg_id = ? WHERE reg_id = ?", [subjectReg_id,reg_id], (err, result) => {
-        if (err) {
-            console.log(err);
-        }else{
-            res.send(result);
-        }
-    })
-})
+//// CRUD //////
 
-app.delete('/delete/:reg_id', (req,res)=> {
-    const reg_id = req.params.reg_id;
-    db.query("DELETE FROM user_reg WHERE reg_id = ?", reg_id,(err,result) => {
-        if(err) {
-            console.log(err);
-        }else{
-            res.send(result);
+
+app.put('/update', (req, res) => {
+    const { ลำดับ, รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา } = req.body;
+    
+    // Log the received update request data
+    console.log('Received update request with data:', req.body);
+
+    // Ensure all required fields are present
+    if (!ลำดับ || !รหัสวิชา || !ชื่อวิชา || !หน่วยกิจ || !ประเภทวิชา) {
+        return res.status(400).json({ error: 'Missing required fields for update' });
+    }
+
+    // Construct the SQL query
+    const updateQuery = `
+        UPDATE course 
+        SET subject_ID = ?, subjact_name = ?, credite = ?, typeSubject = ? 
+        WHERE id_course = ?`;
+
+    // Log the generated SQL query
+    console.log('Update Query:', updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, ลำดับ]);
+
+    // Execute the update query
+    db.query(updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, ลำดับ], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Error updating data', details: err.message });
         }
-    })
-})
+
+        // Check if any rows were affected by the update
+        if (result.affectedRows === 0) {
+            console.error(`No record found with id_course: ${ลำดับ}`);
+            return res.status(404).json({ error: 'No record found for update' });
+        }
+
+        // Log success message and respond to the client
+        console.log('Data updated successfully');
+        res.json({ message: 'Data updated successfully' });
+    });
+});
+
+app.delete('/delete/:subject_ID', (req, res) => {
+    const subject_ID = req.params.subject_ID;
+
+    if (!subject_ID) {
+        console.error('Error: No subject_ID parameter provided in the DELETE request.');
+        return res.status(400).json({ error: 'No subject_ID parameter provided' });
+    }
+
+    db.query("DELETE FROM course WHERE subject_ID = ?", subject_ID, (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Error deleting data' });
+        }
+
+        if (result.affectedRows === 0) {
+            console.error(`No record found with subject_ID: ${subject_ID}`);
+            return res.status(404).json({ error: 'No record found for deletion' });
+        }
+
+        console.log('Data deleted successfully');
+        return res.json({ message: 'Data deleted successfully' });
+    });
+});
+
+
+
+app.get('/users', (req, res) => {
+    const sql = "SELECT * FROM course";
+    db.query(sql, (err, data) => {
+        if (err) return res.json(err);
+        return res.json(data);
+    });
+});
+
+
 
 
 /////////////////date and time///////////////////
@@ -294,4 +351,5 @@ app.post('/api/registration', (req, res) => {
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001
 app.listen('3001', () => {
     console.log('Server is running on port 3001');
-})  
+});
+

@@ -1,0 +1,525 @@
+﻿รหัสวิชา,ชื่อวิชา,หน่วยกิจ
+03600011-55,"Introduction to Computer Programming 
+การโปรแกรมคอมพิวเตอร์เบื้องตน",3(2-3-6)
+03600012-55,"Green Technology 
+เทคโนโลยีสีเขียว",3(3-0-6)
+03600013-55,"Computer Software and Applications 
+คอมพิวเตอร์ซอฟต์แวร์และการประยุกต์",1(0-3-2)
+03600014-55,"Creative Problem Solving and Critical Thinking Skills 
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6)
+01999011-55,"Food for Mankind 
+อาหารเพื่อมนุษย์ชาติ",3(3-0-6)
+01999012-55,"Health for Life 
+สุขภาพเพื่อชีวิต",3(3-0-6)
+01999213-55,"Environment, Technology and Life 
+สิ่งแวดล้อม เทคโนโลยีและชีวิต",3(3-0-6)
+01999021-55,"Thai Language for Communication 
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+01355xxx-55,"English 
+ภาษาอังกฤษ",9( - - )
+01999041-55,"Economics for Better Living 
+เศรษฐศาสตร์เพื่อการดำเนินชีวิตที่ดี",3(3-0-6)
+01999141-55,"Man and Society 
+มนุษย์กับสังคม",3(3-0-6)
+01999031-55,"The Heritage of World Civilizations 
+มรดกอารยธรรมโลก",3(3-0-6)
+01999032-55,"Thai Studies 
+ไทยศึกษา",3(3-0-6)
+01999033-55,"Arts of Living 
+ศิลปะการดำเนินชีวิต",3(3-0-6)
+01403114-55,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-55,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-55,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-55,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-55,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-55,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-55,"General Physics II 
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-55,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-55,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ II",1(0-3-2)
+03602211-55,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+03604111-55,"Engineering Drawing 
+การเขียนแบบทางวิศวกรรม",3(3-0-6)
+03601191-55,"Electrical Engineering Orientation 
+แนะแนวทางวิศวกรรมไฟฟ้า",2(1-3-4)
+03601211-55,"Electric Circuit Analysis I 
+การวิเคราะห์วงจรไฟฟ้า I",3(3-0-6)
+03601212-55,"Electric Circuit Analysis II 
+การวิเคราะห์วงจรไฟฟ้า II",3(3-0-6)
+03601213-55,"Electric Circuit Laboratory 
+ปฏิบัติการวงจรไฟฟ้า",1(0-3-2)
+03601214-55,"Applied Linear Algebra in Electrical Engineering 
+พีชคณิตเชิงเส้นประยุกต์ทางวิศวกรรมไฟฟ้า",3(3-0-6)
+03601215-55,"Applied Probability for Electrical Engineers 
+ความน่าจะเป็นประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6)
+03601231-55,"Electronic Circuits and Systems I 
+วงจรและระบบอิเล็กทรอนิกส์ I",3(3-0-6)
+03601232-55,"Digital Circuits and Logic Design 
+การออกแบบวงจรดิจิทัลและตรรกะ",3(3-0-6)
+03601251-55,"Electromechanical Energy Conversion I 
+การแปลงผันพลังงานเครื่องกลไฟฟา I",3(3-0-6)
+03601252-55,"Electromechanical Energy Conversion Laboratory I 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟา I",1(0-3-2)
+03601281-55,"Computer Programming for Electrical Engineers 
+การเขียนโปรแกรมคอมพิวเตอร์สำหรับวิศวกรไฟฟ้า",3(3-0-6)
+03601311-55,"Signals and Systems 
+สูญญาณและระบบ",3(3-0-6)
+03601321-55,"Principles of Communications 
+หลักการสิ่อสาร",3(3-0-6)
+03601331-55,"Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์",1(0-3-2)
+03601332-55,"Microprocessors 
+ไมโครโพรเซสเซอร์",3(3-0-6)
+03601333-55,"Microprocessors Laboratory 
+ปฏิบัติการไมโครโพรเซสเซอร์",1(0-3-2)
+03601341-55,"Electromagnetic Fields and Waves I 
+สนามแม่เหล็กไฟฟ้าและคลื่น I",3(3-0-6)
+03601361-55,"Electrical Instruments and Measurements I 
+เครื่องมือวัดและการวัดทางไฟฟ้า I",3(3-0-6)
+03601362-55,"Linear Control Systems 
+ระบบควบคุมเชิงเส้น",3(3-0-6)
+03601495-55,"Electrical and Electronics Engineering Project I 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ I",1(0-3-2)
+03601497-55,"Seminar 
+สัมมนา",1
+03601499-55,"Electrical and Electronics Engineering Project II 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ II",2(0-6-3)
+03604201-55,"Basic Principles of Engineering Mechanics 
+หลักพื่นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6)
+03604281-55,"Workshop Practice 
+การฝึกงานโรงงาน",1(0-3-2)
+03601314-55,"Digital Signal Processing 
+การประมวลสัญญาณดิจิทัล",3(3-0-6)
+03601315-55,"Digital Signal Processing Laboratory 
+ปฏิบัติการประมวลสัญญาณดิจิทัล",1(0-3-2)
+03601323-55,"Communication Laboratory 
+ปฏิบัติการไฟฟ้าสื่สาร",1(0-3-2)
+03601334-55,"Electronic Circuits and Systems II 
+วงจรและระบบอิเล็กทรอนิกส์ II",3(3-0-6)
+03601336-55,"Electronic Circuit Design 
+การออกแบบวงจรอิเล็กทรอนิกส์",3(3-0-6)
+03601351-55,"Electromechanical Energy Conversion II 
+การแปลงผันพลังงานเครื่องกลไฟฟ้า II",3(3-0-6)
+03601352-55,"Electromechanical Energy Conversion Laboratory II 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟ้า II",3(3-0-6)
+03601353-55,"Power Systems in Buildings 
+ระบบกำลังในอาคาร",3(3-0-6)
+03601354-55,"Electric Power Systems Analysis I 
+การวิเคราะห์ระบบไฟฟ้ากำลัง I",3(3-0-6)
+03601355-55,"High-Voltage Engineering 
+วิศวกรรมไฟฟ้าแรงสูง",3(3-0-6)
+03601356-55,"Illumination Engineering 
+วิศวกรรมการส่องสว่าง",3(3-0-6)
+03601363-55,"Control and Measurement Laboratory 
+ปฏิบัติการการควบคุมและการวัด",1(0-3-2)
+03601364-55,"Industrial Automation Systems 
+ระบบอัตโนมัติทางอุตสาหกรรม",3(3-0-6)
+03601365-55,"Industrial Automation Systems Laboratory 
+ปฏิบัติการระบบอัตโนมัติทางอุตสาหกรรม",1(0-3-2)
+03601432-55,"Analog Integrated Circuit Application Designs 
+การออกแบบประยุกต์วงจรรวมแอนะล็อก",3(3-0-6)
+03601433-55,"Industrial Electronics 
+อิเล็กทรอนิกส์อุตสาหกรรม",3(3-0-6)
+03601451-55,"Basic Power System Reliability 
+ความเชื่อถือได้เบื่องตนของระบบกำลัง",3(3-0-6)
+03601452-55,"Electric Power Plants 
+โรงจักรไฟฟ้ากำลัง",3(3-0-6)
+03601453-55,"Electric Power Systems Analysis II 
+การวิเคราะห์ระบบไฟฟ้ากำลัง II",3(3-0-6)
+03601454-55,"Electric Power Systems Analysis Laboratory 
+ปฏิบัติการการวิเคราะห์ระบบไฟฟ้า",1(0-3-2)
+03601456-55,"Power System Protection 
+การป้องกันระบบไฟฟ้ากำลัง",3(3-0-6)
+03601457-55,"Electrical Systems and Signal Systems in Building 
+ระบบไฟฟ้าและระบบสัญญาณในอาคาร",3(3-0-6)
+03601458-55,"Electrical Power Generation, Transmission and Distribution 
+การผลิต สูง และจำหน่ายกำลังไฟฟ้า",3(3-0-6)
+03601461-55,"Process Control 
+การควบคุมกระบวนการ",3(3-0-6)
+03601462-55,"Industrial Sensors and Control Devices 
+เซนเซอร์ทางอุตสาหกรรมและอุปกรณ์ควบคุม",3(3-0-6)
+03601471-55,"Analysis and Applications of Electrical Machines 
+การวิเคราะห์และประยุกต์เครื่องจักรไฟฟ้า",3(3-0-6)
+03601472-55,"Electric Drives 
+การขับเคลื่อนด้วยไฟฟ้า",3(3-0-6)
+03601473-55,"Power Electronics 
+อิเล็กทรอนิกส์กำลัง",3(3-0-6)
+03601474-55,"Power Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์กำลัง",1(0-3-2)
+03601475-55,"Power Electronics for Energy Conservation 
+อิเล็กทรอนิกส์กำลังสำหรับการอนุรักษ์พลังงาน",3(3-0-6)
+03601476-55,"Distributed Generation Systems 
+ระบบผลิตไฟฟ้าจำหน่าย",3(3-0-6)
+03601477-55,"Renewable Energy 
+พลังงานหมุนเวียน",3(3-0-6)
+03601478-55,"Energy Conservation and Management 
+การอนุรักษ์และการจัดการพลังงาน",3(3-0-6)
+03601479-55,"Electric Vehicle Systems 
+ระบบยานยนต์ไฟฟ้า",3(3-0-6)
+03601482-55,"Thermal Sciences 
+อุณหศาสตร์",3(3-0-6)
+03600490-55,Cooperative Education,6
+03601496-55,"Selected Topics in Electrical and Electronics Engineering 
+เรื่องเฉพาะทางวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6)
+03601498-55,"Special Problems 
+ปัญหาพิเศษ",45352
+01175xxx-60,กิจกรรมพลศึกษา,1(0-2-1)
+xxxxxxxx-60,กลุ่มสาระอยู่ดีมีสุข,2
+03600014-60,"Creative Problem Solving and Critical Thinking Skills 
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6)
+01999021-60,"Thai Language for Communication 
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+03600013-60,"Essential Computer Tools and Skills 
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2)
+01355111-60,"Foundation English I 
+ภาษาอังกฤษ I",-
+01355112-60,"Foundation English II 
+ภาษาอังกฤษพื้นฐาน II",3(3-0-6)
+01355113-60,"Foundation English III 
+ภาษาอังกฤษพื้นฐาน III",3(3-0-6)
+01355xxx-60,กลุ่มวิชาภาษาอังกฤษ,3(3-0-6)
+01999111-60,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4)
+03600012-60,"Green Technology 
+เทคโนโลยีสีเขียว",3(3-0-6)
+01403114-60,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-60,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-60,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-60,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-60,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-60,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-60,"General Physics II 
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-60,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-60,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ II",1(0-3-2)
+03602211-60,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+03604111-60,"Engineering Drawing 
+การเขียนแบบทางวิศวกรรม",3(3-0-6)
+03603101-60,"Introduction to Computer Programming 
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6)
+03601211-60,"Electric Circuit Analysis I 
+การวิเคราะห์วงจรไฟฟ้า I",3(3-0-6)
+03601212-60,"Electric Circuit Analysis II 
+การวิเคราะห์วงจรไฟฟ้า II",3(3-0-6)
+03601213-60,"Electric Circuit Laboratory 
+ปฏิบัติการวงจรไฟฟ้า",1(0-3-2)
+03601214-60,"Applied Linear Algebra in Electrical Engineering 
+พีชคณิตเชิงเส้นประยุกต์ทางวิศวกรรมไฟฟ้า",3(3-0-6)
+03601215-60,"Applied Probability for Electrical Engineers 
+ความน่าจะเป็นประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6)
+03601231-60,"Electronic Circuits and Systems I 
+วงจรและระบบอิเล็กทรอนิกส์ I",3(3-0-6)
+03601232-60,"Digital Circuits and Logic Design 
+การออกแบบวงจรดิจิทัลและตรรกะ",3(3-0-6)
+03601251-60,"Electromechanical Energy Conversion I 
+การแปลงผันพลังงานเครื่องกลไฟฟา I",3(3-0-6)
+03601252-60,"Electromechanical Energy Conversion Laboratory I 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟา I",1(0-3-2)
+03601271-60,"Practice in Electrical Engineering 
+การปฏิบัติงานทางวิศวกรรมไฟฟ้า",1(0-3-2)
+03601311-60,"Signals and Systems 
+สูญญาณและระบบ",3(3-0-6)
+03601331-60,"Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์",1(0-3-2)
+03601332-60,"Microprocessors 
+ไมโครโพรเซสเซอร์",3(3-0-6)
+03601341-60,"Electromagnetic Fields and Waves I 
+สนามแม่เหล็กไฟฟ้าและคลื่น I",3(3-0-6)
+03601361-60,"Electrical Instruments and Measurements I 
+เครื่องมือวัดและการวัดทางไฟฟ้า I",3(3-0-6)
+03601362-60,"Linear Control Systems 
+ระบบควบคุมเชิงเส้น",3(3-0-6)
+03601371-60,"Internship Preparation 
+การเตรียมความพร้อมก่อนฝึกงาน",1(0-3-2)
+03601495-60,"Electrical and Electronics Engineering Project I 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ I",1(0-3-2)
+03601497-60,"Seminar 
+สัมมนา",1
+03601499-60,"Electrical and Electronics Engineering Project II 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ II",2(0-6-3)
+03604201-60,"Basic Principles of Engineering Mechanics 
+หลักพื่นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6)
+03604281-60,"Workshop Practice 
+การฝึกงานโรงงาน",1(0-3-2)
+03601314-60,"Digital Signal Processing 
+การประมวลสัญญาณดิจิทัล",3(3-0-6)
+03601315-60,"Digital Signal Processing Laboratory 
+ปฏิบัติการประมวลสัญญาณดิจิทัล",1(0-3-2)
+03601321-60,"Principles of Communications 
+หลักการสื่อสาร",3(3-0-6)
+03601323-60,"Communication Laboratory 
+ปฏิบัติการไฟฟ้าสื่สาร",1(0-3-2)
+03601333-60,"Microprocessors Laboratory 
+ปฏิบัติการไมโครโพรเซสเซอร์",1(0-3-2)
+03601334-60,"Electronic Circuits and Systems II 
+วงจรและระบบอิเล็กทรอนิกส์ II",3(3-0-6)
+03601335-60,"Advanced Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์ขั้นสูง",1(0-3-2)
+03601351-60,"Electromechanical Energy Conversion II 
+การแปลงผันพลังงานเครื่องกลไฟฟ้า II",3(3-0-6)
+03601352-60,"Electromechanical Energy Conversion Laboratory II 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟ้า II",1(0-3-2)
+03601353-60,"Power Systems in Buildings 
+ระบบกำลังในอาคาร",3(3-0-6)
+03601354-60,"Electric Power Systems Analysis I 
+การวิเคราะห์ระบบไฟฟ้ากำลัง I",3(3-0-6)
+03601355-60,"High-Voltage Engineering 
+วิศวกรรมไฟฟ้าแรงสูง",3(3-0-6)
+03601356-60,"Illumination Engineering 
+วิศวกรรมการส่องสว่าง",3(3-0-6)
+03601363-60,"Control and Measurement Laboratory 
+ปฏิบัติการการควบคุมและการวัด",1(0-3-2)
+03601364-60,"Industrial Automation Systems 
+ระบบอัตโนมัติทางอุตสาหกรรม",3(3-0-6)
+03601365-60,"Industrial Automation Systems Laboratory 
+ปฏิบัติการระบบอัตโนมัติทางอุตสาหกรรม",1(0-3-2)
+03601372-60,"Volunteer Electrical Engineer for Social Development 
+วิศวกรไฟฟ้าอาสาสําหรับการพัฒนาสังคม",3(3-0-6)
+03601381-60,"Computer Programming for Electrical Engineers 
+การเขียนโปรแกรมคอมพิวเตอร์สําหรับวิศวกรไฟฟ้า",3(3-0-6)
+03601432-60,"Analog Integrated Circuit Application Designs 
+การออกแบบประยุกต์วงจรรวมแอนะล็อก",3(3-0-6)
+03601433-60,"Industrial Electronics 
+อิเล็กทรอนิกส์อุตสาหกรรม",3(3-0-6)
+03601451-60,"Basic Power System Reliability 
+ความเชื่อถือได้เบื่องตนของระบบกำลัง",3(3-0-6)
+03601452-60,"Electric Power Plants 
+โรงจักรไฟฟ้ากำลัง",3(3-0-6)
+03601453-60,"Electric Power Systems Analysis II 
+การวิเคราะห์ระบบไฟฟ้ากำลัง II",3(3-0-6)
+03601454-60,"Electric Power Systems Analysis Laboratory 
+ปฏิบัติการการวิเคราะห์ระบบไฟฟ้า",1(0-3-2)
+03601456-60,"Power System Protection 
+การป้องกันระบบไฟฟ้ากำลัง",3(3-0-6)
+03601457-60,"Electrical Systems and Signal Systems in Building 
+ระบบไฟฟ้าและระบบสัญญาณในอาคาร",3(3-0-6)
+03601458-60,"Electrical Power Generation, Transmission and Distribution 
+การผลิต สูง และจำหน่ายกำลังไฟฟ้า",3(3-0-6)
+03601459-60,Safety in Electrical Engineering,3(3-0-6)
+03601461-60,"Process Control 
+การควบคุมกระบวนการ",3(3-0-6)
+03601462-60,"Industrial Sensors and Control Devices 
+เซนเซอร์ทางอุตสาหกรรมและอุปกรณ์ควบคุม",3(3-0-6)
+03601463-60,"Computer Control of Machines and Processes 
+การควบคุมเครื่องจักรกลและกระบวนการด้วยคอมพิวเตอร์",3(3-0-6)
+03601464-60,"Sensors and Transducers 
+เซนเซอร์และตัวแปลงสัญญาณ",3(3-0-6)
+03601465-60,"Electrical and Electronics Innovation 
+นวัตกรรมทางไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6)
+03601466-60,"Introduction to Robotic Systems 
+ระบบหุ่นยนต์เบื้องต้น",3(3-0-6)
+03601471-60,"Analysis and Applications of Electrical Machines 
+การวิเคราะห์และประยุกต์เครื่องจักรไฟฟ้า",3(3-0-6)
+03601472-60,"Electric Drives 
+การขับเคลื่อนด้วยไฟฟ้า",3(3-0-6)
+03601473-60,"Power Electronics 
+อิเล็กทรอนิกส์กำลัง",3(3-0-6)
+03601474-60,"Power Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์กำลัง",1(0-3-2)
+03601475-60,"Power Electronics for Energy Conservation 
+อิเล็กทรอนิกส์กำลังสำหรับการอนุรักษ์พลังงาน",3(3-0-6)
+03601476-60,"Distributed Generation Systems 
+ระบบผลิตไฟฟ้าจำหน่าย",3(3-0-6)
+03601477-60,"Renewable Energy 
+พลังงานหมุนเวียน",3(3-0-6)
+03601478-60,"Energy Conservation and Management 
+การอนุรักษ์และการจัดการพลังงาน",3(3-0-6)
+03601479-60,"Electric Vehicle Systems 
+ระบบยานยนต์ไฟฟ้า",3(3-0-6)
+03601482-60,"Thermal Sciences 
+อุณหศาสตร์",3(3-0-6)
+03600490-60,Cooperative Education,6
+03601496-60,"Selected Topics in Electrical and Electronics Engineering 
+เรื่องเฉพาะทางวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6)
+03601498-60,"Special Problems 
+ปัญหาพิเศษ",45352
+01175xxx-65,กิจกรรมพลศึกษา,1(0-2-1)
+01999021-65,"Thai Language for Communication 
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+01355101-65,"English for Everyday Life 
+ภาษาอังกฤษในชีวิตประจำวัน",3(3-0-6)
+01355102-65,"English for University Life 
+ภาษาอังกฤษในมหาวิทยาลัย",3(3-0-6)
+01355103-65,"English for Job Opportunities 
+ภาษาอังกฤษเพื่อโอกาสในการทำงาน",3(3-0-6)
+01355xxx-65,กลุ่มวิชาภาษาอังกฤษเลือก (01355xxx),3(3-0-6)
+01999111-65,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4)
+01403114-65,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-65,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-65,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-65,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-65,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-65,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420113-65,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+03602211-65,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+03603101-65,"Introduction to Computer Programming 
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6)
+03604111-65,"Engineering Drawing 
+การเขียนแบบทางวิศวกรรม",3(3-0-6)
+03601211-65,"Electric Circuit Analysis I 
+การวิเคราะห์วงจรไฟฟ้า I",3(3-0-6)
+03601212-65,"Electric Circuit Analysis II 
+การวิเคราะห์วงจรไฟฟ้า II",3(3-0-6)
+03601213-65,"Electric Circuit Laboratory 
+ปฏิบัติการวงจรไฟฟ้า",1(0-3-2)
+03601214-65,"Applied Linear Algebra in Electrical Engineering 
+พีชคณิตเชิงเส้นประยุกต์ทางวิศวกรรมไฟฟ้า",3(3-0-6)
+03601215-65,"Applied Probability for Electrical Engineers 
+ความน่าจะเป็นประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6)
+03601221-65,"Communication Technology and Smart Grid 
+เทคโนโลยีการสื่อสารและโครงข่ายไฟฟ้าอัจฉริยะ",3(3-0-6)
+03601231-65,"Electronic Circuits and Systems I 
+วงจรและระบบอิเล็กทรอนิกส์ I",3(3-0-6)
+03601232-65,"Digital Circuits and Logic Design 
+การออกแบบวงจรดิจิทัลและตรรกะ",3(3-0-6)
+03601241-65,"Electromagnetic Fields and Waves 
+สนามแม่เหล็กไฟฟ้าและคลื่น",3(3-0-6)
+03601251-65,"Electromechanical Energy Conversion I 
+การแปลงผันพลังงานเครื่องกลไฟฟา I",3(3-0-6)
+03601252-65,"Electromechanical Energy Conversion Laboratory I 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟา I",1(0-3-2)
+03601271-65,"Practice in Electrical Engineering 
+การปฏิบัติงานทางวิศวกรรมไฟฟ้า",1(0-3-2)
+03601311-65,"Signals and Systems 
+สูญญาณและระบบ",3(3-0-6)
+03601331-65,"Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์",1(0-3-2)
+03601332-65,"Microprocessors 
+ไมโครโพรเซสเซอร์",3(3-0-6)
+03601353-65,"Electrical System Design 
+การออกแบบระบบไฟฟ้า",3(3-0-6)
+03601361-65,"Electrical Instruments and Measurements I 
+เครื่องมือวัดและการวัดทางไฟฟ้า I",3(3-0-6)
+03601371-65,"Internship Preparation 
+การเตรียมความพร้อมก่อนฝึกงาน",1(0-3-2)
+03601458-65,"Electrical Power Generation, Transmission and Distribution 
+การผลิต สูง และจำหน่ายกำลังไฟฟ้า",3(3-0-6)
+03601459-65,Safety in Electrical Engineering,3(3-0-6)
+03601473-65,"Power Electronics 
+อิเล็กทรอนิกส์กำลัง",3(3-0-6)
+03601477-65,"Renewable Energy 
+พลังงานหมุนเวียน",3(3-0-6)
+03601495-65,"Electrical and Electronics Engineering Project I 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ I",1(0-3-2)
+03601497-65,"Seminar 
+สัมมนา",1
+03601499-65,"Electrical and Electronics Engineering Project II 
+โครงงานวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์ II",2(0-6-3)
+03602301-65,"Basic Principles of Production Management 
+หลักพื้นฐานการจัดการผลิต",3(3-0-6)
+03604223-65,"Basic Principles of Engineering Mechanics 
+หลักพื้นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6)
+03604281-65,"Workshop Practice 
+การฝึกงานโรงงาน",1(0-3-2)
+03600490-65,Cooperative Education,6
+03601314-65,"Digital Signal Processing 
+การประมวลสัญญาณดิจิทัล",3(3-0-6)
+03601315-65,"Digital Signal Processing Laboratory 
+ปฏิบัติการประมวลสัญญาณดิจิทัล",1(0-3-2)
+03601321-65,"Principles of Communications 
+หลักการสื่อสาร",3(3-0-6)
+03601323-65,"Communication Laboratory 
+ปฏิบัติการไฟฟ้าสื่สาร",1(0-3-2)
+03601333-65,"Microprocessors Laboratory 
+ปฏิบัติการไมโครโพรเซสเซอร์",1(0-3-2)
+03601334-65,"Electronic Circuits and Systems II 
+วงจรและระบบอิเล็กทรอนิกส์ II",3(3-0-6)
+03601335-65,"Advanced Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์ขั้นสูง",1(0-3-2)
+03601336-65,"Design and Application of Electronic Circuits 
+การออกแบบและประยุกต์วงจรอิเล็กทรอนิกส์",3(3-0-6)
+03601351-65,"Electromechanical Energy Conversion II 
+การแปลงผันพลังงานเครื่องกลไฟฟ้า II",3(3-0-6)
+03601352-65,"Electromechanical Energy Conversion Laboratory II 
+ปฏิบัติการการแปลงผันพลังงานเครื่องกลไฟฟ้า II",1(0-3-2)
+03601355-65,"High-Voltage Engineering 
+วิศวกรรมไฟฟ้าแรงสูง",3(3-0-6)
+03601356-65,"Illumination Engineering 
+วิศวกรรมการส่องสว่าง",3(3-0-6)
+03601357-65,"Electrical Power System 
+ระบบไฟฟ้ากำลัง",3(3-0-6)
+03601358-65,"High-Voltage Engineering Laboratory 
+ปฏิบัติการวิศวกรรมไฟฟ้าแรงสูง",3(3-0-6)
+03601363-65,"Control and Measurement Laboratory 
+ปฏิบัติการการควบคุมและการวัด",1(0-3-2)
+03601364-65,"Industrial Automation Systems 
+ระบบอัตโนมัติทางอุตสาหกรรม",3(3-0-6)
+03601365-65,"Industrial Automation Systems Laboratory 
+ปฏิบัติการระบบอัตโนมัติทางอุตสาหกรรม",1(0-3-2)
+03601382-65,"Application Programs for Electrical Engineers 
+โปรแกรมประยุกต์สำหรับวิศวกรไฟฟ้า",3(3-0-6)
+03601432-65,"Analog Integrated Circuit Application Designs 
+การออกแบบประยุกต์วงจรรวมแอนะล็อก",3(3-0-6)
+03601433-65,"Industrial Electronics 
+อิเล็กทรอนิกส์อุตสาหกรรม",3(3-0-6)
+03601434-65,"Computer Aided Electronic System Development 
+การพัฒนาระบบอิเล็กทรอนิกส์โดยใช้คอมพิวเตอร์ช่วย",3(3-0-6)
+03601451-65,"Basic Power System Reliability 
+ความเชื่อถือได้เบื่องตนของระบบกำลัง",3(3-0-6)
+03601452-65,"Electric Power Plants 
+โรงจักรไฟฟ้ากำลัง",3(3-0-6)
+03601454-65,"Electric Power Systems Analysis Laboratory 
+ปฏิบัติการการวิเคราะห์ระบบไฟฟ้า",1(0-3-2)
+03601456-65,"Power System Protection 
+การป้องกันระบบไฟฟ้ากำลัง",3(3-0-6)
+03601457-65,"Electrical Systems and Signal Systems in Building 
+ระบบไฟฟ้าและระบบสัญญาณในอาคาร",3(3-0-6)
+03601461-65,"Process Control 
+การควบคุมกระบวนการ",3(3-0-6)
+03601462-65,"Industrial Sensors and Control Devices 
+เซนเซอร์ทางอุตสาหกรรมและอุปกรณ์ควบคุม",3(3-0-6)
+03601463-65,"Computer Control of Machines and Processes 
+การควบคุมเครื่องจักรกลและกระบวนการด้วยคอมพิวเตอร์",3(3-0-6)
+03601464-65,"Sensors and Transducers 
+เซนเซอร์และตัวแปลงสัญญาณ",3(3-0-6)
+03601465-65,"ิElectrical and Electronics Innovation 
+นวัตกรรมทางไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6)
+03601466-65,"Introduction to Robotic Systems 
+ระบบหุ่นยนต์เบื้องต้น",3(3-0-6)
+03601467-65,"Railway Signaling and Control Systems 
+ระบบอาณัติสัญญาณและควบคุมระบบราง",3(3-0-6)
+03601471-65,"Analysis and Applications of Electrical Machines 
+การวิเคราะห์และประยุกต์เครื่องจักรไฟฟ้า",3(3-0-6)
+03601472-65,"Electric Drives 
+การขับเคลื่อนด้วยไฟฟ้า",3(3-0-6)
+03601474-65,"Power Electronics Laboratory 
+ปฏิบัติการอิเล็กทรอนิกส์กำลัง",1(0-3-2)
+03601475-65,"Power Electronics for Energy Conservation 
+อิเล็กทรอนิกส์กำลังสำหรับการอนุรักษ์พลังงาน",3(3-0-6)
+03601476-65,"Distributed Generation Systems 
+ระบบผลิตไฟฟ้าจำหน่าย",3(3-0-6)
+03601478-65,"Energy Conservation and Management 
+การอนุรักษ์และการจัดการพลังงาน",3(3-0-6)
+03601479-65,"Electric Vehicle Systems 
+ระบบยานยนต์ไฟฟ้า",3(3-0-6)
+03601496-65,"Selected Topics in Electrical and Electronics Engineering 
+เรื่องเฉพาะทางวิศวกรรมไฟฟ้าและอิเล็กทรอนิกส์",3(3-0-6)
+03601498-65,"Special Problems 
+ปัญหาพิเศษ",45352

@@ -1,9 +1,17 @@
-import { Button, Col, Form, Input, Row, Card, Cascader,Select,Space } from "antd";
-import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import {
+  Button,
+  Col,
+  Form,
+  Input,
+  Row,
+  Card,
+  Cascader,
+  Select,
+  Divider,
+  Space,
+} from "antd";
 import "./RegisterContent.css";
-import Axios from 'axios'
+import Axios from "axios";
 
 function RegisterContent() {
   const [options, setOptions] = useState([]);
@@ -11,6 +19,7 @@ function RegisterContent() {
   const [labelString, setLabelString] = useState('');
   const [type, setType] = useState('');
 
+  const { Option } = Select;
 
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.auth.profile);
@@ -47,7 +56,7 @@ function RegisterContent() {
       console.log('Subject Label:', label);
     }
   };
-  
+
   const [subjectReg_id, setSubjectReg_id] = useState("");
   const [lec_group, setLec_group] = useState(0);
   const [lab_group, setLab_group] = useState(0);
@@ -56,16 +65,23 @@ function RegisterContent() {
   const [user_email, setUser_email] = useState("");
   const [newSubjectReg_id, setNewSubjectReg_id] = useState(0);
   const [registerteacherList, setRegisterteacherList] = useState([]);
+  const [lec_num, setLec_num] = useState(0);
+  const [lab_num, setLab_num] = useState(0);
+  const [major, setMajor] = useState([]);
+  const [regYear, setRegYear] = useState([]);
+  const {room1, setRoom1} = useState("");
+  const {room2, setRoom2} = useState("");
+  const {room3, setRoom3} = useState("");
 
   const getRegister = () => {
-    Axios.get('http://localhost:3001/registerteacher')
+    Axios.get("http://localhost:3001/register")
       .then((response) => {
         setRegisterteacherList(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
 
   useEffect(() => {
     getRegister();
@@ -89,28 +105,31 @@ function RegisterContent() {
     }).catch(error => {
       console.log('เกิดข้อผิดพลาดในการบันทึกข้อมูล:', error);
     });
+
   };
 
   const updateRegisterSubject = (reg_id) => {
     Axios.put("http://localhost:3001/update", {
-      subjectReg_id: newSubjectReg_id, reg_id: reg_id
+      subjectReg_id: newSubjectReg_id,
+      reg_id: reg_id,
     }).then((response) => {
       setRegisterteacherList(
         registerteacherList.map((val) => {
           return val.reg_id === reg_id
             ? {
-              reg_id: val.reg_id,
-              subjectReg_id: newSubjectReg_id,
-              lec_group: val.lec_group,
-              lab_group: val.lab_group,
-              major_year: val.major_year,
-              roomReg_ranking: val.roomReg_ranking,
-              user_email: val.user_email
-            } : val;
+                reg_id: val.reg_id,
+                subjectReg_id: newSubjectReg_id,
+                lec_group: val.lec_group,
+                lab_group: val.lab_group,
+                major_year: val.major_year,
+                roomReg_ranking: val.roomReg_ranking,
+                user_email: val.user_email,
+              }
+            : val;
         })
-      )
-    })
-  }
+      );
+    });
+  };
 
   const deleteRegister = (reg_id) => {
     Axios.delete(`http://localhost:3001/delete/${reg_id}`).then((response) => {
@@ -118,9 +137,18 @@ function RegisterContent() {
         registerteacherList.filter((val) => {
           return val.reg_id !== reg_id;
         })
-      )
-    })
-  }
+      );
+    });
+  };
+
+
+  const handleChangeMajor = (major) => {
+    setMajor(major);
+  };
+
+  const handleChangeYear = (regYear) => {
+    setRegYear(regYear);
+  };
 
   const handleChange = (value) => {
     setType(value);
@@ -155,69 +183,22 @@ function RegisterContent() {
     <div className="top-regis">
       <Row gutter={16} style={{ flexDirection: "row" }}>
         <Col span={4}>
-          <h3>คณะ</h3>
-          <Form name="คณะ">
-            <Input placeholder="วิศวกรรมศาสตร์" />
-          </Form>
-        </Col>
-        <Col span={4}>
-          <h3>สาขา</h3>
-          <Form>
-            {/* <Input placeholder="เลือกสาขา"
-              onChange={(event) => {
-                setMajor_year(event.target.value)
-              }}
-            /> */}
-        <Space wrap>
-        <Select
-          placeholder="สาขาวิชา"
-          style={{
-            width: 120,
-          }}
-          onChange={handleChange}
-          options={[
-            {
-              value: 'T05',
-              label: 't05',
-            },
-            {
-              value: 'T12',
-              label: 't12',
-            },
-            {
-              value: 'T13',
-              label: 't13',
-            },
-            {
-              value: 'T14',
-              label: 't14',
-            },
-            {
-              value: 'T17',
-              label: 't17',
-            },
-          ]}
-          />
-          </Space>
-          </Form>
-        </Col>
-        <Col span={4}>
           <h3>ปีการศึกษา</h3>
           <Form>
-            <Input placeholder="2567" />
+            <Input placeholder="ปีการศึกษา" />
           </Form>
         </Col>
         <Col span={4}>
           <h3>ภาคการศึกษา</h3>
           <Form>
-            <Input placeholder="ภาคปลาย" />
+            <Input placeholder="ภาคการศึกษา" />
           </Form>
         </Col>
       </Row>
       <br />
       <Card style={{ background: "#d9d9d9" }}>
         <Row gutter={16} style={{ flexDirection: "row" }}>
-          <Col span={6}>
+          <Col span={4}>
             <h3>วิชา</h3>
             <Form>
             <Cascader
@@ -233,68 +214,141 @@ function RegisterContent() {
             />
           </Form>
           </Col>
-          <Col span={6}>
-            <h3>หมู่บรรยายและจำนวนนิสิต</h3>
-            <Form>
-              <Input placeholder="จำนวน"
+          <Col span={4}>
+            <h3>บรรยายและจำนวนนิสิต</h3>
+            <Form style={{ width: "200px" }}>
+              <Input 
+                placeholder="ใส่จำนวนนิสิต" 
                 onChange={(event) => {
-                  setLec_group(event.target.value)
-                }}
+                  setLec_num(event.target.value)
+              }}
               />
             </Form>
           </Col>
-          <Col span={6}>
-            <h3>หมู่ปฎิบัติและจำนวนนิสิต</h3>
-            <Form>
-              <Input placeholder="จำนวน"
+          <Col span={4}>
+            <h3>ปฎิบัติและจำนวนนิสิต</h3>
+            <Form style={{ width: "200px" }}>
+              <Input 
+                placeholder="ใส่จำนวนนิสิต" 
                 onChange={(event) => {
-                  setLab_group(event.target.value)
-                }}
+                  setLab_num(event.target.value)
+              }}
               />
             </Form>
           </Col>
-          <Col span={6}>
-            <h3>ห้องเรียน</h3>
-            <Form>
-              <Input placeholder="เลือกห้อง"
-                onChange={(event) => {
-                  setRoomReg_ranking(event.target.value)
-                }}
-              />
+          <Col span={4}>
+            <h3>สาขาที่เปิด</h3>
+            <Form style={{ width: "200px" }}>
+              <Select
+                mode="multiple"
+                style={{ width: "100%" }}
+                placeholder="เลือกสาขา"
+                onChange={handleChangeMajor}
+                value={major}
+              >
+                <Option value="item1">T12</Option>
+                <Option value="item2">T13</Option>
+                <Option value="item3">T14</Option>
+                <Option value="item4">T15</Option>
+              </Select>
+            </Form>
+          </Col>
+          <Col span={4}>
+            <h3>ชั้นปีที่เปิด</h3>
+            <Form style={{ width: "200px" }}>
+              <Select
+                mode="multiple"
+                style={{ width: "100%" }}
+                placeholder="เลือกชั้นปี"
+                onChange={handleChangeYear}
+                value={regYear}
+              >
+                <Option value="item1">ปี 1</Option>
+                <Option value="item2">ปี 2</Option>
+                <Option value="item3">ปี 3</Option>
+                <Option value="item4">ปี 4</Option>
+              </Select>
             </Form>
           </Col>
         </Row>
         <br />
-        <Button className="submit-button" onClick={addRegister}>ยืนยัน</Button>
+        <h3>อันดับห้องปฎิบัติ</h3>
+        <Row gutter={16} style={{ flexDirection: "row" }}>
+          <Col span={3}>
+            <Form>
+              <Select 
+                style={{ width: "100%" }} 
+                placeholder="เลือกห้องที่ 1"
+                onChange={(event) => {
+                  setRoom1(event.target.value)
+              }}
+                >
+                  <Option value="item1">Lab com 2</Option>
+                  <Option value="item2">Lab com 3</Option>
+                  <Option value="item3">Lab com DAT</Option>
+              </Select>
+            </Form>
+          </Col>
+          <Col span={3}>
+            <Form>
+              <Select 
+                style={{ width: "100%" }} 
+                placeholder="เลือกห้องที่ 2"
+                onChange={(event) => {
+                  setRoom2(event.target.value)
+              }}
+              >
+                <Option value="item1">Lab com 2</Option>
+                <Option value="item2">Lab com 3</Option>
+                <Option value="item3">Lab com DAT</Option>
+              </Select>
+            </Form>
+          </Col>
+          <Col span={3}>
+            <Form>
+              <Select 
+                style={{ width: "100%" }} 
+                placeholder="เลือกห้องที่ 3"
+                onChange={(event) => {
+                  setRoom3(event.target.value)
+              }}
+              >
+                <Option value="item1">Lab com 2</Option>
+                <Option value="item2">Lab com 3</Option>
+                <Option value="item3">Lab com DAT</Option>
+              </Select>
+            </Form>
+          </Col>
+        </Row>
         <br />
+        <Button className="submit-button" onClick={addRegister}>
+          ยืนยัน
+        </Button>
       </Card>
-      {/* {registerteacherList.map((val, index) => {
+      <Divider />
+      {registerteacherList.map((val, index) => {
         return (
           <Card style={{ background: "#d9d9d9" }} key={index}>
-            <div className='employee card'>
-              <p>วิชา : {val.subjectReg_id}</p>
-              <p>บรรยายและจำนานนิสิต : {val.lec_group}</p>
-              <p>ปฎิบัติและจำนวนนิสิต : {val.lab_group}</p>
-              <p>สาขา : {val.major_year}</p>
-              <p>ห้องปฎิบัติ : {val.roomReg_ranking}</p>
-              <Button className='delete-button' onClick={() => { deleteRegister(val.reg_id) }}>ลบ</Button>
+            <div className="employee card">
+              <p>วิชา : {val.subject}</p>
+              <p>บรรยายและจำนานนิสิต : {val.lec_num}</p>
+              <p>ปฎิบัติและจำนวนนิสิต : {val.lab_num}</p>
+              <p>สาขา : {val.major}</p>
+              <p>ชั้นปี : {val.regYear}</p>
+              <p>ห้องปฎิบัติ 1 : {val.room1}</p>
+              <p>ห้องปฎิบัติ 1 : {val.room2}</p>
+              <p>ห้องปฎิบัติ 1 : {val.room3}</p>
+              <Button
+                danger
+                onClick={() => {
+                  deleteRegister(val.reg_id);
+                }}
+              >
+                ลบ
+              </Button>
             </div>
           </Card>
-        )
-      })} */}
-      {registerteacherList.map((val) => {
-      return (
-        <Card style={{ background: "#d9d9d9" }} key={val.reg_id}>
-          <div className='employee card'>
-            <p>วิชา : {val.subjectReg_id}</p>
-            <p>บรรยายและจำนานนิสิต : {val.lec_group}</p>
-            <p>ปฎิบัติและจำนวนนิสิต : {val.lab_group}</p>
-            <p>สาขา : {val.major_year}</p>
-            <p>ห้องปฎิบัติ : {val.roomReg_ranking}</p>
-            <Button className='delete-button' onClick={() => { deleteRegister(val.reg_id) }}>ลบ</Button>
-          </div>
-        </Card>
-      )
+        );
       })}
     </div>
   );

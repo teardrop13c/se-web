@@ -1,0 +1,427 @@
+﻿รหัสวิชา,ชื่อวิชา,หน่วยกิต
+03600011-55,"Introduction to Computer Programming
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6)
+03600012-55,"Green Technology
+เทคโนโลยีสีเขียว",3(3-0-6)
+03600013-55,"Computer Software and Applications
+คอมพิวเตอร์ซอฟต์แวร์และการประยุกต์",1(0-3-2)
+01999021-55,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+01355-55,"Foundation English I
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",3(3-0-6)
+01403114-55,"Foundation English II
+ภาษาอังกฤษ 2",1(0-3-2)
+01403117-55,"Foundation English III
+ภาษาอังกฤษ 3",3(3-0-6)
+1403114-55,"Laboratory in Fundamental of General Chemistry
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+1403117-55,"Fundamental of General Chemistry
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-55,"Engineering Mathematics I
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-55,"Engineering Mathematics II
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-55,"Engineering Mathematics III
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-55,"General Physics I
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-55,"General Physics II
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-55,"Laboratory in Physics I
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-55,"Laboratory in Physics II
+ปฏิบัติการฟิสิกส์ II",1(0-3-2)
+03602211-55,"Materials Science for Engineers
+วัสดุศาสตร์สำหรับวิศวกร",3(2-3-6)
+03604111-55,"Engineering Drawing
+การเขียนแบบทางวิศวกรรม",3(3-0-6)
+03601201-55,"Introduction to Electrical Engineering
+วิศวกรรมไฟฟ้าเบื้องต้น",3(3-0-6)
+03601202-55,"Electrical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมไฟฟ้า I",1(0-3-2)
+03602212-55,"Computer-Aided Design
+การออกแบบใช้คอมพิวเตอร์ช่วย",3(2-3-6)
+03602221-55,"Applied Probability and Statistics for Engineers
+ความน่าจะเป็นและสถิติประยุกต์สำหรับวิศวกร",3(3-0-6)
+03602222-55,"Parameter Design
+การออกแบบพารามิเตอร์",3(3-0-6)
+03602251-55,"Engineering Economy
+เศรษฐศาสตร์วิศวกรรม",3(3-0-6)
+03602311-55,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6)
+03602312-55,"Introduction to Industrial and Systems Engineering
+วิศวกรรมอุตสาหการและระบบเบื้องต้น",1(0-3-2)
+03602321-55,"Operations Research for Engineers I
+การวิจัยการดำเนินงานสำหรับวิศวกร I",3(3-0-6)
+03602322-55,"Quality Control
+การควบคุมคุณภาพ",3(3-0-6)
+03602341-55,"Industrial Work Study
+การศึกษาการทำงานทางอุตสาหกรรม",3(3-0-6)
+03602342-55,"Production Planning and Control
+การวางแผนและการควบคุมการผลิต",3(3-0-6)
+03602343-55,"Industrial Plant Design
+การออกแบบโรงงานอุตสาหกรรม",3(3-0-6)
+03602361-55,"Problems Solving Techniques for Industrial Engineering
+เทคนิคการแก้ปัญหาทางวิศวกรรมอุตสาหการ",3(3-0-6)
+03602362-55,"Automatic Production System
+ระบบการผลิตอัตโนมัติ",4(3-3-8)
+03602381-55,"Industrial Engineering Laboratory
+ปฏิบัติการวิศวกรรมอุตสาหการ",1(0-3-2)
+03602411-55,"Industrial Instrumentation and Measurement
+วิชาการเครื่องมือวัดและการวัดทางอุตสาหกรรม",3(3-0-6)
+03602452-55,"Industrial Cost Analysis
+การวิเคราะห์ต้นทุนทางอุตสาหกรรม",3(3-0-6)
+03602461-55,"System Engineering
+วิศวกรรมระบบ",3(3-0-6)
+03602471-55,"Maintenance Engineering
+วิศวกรรมการซ่อมบำรุง",3(3-0-6)
+03602472-55,"Industrial Safety
+ความปลอดภัยในอุตสาหกรรม",3(3-0-6)
+03602495-55,"Industrial and Systems Engineering Project Preparation
+การเตรียมโครงงานวิศวกรรมอุตสาหการและระบบ",1(0-3-2)
+03602497-55,"Seminar
+สัมมนา",1
+03602499-55,"Industrial and Systems Engineering Project
+โครงงานวิศวกรรมอุตสาหการและระบบ",2(0-6-3)
+03604201-55,"Basic Principles of Engineering Mechanics
+หลักพื้นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6)
+03604203-55,"Introduction to Thermodynamics and Fluid Mechanics
+อุณหพลศาสตร์และกลศาสตร์ของไหลเบื้องต้น",3(3-0-6)
+03604281-55,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2)
+03604381-55,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2)
+03602323-55,"Operations Research for Engineers II
+การวิจัยการดำเนินงานสำหรับวิศวกร II",3(3-0-6)
+03602421-55,"Simulation
+การจำลองสถานการณ์",3(3-0-6)
+03602444-55,"Industrial Forecasting
+การพยากรณ์ทางอุตสาหกรรม",3(3-0-6)
+03602462-55,"Logistics Engineering
+วิศวกรรมโลจิสติกส์",3(3-0-6)
+03602412-55,"Industrial Pollution
+มลพิษทางอุตสาหกรรม",3(3-0-6)
+03602431-55,"Industrial Management
+การจัดการวิศวกรรม",3(3-0-6)
+03602432-55,"Design of Industrial Information System
+การออกแบบระบบสารสนเทศทางอุตสาหกรรม",3(3-0-6)
+03602442-55,"Energy Management
+การจัดการพลังงาน",3(3-0-6)
+03602451-55,"Industrial and Commercial Laws
+กฎหมายอุตสาหกรรมและพาณิชยกรรม",3(3-0-6)
+03602453-55,"Industrial Project Feasibility Study
+การศึกษาความเป็นไปได้ของโครงการอุตสาหกรรม",3(3-0-6)
+03602401-55,"Manufacturing Systems Engineering
+วิศวกรรมระบบการผลิต",3(3-0-6)
+03602414-55,"Design for Manufacturing and Assembly
+การออกแบบเพื่อการผลิตและการประกอบ",3(3-0-6)
+03602415-55,"Industrial Packaging
+การบรรจุทางอุตสาหกรรม",3(3-0-6)
+03602416-55,"Computer-Aided Design and Manufacturing
+การออกแบบและผลิตใช้คอมพิวเตอร์ช่วย",3(3-0-6)
+03602417-55,"Computer-aided Engineering and Manufacturing
+คอมพิวเตอร์ช่วยในงานวิศวกรรมและการผลิต",3(3-0-6)
+03602418-55,"Applied Image Processing for Manufacturing Process
+การประมวลผลภาพเชิงประยุกต์สำหรับกระบวนการผลิต",3(3-0-6)
+03602419-55,"Innovative Product Design and Manufacturing
+การออกแบบและการผลิตผลิตภัณฑ์เชิงนวัตกรรม",3(3-0-6)
+03602423-55,"Experimental Design for Engineers
+การออกแบบแผนการทดลองสำหรับวิศวกร",3(3-0-6)
+03602443-55,"Ergonomics
+การยศาสตร์",3(3-0-6)
+03602445-55,"Value Engineering
+วิศวกรรมคุณค่า",3(3-0-6)
+03602446-55,"Productivity Measurement and Management
+การวัดและการจัดการผลิตภาพ",3(3-0-6)
+03602496-55,"Special Problems
+ปัญหาพิเศษ",1-3
+03602498-55,"Selected Topics in Industrial and Systems Engineering
+เรื่องเฉพาะทางวิศวกรรมอุตสาหการและระบบ",1-3
+03600390-55,"Cooperative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6)
+03600490-55,"Cooperative Education
+สหกิจศึกษา",6
+03600014-60,"Creative Problem Solving and Critical Thinking Skills
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6)
+01999021-60,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+03600013-60,"Essential Computer Tools and Skills
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2)
+03754111-60,"Fundamental English I 
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",3(3-0-6)
+03754112-60,"Fundamental English II 
+ภาษาอังกฤษ II",3(3-0-6)
+03754113-60,"Fundamental English III
+ภาษาอังกฤษ III",3(3-0-6)
+03754xxx-60,กลุ่มวิชาภาษาอังกฤษเลือก (03754xxx),3(3-0-6)
+01999111-60,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4)
+03600012-60,"Green Technology 
+เทคโนโลยีสีเขียว",3(3-0-6)
+01403114-60,"Laboratory in Fundamental of General Chemistry
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-60,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-60,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-60,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-60,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-60,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-60,"General Physics II 
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-60,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-60,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ II",1(0-3-2)
+03602211-60,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+03603101-60,"Introduction to Computer Programming 
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6)
+03604111-60,"Engineering Drawing 
+การเขียนแบบทางวิศวกรรม",3(2-3-6)
+03601201-60,"Introduction to Electrical Engineering
+วิศวกรรมไฟฟ้าเบื้องต้น",3(3-0-6)
+03601202-60,"Electrical Engineering Laboratory
+ปฏิบัติการวิศวกรรมไฟฟ้า",1(0-3-2)
+03602212-60,"Computer-Aided Design
+การออกแบบใช้คอมพิวเตอร์ช่วย",3(2-3-6)
+03602221-60,"Applied Probability and Statistics for Engineers
+ความน่าจะเป็นและสถิติประยุกต์สำหรับวิศวกร",3(3-0-6)
+03602222-60,"Parameter Design
+การออกแบบพารามิเตอร์",3(3-0-6)
+03602251-60,"Engineering Economy
+เศรษฐศาสตร์วิศวกรรม",3(3-0-6)
+03602311-60,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6)
+03602312-60,"Introduction to Industrial and Systems Engineering
+วิศวกรรมอุตสาหการและระบบเบื้องต้น",1(0-3-2)
+03602321-60,"Operations Research for Engineers I
+การวิจัยการดำเนินงานสำหรับวิศวกร I",3(3-0-6)
+03602322-60,"Quality Control
+การควบคุมคุณภาพ",3(3-0-6)
+03602341-60,"Industrial Work Study
+การศึกษาการทำงานทางอุตสาหกรรม",3(3-0-6)
+03602342-60,"Production Planning and Control
+การวางแผนและการควบคุมการผลิต",3(3-0-6)
+03602343-60,"Industrial Plant Design
+การออกแบบโรงงานอุตสาหกรรม",3(3-0-6)
+03602361-60,"Computer Applications for Industrial Engineers
+คอมพิวเตอร์ประยุกต์สำหรับวิศวกรอุตสาหการ",3(3-0-6)
+03602362-60,"Automatic Production System
+ระบบการผลิตอัตโนมัติ",4(3-3-8)
+03602381-60,"Industrial Engineering Laboratory
+ปฏิบัติการวิศวกรรมอุตสาหการ",1(0-3-2)
+03602412-60,"Manufacturing System Engineering
+วิศวกรรมระบบการผลิต",3(3-0-6)
+03602452-60,"Industrial Cost Analysis
+การวิเคราะห์ต้นทุนทางอุตสาหกรรม",3(3-0-6)
+03602461-60,"Systems Engineering
+วิศวกรรมระบบ",3(3-0-6)
+03602471-60,"Maintenance Engineering
+วิศวกรรมการซ่อมบำรุง",3(3-0-6)
+03602472-60,"Industrial Safety
+ความปลอดภัยในอุตสาหกรรม",3(3-0-6)
+03602497-60,"Seminar
+สัมมนา",1
+03604201-60,"Basic Principles of Engineering Mechanics
+หลักพื้นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6)
+03604203-60,"Introduction to Thermodynamics and Fluid Mechanics
+อุณหพลศาสตร์และกลศาสตร์ของไหลเบื้องต้น",3(3-0-6)
+03604281-60,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2)
+03604381-60,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2)
+03600490-60,"Cooperative Education 
+สหกิจศึกษา",6
+03602495-60,"Industrial and Systems Engineering Project Preparation 
+การเตรียมโครงงานวิศวกรรมอุตสาหการและระบบ",1(0-3-2)
+03602499-60,"Industrial and Systems Engineering Project 
+โครงงานวิศวกรรมอุตสาหการและระบบ",2(0-6-3)
+03600390-60,"Cooperative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6)
+03602323-60,"Operations Research for Engineers II
+การวิจัยการดำเนินงานสำหรับวิศวกร II",3(3-0-6)
+03602411-60,"Industrial Instrumentation and Measurement
+วิชาการเครื่องมือและการวัดทางอุตสาหกรรม",3(3-0-6)
+03602414-60,"Design for Manufacturing and Assembly
+การออกแบบเพื่อการผลิตและการประกอบ",3(3-0-6)
+03602415-60,"Industrial Packaging
+การบรรจุทางอุตสาหกรรม",3(3-0-6)
+03602416-60,"Computer-Aided Design and Manufacturing
+การออกแบบและผลิตใช้คอมพิวเตอร์ช่วย",3(2-3-6)
+03602417-60,"Computer-aided Engineering and Manufacturing
+คอมพิวเตอร์ช่วยในงานวิศวกรรมและการผลิต",3(3-0-6)
+03602418-60,"Applied Image Processing for Manufacturing Processes
+การประมวลผลภาพเชิงประยุกต์สำหรับกระบวนการผลิต",3(3-0-6)
+03602419-60,"Innovative Product Design and Manufacturing
+การออกแบบและการผลิตผลิตภัณฑ์เชิงนวัตกรรม",3(3-0-6)
+03602421-60,"Simulation
+การจำลองสถานการณ์",3(3-0-6)
+03602423-60,"Experimental Design for Engineers
+การออกแบบแผนการทดลองสำหรับวิศวกร",3(3-0-6)
+03602431-60,"Industrial Management
+การจัดการอุตสาหกรรม",3(3-0-6)
+03602432-60,"Design of Industrial Information System
+การออกแบบระบบสารสนเทศทางอุตสาหกรรม",3(3-0-6)
+03602442-60,"Energy Management
+การจัดการพลังงาน",3(3-0-6)
+03602443-60,"Ergonomics
+การยศาสตร์",3(3-0-6)
+03602444-60,"Industrial Forecasting
+การพยากรณ์ทางอุตสาหกรรม",3(3-0-6)
+03602445-60,"Value Engineering
+วิศวกรรมคุณค่า",3(3-0-6)
+03602446-60,"Productivity Measurement and Management
+การวัดและการจัดการผลิตภาพ",3(3-0-6)
+03602451-60,"Industrial and Commercial Laws
+กฎหมายอุตสาหกรรมและพาณิชยกรรม",3(3-0-6)
+03602453-60,"Industrial Project Feasibility Study
+การศึกษาความเป็นไปได้ของโครงการอุตสาหกรรม",3(3-0-6)
+03602462-60,"Logistics Engineering
+วิศวกรรมโลจิสติกส์",3(3-0-6)
+03602496-60,"Selected Topics in Industrial and Systems Engineering
+เรื่องเฉพาะทางวิศวกรรมอุตสาหการและระบบ",1-3
+03602498-60,"Special Problems
+ปัญหาพิเศษ",1-3
+01999021-65,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+01355101-65,"English for Everyday Life
+ภาษาอังกฤษในชีวิตประจำวัน",3(3-0-6)
+01355102-65,"English for University Life
+ภาษาอังกฤษในมหาวิทยาลัย",3(3-0-6)
+01355103-65,"English for Job Opportunities
+ภาษาอังกฤษเพื่อโอกาสในการทำงาน",3(3-0-6)
+03754xxx-65,กลุ่มวิชาภาษาอังกฤษเลือก (03754xxx),3(3-0-6)
+01999111-65,"Knowledge of the Land
+ศาสตร์แห่งแผ่นดิน",2(2-0-4)
+01403114-65,"Laboratory in Fundamental of General Chemistry
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-65,"Fundamental of General Chemistry
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-65,"Engineering Mathematics I
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-65,"Engineering Mathematics II
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01420111-65,"General Physics I
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-65,"General Physics II
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-65,"Laboratory in Physics I
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-65,"Laboratory in Physics II
+ปฏิบัติการฟิสิกส์ II",1(0-3-2)
+03602211-65,"Materials Science for Engineers
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+03603101-65,"Introduction to Computer Programming
+การโปรแกรมคอมพิวเตอร์เบื้องต้น",3(2-3-6)
+03604111-65,"Engineering Drawing
+การเขียนแบบทางวิศวกรรม",3(2-3-6)
+03601201-65,"Introduction to Electrical Engineering
+วิศวกรรมไฟฟ้าเบื้องต้น",3(3-0-6)
+03601202-65,"Electrical Engineering Laboratory
+ปฏิบัติการวิศวกรรมไฟฟ้า",1(0-3-2)
+03602212-65,"Computer-Aided Design
+การออกแบบใช้คอมพิวเตอร์ช่วย",3(2-3-6)
+03602221-65,"Applied Probability and Statistics for Engineers
+ความน่าจะเป็นและสถิติประยุกต์สำหรับวิศวกร",3(3-0-6)
+03602222-65,"Engineering Experimental Design
+การออกแบบการทดลองเชิงวิศวกรรม",3(3-0-6)
+03602223-65,"Introduction to Computation and Intelligent Systems
+การคำนวณและระบบอัจฉริยะเบื้องต้น",3(3-0-6)
+03602251-65,"Engineering Economy
+เศรษฐศาสตร์วิศวกรรม",3(3-0-6)
+03602311-65,"Manufacturing Processes I
+กระบวนการผลิต I",3(3-0-6)
+03602312-65,"Introduction to Industrial and Systems Engineering
+วิศวกรรมอุตสาหการและระบบเบื้องต้น",1(0-3-2)
+03602321-65,"Operations Research for Engineers I
+การวิจัยการดำเนินงานสำหรับวิศวกร I",3(3-0-6)
+03602322-65,"Quality Control
+การควบคุมคุณภาพ",3(3-0-6)
+03602331-65,"Industrial Safety
+ความปลอดภัยในอุตสาหกรรม",3(3-0-6)
+03602341-65,"Industrial Work Study
+การศึกษาการทำงานทางอุตสาหกรรม",3(3-0-6)
+03602342-65,"Production Planning and Control
+การวางแผนและการควบคุมการผลิต",3(3-0-6)
+03602343-65,"Industrial Plant and Facilities Design
+การออกแบบโรงงานอุตสหากรรมและสิ่งอำนวยความสะดวก",3(3-0-6)
+03602351-65,"Industrial Cost Analysis
+การวิเคราะห์ต้นทุนทางอุตสาหกรรม",3(3-0-6)
+03602361-65,"Computer Applications for Industrial Engineers
+คอมพิวเตอร์ประยุกต์สำหรับวิศวกรอุตสาหการ",3(3-0-6)
+03602362-65,"Automatic Production System
+ระบบการผลิตอัตโนมัติ",4(3-3-8)
+03602421-65,"Simulation
+การจำลองสถานการณ์",3(3-0-6)
+03602433-65,"Maintenance Engineering
+วิศวกรรมการซ่อมบำรุง",3(3-0-6)
+03602461-65,"Systems Engineering
+วิศวกรรมระบบ",3(3-0-6)
+03602481-65,"Industrial Engineering Laboratory
+ปฏิบัติการวิศวกรรมอุตสาหการ",1(0-3-2)
+03602495-65,"Industrial and Systems Engineering Project Preparation
+การเตรียมโครงงานวิศวกรรมอุตสาหการและระบบ",1(0-3-2)
+03602499-65,"Industrial and Systems Engineering Project
+โครงงานวิศวกรรมอุตสาหการและระบบ",2(0-6-3)
+03604203-65,"Introduction to Thermodynamics and Fluid Mechanics
+อุณหพลศาสตร์และกลศาสตร์ของไหลเบื้องต้น",3(3-0-6)
+03604223-65,"Basic Principles of Engineering Mechanics
+หลักพื้นฐานทางกลศาสตร์ของไหลเบื้องต้น",3(3-0-6)
+03604281-65,"Workshop Practice
+การฝึกงานโรงงาน",1(0-3-2)
+03604381-65,"Mechanical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมเครื่องกล I",1(0-3-2)
+03600490-65,"Cooperative Education
+สหกิจศึกษา",6
+03600390-65,"Cooperative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6)
+03602323-65,"Operations Research for Engineers II
+การวิจัยการดำเนินงานสำหรับวิศวกร II",3(3-0-6)
+03602412-65,"Manufacturing System Engineering
+วิศวกรรมระบบการผลิต",3(3-0-6)
+03602413-65,"Industrial Packaging
+การบรรจุภัณฑ์ทางอุตสาหกรรม",3(3-0-6)
+03602414-65,"Computer-Aided Design and Manufacturing
+การออกแบบและผลิตใช้คอมพิวเตอร์ช่วย",3(2-3-6)
+03602415-65,"Computer-Aided Engineering and Manufacturing
+คอมพิวเตอร์ช่วนในงานวิศวกรรมและการผลิต",3(2-3-6)
+03602416-65,"Applied Image Processing for Manufacturing Processes
+การประมวลผลภาพเชิงประยุกต์สำหรับกระบวนการผลิต",3(3-0-6)
+03602417-65,"Innovative Product Design and Manufacturing
+การออกแบบและการผลิตภัณฑ์เชิงนวัตกรรม",3(3-0-6)
+03602418-65,"Application of Industrial Internet of Things in Manufacturing Systems
+การประยุกต์อินเตอร์เน็ตสรรพสิ่งสำหรับอุตสาหกรรมในระบบการผลิต",3(3-0-6)
+03602422-65,"Practical Operations Research
+การวิจัยการดำเนินงานภาคปฏิบัติ",3(3-0-6)
+03602431-65,"Innovative Industrial Management
+การจัดการนวัตกรรมอุตสาหกรรม",3(3-0-6)
+03602432-65,"Design of Industrial Information System
+การออกแบบระบบสารสนเทศทางอุตสาหกรรม",3(3-0-6)
+03602434-65,"Lean Manufacturing
+การจัดการพลังงาน",3(3-0-6)
+03602441-65,"Shop Floor Management
+การบริหารพื้นที่ผลิต",3(3-0-6)
+03602442-65,"Energy Management
+การจัดการพลังงาน",3(3-0-6)
+03602443-65,"Ergonomics
+การยศาสตร์",3(3-0-6)
+03602445-65,"Value Engineering
+วิศวกรรมคุณค่า",3(3-0-6)
+03602446-65,"Productivity Measurement and Management
+การวัดและการจัดการผลิตภาพ",3(3-0-6)
+03602451-65,"Industrial Project Feasibility Study
+การศึกษาความเป็นไปได้ของโครงการอุตสาหกรรม",3(3-0-6)
+03602471-65,"Logistics Engineering
+วิศวกรรมโลจิสติกส์",3(3-0-6)
+03602472-65,"Inventory Management and Warehouse Operations
+การจัดการสินค้าคงคลังและการดำเนินงานคลังสินค้า",3(3-0-6)
+03602473-65,"Strategies for Managing Supply Chains
+กลยุทธ์สำหรับการจัดการโซ่อุปทาน",3(3-0-6)
+03602496-65,"Selected Topics in Industrial and Systems Engineering
+เรื่องเฉพาะทางวิศวกรรมอุตสาหการและระบบ",1-3
+03602498-65,"Special Problems
+ปัญหาพิเศษ",1-3

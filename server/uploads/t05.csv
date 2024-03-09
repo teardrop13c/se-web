@@ -1,0 +1,537 @@
+﻿รหัสวิชา,ชื่อวิชา,หน่วยกิจ
+01200101-56,"Innovative Thinking 
+การคิดเชิงนวัตกรรม",1(1-0-2)
+01204111-56,"Computers and Programming 
+คอมพิวเตอร์และการโปรแกรม",3(2-3-6)
+01999011-56,"Food for Mankind 
+อาหารเพื่อมนุษยชาติ",3(3-0-6)
+01999012-56,"Health for Life 
+สุขภาพเพื่อชีวิต",3(3-0-6)
+01999213-56,"Environment, Technology and Life 
+สิ่งแวดล้อม เทคโนโลยีและชีวิต",3(3-0-6)
+01999021-56,"Thai Language for Communication 
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+01355111-56,"Foundation English I 
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",-
+01355112-56,"Foundation English II 
+ภาษาอังกฤษพื้นฐาน II",3(3-0-6)
+01355113-56,"Foundation English III 
+ภาษาอังกฤษพื้นฐาน III",3(3-0-6)
+01355xxx-56,กลุ่มวิชาภาษาอังกฤษ,3(3-0-6)
+01999041-56,"Economics for Better Living 
+เศรษฐศาสตร์เพื่อการดำเนินชีวิตที่ดี",3(3-0-6)
+01999141-56,"Man and Society 
+มนุษย์กับสังคม",3(3-0-6)
+01999031-56,"The Heritage of World Civilizations 
+มรดกอารยธรรมโลก",3(3-0-6)
+01999032-56,"Thai Studies 
+ไทยศึกษา",3(3-0-6)
+01999033-56,"Arts of Living 
+ศิลปะการดำเนินชีวิต",3(3-0-6)
+01175xxx-56,กิจกรรมพลศึกษา,1(0-2-1)
+01208111-56,"Engineering Drawing 
+การเขียนแบบวิศวกรรม",3(2-3-6)
+01213211-56,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+01403114-56,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-56,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-56,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-56,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-56,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-56,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-56,"General Physics II 
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-56,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-56,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ทั่ว II",1(0-3-2)
+01203211-56,"Surveying 
+การสำรวจ",3(2-3-6)
+01203212-56,"Survey Camp 
+การฝึกงานสำรวจ",1
+01203221-56,"Mechanics of Materials I 
+กลศาสตร์ของวัสดุ I",3(3-0-6)
+01203222-56,"Structural Analysis I 
+การวิเคราะห์โครงสร้าง I",3(3-0-6)
+01203223-56,"Mechanics of Materials II 
+กลศาสตร์ของวัสดุ III",3(3-0-6)
+01203224-56,"Applied Mathematics for Civil Engineering 
+คณิตศาสตร์ประยุกต์สำหรับวิศวกรรมโยธา",3(3-0-6)
+01203231-56,"Concrete and Engineering Materials 
+คอนกรีตและวัสดุวิศวกรรม",3(2-3-6)
+01203251-56,"Engineering Geology 
+ธรณีวิทยาทางวิศวกรรม",3(3-0-6)
+01203322-56,"Civil Engineering Materials Testing Laboratory 
+ปฏิบัติการทดสอบวัสดุวิศวกรรมโยธา",1(0-3-2)
+01203323-56,"Structural Analysis II 
+การวิเคราะห์โครงสร้าง II",3(3-0-6)
+01203331-56,"Reinforced Concrete Design 
+การออกแบบคอนกรีตเสริมเหล็ก",4(3-3-8)
+01203333-56,"Design of Timber and Steel Structures 
+การออกแบบโครงสร้างไม้และเหล็ก",4(3-3-8)
+01203352-56,"Soil Mechanics 
+ปฐพีกลศาสตร์",3(3-0-6)
+01203353-56,"Soil Mechanics Laboratory 
+ปฏิบัติการปฐพีกลศาสตร์",1(0-3-2)
+01203354-56,"Foundation Design 
+การออกแบบฐานราก",3(3-0-6)
+01203361-56,"Construction Engineering and Management 
+วิศวกรรมก่อสร้างและการจัดการ",3(3-0-6)
+01203371-56,"Transportation Engineering 
+วิศวกรรมขนส่ง",3(3-0-6)
+01203381-56,"Computer Applications in Civil Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโยธา",1(0-3-2)
+01203399-56,"Internship 
+การฝึกงาน",1
+01203471-56,"Highway Engineering 
+วิศวกรรมการทาง",3(3-0-6)
+01203495-56,"Civil Engineering Project Preparation 
+การเตรียมการโครงงานวิศวกรรมโยธา",1(0-3-2)
+01203497-56,"Seminar 
+สัมมนา",1
+01203499-56,"Civil Engineering Project 
+โครงงานวิศวกรรมโยธา",1(0-3-2)
+01204112-56,"Information Technology for Engineers 
+เทคโนโลยีสารสนเทศสำหรับวิศวกร",1(1-2-0)
+01206221-56,"Applied Probability and Statistics for Engineers 
+ความน่าจะเป็นและสถิตประยุกต์สำหรับวิศวกร",3(3-0-6)
+01208221-56,"Engineering Mechanics I 
+กลศาสตร์วิศวกรรม I",3(3-0-6)
+01209211-56,"Fluid Mechanics 
+กลศาสตร์ของของไหล",3(3-0-6)
+01209242-56,"Hydrology for Civil Engineering 
+อุทกวิทยาสำหรับวิศวกรรมโยธา",3(3-0-6)
+01209312-56,"Fluid Mechanics Laboratory 
+ปฏิบัติการกลศาสตร์ของของไหล",1(0-3-2)
+01209423-56,"Hydraulic Engineering 
+วิศวกรรมชลศาสตร์",3(3-0-6)
+01203490-56,"Co-operative Education 
+สหกิจศึกษา",6
+01203496-56,"Selected Topics in Civil Engineering(Advanced concrete) 
+เรื่องเฉพาะทางวิศวกรรมโยธา",45352
+01203311-56,"Engineering Surveying Technology
+เทคโนโลยีการสำรวจทางวิศวกรรม",3(2-3-6)
+01203312-56,"Photogrammetry 
+การสำรวจด้วยภาพถ่าย",3(2-3-6)
+01203411-56,"Aerial Photography Interpretation 
+การแปลภาพถ่ายทางอากาศ",3(2-3-6)
+01203415-56,"Remote Sensing for Engineers 
+การสำรวจข้อมูลระยะไกลสำหรับวิศวกร",3(2-3-6)
+01203416-56,"Geographic Information Systems for Engineers 
+ระบบสารสนเทศภูมิศาสตร์สำหรับวิศวกร",3(2-3-6)
+01203417-56,"Satellite Surveying for Engineers 
+การสำรวจด้วยดาวเทียมสำหรับวิศวกร",3(2-3-6)
+01203421-56,"Computer Applications in Structural Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโครงสร้าง",3(2-3-6)
+01203422-56,"Structural Damage and Rehabilitation 
+ความเสียหายของโครงสร้างและการฟื้นฟูสภาพ",3(3-0-6)
+01203431-56,"Prestressed Concrete Design 
+การออกแบบคอนกรีตอัดแรง",3(3-0-6)
+01203432-56,"Bridge Structural Design 
+การออกแบบโครงสร้างสะพาน",3(3-0-6)
+01203433-56,"Building Structural Design 
+การออกแบบโครงสร้างอาคาร",3(2-3-6)
+01203434-56,"Structural Steel Technology 
+เทคโนโลยีของเหล็กโครงสร้างง",3(3-0-6)
+01203451-56,"Analysis and Design of Earth Structures 
+การวิเคราะห์และออกแบบโครงสร้างดิน",3(3-0-6)
+01203452-56,"Engineering Soil Exploration 
+การสำรวจดินทางวิศวกรรม",3(2-3-6)
+01203453-56,"Principles of Geomechanics 
+หลักการธรณีกลศาสตร์",3(3-0-6)
+01203454-56,"Computer Applications in Geotechnical Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมปฐพี",3(2-3-6)
+01203455-56,"Principles of Rock Mechanics and Tunneling 
+หลักการกลศาสตร์ของหินและงานอุโมงค์",3(2-3-6)
+01203456-56,"Geo-environmental Engineering 
+วิศวกรรมปฐพีสิ่งแวดล้อม",3(3-0-6)
+01203461-56,"Construction Equipment 
+เครื่องมือในงานก่อสร้าง",3(3-0-6)
+01203462-56,"Contract, Specification and Construction Estimation 
+สัญญา ข้อกำหนดและการประมาณการก่อสร้าง",3(3-0-6)
+01203463-56,"Sustainable Construction 
+การก่อสร้างอย่างยั่งยืน",3(3-0-6)
+01203464-56,"Materials and Methods of Construction 
+วัสดุและวิธีการก่อสร้าง",3(3-0-6)
+01203465-56,"Computer Applications in Construction 
+การประยุกต์คอมพิวเตอร์ในงานก่อสร้าง",3(2-3-6)
+01203466-56,"Construction Project Analysis 
+การวิเคราะห์โครงการก่อสร้าง",3(3-0-6)
+01203467-56,"Supervision and Inspection in Construction 
+การควบคุมและตรวจสอบงานก่อสร้าง",3(3-0-6)
+01203472-56,"Highway Materials 
+วัสดุการทาง",3(2-3-6)
+01203473-56,"Traffic Engineering 
+วิศวกรรมจราจร",3(3-0-6)
+01203474-56,"Urban Transportation Planning 
+การวางแผนการขนส่งเขตเมือง",3(3-0-6)
+01203475-56,"Urban Mass Transportation Planning 
+การวางแผนการขนส่งมวลชนเขตเมือง",3(3-0-6)
+01203476-56,"Airport Planning and Design 
+การวางแผนและการออกแบบสนามบิน",3(3-0-6)
+01203477-56,"Pavement Structures 
+โครงสร้างพื้นผิวทาง",3(3-0-6)
+01203478-56,"Traffic Design and Operations 
+การออกแบบและการดำเนินงานการจราจร",3(2-3-6)
+01203479-56,"Computer applications in transport engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมขนส่ง",3(3-0-6)
+01203481-56,"Sanitary Engineering and Water Supply 
+วิศวกรรมสุขภิบาลและการประปา",3(3-0-6)
+01175xxx-60,กิจกรรมพลศึกษา,1(0-2-1)
+03600014-60,"Creative Problem Solving and Critical Thinking Skills 
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6)
+01999021-60,"Thai Language for Communication 
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+03600013-60,"Essential Computer Tools and Skills 
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2)
+01355111-60,"Foundation English I
+ภาษาอังกฤษ 1",-
+01355112-60,"Foundation English II 
+ภาษาอังกฤษ II",3(3-0-6)
+01355113-60,"Foundation English III 
+ภาษาอังกฤษ III",3(3-0-6)
+01355xxx-60,กลุ่มวิชาภาษาอังกฤษ,3(3-0-6)
+01999111-60,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4)
+01403114-60,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-60,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-60,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-60,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01417267-60,"Engineering Mathematics III 
+คณิตศาสตร์วิศวกรรม III",3(3-0-6)
+01420111-60,"General Physics I
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420112-60,"General Physics II
+ฟิสิกส์ทั่วไป II",3(3-0-6)
+01420113-60,"Laboratory in Physics I
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01420114-60,"Laboratory in Physics II 
+ปฏิบัติการฟิสิกส์ทั่ว II",1(0-3-2)
+01204111-60,"Computers and Programming 
+คอมพิวเตอร์และการโปรแกรม",3(2-3-6)
+01208111-60,"Engineering Drawing 
+การเขียนแบบวิศวกรรม",3(2-3-6)
+01208221-60,"Engineering Mechanics I 
+กลศาสตร์วิศวกรรม I",3(3-0-6)
+01213211-60,"Materials Science for Engineers 
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+01203211-60,"Surveying 
+การสำรวจ",3(2-3-6)
+01203212-60,"Survey Camp 
+การฝึกงานสำรวจ",1
+01203221-60,"Mechanics of Materials I 
+กลศาสตร์ของวัสดุ I",3(3-0-6)
+01203222-60,"Structural Analysis I 
+การวิเคราะห์โครงสร้าง I",3(3-0-6)
+01203223-60,"Mechanics of Materials II 
+กลศาสตร์ของวัสดุ II",3(3-0-6)
+01203224-60,"Applied Mathematics for Civil Engineering 
+คณิตศาสตร์ประยุกต์สำหรับวิศวกรรมโยธา",3(3-0-6)
+01203231-60,"Concrete and Engineering Materials 
+คอนกรีตและวัสดุวิศวกรรม",3(2-3-6)
+01203251-60,"Engineering Geology 
+ธรณีวิทยาทางวิศวกรรม",3(3-0-6)
+01203322-60,"Civil Engineering Materials Testing Laboratory 
+ปฏิบัติการทดสอบวัสดุวิศวกรรมโยธา",1(0-3-2)
+01203323-60,"Structural Analysis II 
+การวิเคราะห์โครงสร้าง III",3(3-0-6)
+01203331-60,"Reinforced Concrete Design 
+การออกแบบคอนกรีตเสริมเหล็ก",4(3-3-8)
+01203333-60,"Design of Timber and Steel Structures 
+การออกแบบโครงสร้างไม้และเหล็ก",4(3-3-8)
+01203352-60,"Soil Mechanics 
+ปฐพีกลศาสตร์",3(3-0-6)
+01203353-60,"Soil Mechanics Laboratory
+ปฏิบัติการปฐพีกลศาสตร์",1(0-3-2)
+01203354-60,"Foundation Design 
+การออกแบบฐานราก",3(3-0-6)
+01203361-60,"Construction Engineering and Management 
+วิศวกรรมก่อสร้างและการจัดการ",3(3-0-6)
+01203371-60,"Transportation Engineering 
+วิศวกรรมขนส่ง",3(3-0-6)
+01203381-60,"Computer Applications in Civil Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโยธา",1(0-3-2)
+01203399-60,"Internship 
+การฝึกงาน",1
+01203471-60,"Highway Engineering 
+วิศวกรรมการทาง",3(3-0-6)
+01203495-60,"Civil Engineering Project Preparation 
+การเตรียมการโครงงานวิศวกรรมโยธา",1(0-3-2)
+01203497-60,"Seminar 
+สัมมนา",1
+01203499-60,"Civil Engineering Project 
+โครงงานวิศวกรรมโยธา",1(0-3-2)
+01204112-60,"Information Technology for Engineers 
+เทคโนโลยีสารสนเทศสำหรับวิศวกร",1(1-2-0)
+01209211-60,"Fluid Mechanics 
+กลศาสตร์ของของไหล",3(3-0-6)
+01209312-60,"Laboratory for Fluid Mechanics 
+ปฏิบัติการสำหรับวิชากลศาสตร์ของของไหล",1(0-3-2)
+01209242-60,"Hydrology for Civil Engineering 
+อุทกวิทยาสำหรับวิศวกรรมโยธา",2(2-0-4)
+01209423-60,"Hydraulic Engineering 
+วิศวกรรมชลศาสตร์",3(3-0-6)
+01203311-60,"Engineering Surveying Technology 
+เทคโนโลยีการสำรวจทางวิศวกรรม",3(2-3-6)
+01203312-60,"Photogrammetry 
+การสำรวจด้วยภาพถ่าย",3(2-3-6)
+01203411-60,"Aerial Photography Interpretation 
+การแปลภาพถ่ายทางอากาศ",3(2-3-6)
+01203415-60,"Remote Sensing for Engineers 
+การสำรวจข้อมูลระยะไกลสำหรับวิศวกร",3(2-3-6)
+01203416-60,"Geographic Information Systems for Engineers 
+ระบบสารสนเทศภูมิศาสตร์สำหรับวิศวกร",3(2-3-6)
+01203417-60,"Satellite Surveying for Engineers 
+การสำรวจด้วยดาวเทียมสำหรับวิศวกร",3(2-3-6)
+01203490-60,"Co-operative Education 
+สหกิจศึกษา",6
+01203496-60,"Selected Topics in Civil Engineering 
+เรื่องเฉพาะทางวิศวกรรมโยธา",45352
+01203421-60,"Computer Applications in Structural Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโครงสร้าง",3(2-3-6)
+01203422-60,"Structural Damage and Rehabilitation 
+ความเสียหายของโครงสร้างและการฟื้นฟูสภาพ",3(3-0-6)
+01203431-60,"Prestressed Concrete Design 
+การออกแบบคอนกรีตอัดแรง",3(3-0-6)
+01203432-60,"Bridge Structural Design 
+การออกแบบโครงสร้างสะพาน",3(3-0-6)
+01203433-60,"Building Structural Design 
+การออกแบบโครงสร้างอาคาร",3(2-3-6)
+01203434-60,"Structural Steel Technology 
+เทคโนโลยีของเหล็กโครงสร้าง",3(3-0-6)
+01203451-60,"Analysis and Design of Earth Structures 
+การวิเคราะห์และออกแบบโครงสร้างดิน",3(3-0-6)
+01203452-60,"Engineering Soil Exploration 
+การสำรวจดินทางวิศวกรรม",3(2-3-6)
+01203453-60,"Principles of Geomechanics 
+หลักการธรณีกลศาสตร์",3(3-0-6)
+01203454-60,"Computer Applications in Geotechnical Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมปฐพี",3(2-3-6)
+01203455-60,"Principles of Rock Mechanics and Tunneling 
+หลักการกลศาสตร์ของหินและงานอุโมงค์",3(2-3-6)
+01203456-60,"Geo-environmental Engineering 
+วิศวกรรมปฐพีสิ่งแวดล้อม",3(3-0-6)
+01203461-60,"Construction Equipment 
+เครื่องมือในงานก่อสร้าง",3(3-0-6)
+01203462-60,"Contract, Specification and Construction Estimation 
+สัญญา ข้อกำหนดและการประมาณการก่อสร้าง",3(3-0-6)
+01203463-60,"Sustainable Construction 
+การก่อสร้างอย่างยั่งยืน",3(3-0-6)
+01203464-60,"Materials and Methods of Construction 
+วัสดุและวิธีการก่อสร้าง",3(3-0-6)
+01203465-60,"Computer Applications in Construction 
+การประยุกต์คอมพิวเตอร์ในงานก่อสร้าง",3(2-3-6)
+01203466-60,"Construction Project Analysis 
+การวิเคราะห์โครงการก่อสร้าง",3(3-0-6)
+01203467-60,"Supervision and Inspection in Construction 
+การควบคุมและตรวจสอบงานก่อสร้าง",3(3-0-6)
+01203470-60,"Freight Transportation Planning and Logistics 
+การวางแผนการขนส่งสินค้าและโลจิสติกส์",3(3-0-6)
+01203472-60,"Highway Materials 
+วัสดุการทาง",3(2-3-6)
+01203473-60,"Traffic Engineering 
+วิศวกรรมจราจร",3(3-0-6)
+01203474-60,"Urban Transportation Planning 
+การวางแผนการขนส่งเขตเมือง",3(3-0-6)
+01203475-60,"Urban Mass Transportation Planning 
+การวางแผนการขนส่งมวลชนเขตเมือง",3(3-0-6)
+01203476-60,"Airport Planning and Design 
+การวางแผนและการออกแบบสนามบิน",3(3-0-6)
+01203477-60,"Pavement Structures 
+โครงสร้างพื้นผิวทาง",3(3-0-6)
+01203478-60,"Traffic Design and Operations 
+การออกแบบและการดำเนินงานการจราจร",3(2-3-6)
+01203479-60,"Computer applications in transport engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมขนส่ง",3(3-0-6)
+01200434-60,"Rail Infrastructure 
+โครงสร้างพื้นฐานระบบราง",3(3-0-6)
+01200435-60,"Rail System Operation and Maintenance 
+การปฏิบัติการและการซ่อมบำรุงระบบราง",3(3-0-6)
+01203481-60,"Sanitary Engineering and Water Supply 
+วิศวกรรมสุขภิบาลและการประปา",3(3-0-6)
+01175xxx-65,กิจกรรมพลศึกษา,1(0-2-1)
+03600014-65,"Creative Problem Solving and Critical Thinking Skills 
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6)
+01999021-65,"Thai Language for Communication 
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6)
+03600013-65,"Essential Computer Tools and Skills 
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2)
+01355101-65,"English for Everyday Life 
+ภาษาอังกฤษในชีวิตประจำวัน",3(3-0-6)
+01355102-65,"English for University Life 
+ภาษาอังกฤษในมหาวิทยาลัย",3(3-0-6)
+01355103-65,"English for Job Opportunities 
+ภาษาอังกฤษเพื่อโอกาสในการทำงาน",3(3-0-6)
+01355xxx-65,กลุ่มวิชาภาษาอังกฤษ,3(3-0-6)
+01999111-65,"Knowledge of the Land 
+ศาสตร์แห่งแผ่นดิน",2(2-0-4)
+01403114-65,"Laboratory in Fundamental of General Chemistry 
+ปฏิบัติการหลักมูลเคมีทั่วไป",1(0-3-2)
+01403117-65,"Fundamental of General Chemistry 
+หลักมูลเคมีทั่วไป",3(3-0-6)
+01417167-65,"Engineering Mathematics I 
+คณิตศาสตร์วิศวกรรม I",3(3-0-6)
+01417168-65,"Engineering Mathematics II 
+คณิตศาสตร์วิศวกรรม II",3(3-0-6)
+01420111-65,"General Physics I 
+ฟิสิกส์ทั่วไป I",3(3-0-6)
+01420113-65,"Laboratory in Physics I 
+ปฏิบัติการฟิสิกส์ I",1(0-3-2)
+01204111-65,"Computers and Programming 
+คอมพิวเตอร์และการโปรแกรม",3(2-3-6)
+01208111-65,"Engineering Drawing 
+การเขียนแบบวิศวกรรม",3(2-3-6)
+01208221-65,"Engineering Mechanics I 
+กลศาสตร์วิศวกรรม I",3(3-0-6)
+01213211-65,"Materials Science for Engineers
+วัสดุศาสตร์สำหรับวิศวกร",3(3-0-6)
+01203111-65,"Applied Statistics for Civil Engineering 
+สถิติประยุกต์สำหรับวิศวกรรมโยธา",2(2-0-4)
+01203211-65,"Surveying 
+การสำรวจ",3(2-3-6)
+01203212-65,"Survey Camp 
+การฝึกงานสำรวจ",1
+01203221-65,"Mechanics of Materials I 
+กลศาสตร์ของวัสดุ I",3(3-0-6)
+01203222-65,"Structural Analysis I 
+การวิเคราะห์โครงสร้าง I",3(3-0-6)
+01203223-65,"Mechanics of Materials II 
+กลศาสตร์ของวัสดุ II",3(3-0-6)
+01203224-65,"Applied Mathematics for Civil Engineering 
+คณิตศาสตร์ประยุกต์สำหรับวิศวกรรมโยธา",3(3-0-6)
+01203231-65,"Concrete and Engineering Materials 
+คอนกรีตและวัสดุวิศวกรรม",3(2-3-6)
+01203251-65,"Engineering Geology 
+ธรณีวิทยาทางวิศวกรรม",3(3-0-6)
+01203322-65,"Civil Engineering Materials Testing Laboratory 
+ปฏิบัติการทดสอบวัสดุวิศวกรรมโยธา",1(0-3-2)
+01203323-65,"Structural Analysis II 
+การวิเคราะห์โครงสร้าง III",3(3-0-6)
+01203331-65,"Reinforced Concrete Design 
+การออกแบบคอนกรีตเสริมเหล็ก",4(3-3-8)
+01203333-65,"Design of Timber and Steel Structures 
+การออกแบบโครงสร้างไม้และเหล็ก",4(3-3-8)
+01203352-65,"Soil Mechanics 
+ปฐพีกลศาสตร์",3(3-0-6)
+01203353-65,"Soil Mechanics Laboratory
+ปฏิบัติการปฐพีกลศาสตร์",1(0-3-2)
+01203354-65,"Foundation Design 
+การออกแบบฐานราก",3(3-0-6)
+01203361-65,"Construction Engineering and Management 
+วิศวกรรมก่อสร้างและการจัดการ",3(3-0-6)
+01203371-65,"Transportation Engineering 
+วิศวกรรมขนส่ง",3(3-0-6)
+01203381-65,"Computer Applications in Civil Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโยธา",1(0-3-2)
+01203399-65,"Internship 
+การฝึกงาน",1
+01203471-65,"Highway Engineering 
+วิศวกรรมการทาง",3(3-0-6)
+01203472-65,"Smart Cities 
+เมืองอัจฉริยะ",3(3-0-6)
+01203495-65,"Civil Engineering Project Preparation 
+การเตรียมการโครงงานวิศวกรรมโยธา",1(0-3-2)
+01203497-65,"Seminar 
+สัมมนา",1
+01203499-65,"Civil Engineering Project 
+โครงงานวิศวกรรมโยธา",1(0-3-2)
+01209211-65,"Fluid Mechanics 
+กลศาสตร์ของของไหล",3(3-0-6)
+01209312-65,"Laboratory for Fluid Mechanics 
+ปฏิบัติการสำหรับวิชากลศาสตร์ของของไหล",1(0-3-2)
+01209242-65,"Hydrology for Civil Engineering 
+อุทกวิทยาสำหรับวิศวกรรมโยธา",2(2-0-4)
+01209423-65,"Hydraulic Engineering 
+วิศวกรรมชลศาสตร์",3(3-0-6)
+01203311-65,"Engineering Surveying Technology 
+เทคโนโลยีการสำรวจทางวิศวกรรม",3(2-3-6)
+01203312-65,"Photogrammetry 
+การสำรวจด้วยภาพถ่าย",3(2-3-6)
+01203411-65,"Aerial Photography Interpretation 
+การแปลภาพถ่ายทางอากาศ",3(2-3-6)
+01203415-65,"Remote Sensing for Engineers 
+การสำรวจข้อมูลระยะไกลสำหรับวิศวกร",3(2-3-6)
+01203416-65,"Geographic Information Systems for Engineers 
+ระบบสารสนเทศภูมิศาสตร์สำหรับวิศวกร",3(2-3-6)
+01203417-65,"Satellite Surveying for Engineers 
+การสำรวจด้วยดาวเทียมสำหรับวิศวกร",3(2-3-6)
+01203421-65,"Computer Applications in Structural Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมโครงสร้าง",3(2-3-6)
+01203422-65,"Structural Damage and Rehabilitation 
+ความเสียหายของโครงสร้างและการฟื้นฟูสภาพ",3(3-0-6)
+01203431-65,"Prestressed Concrete Design 
+การออกแบบคอนกรีตอัดแรง",3(3-0-6)
+01203432-65,"Bridge Structural Design 
+การออกแบบโครงสร้างสะพาน",3(3-0-6)
+01203433-65,"Building Structural Design 
+การออกแบบโครงสร้างอาคาร",3(2-3-6)
+01203434-65,"Structural Steel Technology 
+เทคโนโลยีของเหล็กโครงสร้าง",3(3-0-6)
+01203451-65,"Analysis and Design of Earth Structures 
+การวิเคราะห์และออกแบบโครงสร้างดิน",3(3-0-6)
+01203452-65,"Engineering Soil Exploration 
+การสำรวจดินทางวิศวกรรม",3(2-3-6)
+01203453-65,"Principles of Geomechanics 
+หลักการธรณีกลศาสตร์",3(3-0-6)
+01203454-65,"Computer Applications in Geotechnical Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมปฐพี",3(2-3-6)
+01203455-65,"Principles of Rock Mechanics and Tunneling 
+หลักการกลศาสตร์ของหินและงานอุโมงค์",3(2-3-6)
+01203456-65,"Geo-environmental Engineering 
+วิศวกรรมปฐพีสิ่งแวดล้อม",3(3-0-6)
+01203461-65,"Construction Equipment 
+เครื่องมือในงานก่อสร้าง",3(3-0-6)
+01203462-65,"Contract, Specification and Construction Estimation 
+สัญญา ข้อกำหนดและการประมาณการก่อสร้าง",3(3-0-6)
+01203463-65,"Sustainable Construction 
+การก่อสร้างอย่างยั่งยืน",3(3-0-6)
+01203464-65,"Materials and Methods of Construction 
+วัสดุและวิธีการก่อสร้าง",3(3-0-6)
+01203465-65,"Computer Applications in Construction 
+การประยุกต์คอมพิวเตอร์ในงานก่อสร้าง",3(2-3-6)
+01203466-65,"Construction Project Analysis 
+การวิเคราะห์โครงการก่อสร้าง",3(3-0-6)
+01203467-65,"Supervision and Inspection in Construction 
+การควบคุมและตรวจสอบงานก่อสร้าง",3(3-0-6)
+01203470-65,"Freight Transportation Planning and Logistics
+การวางแผนการขนส่งสินค้าและโลจิสติกส์",3(3-0-6)
+01203473-65,"Traffic Engineering 
+วิศวกรรมจราจร",3(3-0-6)
+01203474-65,"Urban Transportation Planning 
+การวางแผนการขนส่งเขตเมือง",3(3-0-6)
+01203475-65,"Urban Mass Transportation Planning 
+การวางแผนการขนส่งมวลชนเขตเมือง",3(3-0-6)
+01203476-65,"Airport Planning and Design 
+การวางแผนและการออกแบบสนามบิน",3(3-0-6)
+01203477-65,"Pavement Structures 
+โครงสร้างพื้นผิวทาง",3(3-0-6)
+01203478-65,"Traffic Design and Operation 
+การออกแบบและการดำเนินงานการจราจร",3(2-3-6)
+01203479-65,"Computer Applications in Transport Engineering 
+การประยุกต์คอมพิวเตอร์ในงานวิศวกรรมขนส่ง",3(3-0-6)
+01203481-65,"Sanitary Engineering and Water Supply 
+วิศวกรรมสุขภิบาลและการประปา",3(3-0-6)
+01203490-65,"Co-operative 
+สหกิจศึกษา",6
+01203496-65,"Selected Topics in Civil Engineering 
+เรื่องเฉพาะทางวิศวกรรมโยธา",45352
+01200434-65,"Rail Infrastructure 
+โครงสร้างพื้นฐานระบบราง",3(3-0-6)
+01200435-65,"Rail System Operation and Maintenance 
+การปฏิบัติการและการซ่อมบำรุงระบบราง",3(3-0-6)
+03606421-65,"Advanced Concrete Technology 
+เทคโนโลยีคอนกรีตขั้นสูง",3(3-0-6)
+03606461-65,"Applications of Building Information Modeling in Construction 
+การประยุกต์แบบจำลองสารสนเทศอาคารในงานก่อสร้าง",3(2-3-6)
+03606481-65,"Coastal Engineering 
+วิศวกรรมชายฝั่งทะเล",3(3-0-6)

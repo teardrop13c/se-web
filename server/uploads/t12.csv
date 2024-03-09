@@ -1,0 +1,476 @@
+﻿รหัสวิชา,ชื่อวิชา,หน่วยกิจ,
+03600012-55,"Green Technology
+เทคโนโลยีสีเขียว",3(3-0-6),
+03600013-55,"Computer Software and Applications
+คอมพิวเตอร์ซอฟต์แวร์และการประยุกต์",1(0-3-2),
+03600014-55,"Creative Problem Solving and Critical Thinking Skills
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6),
+01999011-55,"Food for Mankind
+อาหารเพื่อมนุษยชาติ",3(3-0-6),
+01999012-55,"Health for Life
+สุขภาพเพื่อชีวิต",3(3-0-6),
+01999213-55,"Environment, Technology and Life
+สิ่งแวดล้อม เทคโนโลยีและชีวิต",3(3-0-6),
+01999021-55,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6),
+01355111-55,"Foundation English I
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",3(3-0-6),
+01355112-55,"Foundation English II
+ภาษาอังกฤษ 2",3(3-0-6),
+01355113-55,"Foundation English III
+ภาษาอังกฤษ 3",3(3-0-6),
+01355xxx-55,กลุ่มวิชาภาษาอังกฤษ (01355xxx),3(3-0-6),
+01999041-55,"Economics for Better Living
+เศรษฐศาสตร์เพื่อการดำเนินชีวิตที่ดี",3(3-0-6),
+01999141-55,"Man and Society
+มนุษย์กับสังคม",3(3-0-6),
+01999031-55,"The Heritage of World Civilizations
+มรดกอารยธรรมโลก",3(3-0-6),
+01999032-55,"Thai Studies
+ไทยศึกษา",3(3-0-6),
+01999033-55,"Arts of Living
+ศิลปะการดำเนินชีวิต",3(3-0-6),
+01175xxx-55,"กิจกรรมพลศึกษา
+กิจกรรมพลศึกษา",1(0-2-1),
+01417167-55,"Engineering Mathematics I
+คณิตศาสตร์วิศวกรรม I",3(3-0-6),
+01417168-55,"Engineering Mathematics II
+คณิตศาสตร์วิศวกรรม II",3(3-0-6),
+01417267-55,"Engineering Mathematics III
+คณิตศาสตร์วิศวกรรม III",3(3-0-6),
+01420111-55,"General Physics I
+ฟิสิกส์ทั่วไป I",3(3-0-6),
+01420112-55,"General Physics II
+ฟิสิกส์ทั่วไป II",3(3-0-6),
+01420113-55,"Laboratory in Physics I
+ปฏิบัติการฟิสิกส์ I",1(0-3-2),
+01420114-55,"Laboratory in Physics II
+ปฏิบัติการฟิสิกส์ II",1(0-3-2),
+03601201-55,"Introduction to Electrical Engineering
+วิศวกรรมไฟฟ้าเบื้องต้น",3(3-0-6),
+03601202-55,"Electrical Engineering Laboratory I
+ปฏิบัติการวิศวกรรมไฟฟ้า I",1(0-3-6),
+03603111-55,"Programming Fundamentals I
+หลักการโปรแกรมเบื้องต้น I",3(2-3-6),
+03604111-55,"Engineering Drawing
+การเขียนแบบทางวิศวกรรม",3(2-3-6),
+03604201-55,"Basic Principles of Engineering Mechanics
+หลักพื้นฐานทางกลศาสตร์วิศวกรรม",3(3-0-6),
+03603352-55,"Laws and Ethics in Information Technology
+กฎหมายและจริยธรรมทางเทคโนโลยีสารสนเทศ",3(3-0-6),
+03603225-55,"Web Technology Laboratory
+ปฏิบัติการเทคโนโลยีเว็บ",1(0-3-2),
+03603251-55,"Database Systems
+ระบบฐานข้อมูล",3(3-0-6),
+03603252-55,"Database Systems Laboratory
+ปฏิบัติการระบบฐานข้อมูล",1(0-3-2),
+03603112-55,"Programming Fundamentals II
+หลักการโปรแกรมเบื้องต้น II",3(2-3-6),
+03603212-55,"Abstract Data Types and Problem Solving
+แบบชนิดข้อมูลนามธรรมและการแก้ปัญหา",3(3-0-6),
+03603213-55,"Algorithm Design and Analysis
+การออกแบบและวิเคราะห์ขั้นตอนวิธี",3(3-0-6),
+03603214-55,"Programming Skills Development Laboratory
+ปฏิบัติการพัฒนาทักษะการโปรแกรม",1(0-3-2),
+03603341-55,"Software Engineering
+วิศวกรรมซอฟต์แวร์",4(3-3-8),
+03603211-55,"Discrete Mathematics
+คณิตศาสตร์เต็มหน่วย",3(3-0-6),
+03603312-55,"Probability and Random Processes for Computer Engineers
+ความน่าจะเป็นและกระบวนการสุ่มสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03603325-55,"Data Communications
+การสื่อสารข้อมูล",3(3-0-6),
+03603332-55,"Operating Systems
+ระบบปฏิบัติการ",3(3-0-6),
+03603371-55,"Digital Signal Processing for Computer Engineers
+การประมวลผลสัญญาณดิจิทัลสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03603421-55,"Computer Networks
+เครือข่ายคอมพิวเตอร์",3(3-0-6),
+03601203-55,"Electronics for Computer Engineers
+อิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03601303-55,"Electronics Laboratory for Computer Engineers
+ปฏิบัติการอิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),
+03603221-55,"Digital Systems Design
+การออกแบบระบบดิจิทัล",3(3-0-6),
+03603222-55,"Logic Circuit Laboratory
+ปฏิบัติการวงจรตรรก",1(0-3-2),
+03603223-55,"Computer Architecture and Organization
+สถาปัตยกรรมและการจัดระบบคอมพิวเตอร์",3(3-0-6),
+03603321-55,"Microcontroller and Microprocessor System Design
+การออกแบบระบบไมโครคอนโทรลเลอร์และระบบไมโครโปรเซสเซอร์",3(3-0-6),
+03603322-55,"Computer System Laboratory
+ปฏิบัติการระบบคอมพิวเตอร์",1(0-3-2),
+03603495-55,"Computer Engineering and Informatics Project Preparation
+การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1(0-3-2),
+03603497-55,"Seminar
+สัมมนา",1,
+03603499-55,"Computer Engineering and Informatics Project
+โครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",2(0-6-3),
+03603323-55,"Embedded Systems
+ระบบฝังตัว",3(3-0-6),
+03603351-55,"Introduction to Data Science
+วิทยาศาสตร์ข้อมูลเบื้องต้น",3(3-0-6),
+03603372-55,"Digital Image Processing
+การประมวลผลภาพดิจิทัล",3(3-0-6),
+03603423-55,"Network Programming
+การโปรแกรมเครือข่าย",3(3-0-6),
+03603424-55,"Computer Networks Laboratory I
+ปฏิบัติการเครือข่ายคอมพิวเตอร์ I",1(0-3-2),
+03603425-55,"Computer Networks Laboratory II
+ปฏิบัติการเครือข่ายคอมพิวเตอร์ II",1(0-3-2),
+03603426-55,"Computer Security
+ความปลอดภัยในระบบคอมพิวเตอร์",3(3-0-6),
+03603427-55,"Mobile Computing
+ระบบคอมพิวเตอร์เคลื่อนที่",3(3-0-6),
+03603428-55,"Internet of Things
+อินเทอร์เน็ตของสรรพสิ่ง",3(3-0-6),
+03603432-55,"Programming Language Concepts
+มโนทัศน์ภาษาโปรแกรม",3(3-0-6),
+03603451-55,"Information Technology Management
+การจัดการเทคโนโลยีสารสนเทศ",3(3-0-6),
+03603461-55,"Artificial Intelligence
+ปัญญาประดิษฐ์",3(3-0-6),
+03603463-55,"Biologically-Inspired Computational Intelligence
+ปัญญาเชิงคำนวณโดยเลียนแบบวิธีการทางชีวภาพ",3(3-0-6),
+03603471-55,"Microcomputer Interfacing
+การเชื่อมต่อกับไมโครคอมพิวเตอร์",3(3-0-6),
+03603481-55,"Computer Graphics
+คอมพิวเตอร์กราฟิกส์",3(3-0-6),
+03603484-55,"Computer Game Development
+การพัฒนาเกมคอมพิวเตอร์",3(3-0-6),
+03603485-55,"Digital Audio and Computer Music
+เสียงดิจิทัลและดนตรีคอมพิวเตอร์",3(3-0-6),
+03603422-55,"Wireless and Mobile Networks
+เครือข่ายไร้สายและเคลื่อนที่",3(3-0-6),
+03603411-55,"Functional Programming
+การโปรแกรมเชิงฟังชั่น",3(3-0-6),
+03603441-55,"Object-Oriented Analysis and Design
+การวิเคราะห์และออกแบบเชิงวัตถุ",3(3-0-6),
+03603482-55,"User Experience Design
+การออกแบบประสบการณ์ของผู้ใช้",3(3-0-6),
+03603464-55,"Computer Vision
+คอมพิวเตอร์วิทัศน์",3(3-0-6),
+03603496-55,"Selected Topics in Computer Engineering and Informatics
+เรื่องเฉพาะทางวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",45294,
+03600490-55,"Cooperative Education
+สหกิจศึกษา",6,
+03603498-55,"Special Problems
+ปัญหาพิเศษ",45294,
+03600014-60,"Creative Problem Solving and Critical Thinking Skills
+การแก้ปัญหาเชิงสร้างสรรค์และทักษะการคิดเชิงวิพากษ์",3(3-0-6),
+01999021-60,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6),
+03600013-60,"Essential Computer Tools and Skills
+เครื่องมือและทักษะทางคอมพิวเตอร์ที่จำเป็น",1(0-3-2),
+03754111-60,"Fundamental English I
+ภาษาอังกฤษ 1 (ไม่นับหน่วยกิต)",3(3-0-6),
+03754112-60,"Fundamental English II
+ภาษาอังกฤษ II",3(3-0-6),
+03754113-60,"Fundamental English III
+ภาษาอังกฤษ III",3(3-0-6),
+03754xxx-60,กลุ่มวิชาภาษาอังกฤษเลือก (03754xxx),3(3-0-6),
+01999111-60,"Knowledge of the Land
+ศาสตร์แห่งแผ่นดิน",2(2-0-4),
+03600012-60,"Green Technology
+เทคโนโลยีสีเขียว",3(3-0-6),
+01417167-60,"Engineering Mathematics I
+คณิตศาสตร์วิศวกรรม I",3(3-0-6),
+01417168-60,"Engineering Mathematics II
+คณิตศาสตร์วิศวกรรม II",3(3-0-6),
+01417267-60,"Engineering Mathematics III
+คณิตศาสตร์วิศวกรรม III",3(3-0-6),
+01420111-60,"General Physics I
+ฟิสิกส์ทั่วไป I",3(3-0-6),
+01420112-60,"General Physics II
+ฟิสิกส์ทั่วไป II",3(3-0-6),
+01420113-60,"Laboratory in Physics I
+ปฏิบัติการฟิสิกส์ I",1(0-3-2),
+01420114-60,"Laboratory in Physics II
+ปฏิบัติการฟิสิกส์ II",1(0-3-2),
+03601204-60,"Electric Circuit Analysis for Computer Engineers
+การวิเคราะห์วงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03601205-60,"Electric Circuit Laboratory for Computer Engineers
+ปฏิบัติการวงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),
+03603111-60,"Programming Fundamentals I
+หลักการโปรแกรมเบื้องต้น l",3(2-3-6),
+03603112-60,"Programming Fundamentals II
+หลักการโปรแกรมเบื้องต้น II",3(2-3-6),
+03604111-60,"Engineering Drawing
+การเขียนแบบทางวิศวกรรม",3(2-3-6),
+03603171-60,"Introduction to Computer Engineering and Informatics
+วิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์เบื้องต้น",3(3-0-6),
+03603352-60,"Laws and Ethics in Information Technology
+กฏหมายและจริยธรรทางเทคโนโลยีสารสนเทศ",3(3-0-6),
+03603251-60,"Database Systems
+ระบบฐานข้อมูล",3(3-0-6),
+03603252-60,"Database Systems Laboratory
+ปฏิบัติการระบบฐานข้อมูล",1(0-3-2),
+03603212-60,"Abstract Data Types and Problem Solving
+แบบชนิดข้อมูลนามธรรมและการแก้ปัญหา",3(3-0-6),
+03603213-60,"Algorithm Design and Analysis
+การออกแบบและวิเคราะห์ขั้นตอนวิธี",3(3-0-6),
+03603214-60,"Programming Skills Development Laboratory
+ปฏิบัติการพัฒนาทักษะการโปรแกรม",1(0-3-2),
+03603341-60,"Software Engineering
+วิศวกรรมซอฟต์แวร์",4(3-3-8),
+03603211-60,"Discrete Mathematics
+วิยุตคณิต",3(3-0-6),
+03603312-60,"Probability and Statistics for Informatics
+ความน่าจะเป็นและสถิติสำหรับสารสนเทศศาสตร์",3(3-0-6),
+03603325-60,"Data Communications and Computer Networks
+การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",3(3-0-6),
+03603332-60,"Operating Systems
+ระบบปฏิบัติการ",3(3-0-6),
+03601203-60,"Electronics for Computer Engineers
+อิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03601303-60,"Electronics Laboratory for Computer Engineers
+ปฏิบัติการอิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),
+03603221-60,"Digital Systems Design
+การออกแบบระบบดิจิทัล",3(3-0-6),
+03603222-60,"Logic Circuit Laboratory
+ปฏิบัติการวงจรตรรก",1(0-3-2),
+03603223-60,"Computer Architecture and Organization
+สถาปัตยกรรมและการจัดระบบคอมพิวเตอร์",3(3-0-6),
+03603323-60,"Introduction to Embedded Systems
+ระบบฝังตัวเบื้องต้น",3(3-0-6),
+03603324-60,"Embedded Systems Laboratory
+ปฏิบัติการระบบฝังตัว",1(0-3-2),
+03603299-60,"Exploratory Project in Computing
+โครงงานเชิงสำรวจทางวิชาการคอมพิวเตอร์",1(0-3-2),
+03603497-60,"Seminar
+สัมมนา",1,
+03603421-60,"Internetworking with TCP/IP
+การเชื่อมต่อเครือข่ายด้วยที่ซีพี/ไอพี",3(3-0-6),
+03603422-60,"Wireless and Mobile Networks
+เครือข่ายไร้สายและเคลื่อนที่",3(3-0-6),
+03603423-60,"Network Programming
+การโปรแกรมเครือข่าย",3(3-0-6),
+03603424-60,"Computer Networks Laboratory I
+ปฏิบัติการเครือข่ายคอมพิวเตอร์ I",1(0-3-2),
+03603425-60,"Computer Networks Laboratory II
+ปฏิบัติการเครือข่ายคอมพิวเตอร์ II",1(0-3-2),
+03603426-60,"Computer Security
+ความปลอดภัยในระบบคอมพิวเตอร์",3(3-0-6),
+03603427-60,"Mobile Computing
+ระบบคอมพิวเตอร์เคลื่อนที่",3(3-0-6),
+03603428-60,"Internet of Things
+อินเทอร์เน็ตของสรรพสิ่ง",3(3-0-6),
+03603411-60,"Functional Programming
+การโปรแกรมเชิงฟังชั่น",3(3-0-6),
+03603435-60,"Cloud Computing
+การคำนวณแบบกลุ่มเมฆ",3(3-0-6),
+03603436-60,"Web Application Development
+การพัฒนาโปรแกรมประยุกต์บนเว็บ",3(3-0-6),
+03603437-60,"Mobile Application Development
+การพัฒนาโปรแกรมประยุกต์เคลื่อนที่",3(3-0-6),
+03603441-60,"Object-Oriented Analysis and Design
+การวิเคราะห์และออกแบบเชิงวัตถุ",3(3-0-6),
+03603482-60,"User Experience Design
+การออกแบบประสบการณ์ของผู้ใช้",3(3-0-6),
+03603484-60,"Computer Game Development
+การพัฒนาเกมคอมพิวเตอร์",3(3-0-6),
+01204213-60,"Theory of Computaiton
+ทฤษฏีการคำนวณ",3(3-0-6),
+03603351-60,"Introduction to Data Science
+วิทยาศาสตร์ข้อมูลเบื้องต้น",3(3-0-6),
+03603452-60,"Data Mining
+การทำเหมืองข้อมูล",3(3-0-6),
+03603461-60,"Artificial Intelligence
+ปัญญาประดิษฐ์",3(3-0-6),
+03603462-60,"Statistical Learning
+การเรียนรู้เชิงสถิติ",3(3-0-6),
+03603463-60,"Biologically-Inspired Computational Intelligence
+ปัญญาเชิงคำนวณโดยเลียนแบบวิธีการทางชีวภาพ",3(3-0-6),
+03603371-60,"Digital Signal Processing for Computer Engineers
+การประมวลผลสัญญาณดิจิทัลสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03603372-60,"Digital Image Processing
+การประมวลผลภาพดิจิทัล",3(3-0-6),
+03603464-60,"Computer Vision
+คอมพิวเตอร์วิทัศน์",3(3-0-6),
+03603481-60,"Computer Graphics
+เรขภาพคอมพิวเตอร์",3(3-0-6),
+03603485-60,"Digital Audio and Computer Music
+เสียงดิจิทัลและดนตรีคอมพิวเตอร์",3(3-0-6),
+03603495-60,"Computer Engineering and Informatics Project Preparation
+การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1(0-3-2),
+03603499-60,"Computer Engineering and Informatics Project
+โครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",2(0-6-3),
+03603432-60,"Programming Language Concepts
+มโนทัศน์ภาษาโปรแกรม",3(3-0-6),
+03603451-60,"Information Technology Management
+การจัดการเทคโนโลยีสารสนเทศ",3(3-0-6),
+03603471-60,"Embedded Systems Interfacing
+การเชื่อมต่อกับระบบฝังตัว",3(3-0-6),
+03603496-60,"Selected Topics in Computer Engineering and Informatics
+เรื่องเฉพาะทางวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1,
+03603498-60,"Special Problems
+ปัญหาพิเศษ",1,
+03600390-60,"Co-operative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6),
+03600490-60,"Co-operative Education
+สหกิจศึกษา",6,
+01999021-65,"Thai Language for Communication
+ภาษาไทยเพื่อการสื่อสาร",3(3-0-6),
+01355101-65,"English for Everyday Life
+ภาษาอังกฤษในชีวิตประจำวัน",3(3-0-6),
+01355102-65,"English for University Life
+ภาษาอังกฤษในมหาวิทยาลัย",3(3-0-6),
+01355103-65,"English for Job Opportunities
+ภาษาอังกฤษเพื่อโอกาสในการทำงาน",3(3-0-6),
+03754xxx-65,กลุ่มวิชาภาษาอังกฤษเลือก (03754xxx),3(3-0-6),
+01999111-65,"Knowledge of the Land
+ศาสตร์แห่งแผ่นดิน",2(2-0-4),
+01417167-65,"Engineering Mathematics I
+คณิตศาสตร์วิศวกรรม I",3(3-0-6),
+01417168-65,"Engineering Mathematics II
+คณิตศาสตร์วิศวกรรม II",3(3-0-6),
+01417267-65,"Engineering Mathematics III
+คณิตศาสตร์วิศวกรรม III",3(3-0-6),
+01420111-65,"General Physics I
+ฟิสิกส์ทั่วไป I",3(3-0-6),
+01420112-65,"General Physics II
+ฟิสิกส์ทั่วไป II",3(3-0-6),
+01420113-65,"Laboratory in Physics I
+ปฏิบัติการฟิสิกส์ I",1(0-3-2),
+01420114-65,"Laboratory in Physics II
+ปฏิบัติการฟิสิกส์ II",1(0-3-2),
+03601204-65,"Electric Circuit Analysis for Computer Engineers
+การวิเคราะห์วงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03601205-65,"Electric Circuit Laboratory for Computer Engineers
+ปฏิบัติการวงจรไฟฟ้าสำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),
+03603111-65,"Programming Fundamentals I
+หลักการโปรแกรมเบื้องต้น l",3(2-3-6),
+03603112-65,"Programming Fundamentals II
+หลักการโปรแกรมเบื้องต้น II",3(2-3-6),
+03604111-65,"Engineering Drawing
+การเขียนแบบทางวิศวกรรม",3(2-3-6),
+03603171-65,"Introduction to Computer Engineering and Informatics
+วิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์เบื้องต้น",3(3-0-6),
+03603352-65,"Laws and Ethics in Information Technology
+กฏหมายและจริยธรรทางเทคโนโลยีสารสนเทศ",3(3-0-6),
+03603251-65,"Database Systems
+ระบบฐานข้อมูล",3(3-0-6),
+03603252-65,"Database Systems Laboratory
+ปฏิบัติการระบบฐานข้อมูล",1(0-3-2),
+03603212-65,"Abstract Data Types and Problem Solving
+แบบชนิดข้อมูลนามธรรมและการแก้ปัญหา",3(3-0-6),
+03603213-65,"Algorithm Design and Analysis
+การออกแบบและวิเคราะห์ขั้นตอนวิธี",3(3-0-6),
+03603214-65,"Programming Skills Development Laboratory
+ปฏิบัติการพัฒนาทักษะการโปรแกรม",1(0-3-2),
+03603241-65,"Application Development
+การพัฒนาโปรแกรมประยุกต์",3(3-0-6),
+03603341-65,"Software Engineering
+วิศวกรรมซอฟต์แวร์",4(3-3-8),
+03603342-65,"Combined Information Technology for Software Development Laboratory
+ปฏิบัตการผสานเทคโนโลยีสารสนเทศเพื่อการพัฒนาซอฟต์แวร์",1(0-3-2),
+03603211-65,"Discrete Mathematics
+วิยุตคณิต",3(3-0-6),
+03603312-65,"Probability and Statistics for Informatics
+ความน่าจะเป็นและสถิติสำหรับสารสนเทศศาสตร์",3(3-0-6),
+03603325-65,"Data Communications and Computer Networks
+การสื่อสารข้อมูลและเครือข่ายคอมพิวเตอร์",3(3-0-6),
+03603332-65,"Operating Systems
+ระบบปฏิบัติการ",3(3-0-6),
+03601203-65,"Electronics for Computer Engineers
+อิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03601303-65,"Electronics Laboratory for Computer Engineers
+ปฏิบัติการอิเล็กทรอนิกส์สำหรับวิศวกรคอมพิวเตอร์",1(0-3-2),
+03603221-65,"Digital Systems Design
+การออกแบบระบบดิจิทัล",3(3-0-6),
+03603222-65,"Logic Circuit Laboratory
+ปฏิบัติการวงจรตรรก",1(0-3-2),
+03603223-65,"Computer Architecture and Organization
+สถาปัตยกรรมและการจัดระบบคอมพิวเตอร์",3(3-0-6),
+03603323-65,"Introduction to Embedded Systems
+ระบบฝังตัวเบื้องต้น",3(3-0-6),
+03603324-65,"Embedded Systems Laboratory
+ปฏิบัติการระบบฝังตัว",1(0-3-2),
+03603497-65,"Seminar
+สัมมนา",1,
+03603321-65,"Computer Networks Laboratory
+ปฏิบัติการเครือข่ายคอมพิวเตอรื",3(1-6-6),
+03603421-65,"Internetworking with TCP/IP
+การเชื่อมต่อเครือข่ายด้วยที่ซีพี/ไอพี",3(3-0-6),
+03603422-65,"Wireless and Mobile Networks
+เครือข่ายไร้สายและเคลื่อนที่",3(3-0-6),
+03603423-65,"Network Programming
+การโปรแกรมเครือข่าย",3(3-0-6),
+03603426-65,"Cyber Security
+ความมั่นคงปลอดภัยไซเบอร์",3(3-0-6),
+03603427-65,"Mobile Computing
+ระบบคอมพิวเตอร์เคลื่อนที่",3(3-0-6),
+03603428-65,"Internet of Things
+อินเทอร์เน็ตของสรรพสิ่ง",3(3-0-6),
+03603429-65,"Cryptography and Blockchain Technology
+วิทยาการเข้ารหัสลับและเทคโนโลยีบบล็อกเชน",3(3-0-6),
+03603411-65,"Functional Programming
+การโปรแกรมเชิงฟังชั่น",3(3-0-6),
+03603435-65,"Cloud Computing
+การคำนวณแบบกลุ่มเมฆ",3(3-0-6),
+03603436-65,"Web Application Development
+การพัฒนาโปรแกรมประยุกต์บนเว็บ",3(3-0-6),
+03603437-65,"Mobile Application Development
+การพัฒนาโปรแกรมประยุกต์เคลื่อนที่",3(3-0-6),
+03603482-65,"User Experience Design
+การออกแบบประสบการณ์ของผู้ใช้",3(3-0-6),
+03603484-65,"Computer Game Development
+การพัฒนาเกมคอมพิวเตอร์",3(3-0-6),
+03603441-65,"Software Testing
+การทดสอบซอฟต์แวร์",3(3-0-6),
+01204213-65,"Theory of Computaiton
+ทฤษฏีการคำนวณ",3(3-0-6),
+03603351-65,"Introduction to Data Science
+วิทยาศาสตร์ข้อมูลเบื้องต้น",3(3-0-6),
+03603452-65,"Mining Big Data
+การทำเหมืองข้อมูลบิ๊กดาต้า",3(3-0-6),
+03603461-65,"Artificial Intelligence
+ปัญญาประดิษฐ์",3(3-0-6),
+03603462-65,"Machine Learning
+การเรียนรู้ของเครื่อง",3(3-0-6),
+03603463-65,"Biologically-Inspired Computational Intelligence
+ปัญญาเชิงคำนวณโดยเลียนแบบวิธีการทางชีวภาพ",3(3-0-6),
+03603465-65,"Natural Language Processing
+การประมวลผลภาษาธรรมชาติ",3(3-0-6),
+03603381-65,"Digital Signal Processing for Computer Engineers
+การประมวลผลสัญญาณดิจิทัลสำหรับวิศวกรคอมพิวเตอร์",3(3-0-6),
+03603382-65,"Digital Image Processing
+การประมวลผลภาพดิจิทัล",3(3-0-6),
+03603383-65,"Digital Identification
+การระบุตัวตนดิจิทัล",3(3-0-6),
+03603464-65,"Computer Vision
+คอมพิวเตอร์วิทัศน์",3(3-0-6),
+03603481-65,"Computer Graphics
+เรขภาพคอมพิวเตอร์",3(3-0-6),
+03603485-65,"Digital Audio and Computer Music
+เสียงดิจิทัลและดนตรีคอมพิวเตอร์",3(3-0-6),
+03603371-65,"Application Development for Embedded Devices
+การพัฒนาโปรแกรมประยุกต์บนอุปกรณ์ฝังตัว",3(3-0-6),
+03603471-65,"Embedded Systems Interfacing
+การเชื่อมต่อกับระบบฝังตัว",3(3-0-6),
+03603472-65,"Industrial Automation and Control
+ระบบอัตโนมัติและการควบคุมทางอุตสาหกรรม",3(3-0-6),
+03603473-65,"Digital Circuit Design with VHDL
+การออกแบบวงจรดิจิทัลด้วยวีเอชดีแอล",3(3-0-6),
+03603474-65,"Real-Time Operating System
+ระบบปฏิบัติการเวลาจริง",3(3-0-6),
+03603475-65,"Sensors and Transducer
+อุปกรณ์รับรู้และตัวแปรสัญญาณ",3(3-0-6),
+03603476-65,"Embedded System Circuit Design
+การออกแบบวงจรระบบสมองกลฝังตัว",3(3-0-6),
+03603495-65,"Computer Engineering and Informatics Project Preparation
+การเตรียมโครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1(0-3-2),
+03603499-65,"Computer Engineering and Informatics Project
+โครงงานวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",2(0-6-3),
+03603432-65,"Programming Language Concepts
+มโนทัศน์ภาษาโปรแกรม",3(3-0-6),
+03603451-65,"Information Technology Management
+การจัดการเทคโนโลยีสารสนเทศ",3(3-0-6),
+03603496-65,"Selected Topics in Computer Engineering and Informatics
+เรื่องเฉพาะทางวิศวกรรมคอมพิวเตอร์และสารสนเทศศาสตร์",1,
+03603498-65,"Special Problems
+ปัญหาพิเศษ",1,
+03600390-65,"Co-operative Education Preparation
+การเตรียมความพร้อมสหกิจศึกษา",3(3-0-6),
+03600490-65,"Co-operative Education
+สหกิจศึกษา",6,
