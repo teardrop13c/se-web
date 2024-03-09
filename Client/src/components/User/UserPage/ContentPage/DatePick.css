@@ -5,3 +5,7 @@
     display: flex;
     justify-content: space-evenly;
   }
+
+  .table-container {
+    flex-grow: 1; /* Allow the table to grow and fill available space */
+  }

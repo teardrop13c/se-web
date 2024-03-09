@@ -72,32 +72,33 @@ function Login() {
   useEffect(() => {
     const sendProfileName = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/profile', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ name: profile?.name,email: profile?.email }) // ส่งชื่อของโปรไฟล์ไปยังเซิร์ฟเวอร์
-        });
+        // ตรวจสอบว่าโปรไฟล์ไม่ใช่ค่าว่าง และมีอีเมล
+        if (profile && profile.email) {
+          // ส่งคำขอ POST ไปยังเซิร์ฟเวอร์
+          const response = await fetch('http://localhost:3001/api/profile', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name: profile.name, email: profile.email })
+          });
   
-        if (response.ok) {
-          console.log('Profile name sent successfully');
+          if (response.ok) {
+            console.log('Profile name sent successfully');
+          } else {
+            throw new Error('Failed to send profile name');
+          }
         } else {
-          throw new Error('Failed to send profile name');
+          console.error('Profile is null or missing email');
         }
       } catch (error) {
         console.error('Error sending profile name:', error.message);
       }
     };
   
-    if (profile !== null) {
-      sendProfileName();
-    } else {
-      console.log("profile is null");
-    }
+    sendProfileName();
   }, [profile]);
   
-
 
   function accountAdmin() {
     return (
@@ -194,7 +195,7 @@ function Login() {
         />
         <h2>ยินดีต้อนรับสู่ระบบจัดตารางสอน</h2>
         <br />
-        {isLoggedIn ? (
+        {profile ? (
           checkAdmin() ? (
             accountAdmin()
           ) : (
