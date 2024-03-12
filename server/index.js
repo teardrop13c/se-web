@@ -120,13 +120,13 @@ app.post('/create', (req, res) => {
 
 
 app.put('/update', (req, res) => {
-    const { ลำดับ, รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา } = req.body;
+    const { id_course, รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา } = req.body;
     
     // Log the received update request data
     console.log('Received update request with data:', req.body);
 
     // Ensure all required fields are present
-    if (!ลำดับ || !รหัสวิชา || !ชื่อวิชา || !หน่วยกิจ || !ประเภทวิชา) {
+    if (!id_course || !รหัสวิชา || !ชื่อวิชา || !หน่วยกิจ || !ประเภทวิชา) {
         return res.status(400).json({ error: 'Missing required fields for update' });
     }
 
@@ -137,10 +137,10 @@ app.put('/update', (req, res) => {
         WHERE id_course = ?`;
 
     // Log the generated SQL query
-    console.log('Update Query:', updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, ลำดับ]);
+    console.log('Update Query:', updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, id_course]);
 
     // Execute the update query
-    db.query(updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, ลำดับ], (err, result) => {
+    db.query(updateQuery, [รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา, id_course], (err, result) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Error updating data', details: err.message });
@@ -148,7 +148,7 @@ app.put('/update', (req, res) => {
 
         // Check if any rows were affected by the update
         if (result.affectedRows === 0) {
-            console.error(`No record found with id_course: ${ลำดับ}`);
+            console.error(`No record found with id_course: ${id_course}`);
             return res.status(404).json({ error: 'No record found for update' });
         }
 
@@ -157,6 +157,33 @@ app.put('/update', (req, res) => {
         res.json({ message: 'Data updated successfully' });
     });
 });
+
+
+
+// app.delete('/delete/:subject_ID', (req, res) => {
+//     const subject_ID = req.params.subject_ID;
+
+//     if (!subject_ID) {
+//         console.error('Error: No subject_ID parameter provided in the DELETE request.');
+//         return res.status(400).json({ error: 'No subject_ID parameter provided' });
+//     }
+
+    
+//     db.query("DELETE FROM course WHERE subject_ID = ?", subject_ID, (err, result) => {
+//         if (err) {
+//             console.error(err);
+//             return res.status(500).json({ error: 'Error deleting data' });
+//         }
+
+//         if (result.affectedRows === 0) {
+//             console.error(`No record found with subject_ID: ${subject_ID}`);
+//             return res.status(404).json({ error: 'No record found for deletion' });
+//         }
+
+//         console.log('Data deleted successfully');
+//         return res.json({ message: 'Data deleted successfully' });
+//     });
+// });
 
 app.delete('/delete/:subject_ID', (req, res) => {
     const subject_ID = req.params.subject_ID;
@@ -177,8 +204,24 @@ app.delete('/delete/:subject_ID', (req, res) => {
             return res.status(404).json({ error: 'No record found for deletion' });
         }
 
-        console.log('Data deleted successfully');
-        return res.json({ message: 'Data deleted successfully' });
+        // ทำการตั้งค่า AUTO_INCREMENT ใหม่โดยเรียงลำดับใหม่
+        db.query("SET @num = 0;", (err, result) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send("Error setting @num variable");
+            }
+        
+            db.query("UPDATE course SET id_course = @num:= (@num + 1);", (err, result) => {
+                if (err) {
+                    console.error(err);
+                    return res.status(500).send("Error updating id_course");
+                }
+        
+                console.log("AUTO_INCREMENT re-ordered successfully");
+                console.log('Data deleted and AUTO_INCREMENT re-ordered successfully');
+                return res.json({ message: 'Data deleted and AUTO_INCREMENT re-ordered successfully' });
+            });
+        });          
     });
 });
 
