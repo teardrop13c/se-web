@@ -20,7 +20,6 @@ function RegisterContent() {
   const [options, setOptions] = useState([]);
   const [data, setData] = useState([]);
   const [labelString, setLabelString] = useState('');
-  const [type, setType] = useState('');
 
   const { Option } = Select;
 
@@ -31,16 +30,22 @@ function RegisterContent() {
     fetch("http://localhost:3001/users")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
-        const cascaderOptions = data.map((item) => ({
+        const uniqueData = data.filter((item, index, self) =>
+          index === self.findIndex((t) => (
+            t.subject_ID === item.subject_ID
+          ))
+        );
+        setData(uniqueData);
+        const cascaderOptions = uniqueData.map((item) => ({
           value: item.subject_ID,
           label: `${item.subject_ID} - ${item.subjact_name} - ${item.credite}`,
+          key: item.subject_ID, // ใช้ subject_ID เป็น key ที่ไม่ซ้ำกัน
         }));
         setOptions(cascaderOptions);
       })
       .catch(err => console.log(err));
-  }, [type]);
+  }, []);
 
   const findSubjectNameById = (subjectId) => {
     const subject = data.find((item) => item.subject_ID === subjectId);
@@ -102,7 +107,7 @@ function RegisterContent() {
       lab_group: lab_group,
       major_year: major_year,
       roomReg_ranking: roomReg_ranking,
-      user_email: profile.name,
+      user_email: profile.email,
     })
       .then(() => {
         getRegister();
@@ -158,30 +163,6 @@ function RegisterContent() {
     setType(value);
     console.log(`selected ${value}`);
   };
-
-  useEffect(() => {
-    // ตรวจสอบว่า type ไม่ใช่ค่าว่าง
-    if (type.trim() !== '') {
-      sendDataToNode();
-    }
-  }, [type]);
-
-  const sendDataToNode = async () => {
-    try {
-      const response = await fetch('http://localhost:3001/api/type', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ type })
-      });
-      const data = await response.json();
-      console.log(data); // ประมวลผลผลลัพธ์จาก Node.js
-    } catch (error) {
-      console.error('Error sending data to Node.js:', error);
-    }
-  }
-  
 
   return (
     <div className="top-regis">
