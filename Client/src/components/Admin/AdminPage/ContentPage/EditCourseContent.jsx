@@ -23,7 +23,7 @@ function EditCourseContent() {
           message.success(`${info.file.name} file uploaded successfully`);
           Papa.parse(info.file.originFileObj, {
             complete: (result) => {
-              setTableData(result.data);
+              // setTableData(result.data);
             },
             header: true,
           });
@@ -34,12 +34,24 @@ function EditCourseContent() {
     },
   };
 
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/course_show')
+      .then(response => response.json())
+      .then(data => {
+          setCourses(data);
+          setTableData(data); // ตั้งค่า tableData ที่นี่
+      })
+      .catch(error => console.error('Error fetching courses:', error));
+}, [tableData, courses]);
+
   const columns = [
-    { title: 'NO', dataIndex: 'ลำดับ', key: 'id_course' },
-    { title: 'รหัสวิชา', dataIndex: 'รหัสวิชา', key: 'subject_ID' },
-    { title: 'ชื่อวิชา', dataIndex: 'ชื่อวิชา', key: 'subjact_name' },
-    { title: 'หน่วยกิจ', dataIndex: 'หน่วยกิจ', key: 'credite' },
-    { title: 'ประเภทวิชา', dataIndex: 'ประเภทวิชา', key: 'typeSubject' },
+    { title: 'NO', dataIndex: 'id_course', key: 'id_course' },
+    { title: 'รหัสวิชา', dataIndex: 'subject_ID', key: 'subject_ID' },
+    { title: 'ชื่อวิชา', dataIndex: 'subjact_name', key: 'subjact_name' }, // เปลี่ยนตรงนี้
+    { title: 'หน่วยกิจ', dataIndex: 'credite', key: 'credite' }, // เปลี่ยนตรงนี้
+    { title: 'ประเภทวิชา', dataIndex: 'typeSubject', key: 'typeSubject' },
     {
       title: 'จัดการ',
       dataIndex: 'operation',
@@ -89,8 +101,13 @@ function EditCourseContent() {
   };
 
   const handleUpdateData = (values) => {
+    if (!tableData) {
+        console.error('tableData is not defined');
+        return;
+    }
+    
     const updatedData = tableData.map((data) =>
-      data.ลำดับ === formData.ลำดับ ? { ...data, ...values } : data
+      data.id_course === formData.id_course ? { ...data, ...values } : data
     );
     setTableData(updatedData);
 
@@ -113,16 +130,16 @@ function EditCourseContent() {
       });
 
     form.resetFields();
-  };
+};
 
   const handleDeleteData = (record) => {
     console.log('Deleting record:', record);
 
-    axios.delete(`http://localhost:3001/delete/${record.รหัสวิชา}`)
+    axios.delete(`http://localhost:3001/delete/${record.subject_ID}`)
         .then(response => {
             console.log(response.data);
             // Update frontend state after successful deletion
-            const updatedData = tableData.filter(item => item.รหัสวิชา !== record.รหัสวิชา);
+            const updatedData = tableData.filter(item => item.subject_ID !== record.subject_ID);
             setTableData(updatedData);
 
             Swal.fire({
@@ -153,7 +170,7 @@ function EditCourseContent() {
       </div>
 
       <div className="csv-table">
-        <Table dataSource={tableData} columns={columns} />
+        <Table dataSource={courses} columns={columns} rowKey="id_course" />
       </div>
 
       {isEditMode && (
