@@ -170,13 +170,13 @@ function RegisterContent() {
         <Col span={4}>
           <h3>ปีการศึกษา</h3>
           <Form>
-            <Input placeholder="ปีการศึกษา" />
+            <Input placeholder="ปีการศึกษา" disabled />
           </Form>
         </Col>
         <Col span={4}>
           <h3>ภาคการศึกษา</h3>
           <Form>
-            <Input placeholder="ภาคการศึกษา" />
+            <Input placeholder="ภาคการศึกษา" disabled />
           </Form>
         </Col>
       </Row>
