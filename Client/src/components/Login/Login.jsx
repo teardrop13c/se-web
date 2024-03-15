@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import "./Login.css";
-import { whenLogin,whenLogout } from "../../../Store/authSlice";
+import { whenLogin,whenLogout } from "../../../Store/authSlice.jsx";
 
 function Login() {
   const clientId = "547931595657-oaphvpiui1527babqslkcbb93a9p938o.apps.googleusercontent.com";

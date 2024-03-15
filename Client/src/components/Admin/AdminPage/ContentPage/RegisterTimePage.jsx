@@ -5,6 +5,8 @@ import './RegisterTimePage.css';
 import th from 'date-fns/locale/th';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { setOnReg,setOffReg } from '../../../../../Store/varSlice.jsx';
+import { useSelector , useDispatch} from 'react-redux';
 
 function RegisterTimePage() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -14,6 +16,9 @@ function RegisterTimePage() {
 
   const openingDatePickerRef = useRef(null);
   const closingDatePickerRef = useRef(null);
+
+  const dispatch = useDispatch();
+  const OnOffReg = useSelector((state) => state.var.OnOffReg); //null true
 
   const convertToThaiTime = (dateTime) => {
     const options = {
@@ -116,6 +121,27 @@ function RegisterTimePage() {
       alertContainer.classList.remove('show');
     }
   };
+  //onoffregมันเซ้ตในนี้ไม่ขึ้นglobal
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentDateTimeMillis = currentDateTime.getTime();
+      const openingTimeMillis = openingTime.getTime();
+      const closingTimeMillis = closingTime.getTime();
+
+      //แก้ตรงนี้เวลา
+      if (currentDateTimeMillis >= openingTimeMillis && currentDateTimeMillis <= closingTimeMillis) {
+        dispatch(setOnReg());//ส่งไปไม่ถึง
+        console.log("inIF", OnOffReg);//true
+      }
+      else if (currentDateTimeMillis > closingTimeMillis) {        
+        dispatch(setOffReg());
+        console.log("inelseIF",OnOffReg);
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentDateTime, openingTime, closingTime, dispatch]);
+
 
   return (
     <div className="register-rounded-rectangle">

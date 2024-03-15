@@ -7,10 +7,15 @@ import Login from "../../Login/Login";
 
 function UserRegister() {
     //authuser
-  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); 
-  if (!isLoggedIn) {
-    return <Login />;
-  }
+    const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); 
+    const OnOffReg = useSelector((state) => state.var.OnOffReg); 
+  
+    if (!isLoggedIn) {
+      return <Login />;
+    }
+    else if(!OnOffReg){
+      console.log(OnOffReg)
+    }
   return (
     <section id="main-layout">
       <Navbar />

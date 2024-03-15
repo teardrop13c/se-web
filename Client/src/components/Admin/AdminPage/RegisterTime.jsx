@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../Navbar'
 import AdminMenu from '../AdminMenu/AdminMenu'
 import RegisterTimePage from "./ContentPage/RegisterTimePage";
-import { useSelector } from 'react-redux'; 
+import { useSelector } from 'react-redux';
 import Login from '../../Login/Login';
 
 function RegisterTime() {
@@ -12,13 +12,13 @@ function RegisterTime() {
   if (!isLoggedIn || (profile?.name !== 'Admin007')) {
     return <Login />;
   }
-  
+
   return (
     <section id="main-layout">
       <Navbar />
       <AdminMenu />
       <div className="content">
-      <RegisterTimePage/>
+        <RegisterTimePage />
       </div>
     </section>
   )
