@@ -5,6 +5,7 @@ const { DateTime } = require('luxon');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
+const axios = require('axios');
 
 app.use(cors());
 app.use(fileUpload());
@@ -14,10 +15,16 @@ app.use(express.urlencoded({ extended: true }));
 const db = mysql.createConnection({
     host: "localhost",
     user: 'root',
-    password: '',
+    password: '123456',
     database: 'kusrc_course'
 })
 
+const dbNews = mysql.createConnection({
+    host: "localhost",
+    user: 'root',
+    password: '123456',
+    database: 'news_database'
+});
 
 //////////////////user_info/////////////////
 app.post('/api/profile', (req, res) => {
@@ -361,6 +368,16 @@ app.post('/api/registration', (req, res) => {
   
 ///////////////////////////////////
 
+axios.post('http://localhost:5173/News', { /* ข้อมูลที่ต้องการส่ง */ })
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+
+///////////////////////////////////
 
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001
 app.listen('3001', () => {

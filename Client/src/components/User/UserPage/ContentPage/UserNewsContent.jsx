@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './UserNewsContent.css';
 
 function NewsPage() {
@@ -12,17 +13,32 @@ function NewsPage() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    // Clear input values on modal close
     setNewsTitle('');
     setNewsContent('');
   };
 
   const handlePostNews = () => {
-    // Handle the logic for posting news
-    console.log('News Title:', newsTitle);
-    console.log('News Content:', newsContent);
-    // Add your logic for posting news here
-    handleCloseModal();
+    // สร้างข้อมูลที่จะส่งไปยังเซิร์ฟเวอร์ Express
+    const postData = {
+      title: newsTitle,
+      content: newsContent
+    };
+
+    // ทำการโพสต์ข้อมูลไปยังเซิร์ฟเวอร์ Express
+    axios.post('http://localhost:5173/UserNews', postData)
+      .then(response => {
+        console.log(response.data);
+        // ตรวจสอบว่าโพสต์ข่าวสำเร็จหรือไม่
+        if (response.status === 200) {
+          console.log('โพสต์ข่าวสำเร็จ');
+          handleCloseModal();
+        } else {
+          console.error('เกิดข้อผิดพลาดในการโพสต์ข่าว');
+        }
+      })
+      .catch(error => {
+        console.error('เกิดข้อผิดพลาดในการโพสต์ข่าว:', error);
+      });
   };
 
   return (
