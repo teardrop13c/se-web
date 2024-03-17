@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import homeIcon from '../../../assets/home.png'
+import datePick from '../../../assets/clock-regular.svg'
+import registerIcon from '../../../assets/register.svg'
 
 function UserMenu() {
   return (
@@ -8,7 +11,7 @@ function UserMenu() {
         <Link to="/HomeUser" className="item">
           <div className="icon">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2073.png?alt=media&token=274beb4d-0b29-4f61-bbfc-a3cf27b7b00f"
+              src={homeIcon}
               alt="homeUser"
               style={{ width: "50px", height: "50px" }}
             />
@@ -28,7 +31,7 @@ function UserMenu() {
         <Link to="/UserDatePick" className="item">
           <div className="icon">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2073.png?alt=media&token=274beb4d-0b29-4f61-bbfc-a3cf27b7b00f"
+              src={datePick}
               alt="datepick"
               style={{ width: "50px", height: "50px" }}
             />
@@ -38,7 +41,7 @@ function UserMenu() {
         <Link to="/UserRegister" className="item">
           <div className="icon">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/seproject-8d5aa.appspot.com/o/image%2073.png?alt=media&token=274beb4d-0b29-4f61-bbfc-a3cf27b7b00f"
+              src={registerIcon}
               alt="register"
               style={{ width: "50px", height: "50px" }}
             />

@@ -1,9 +1,15 @@
-import React, { useEffect, useState} from "react";
-import { UploadOutlined } from '@ant-design/icons';
-import { Button, message, Upload } from 'antd';
-import "./EditCourseContent.css"
+import React, { useEffect, useState } from "react";
+import { UploadOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { Button, message, Upload, Table, Input, Form } from 'antd';
+import axios from 'axios';
+import "./EditCourseContent.css";
+import Swal from 'sweetalert2';
 
 function EditCourseContent() {
+  const [tableData, setTableData] = useState([]);
+  const [formData, setFormData] = useState({});
+  const [form] = Form.useForm();
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const props = {
     name: 'file',
@@ -13,9 +19,14 @@ function EditCourseContent() {
     },
     onChange(info) {
       if (info.file && info.file.status !== 'uploading') {
-        console.log(info.file, info.fileList);
         if (info.file.status === 'done') {
           message.success(`${info.file.name} file uploaded successfully`);
+          Papa.parse(info.file.originFileObj, {
+            complete: (result) => {
+              // setTableData(result.data);
+            },
+            header: true,
+          });
         } else if (info.file.status === 'error') {
           message.error(`${info.file.name} file upload failed.`);
         }
@@ -23,32 +34,167 @@ function EditCourseContent() {
     },
   };
 
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/course_show')
+      .then(response => response.json())
+      .then(data => {
+          setCourses(data);
+          setTableData(data); // ตั้งค่า tableData ที่นี่
+      })
+      .catch(error => console.error('Error fetching courses:', error));
+}, [tableData, courses]);
+
+  const columns = [
+    { title: 'NO', dataIndex: 'id_course', key: 'id_course' },
+    { title: 'รหัสวิชา', dataIndex: 'subject_ID', key: 'subject_ID' },
+    { title: 'ชื่อวิชา', dataIndex: 'subjact_name', key: 'subjact_name' }, // เปลี่ยนตรงนี้
+    { title: 'หน่วยกิจ', dataIndex: 'credite', key: 'credite' }, // เปลี่ยนตรงนี้
+    { title: 'ประเภทวิชา', dataIndex: 'typeSubject', key: 'typeSubject' },
+    {
+      title: 'จัดการ',
+      dataIndex: 'operation',
+      render: (_, record) => (
+        <>
+          <Button icon={<EditOutlined />} onClick={() => handleEditData(record)}>
+            แก้ไข
+          </Button>
+          <Button icon={<DeleteOutlined />} onClick={() => handleDeleteData(record)}>
+            ลบ
+          </Button>
+        </>
+      ),
+    },
+  ];
+
+  const handleEditData = (record) => {
+    setFormData(record);
+    form.setFieldsValue(record);
+    setIsEditMode(true);
+  };
+
+  const handleFinish = (values) => {
+    if (isEditMode) {
+      handleUpdateData(values);
+    } else {
+      axios.post('http://localhost:3001/create', values)
+        .then(response => {
+          setTableData(prevData => [...prevData, response.data]);
+          Swal.fire({
+            icon: 'success',
+            title: 'การเพิ่มข้อมูลเสร็จสมบูรณ์',
+            text: 'ข้อมูลได้รับการเพิ่มเรียบร้อยแล้ว!',
+          });
+        })
+        .catch(error => {
+          console.error(error);
+          Swal.fire({
+            icon: 'error',
+            title: 'ข้อผิดพลาดในการเพิ่มข้อมูล',
+            text: 'เกิดข้อผิดพลาดในการเพิ่มข้อมูล โปรดลองอีกครั้ง!',
+          });
+        });
+      form.resetFields();
+    }
+    setIsEditMode(false);
+  };
+
+  const handleUpdateData = (values) => {
+    if (!tableData) {
+        console.error('tableData is not defined');
+        return;
+    }
+    
+    const updatedData = tableData.map((data) =>
+      data.id_course === formData.id_course ? { ...data, ...values } : data
+    );
+    setTableData(updatedData);
+
+    axios.put('http://localhost:3001/update', { ...formData, ...values })
+      .then(response => {
+        console.log(response.data);
+        Swal.fire({
+          icon: 'success',
+          title: 'การแก้ไขข้อมูลเสร็จสมบูรณ์',
+          text: 'ข้อมูลได้รับการแก้ไขเรียบร้อยแล้ว!',
+        });
+      })
+      .catch(error => {
+        console.error(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'ข้อผิดพลาดในการแก้ไขข้อมูล',
+          text: 'เกิดข้อผิดพลาดในการแก้ไขข้อมูล โปรดลองอีกครั้ง!',
+        });
+      });
+
+    form.resetFields();
+};
+
+  const handleDeleteData = (record) => {
+    console.log('Deleting record:', record);
+
+    axios.delete(`http://localhost:3001/delete/${record.subject_ID}`)
+        .then(response => {
+            console.log(response.data);
+            // Update frontend state after successful deletion
+            const updatedData = tableData.filter(item => item.subject_ID !== record.subject_ID);
+            setTableData(updatedData);
+
+            Swal.fire({
+                icon: 'success',
+                title: 'การลบข้อมูลเสร็จสมบูรณ์',
+                text: 'ข้อมูลได้รับการลบเรียบร้อยแล้ว!',
+            });
+        })
+        .catch(error => {
+            console.error(error);
+            Swal.fire({
+                icon: 'error',
+                title: 'ข้อผิดพลาดในการลบข้อมูล',
+                text: 'เกิดข้อผิดพลาดในการลบข้อมูล โปรดลองอีกครั้ง!',
+            });
+        });
+
+    form.resetFields();
+};
+
 
   return (
-    <>
-      <div className="rounded-rectangle">
-        <p className="faculty-text">ชื่อคณะ</p>
-
-        {/* Dropdown Section */}
-        <div className="dropdown">
-          <button className="dropbtn">ปีหลักสูตร</button>
-          <div className="dropdown-content">
-            <a href="#option1">ปี 55</a>
-            <a href="#option2">ปี 60</a>
-            <a href="#option3">ปี 65</a>
-          </div>
-        </div>
-
-        {/* File Upload Section */}
-        <div className="file-upload">
-          <label htmlFor="fileInput">Upload</label>
-          {/* <input type="file" id="fileInput" name="fileInput" accept=".pdf, .doc, .docx , .xlsx, .csv" {...props} /> */}
-          <Upload {...props}>
+    <div className="rounded-rectangle">
+      <div className="file-upload">
+        <Upload {...props}>
           <Button icon={<UploadOutlined />}>Click to Upload</Button>
-          </Upload>
-        </div>
+        </Upload>
       </div>
-    </>
+
+      <div className="csv-table">
+        <Table dataSource={courses} columns={columns} rowKey="id_course" />
+      </div>
+
+      {isEditMode && (
+        <div className="data-form-popup">
+          <Form form={form} onFinish={handleFinish}>
+            <Form.Item label="รหัสวิชา" name="รหัสวิชา">
+              <Input />
+            </Form.Item>
+            <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
+              <Input />
+            </Form.Item>
+            <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
+              <Input />
+            </Form.Item>
+            <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
+              <Input />
+            </Form.Item>
+            <Button type="primary" htmlType="submit">
+              บันทึกการแก้ไข
+            </Button>
+          </Form>
+        </div>
+      )}
+    </div>
   );
 }
 
