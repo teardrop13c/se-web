@@ -1,4 +1,4 @@
-USE news_database; -- ใช้งานฐานข้อมูล news_database
+USE news_database;
 
 CREATE TABLE IF NOT EXISTS news (
     id INT AUTO_INCREMENT PRIMARY KEY,

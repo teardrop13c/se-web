@@ -1,5 +1,5 @@
 #main-News {
-    background-image: url(https://www.src.ku.ac.th/th/tp/img/kusrc.jpg);
+    background-image: url('https://www.src.ku.ac.th/th/tp/img/kusrc.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
