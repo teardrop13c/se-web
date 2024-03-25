@@ -1,11 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+#main-layout {
+    background-image: url('https://www.src.ku.ac.th/th/tp/img/kusrc.jpg'); /* เปลี่ยนเป็นที่อยู่ของรูปภาพของคุณ */
+    background-size: cover; /* ปรับขนาดรูปให้เต็มขนาดของส่วนโลหะทั้งหมด */
+    background-repeat: no-repeat; /* ไม่ต้องทำซ้ำภาพพื้นหลัง */
+  }
+
+.my-table {
+    background-color: hsla(0, 0%, 100%, 0.65);
+    background-size: cover; /* ปรับขนาดรูปให้เต็มขนาดของตาราง */
+    background-repeat: no-repeat; /* ไม่ต้องทำซ้ำภาพพื้นหลัง */
+  }
 
 /*Table*/
-
 body {
     font-family: Arial, sans-serif;
 }
