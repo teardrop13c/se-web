@@ -7,14 +7,7 @@ import { useSelector } from 'react-redux';
 import Login from "../../Login/Login";
 
 function Schedule() {
-  // Auth
-  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  const profile = useSelector((state) => state.auth.profile);
-  if (!isLoggedIn || (profile?.name !== 'Admin007')) {
-    return <Login />;
-  }
 
-  const [users, setUsers] = useState([]);
   const [options, setOptions] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [userAvailability, setUserAvailability] = useState([]);
@@ -35,25 +28,20 @@ function Schedule() {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setUsers(data);
-        setInstructors(data);
+        if (Array.isArray(data) && data.length > 0 && data.every(user => user.hasOwnProperty('user_email') && user.hasOwnProperty('user_name'))) {
+          setInstructors(data);
+          setOptions(data.map(user => ({
+            value: user.user_email,
+            label: user.user_name,
+          })));
+        } else {
+          console.error('Data is not in the expected format:', data);
+        }
       } catch (error) {
         console.error('Error fetching users:', error);
       }
     };
   
-    fetchUsers();
-  }, [selectedUser]); // เพิ่ม selectedUser เป็น dependency
-  
-
-  useEffect(() => {
-    setOptions(users.map(user => ({
-      value: user.user_email,
-      label: user.user_name,
-    })));
-  }, [users]);
-
-  useEffect(() => {
     if (selectedUser !== null) {
       const fetchUserAvailability = async () => {
         try {
@@ -80,11 +68,21 @@ function Schedule() {
           console.error('Error fetching user registration:', error);
         }
       };
-  
+
       fetchUserAvailability();
       fetchUserReg();
     }
-  }, [selectedUser]);
+  
+    fetchUsers();
+  }, [selectedUser]); // รวม dependencies เข้าด้วยกันในอาร์เรย์เดียว
+
+  // Auth
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const profile = useSelector((state) => state.auth.profile);
+  if (!isLoggedIn || (profile?.name !== 'Admin007')) {
+    return <Login />;
+  }
+
 
   const showModal = () => {
     setIsModalVisible(true);
