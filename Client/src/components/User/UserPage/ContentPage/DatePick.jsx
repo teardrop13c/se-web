@@ -20,18 +20,18 @@ function DatePick() {
     setSelectedTime(value);
   };
 
-  function sendDataToServer(newTimeArray) {
-    if (!Array.isArray(newTimeArray) || newTimeArray.length === 0) {
+  function sendDataToServer(timeArray) {
+    if (!Array.isArray(timeArray) || timeArray.length === 0) {
       console.error('Error sending data: Empty or invalid time array');
       return;
     }
-    console.log('Data to be sent:', { timeArray: newTimeArray });
+    console.log('Data to be sent:', { timeArray: timeArray });
     fetch('http://localhost:3001/api/timeData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ timeArray: newTimeArray })
+      body: JSON.stringify({ timeArray: timeArray })
     })
   }
 
@@ -154,7 +154,7 @@ function DatePick() {
         />
         <Button type="default" className="button-add" onClick={() => setTimeData(selectedDay, selectedTime)}> + </Button>
 
-        <Button type="default" className="submit-button" onClick={() => sendDataToServer(newTimeArray)}> ยืนยัน </Button>
+        <Button type="default" className="submit-button" onClick={() => sendDataToServer(timeArray)}> ยืนยัน </Button>
 
       </div>
         <table className="my-table"> {/* ถ้าใส่cssแล้วลบ border=1 ออก */}
