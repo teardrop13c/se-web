@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../../Navbar";
 import AdminMenu from "../AdminMenu/AdminMenu";
-import { Button, Modal, Select ,Table } from 'antd';
+import { Button, Modal, Select ,Table, message } from 'antd';
 import "./Schedule.css";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
@@ -17,8 +17,11 @@ function Schedule() {
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedRoom, setSelectedRoom] = useState(null);
+  const [selectedLectureSection, setSelectedLectureSection] = useState(null);
+  const [selectedPracticeSection, setSelectedPracticeSection] = useState(null);
   const [newData, setNewData] = useState([]);
   const [instructors, setInstructors] = useState([]);
+  const [course, setCoures] = useState([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -41,6 +44,39 @@ function Schedule() {
         console.error('Error fetching users:', error);
       }
     };
+
+    const fetchCourse = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/users`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setCoures(data);
+      } catch (error) {
+        console.error('Error fetching user registration:', error);
+      }
+    };
+
+    fetchCourse();
+
+    // ในส่วนของ fetchtable
+    const fetchtable = async () => {
+      try {
+        const response = await fetch(`http://localhost:3001/schedule/user_complete`);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setNewData(data);
+    
+      } catch (error) {
+        console.error('Error fetching user registration:', error);
+      }
+    };
+    
+
+    fetchtable();
   
     if (selectedUser !== null) {
       const fetchUserAvailability = async () => {
@@ -72,9 +108,8 @@ function Schedule() {
       fetchUserAvailability();
       fetchUserReg();
     }
-  
     fetchUsers();
-  }, [selectedUser]); // รวม dependencies เข้าด้วยกันในอาร์เรย์เดียว
+  }, [selectedUser,newData]); // รวม dependencies เข้าด้วยกันในอาร์เรย์เดียว
 
   // Auth
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -86,84 +121,166 @@ function Schedule() {
 
   const showModal = () => {
     setIsModalVisible(true);
-    setSelectedSubject(null);
-    setSelectedDay(null);
-    setSelectedTime(null);
-    setSelectedRoom(null);
   };
 
   const handleUserChange = (value) => {
     setSelectedUser(value);
   };
   
-
-  const handleOk = () => {
-    const selectedInstructor = instructors.find(instructor => instructor.user_email === selectedUser);
+  const handleOk = async () => {
+    // ตรวจสอบว่ามีข้อมูลที่เลือกที่ซ้ำกันในตารางหรือไม่
+    const isDuplicate = newData.some(dataItem => 
+      dataItem.day === selectedDay &&
+      dataItem.time_start_end === selectedTime &&
+      dataItem.room_id === selectedRoom
+    );
+  
+    // ถ้ามีข้อมูลที่ซ้ำกันในตาราง
+    if (isDuplicate) {
+      // แสดงข้อความแจ้งเตือน
+      message.error('ไม่สามารถลงทะเบียนได้ เนื่องจากข้อมูลวัน เวลา และห้องเรียนที่เลือกซ้ำกับข้อมูลในตาราง');
+      return; // หยุดการทำงานของฟังก์ชัน
+    }
+  
+    // ถ้าไม่มีข้อมูลที่ซ้ำกันในตาราง
+    // ดำเนินการต่อไปเพื่อส่งข้อมูล
+  
+    const selectedInstructor = instructors.find(
+      (instructor) => instructor.user_email === selectedUser
+    );
+    const selectedRegistration = user_reg.find(
+      (registration) => registration.subjectReg_id === selectedSubject
+    );
+    
+    if (!selectedRegistration) {
+      console.error("No registration found for selected user.");
+      return;
+    }    
+    const { major_year, student_year } = selectedRegistration;
+  
+    const selectedSubjectID = selectedSubject
+      ? selectedSubject.substring(0, 11)
+      : null;
+    const selectedCourse = selectedSubject
+      ? course.find((course) => course.subject_ID.startsWith(selectedSubjectID))
+      : null;
+  
+    const credite = selectedCourse ? selectedCourse.credite : "";
+    const typeSubject = selectedCourse ? selectedCourse.typeSubject : "";
+  
     const newDataItem = {
-      subject: selectedSubject,
+      subjectReg_id: selectedSubject,
+      credite: credite,
+      lec_group: selectedLectureSection,
+      lab_group: selectedPracticeSection,
+      major_year: major_year,
+      student_year: student_year,
       day: selectedDay,
-      time: selectedTime,
-      room: selectedRoom,
-      instructor: selectedInstructor?.user_name || '',
+      time_start_end: selectedTime,
+      room_id: selectedRoom,
+      typeSubject: typeSubject,
+      user_name: selectedInstructor?.user_name || "",
+      user_email: selectedInstructor?.user_email || ""
     };
-    setNewData([...newData, newDataItem]);
+  
+    try {
+      const response = await fetch("http://localhost:3001/schedule/newdata", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newDataItem),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Error sending data: " + response.statusText);
+      }
+  
+      console.log("Data has been sent successfully!");
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  
+    // ปิด Modal เมื่อทำงานเสร็จสิ้น
     setIsModalVisible(false);
-    setSelectedSubject(null);
-    setSelectedDay(null);
-    setSelectedTime(null);
-    setSelectedRoom(null);
   };
+  
 
   const columns = [
     {
       title: 'วัน',
-    dataIndex: 'day',
-    key: 'day',
-    sorter: (a, b) => {
-      // เรียงลำดับตามวัน
-      const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-      const dayAIndex = days.indexOf(a.day.toLowerCase());
-      const dayBIndex = days.indexOf(b.day.toLowerCase());
-      if (dayAIndex !== dayBIndex) {
-        return dayAIndex - dayBIndex; // เรียงตามวันก่อน
-      } else {
-        // ถ้าวันเท่ากัน ให้เรียงตามเวลา
-        const timeA = a.time.split(' - ')[0];
-        const timeB = b.time.split(' - ')[0];
-        return new Date('1970/01/01 ' + timeA) - new Date('1970/01/01 ' + timeB);
-      }
-    },
+      dataIndex: 'day', // ระบุ dataIndex เพื่อให้ sorter function ทำงานได้ถูกต้อง
+      key: 'day',
+      sorter: (a, b) => {
+        // เรียงลำดับตามวัน
+        const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+        const dayAIndex = days.indexOf((a.day || '').toLowerCase());
+        const dayBIndex = days.indexOf((b.day || '').toLowerCase());
+        if (dayAIndex !== dayBIndex) {
+          return dayAIndex - dayBIndex; // เรียงตามวันก่อน
+        } else {
+          // ถ้าวันเท่ากัน ให้เรียงตามเวลา
+          const timeA = (a.time_start_end || '').split(' - ')[0];
+          const timeB = (b.time_start_end || '').split(' - ')[0];
+          return new Date('1970/01/01 ' + timeA) - new Date('1970/01/01 ' + timeB);
+        }
+      },
     },
     {
       title: 'เวลา',
-    dataIndex: 'time',
-    key: 'time',
+      dataIndex: 'time_start_end',
+      key: 'time_start_end',
     },
     {
       title: 'วิชา',
-      dataIndex: 'subject',
-      key: 'subject',
+      dataIndex: 'subjectReg_id',
+      key: 'subjectReg_id',
     },
     {
       title: 'ห้อง',
-      dataIndex: 'room',
-      key: 'room',
+      dataIndex: 'room_id',
+      key: 'room_id',
+    },
+    {
+      title: 'หมู่บรรยาย',
+      dataIndex: 'lec_group',
+      key: 'lec_group',
+    },
+    {
+      title: 'หมู่ปฏิบัติ',
+      dataIndex: 'lab_group',
+      key: 'lab_group',
     },
     {
       title: 'ผู้สอน',
-      dataIndex: 'instructor',
-      key: 'instructor',
+      dataIndex: 'user_name',
+      key: 'user_name',
     },
-  ];
+    {
+      title: 'สาขา',
+      dataIndex: 'major_year',
+      key: 'major_year',
+    },
+    {
+      title: 'ชั้นปี',
+      dataIndex: 'student_year',
+      key: 'student_year',
+    },
+    {
+      title: 'หน่วยกิจ',
+      dataIndex: 'credite',
+      key: 'credite',
+    },
+    {
+      title: 'หมวดหมู่วิชา',
+      dataIndex: 'typeSubject',
+      key: 'typeSubject',
+    }
+  ];      
 
   const handleCancel = () => {
     setIsModalVisible(false);
-    setSelectedSubject(null);
-    setSelectedDay(null);
-    setSelectedTime(null);
-    setSelectedRoom(null);
   };
-  
   
 
   return (
@@ -187,7 +304,7 @@ function Schedule() {
         <Modal title="เพิ่มวิชาที่เปิดสอน" open={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
         <form>
           <label htmlFor="subjectReg_id">วิชาที่เปิดสอน:</label>
-          <Select id="subjectReg_id" style={{ width: '100%' }} onChange={value => setSelectedSubject(value)}>
+          <Select id="subjectReg_id" style={{ width: '100%' }} onChange={value => setSelectedSubject(value)} placeholder="Select a subject">
           {user_reg
           .filter(subject => subject.user_email === selectedUser)
           .map((subject) => (
@@ -198,7 +315,7 @@ function Schedule() {
         </Select>
           <br />
           <label htmlFor="day">วัน:</label>
-          <Select id="day" style={{ width: '100%' }} onChange={value => setSelectedDay(value)}>
+          <Select id="day" style={{ width: '100%' }} onChange={value => setSelectedDay(value)} placeholder="Select a day">
             <Select.Option value="monday">จันทร์</Select.Option>
             <Select.Option value="tuesday">อังคาร</Select.Option>
             <Select.Option value="wednesday">พุธ</Select.Option>
@@ -209,18 +326,44 @@ function Schedule() {
           </Select>
           <br />
           <label htmlFor="time">เวลา:</label>
-          <Select id="time" style={{ width: '100%' }} onChange={value => setSelectedTime(value)}>
+          <Select id="time" style={{ width: '100%' }} onChange={value => setSelectedTime(value)} placeholder="Select a time">
             <Select.Option value="9:00 - 12:00">9.00 - 12.00</Select.Option>
             <Select.Option value="13:00 - 16:00">13.00 - 16.00</Select.Option>
             <Select.Option value="16:00 - 19:00">16.00 - 19.00</Select.Option>
             <Select.Option value="16:30 - 19:30">16.30 - 19.30</Select.Option>
           </Select>
           <br />
+          <label htmlFor="lectureSection">หมู่บรรยาย:</label>
+          <Select id="lectureSection" style={{ width: '100%' }} onChange={value => setSelectedLectureSection(value)} placeholder="-">
+            <Select.Option value="-">-</Select.Option>
+            <Select.Option value="800">800</Select.Option>
+            <Select.Option value="801">801</Select.Option>
+            {/* เพิ่มตัวเลือกอื่น ๆ ตามต้องการ */}
+          </Select>
+          <br />
+          <label htmlFor="practiceSection">หมู่ปฏิบัติ:</label>
+          <Select id="practiceSection" style={{ width: '100%' }} placeholder="-" onChange={value => {
+              setSelectedPracticeSection(value);
+              // ตรวจสอบว่าหมู่ปฏิบัติถูกเลือกหรือไม่
+              if (value !== '-') {
+                  // ถ้าหมู่ปฏิบัติถูกเลือก ให้เปิดให้ผู้ใช้เลือกห้อง
+                  document.getElementById('room').removeAttribute('disabled');
+              } else {
+                  // ถ้าหมู่ปฏิบัติไม่ถูกเลือก ให้ปิดการเลือกห้อง
+                  document.getElementById('room').setAttribute('disabled', 'disabled');
+              }
+          }}>
+            <Select.Option value="-">-</Select.Option>
+            <Select.Option value="830">830</Select.Option>
+            <Select.Option value="831">831</Select.Option>
+            {/* เพิ่มตัวเลือกอื่น ๆ ตามต้องการ */}
+          </Select>
           <label htmlFor="room">ห้องเรียน:</label>
-          <Select id="room" style={{ width: '100%' }} onChange={value => setSelectedRoom(value)}>
+          <Select id="room" style={{ width: '100%' }} placeholder="-" disabled={selectedPracticeSection === '-' ? 'disabled' : ''} onChange={value => setSelectedRoom(value)}>
+          <Select.Option value="-">-</Select.Option>
             <Select.Option value="c201">C201</Select.Option>
             <Select.Option value="c202">C202</Select.Option>
-            {/* Add more options here */}
+            {/* เพิ่มตัวเลือกอื่น ๆ ตามต้องการ */}
           </Select>
       </form>
       </Modal>
@@ -259,8 +402,8 @@ function Schedule() {
           .map((item, index) => (
             <li key={`reg-${index}`}>
               <p>วิชาที่เปิดสอน : {item.subjectReg_id}</p>
-              <p>Lec : {item.lec_num}</p>
-              <p>Lab : {item.lab_num}</p>
+              <p>Lec : {item.lec_group}</p>
+              <p>Lab : {item.lab_group}</p>
               <p>สาขา : {item.major_year}</p>
               <p>ห้อง : {item.roomReg_ranking}</p>
               <p>ชั้นปี : {item.student_year}</p>
@@ -269,10 +412,11 @@ function Schedule() {
         </ul>
         <h1>ตารางเรียน</h1>
         <Table
-        dataSource={newData}
-        columns={columns}
-        pagination={false} // ปิด pagination หากไม่ต้องการให้แสดงหน้าที่ข้อมูล
+          dataSource={newData}
+          columns={columns}
+          pagination={false}
         />
+
       </div>
     </section>
   );
