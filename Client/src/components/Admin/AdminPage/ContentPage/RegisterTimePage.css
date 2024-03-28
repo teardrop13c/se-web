@@ -1,129 +1,140 @@
-body, html {
-    margin: 0;
-    padding: 0;
-  }
-  
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .register-rounded-rectangle {
-    background-color: #f0f0f0;
-    border-radius: 20px; 
-    padding: 20px;
-    margin: 30px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 1350px;
-    height: 560px; 
-  }
+  background-color: #f0f0f0;
+  border-radius: 20px; 
+  padding: 20px;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1350px;
+  height: 560px; 
+}
 
 .converted-time {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .custom-datepicker-text {
-    font-size: 16px !important; 
-    color: #000000;
-  }
+  font-size: 16px !important; 
+  color: #000000;
+}
 
 
 .registration-text {
-  font-size: 50px;
-  font-weight: bold;
-  color: #333;
-  margin-top: 15px;
+font-size: 50px;
+font-weight: bold;
+color: #333;
+margin-top: 15px;
 }
 
 
 .react-datepicker-wrapper {
-  width: 100%;
+width: 100%;
 }
 
 .react-datepicker__input-container {
-  width: 100%;
+width: 100%;
 }
 
 .react-datepicker {
-  font-family: 'Arial', sans-serif;
+font-family: 'Arial', sans-serif;
 }
 
 
 .react-datepicker-popper {
-  margin-top: 10px;
+margin-top: 10px;
 }
 
 
 .react-datepicker__input-container input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
+width: calc(100% - 20px);
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
 }
 
 .date-picker-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 10px;
+margin: auto;
+}
+
+.open-datepicker-container{
+  margin: auto;
+}
+
+.close-datepicker-container{
+  margin: auto;
+  margin-top: 50px;
 }
 
 .to-text {
-  margin: 0 10px;
-  font-size: 16px;
-  color: #555;
+margin: 0 10px;
+font-size: 16px;
+color: #555;
 }
 
 .icon-container {
-    position: absolute;
-    top: 58.3%;
-    cursor: pointer;
-  }
-  
-  .opening-time-icon-container {
-    right: 724px; 
-    transform: translateY(-50%);
-  }
-  
-  .closing-time-icon-container {
-    right: 470px; 
-    transform: translateY(-50%);
-  }
-  
-  .time-schedule-icon {
-    color: #000000; 
-    font-size: 20px; 
-  }
+  position: absolute;
+  top: 58.3%;
+  cursor: pointer;
+}
 
-  .confirm-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px; 
-    position: absolute;
-    bottom: 290px; 
-    right: 370px; 
-  }
-  
-  .confirm-icon {
-    margin-right: 5px;
-  }
-  
+.opening-time-icon-container {
+  right: 724px; 
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.closing-time-icon-container {
+  right: 470px; 
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.time-schedule-icon {
+  color: #000000; 
+  font-size: 20px; 
+}
+
+.confirm-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 140px auto; 
+  bottom: 290px; 
+  right: 370px; 
+}
+
+.confirm-icon {
+  margin-right: 5px;
+}
+
 
 .alert-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #f44336; /* Red color, you can customize this */
-  color: white;
-  border-radius: 8px;
-  text-align: center;
-  display: none;
-  z-index: 999;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+background-color: #f44336; /* Red color, you can customize this */
+color: white;
+border-radius: 8px;
+text-align: center;
+display: none;
+z-index: 999;
 }
 
 .alert-container.show {
-  display: block;
+display: block;
 }

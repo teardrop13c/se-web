@@ -9,8 +9,6 @@ function NameList() {
   //auth
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const profile = useSelector((state) => state.auth.profile);
-  const OnOffReg = useSelector((state) => state.var.OnOffReg); 
-  console.log("namelist", OnOffReg)
   if (!isLoggedIn || (profile?.name !== 'Admin007')) {
     return <Login />;
   }

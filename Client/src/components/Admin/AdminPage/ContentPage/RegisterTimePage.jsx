@@ -5,8 +5,15 @@ import './RegisterTimePage.css';
 import th from 'date-fns/locale/th';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { setOnReg,setOffReg } from '../../../../../Store/varSlice.jsx';
-import { useSelector , useDispatch} from 'react-redux';
+import Swal from 'sweetalert2';
+
+const showErrorMessage = () => {
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: error
+  });
+};
 
 function RegisterTimePage() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -16,9 +23,6 @@ function RegisterTimePage() {
 
   const openingDatePickerRef = useRef(null);
   const closingDatePickerRef = useRef(null);
-
-  const dispatch = useDispatch();
-  const OnOffReg = useSelector((state) => state.var.OnOffReg); //null true
 
   const convertToThaiTime = (dateTime) => {
     const options = {
@@ -98,11 +102,21 @@ function RegisterTimePage() {
   
         if (response.ok) {
           console.log('Registration data sent successfully');
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Registration data sent successfully'
+          });
         } else {
           throw new Error('Failed to send registration data');
         }
       } catch (error) {
         console.error('Error sending registration data:', error.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: `Error sending registration data: ${error.message}`
+        });
       }
     }
   };
@@ -121,27 +135,6 @@ function RegisterTimePage() {
       alertContainer.classList.remove('show');
     }
   };
-  //onoffregมันเซ้ตในนี้ไม่ขึ้นglobal
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const currentDateTimeMillis = currentDateTime.getTime();
-      const openingTimeMillis = openingTime.getTime();
-      const closingTimeMillis = closingTime.getTime();
-
-      //แก้ตรงนี้เวลา
-      if (currentDateTimeMillis >= openingTimeMillis && currentDateTimeMillis <= closingTimeMillis) {
-        dispatch(setOnReg());//ส่งไปไม่ถึง
-        console.log("inIF", OnOffReg);//true
-      }
-      else if (currentDateTimeMillis > closingTimeMillis) {        
-        dispatch(setOffReg());
-        console.log("inelseIF",OnOffReg);
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [currentDateTime, openingTime, closingTime, dispatch]);
-
 
   return (
     <div className="register-rounded-rectangle">
@@ -159,7 +152,7 @@ function RegisterTimePage() {
       </div>
 
       <div className="date-picker-container">
-        <div className="datepicker-container">
+        <div className="open-datepicker-container">
           <DatePicker
             className="custom-datepicker-text"
             selected={openingTime}
@@ -171,12 +164,10 @@ function RegisterTimePage() {
             locale={th}
             ref={openingDatePickerRef}
           />
-          <div className="icon-container opening-time-icon-container" onClick={handleOpeningImageClick}>
-            <FontAwesomeIcon icon={faClock} className="time-schedule-icon" />
-          </div>
+         
         </div>
         <span className="to-text"> ถึง </span>
-        <div className="datepicker-container">
+        <div className="close-datepicker-container">
           <DatePicker
             className="custom-datepicker-text"
             selected={closingTime}
@@ -188,16 +179,12 @@ function RegisterTimePage() {
             locale={th}
             ref={closingDatePickerRef}
           />
-          <div className="icon-container closing-time-icon-container" onClick={handleClosingImageClick}>
-            <FontAwesomeIcon icon={faClock} className="time-schedule-icon" />
-          </div>
-        </div>
-      </div>
-
-      <button className="confirm-button" onClick={handleConfirmButtonClick}>
-        <FontAwesomeIcon icon={faCheck} className="confirm-icon" />
+              <button className="confirm-button" onClick={handleConfirmButtonClick}>
+        
         ยืนยัน
       </button>
+        </div>
+      </div>
     </div>
   );
 }
