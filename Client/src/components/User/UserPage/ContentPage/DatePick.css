@@ -9,3 +9,45 @@
   .table-container {
     flex-grow: 1; /* Allow the table to grow and fill available space */
   }
+
+  .mon {
+    background-color: #FBDD3F;
+  }
+
+  .tues {
+    background-color: #E372FF;
+  }
+
+  .wed {
+    background-color: #82FF87;
+  }
+
+  .thu {
+    background-color: #FF9C64;
+  }
+
+  .fri {
+    background-color: #27CBFF;
+  }
+
+  .sat {
+    background-color: #9C4EFF;
+  }
+
+  .sun {
+    background-color: #FF0000;
+  }
+
+  .titleTable {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/picture-5622c.appspot.com/o/logo.jpg?alt=media&token=3628dfd0-7c51-479d-92cd-63a3014930c2);
+    background-size: cover;
+  }
+
+  .titleTable2 {
+    background-color: #09543d;
+    color: #ffffff;
+  }
+
+  td {
+    background-color: #ffffff;
+  }
