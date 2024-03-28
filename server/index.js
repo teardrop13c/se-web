@@ -15,7 +15,8 @@ const db = mysql.createConnection({
     host: "localhost",
     user: 'root',
     password: '',
-    database: 'kusrc_course'
+    database: 'kusrc_course',
+    port: '3307'
 })
 
 
@@ -24,35 +25,119 @@ app.post('/api/profile', (req, res) => {
     const { name, email } = req.body; // รับชื่อและอีเมลที่ส่งมาจากผู้ใช้
     console.log(email);
     console.log(name);
-  
+    // ตรวจสอบว่าใช่email admin หรือไม่
+    if(email != "imgayhaveverbigk@gmail.com"){
     // ตรวจสอบว่ามีข้อมูลที่ซ้ำกันอยู่แล้วหรือไม่
-    db.query("SELECT * FROM user WHERE user_email = ?", [email], (err, result) => {
-      if (err) {
-        console.error('Error checking for duplicate data:', err);
-        res.status(500).send('Failed to check for duplicate data'); // ส่งข้อความผิดพลาดกลับไปยังผู้ใช้
-      } else {
-        if (result.length > 0) {
-          console.log('Data already exists');
-          res.status(409).send('Data already exists'); // ส่งข้อความว่ามีข้อมูลที่ซ้ำกันอยู่แล้วกลับไปยังผู้ใช้
-        } else {
-          // ไม่มีข้อมูลที่ซ้ำกัน จึงทำการแทรกข้อมูลลงในฐานข้อมูล
-          db.query("INSERT INTO user (user_email, user_name) VALUES (?, ?)", [email, name], (err, result) => {
+        db.query("SELECT * FROM user WHERE user_email = ?", [email], (err, result) => {
             if (err) {
-              console.error('Error inserting data:', err);
-              res.status(500).send('Failed to insert data'); // ส่งข้อความผิดพลาดกลับไปยังผู้ใช้
+                console.error('Error checking for duplicate data:', err);
+                res.status(500).send('Failed to check for duplicate data'); // ส่งข้อความผิดพลาดกลับไปยังผู้ใช้
             } else {
-              console.log('Data inserted successfully');
-              res.status(200).send('Data inserted successfully'); // ส่งข้อความยืนยันการแทรกข้อมูลกลับไปยังผู้ใช้
+                if (result.length > 0) {
+                    console.log('Data already exists');
+                    res.status(409).send('Data already exists'); // ส่งข้อความว่ามีข้อมูลที่ซ้ำกันอยู่แล้วกลับไปยังผู้ใช้
+                } else {
+                    // ไม่มีข้อมูลที่ซ้ำกัน จึงทำการแทรกข้อมูลลงในฐานข้อมูล
+                    db.query("INSERT INTO user (user_email, user_name) VALUES (?, ?)", [email, name], (err, result) => {
+                        if (err) {
+                            console.error('Error inserting data:', err);
+                            res.status(500).send('Failed to insert data'); // ส่งข้อความผิดพลาดกลับไปยังผู้ใช้
+                        } else {
+                            console.log('Data inserted successfully');
+                            res.status(200).send('Data inserted successfully'); // ส่งข้อความยืนยันการแทรกข้อมูลกลับไปยังผู้ใช้
+                        }
+                    })
+                }
             }
-          });
+        })
+    } else{
+        console.log('Email not user');
+        res.status(200).send('Email not user');
+    }
+});
+//ดึง user
+app.get('/api/profile', (req,res) => {
+    db.query("SELECT * FROM user", (err,result) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.send(result);
         }
-      }
+    });
+});  
+////////////////////////////////////////////
+
+app.delete('/delete/:user_email/:user_name', (req, res) => {
+    const email = req.params.user_email;
+    const name = req.params.user_name;
+    db.query("DELETE FROM user WHERE user_email = ? AND user_name = ?", [email, name], (err,result) => {
+        if(err) {
+            console.log(err);
+            res.status(500).send("error deleting the user.");
+        } else {
+            res.send(result);
+        }
+    })
+})
+
+/// เก็บ Phone Number ///
+app.post('/api/user/phone', (req, res) => {
+    const { email, phoneNumber } = req.body;
+    // ตรวจสอบว่ามีอีเมลและเบอร์โทรศัพท์ที่ส่งมาหรือไม่
+    if (!email || !phoneNumber) {
+        return res.status(400).json({ error: 'Email and phone number are required' });
+    }
+
+    db.query("UPDATE user SET user_phone = ? WHERE user_email = ?", [phoneNumber, email], (err, result) => {
+        if (err) {
+            console.error('Error updating phone number:', err);
+            return res.status(500).json({ error: 'Failed to update phone number' });
+        }
+
+        console.log('Phone number updated successfully');
+        res.json({ message: 'Phone number updated successfully' });
     });
 });
 
-  
-////////////////////////////////////////////
+app.get('/api/user/phone/:email', (req, res) => {
+    const email = req.params.email;
 
+    if (!email) {
+        return res.status(400).json({ error: 'Email parameter is required' });
+    }
+
+    db.query("SELECT user_phone FROM user WHERE user_email = ?", email, (err, result) => {
+        if (err) {
+            console.error('Error fetching phone number:', err);
+            return res.status(500).json({ error: 'Failed to fetch phone number' });
+        }
+
+        if (result.length === 0) {
+            return res.status(404).json({ error: 'Phone number not found' });
+        }
+
+        const phoneNumber = result[0].user_phone;
+        res.json({ phoneNumber });
+    });
+});
+
+app.delete('/api/user/phone/:email', (req, res) => {
+    const email = req.params.email;
+
+    if (!email) {
+        return res.status(400).json({ error: 'Email parameter is required' });
+    }
+
+    db.query("UPDATE user SET user_phone = NULL WHERE user_email = ?", email, (err, result) => {
+        if (err) {
+            console.error('Error deleting phone number:', err);
+            return res.status(500).json({ error: 'Failed to delete phone number' });
+        }
+
+        console.log('Phone number deleted successfully');
+        res.json({ message: 'Phone number deleted successfully' });
+    });
+});
 
 // กำหนดเส้นทาง GET /registerteacher เพื่อดึงข้อมูลลงทะเบียนการสอน
 app.get('/registerteacher', (req, res) => {
@@ -133,7 +218,7 @@ app.put('/update', (req, res) => {
     // Construct the SQL query
     const updateQuery = `
         UPDATE course 
-        SET subject_ID = ?, subjact_name = ?, credite = ?, typeSubject = ? 
+        SET subject_ID = ?, subject_name = ?, credite = ?, typeSubject = ? 
         WHERE id_course = ?`;
 
     // Log the generated SQL query
@@ -257,8 +342,6 @@ app.post('/api/timeData', async (req, res) => {
     }
 });
 
-
-
 ////////////////////////////////////////////////////////////
 ///////////////////////uploads//////////////////////////////
 app.post('/uploads', (req, res) => {
@@ -289,7 +372,7 @@ app.post('/uploads', (req, res) => {
         // สร้าง values array จาก jsonData
         const values = jsonData.map(row => [row.รหัสวิชา, row.ชื่อวิชา, row.หน่วยกิจ, row.ประเภทวิชา]);
 
-        const sql = 'INSERT INTO course (subject_ID, subjact_name, credite,typeSubject) VALUES ?';
+        const sql = 'INSERT INTO course (subject_ID, subject_name, credite,typeSubject) VALUES ?';
 
         db.query("SET @num := 0;", (err, result) => {
         if (err) {

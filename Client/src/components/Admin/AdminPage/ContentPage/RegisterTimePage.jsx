@@ -5,6 +5,15 @@ import './RegisterTimePage.css';
 import th from 'date-fns/locale/th';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+
+const showErrorMessage = () => {
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: error
+  });
+};
 
 function RegisterTimePage() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -75,8 +84,13 @@ function RegisterTimePage() {
   const handleConfirmButtonClick = async () => {
     if (closingTime <= openingTime) {
       setError('เวลาปิดการลงทะเบียนต้องมาทีหลังเวลาเปิดการลงทะเบียน');
-      showErrorMessage();
-    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error
+      });
+    }
+    else {
       hideErrorMessage();
       console.log('open:', openingTime);
       console.log('close: ', closingTime);
@@ -93,44 +107,36 @@ function RegisterTimePage() {
   
         if (response.ok) {
           console.log('Registration data sent successfully');
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'ส่งข้อมูลเวลาเปิด/ปิดการลงทะเบียนสำเร็จ'
+          });
         } else {
           throw new Error('Failed to send registration data');
         }
       } catch (error) {
         console.error('Error sending registration data:', error.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: `Error sending registration data: ${error.message}`
+        });
       }
     }
   };
   
 
-  const showErrorMessage = () => {
-    const alertContainer = document.getElementById('alert-container');
-    if (alertContainer) {
-      alertContainer.classList.add('show');
-    }
-  };
 
-  const hideErrorMessage = () => {
-    const alertContainer = document.getElementById('alert-container');
-    if (alertContainer) {
-      alertContainer.classList.remove('show');
-    }
-  };
+
+
 
   return (
     <div className="register-rounded-rectangle">
       <p className="converted-time">{convertToThaiTime(currentDateTime)}</p>
       <p className="registration-text">เลือกเวลาเปิด / ปิดการลงทะเบียน</p>
 
-      {/* Alert Container */}
-      <div id="alert-container" className={`alert-container ${error ? 'show' : ''}`}>
-        <div className="alert-content">
-          {error && <p className="error-message">{error}</p>}
-          <button className="close-button" onClick={hideErrorMessage}>
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
-        </div>
-      </div>
+
 
       <div className="date-picker-container">
         <div className="datepicker-container">
@@ -145,9 +151,7 @@ function RegisterTimePage() {
             locale={th}
             ref={openingDatePickerRef}
           />
-          <div className="icon-container opening-time-icon-container" onClick={handleOpeningImageClick}>
-            <FontAwesomeIcon icon={faClock} className="time-schedule-icon" />
-          </div>
+         
         </div>
         <span className="to-text"> ถึง </span>
         <div className="datepicker-container">
@@ -162,16 +166,12 @@ function RegisterTimePage() {
             locale={th}
             ref={closingDatePickerRef}
           />
-          <div className="icon-container closing-time-icon-container" onClick={handleClosingImageClick}>
-            <FontAwesomeIcon icon={faClock} className="time-schedule-icon" />
-          </div>
-        </div>
-      </div>
-
-      <button className="confirm-button" onClick={handleConfirmButtonClick}>
-        <FontAwesomeIcon icon={faCheck} className="confirm-icon" />
+              <button className="confirm-button" onClick={handleConfirmButtonClick}>
+        
         ยืนยัน
       </button>
+        </div>
+      </div>
     </div>
   );
 }
