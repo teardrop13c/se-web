@@ -1,3 +1,32 @@
 .content {
     margin-left: 10px;
 }
+
+.mondayRow {
+    background-color: red; /* สีพื้นหลังสำหรับวันจันทร์ */
+  }
+  
+  .tuesdayRow {
+    background-color: blue; /* สีพื้นหลังสำหรับวันอังคาร */
+  }
+  
+  .wednesdayRow {
+    background-color: green; /* สีพื้นหลังสำหรับวันพุธ */
+  }
+  
+  .thursdayRow {
+    background-color: yellow; /* สีพื้นหลังสำหรับวันพฤหัสบดี */
+  }
+  
+  .fridayRow {
+    background-color: orange; /* สีพื้นหลังสำหรับวันศุกร์ */
+  }
+  
+  .saturdayRow {
+    background-color: purple; /* สีพื้นหลังสำหรับวันเสาร์ */
+  }
+  
+  .sundayRow {
+    background-color: pink; /* สีพื้นหลังสำหรับวันอาทิตย์ */
+  }
+  
