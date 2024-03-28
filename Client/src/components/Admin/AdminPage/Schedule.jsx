@@ -312,86 +312,78 @@ function Schedule() {
       <Navbar />
       <AdminMenu />
       <div className="content">
-        <h1>Content Schedule Page</h1>
-        <Select
-          showSearch
-          placeholder="Select a person"
-          optionFilterProp="children"
-          onChange={handleUserChange}
-          options={options}
-          style={{ width: '12%' }}
-          filterOption={(input, option) =>
-            option?.label?.toLowerCase().indexOf(input.toLowerCase()) >= 0
-          }
-        />
-        <Button type="primary" onClick={showModal}>เพิ่มวิชาที่เปิดสอน</Button>
-        <Modal title="เพิ่มวิชาที่เปิดสอน" open={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-        <form>
-          <label htmlFor="subjectReg_id">วิชาที่เปิดสอน:</label>
-          <Select id="subjectReg_id" style={{ width: '100%' }} onChange={value => setSelectedSubject(value)} placeholder="Select a subject">
-          {user_reg
-          .filter(subject => subject.user_email === selectedUser)
-          .map((subject) => (
-            <Select.Option key={`${subject.reg_id} - ${subject.subjectReg_id}`} value={subject.subjectReg_id}>
-              {`${subject.reg_id} - ${subject.subjectReg_id}`}
-            </Select.Option>
-          ))}
-        </Select>
-          <br />
-          <label htmlFor="day">วัน:</label>
-          <Select id="day" style={{ width: '100%' }} onChange={value => setSelectedDay(value)} placeholder="Select a day">
-            <Select.Option value="monday">จันทร์</Select.Option>
-            <Select.Option value="tuesday">อังคาร</Select.Option>
-            <Select.Option value="wednesday">พุธ</Select.Option>
-            <Select.Option value="thursday">พฤหัสบดี</Select.Option>
-            <Select.Option value="friday">ศุกร์</Select.Option>
-            <Select.Option value="saturday">เสาร์</Select.Option>
-            <Select.Option value="sunday">อาทิตย์</Select.Option>
-          </Select>
-          <br />
-          <label htmlFor="time">เวลา:</label>
-          <Select id="time" style={{ width: '100%' }} onChange={value => setSelectedTime(value)} placeholder="Select a time">
-            <Select.Option value="9:00 - 12:00">9.00 - 12.00</Select.Option>
-            <Select.Option value="13:00 - 16:00">13.00 - 16.00</Select.Option>
-            <Select.Option value="16:00 - 19:00">16.00 - 19.00</Select.Option>
-            <Select.Option value="16:30 - 19:30">16.30 - 19.30</Select.Option>
-          </Select>
-          <br />
-          <label htmlFor="lectureSection">หมู่บรรยาย:</label>
-          <Select id="lectureSection" style={{ width: '100%' }} onChange={value => setSelectedLectureSection(value)} placeholder="-">
-            <Select.Option value="-">-</Select.Option>
-            <Select.Option value="800">800</Select.Option>
-            <Select.Option value="801">801</Select.Option>
-            {/* เพิ่มตัวเลือกอื่น ๆ ตามต้องการ */}
-          </Select>
-          <br />
-          <label htmlFor="practiceSection">หมู่ปฏิบัติ:</label>
-          <Select id="practiceSection" style={{ width: '100%' }} placeholder="-" onChange={value => {
-              setSelectedPracticeSection(value);
-              // ตรวจสอบว่าหมู่ปฏิบัติถูกเลือกหรือไม่
-              if (value !== '-') {
-                  // ถ้าหมู่ปฏิบัติถูกเลือก ให้เปิดให้ผู้ใช้เลือกห้อง
-                  document.getElementById('room').removeAttribute('disabled');
-              } else {
-                  // ถ้าหมู่ปฏิบัติไม่ถูกเลือก ให้ปิดการเลือกห้อง
-                  document.getElementById('room').setAttribute('disabled', 'disabled');
-              }
-          }}>
-            <Select.Option value="-">-</Select.Option>
-            <Select.Option value="830">830</Select.Option>
-            <Select.Option value="831">831</Select.Option>
-            {/* เพิ่มตัวเลือกอื่น ๆ ตามต้องการ */}
-          </Select>
-          <label htmlFor="room">ห้องเรียน:</label>
-          <Select id="room" style={{ width: '100%' }} placeholder="-" disabled={selectedPracticeSection === '-' ? 'disabled' : ''} onChange={value => setSelectedRoom(value)}>
-          <Select.Option value="-">-</Select.Option>
-            <Select.Option value="c201">C201</Select.Option>
-            <Select.Option value="c202">C202</Select.Option>
-            {/* เพิ่มตัวเลือกอื่น ๆ ตามต้องการ */}
-          </Select>
-      </form>
-      </Modal>
+        <h1>จัดตารางสอน</h1>
+        <div className='dropdownPerson'>
+          <h5>เลือกอาจารย์</h5>
+          <Select
+            showSearch
+            placeholder="Select a person"
+            optionFilterProp="children"
+            onChange={handleUserChange}
+            options={options}
+            style={{ width: '30%' }}
+            filterOption={(input, option) =>
+              option?.label?.toLowerCase().indexOf(input.toLowerCase()) >= 0
+            }
+          />
 
+          <Button type="primary" onClick={showModal}>เพิ่มวิชาที่เปิดสอน</Button>
+          <Modal title="เพิ่มวิชาที่เปิดสอน" className='addSubject' open={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <form>
+              <label htmlFor="subjectReg_id" className='label-1' >วิชาที่เปิดสอน:</label>
+              <Select id="subjectReg_id" style={{ width: '100%' }} onChange={value => setSelectedSubject(value)}>
+                {user_reg
+                  .filter(subject => subject.user_email === selectedUser)
+                  .map((subject) => (
+                    <Select.Option key={`${subject.reg_id} - ${subject.subjectReg_id}`} value={subject.subjectReg_id}>
+                      {`${subject.reg_id} - ${subject.subjectReg_id}`}
+                    </Select.Option>
+                  ))}
+              </Select>
+              <br />
+              <label htmlFor="day" className='label-1' >วัน:</label>
+              <Select id="day" style={{ width: '100%' }} onChange={value => setSelectedDay(value)}>
+                <Select.Option value="monday">จันทร์</Select.Option>
+                <Select.Option value="tuesday">อังคาร</Select.Option>
+                <Select.Option value="wednesday">พุธ</Select.Option>
+                <Select.Option value="thursday">พฤหัสบดี</Select.Option>
+                <Select.Option value="friday">ศุกร์</Select.Option>
+                <Select.Option value="saturday">เสาร์</Select.Option>
+                <Select.Option value="sunday">อาทิตย์</Select.Option>
+              </Select>
+              <br />
+              <label htmlFor="time" className='label-1' >เวลา:</label>
+              <Select id="time" style={{ width: '100%' }} onChange={value => setSelectedTime(value)}>
+                <Select.Option value="9:00 - 12:00">9.00 - 12.00</Select.Option>
+                <Select.Option value="13:00 - 16:00">13.00 - 16.00</Select.Option>
+                <Select.Option value="16:00 - 19:00">16.00 - 19.00</Select.Option>
+                <Select.Option value="16:30 - 19:30">16.30 - 19.30</Select.Option>
+              </Select>
+              <br />
+              <label htmlFor="room" className='label-1' >ห้องเรียน:</label>
+              <Select id="room" style={{ width: '100%' }} onChange={value => setSelectedRoom(value)}>
+                <Select.Option value="Lab CE">Lab CE</Select.Option>
+                <Select.Option value="Lab CE 1">Lab CE 1</Select.Option>
+                <Select.Option value="Lab CE 2">Lab CE 2</Select.Option>
+                <Select.Option value="Lab CE 3">Lab CE 3</Select.Option>
+                <Select.Option value="Lab Com 1">Lab Com 1</Select.Option>
+                <Select.Option value="Lab Com 2">Lab Com 2</Select.Option>
+                <Select.Option value="Lab Com 23">Lab Com 23</Select.Option>
+                <Select.Option value="Lab Com IMS">Lab Com IMS</Select.Option>
+                <Select.Option value="Lab EE">Lab EE</Select.Option>
+                <Select.Option value="Lab ELEC IMS">Lab ELEC IMS</Select.Option>
+                <Select.Option value="Lab IE">Lab IE</Select.Option>
+                <Select.Option value="Lab IMS">Lab IMS</Select.Option>
+                <Select.Option value="Lab Logic Com">Lab Logic Com</Select.Option>
+                <Select.Option value="Lab Marine IMS">Lab Marine IMS</Select.Option>
+                <Select.Option value="Lab ไฟฟ้า">Lab ไฟฟ้า</Select.Option>
+                <Select.Option value="Lab โยธา">Lab โยธา</Select.Option>
+                {/* Add more options here */}
+              </Select>
+
+            </form>
+          </Modal>
+        </div>
         <h1>เวลาว่าง</h1>
         <ul>
           {userAvailability
@@ -414,25 +406,27 @@ function Schedule() {
               return dayComparison;
             })
             .map((availItem, index) => (
-              <li key={`avail-${index}`}>
+              <li key={`avail-${index}`} style={{ marginLeft: '10%', marginRight: '0%' }}>
                 <p>{availItem.day} {availItem.time_start_end}</p>
               </li>
             ))}
         </ul>
-        <h1>วิชาที่เปิดสอน</h1>
+        <h3>วิชาที่ลงทะเบียน</h3>
         <ul>
-        {user_reg
-          .filter(item => item.user_email === selectedUser)
-          .map((item, index) => (
-            <li key={`reg-${index}`}>
-              <p>วิชาที่เปิดสอน : {item.subjectReg_id}</p>
-              <p>Lec : {item.lec_group}</p>
-              <p>Lab : {item.lab_group}</p>
-              <p>สาขา : {item.major_year}</p>
-              <p>ห้อง : {item.roomReg_ranking}</p>
-              <p>ชั้นปี : {item.student_year}</p>
-            </li>
-          ))}
+          {user_reg
+            .filter(item => item.user_email === selectedUser)
+            .map((item, index) => (
+              <li key={`reg-${index}`} style={{ marginBottom: '2%', marginLeft: '10%', 
+              marginRight: '0%' }}>
+                <p>วิชาที่ลงทะเบียน : {item.subjectReg_id}</p>
+                <p>Lec : {item.lec_num}</p>
+                <p>Lab : {item.lab_num}</p>
+                <p>สาขา : {item.major_year}</p>
+                <p>ห้อง : {item.roomReg_ranking}</p>
+                <p>ชั้นปี : {item.student_year}</p>
+              </li>
+            ))}
+
         </ul>
         <h1>ตารางเรียน</h1>
         <Table

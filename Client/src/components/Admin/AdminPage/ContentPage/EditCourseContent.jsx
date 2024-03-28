@@ -163,38 +163,39 @@ function EditCourseContent() {
 
   return (
     <div className="rounded-rectangle">
-      <div className="file-upload">
-        <Upload {...props}>
-          <Button icon={<UploadOutlined />}>Click to Upload</Button>
-        </Upload>
-      </div>
-
-      <div className="csv-table">
-        <Table dataSource={courses} columns={columns} rowKey="id_course" />
-      </div>
-
-      {isEditMode && (
-        <div className="data-form-popup">
-          <Form form={form} onFinish={handleFinish}>
-            <Form.Item label="รหัสวิชา" name="รหัสวิชา">
-              <Input />
-            </Form.Item>
-            <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
-              <Input />
-            </Form.Item>
-            <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
-              <Input />
-            </Form.Item>
-            <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
-              <Input />
-            </Form.Item>
-            <Button type="primary" htmlType="submit">
-              บันทึกการแก้ไข
-            </Button>
-          </Form>
+      <p className="faculty-text">หลักสูตร</p>
+        <div className="file-upload">
+          <Upload {...props}>
+            <Button icon={<UploadOutlined />}>Click to Upload</Button>
+          </Upload>
         </div>
-      )}
-    </div>
+
+        <div className="csv-table">
+          <Table dataSource={courses} columns={columns} rowKey="id_course" />
+        </div>
+
+        {isEditMode && (
+          <div className="data-form-popup">
+            <Form form={form} onFinish={handleFinish}>
+              <Form.Item label="รหัสวิชา" name="รหัสวิชา">
+                <Input />
+              </Form.Item>
+              <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
+                <Input />
+              </Form.Item>
+              <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
+                <Input />
+              </Form.Item>
+              <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
+                <Input />
+              </Form.Item>
+              <Button type="primary" htmlType="submit">
+                บันทึกการแก้ไข
+              </Button>
+            </Form>
+          </div>
+        )}
+      </div>
   );
 }
 
