@@ -5,6 +5,7 @@ import { Button, Modal, Select ,Table, message } from 'antd';
 import "./Schedule.css";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
+import * as XLSX from 'xlsx';
 
 function Schedule() {
 
@@ -16,9 +17,9 @@ function Schedule() {
   const [selectedSubject, setSelectedSubject] = useState(null);
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
-  const [selectedRoom, setSelectedRoom] = useState(null);
-  const [selectedLectureSection, setSelectedLectureSection] = useState(null);
-  const [selectedPracticeSection, setSelectedPracticeSection] = useState(null);
+  const [selectedRoom, setSelectedRoom] = useState("-");
+  const [selectedLectureSection, setSelectedLectureSection] = useState(" - ");
+  const [selectedPracticeSection, setSelectedPracticeSection] = useState(" - ");
   const [newData, setNewData] = useState([]);
   const [instructors, setInstructors] = useState([]);
   const [course, setCoures] = useState([]);
@@ -281,8 +282,31 @@ function Schedule() {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-  
 
+  const exportToXlsx = () => {
+    const exportData = newData.map(item => ({
+      'id':item.user_complete_id,
+      'วัน': item.day,
+      'เวลา': item.time_start_end,
+      'วิชา': item.subjectReg_id,
+      'ห้อง': item.room_id,
+      'หมู่บรรยาย': item.lec_group,
+      'หมู่ปฏิบัติ': item.lab_group,
+      'ผู้สอน': item.user_name,
+      'สาขา': item.major_year,
+      'ชั้นปี': item.student_year,
+      'หน่วยกิจ': item.credite,
+      'หมวดหมู่วิชา': item.typeSubject,
+    }));
+    console.log(exportData);
+    const ws = XLSX.utils.json_to_sheet(exportData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'ตารางเรียน');
+
+    // บันทึกไฟล์
+    XLSX.writeFile(wb, 'ตารางเรียน.xlsx');
+  };
+  
   return (
     <section id="main-layout">
       <Navbar />
@@ -416,7 +440,7 @@ function Schedule() {
           columns={columns}
           pagination={false}
         />
-
+        <Button type="primary" onClick={exportToXlsx}>ส่งออกเป็น Excel</Button>
       </div>
     </section>
   );
