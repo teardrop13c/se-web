@@ -226,8 +226,22 @@ function Schedule() {
               <br />
               <label htmlFor="room" className='label-1' >ห้องเรียน:</label>
               <Select id="room" style={{ width: '100%' }} onChange={value => setSelectedRoom(value)}>
-                <Select.Option value="c201">C201</Select.Option>
-                <Select.Option value="c202">C202</Select.Option>
+                <Select.Option value="Lab CE">Lab CE</Select.Option>
+                <Select.Option value="Lab CE 1">Lab CE 1</Select.Option>
+                <Select.Option value="Lab CE 2">Lab CE 2</Select.Option>
+                <Select.Option value="Lab CE 3">Lab CE 3</Select.Option>
+                <Select.Option value="Lab Com 1">Lab Com 1</Select.Option>
+                <Select.Option value="Lab Com 2">Lab Com 2</Select.Option>
+                <Select.Option value="Lab Com 23">Lab Com 23</Select.Option>
+                <Select.Option value="Lab Com IMS">Lab Com IMS</Select.Option>
+                <Select.Option value="Lab EE">Lab EE</Select.Option>
+                <Select.Option value="Lab ELEC IMS">Lab ELEC IMS</Select.Option>
+                <Select.Option value="Lab IE">Lab IE</Select.Option>
+                <Select.Option value="Lab IMS">Lab IMS</Select.Option>
+                <Select.Option value="Lab Logic Com">Lab Logic Com</Select.Option>
+                <Select.Option value="Lab Marine IMS">Lab Marine IMS</Select.Option>
+                <Select.Option value="Lab ไฟฟ้า">Lab ไฟฟ้า</Select.Option>
+                <Select.Option value="Lab โยธา">Lab โยธา</Select.Option>
                 {/* Add more options here */}
               </Select>
 
@@ -257,18 +271,19 @@ function Schedule() {
               return dayComparison;
             })
             .map((availItem, index) => (
-              <li key={`avail-${index}`}>
+              <li key={`avail-${index}`} style={{ marginLeft: '10%', marginRight: '0%' }}>
                 <p>{availItem.day} {availItem.time_start_end}</p>
               </li>
             ))}
         </ul>
-        <h3>วิชาที่เปิดสอน</h3>
+        <h3>วิชาที่ลงทะเบียน</h3>
         <ul>
           {user_reg
             .filter(item => item.user_email === selectedUser)
             .map((item, index) => (
-              <li key={`reg-${index}`}>
-                <p>วิชาที่เปิดสอน : {item.subjectReg_id}</p>
+              <li key={`reg-${index}`} style={{ marginBottom: '2%', marginLeft: '10%', 
+              marginRight: '0%' }}>
+                <p>วิชาที่ลงทะเบียน : {item.subjectReg_id}</p>
                 <p>Lec : {item.lec_num}</p>
                 <p>Lab : {item.lab_num}</p>
                 <p>สาขา : {item.major_year}</p>
