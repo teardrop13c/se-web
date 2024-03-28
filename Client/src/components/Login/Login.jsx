@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import "./Login.css";
-import { whenLogin,whenLogout } from "../../../Store/authSlice";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import th from 'date-fns/locale/th';
+import { whenLogin,whenLogout } from "../../../Store/authSlice.jsx";
 
 function Login() {
   const clientId = "547931595657-oaphvpiui1527babqslkcbb93a9p938o.apps.googleusercontent.com";

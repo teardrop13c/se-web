@@ -436,20 +436,46 @@ app.get('/users', (req, res) => {
 });
 ////////////////////
 ////////OPEN-CLOSE/////////////////
+const moment = require('moment-timezone');
+
 app.post('/api/registration', (req, res) => {
-    const { openingTime, closingTime } = req.body; // รับข้อมูล openingTime และ closingTime จาก req.body
+    const { openingTime, closingTime } = req.body;
+
+    // ใช้ moment-timezone สำหรับการแปลงเวลาเป็นรูปแบบที่ต้องการ
+    const formattedDateOpen = moment(openingTime).tz('Asia/Bangkok').format('YYYY-MM-DD HH:mm:ss');
+    const formattedDateClose = moment(closingTime).tz('Asia/Bangkok').format('YYYY-MM-DD HH:mm:ss');
+
+    // ใช้ luxon สำหรับการจัดการเวลาและการแปลงเวลา
     const parsedOpeningTime = DateTime.fromISO(openingTime).setZone('Asia/Bangkok');
     const parsedClosingTime = DateTime.fromISO(closingTime).setZone('Asia/Bangkok');
-    const formattedDateOpen = parsedOpeningTime.toFormat('yyyy-MM-dd EEE HH:mm:ss');
-    const formattedDateClose = parsedClosingTime.toFormat('yyyy-MM-dd EEE HH:mm:ss');
-
+    
     console.log('Received openingTime:', formattedDateOpen);
     console.log('Received closingTime:', formattedDateClose);
-  
-    // ทำสิ่งที่ต้องการกับข้อมูลที่รับมา  เช่น บันทึกลงฐานข้อมูล หรือประมวลผลเพิ่มเติม
-    
-    res.send('Received registration data'); // ส่ง response กลับไปยัง client
+
+    db.query("INSERT INTO regStart_end (timeStart, timeEnd) VALUES (?, ?)", [formattedDateOpen, formattedDateClose], (err, result) => {
+        if (err) {
+            console.error('Error inserting data:', err);
+            return res.status(500).send('Failed to insert data');
+        } else {
+            console.log('Data inserted successfully');
+            return res.status(200).send('Data inserted successfully');
+        }
+    });
 });
+///////////////////////////////////
+//////////////Get opening closing ////////////
+app.get('/getTimes', (req, res) => {
+    const sql = 'SELECT * FROM regStart_end';
+    
+    db.query(sql, (err, result) => {
+      if (err) {
+        console.error('Error fetching times:', err);
+        return res.status(500).send('Failed to fetch times');
+      }
+      return res.status(200).json(result);
+    });
+  });
+
   
 ///////////////////////////////////
 //////////////schedule-admin////////////

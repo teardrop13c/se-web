@@ -110,7 +110,7 @@ function RegisterTimePage() {
           Swal.fire({
             icon: 'success',
             title: 'Success',
-            text: 'ส่งข้อมูลเวลาเปิด/ปิดการลงทะเบียนสำเร็จ'
+            text: 'Registration data sent successfully'
           });
         } else {
           throw new Error('Failed to send registration data');
@@ -139,7 +139,7 @@ function RegisterTimePage() {
 
 
       <div className="date-picker-container">
-        <div className="datepicker-container">
+        <div className="open-datepicker-container">
           <DatePicker
             className="custom-datepicker-text"
             selected={openingTime}
@@ -154,7 +154,7 @@ function RegisterTimePage() {
          
         </div>
         <span className="to-text"> ถึง </span>
-        <div className="datepicker-container">
+        <div className="close-datepicker-container">
           <DatePicker
             className="custom-datepicker-text"
             selected={closingTime}
