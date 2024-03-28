@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { gapi } from "gapi-script";
 import { Link } from "react-router-dom";
@@ -14,7 +14,18 @@ function Login() {
   const profile = useSelector((state) => state.auth.profile);
   const [showPhoneNumberModal, setShowPhoneNumberModal] = useState(false);
   const [userPhoneNumber, setUserPhoneNumber] = useState("");
-  
+  const [openingTime, setOpeningTime] = useState(null);
+  const [closingTime, setClosingTime] = useState(null);
+
+
+  const fetchPhoneNumber = () => {
+    fetch(`http://localhost:3001/api/user/phone/${profile.email}`)
+      .then(response => response.json())
+      .then(data => {
+        setUserPhoneNumber(data.phoneNumber); // กำหนด Phone Number ที่ได้จากฐานข้อมูลให้กับ state
+      })
+      .catch(error => console.error('Error fetching phone number:', error));
+  };
   useEffect(() => {
     const initClient = () => {
       gapi.client.init({
@@ -27,9 +38,9 @@ function Login() {
 
   const onSuccess = (res) => {
     dispatch(whenLogin(res.profileObj));
-    setProfile(res.profileObj);
-    setShowPhoneNumberModal(true);
+    setShowPhoneNumberModal(true); // ตั้งค่าเป็น true เพื่อให้แสดงหน้าต่าง input หลังจากการเข้าสู่ระบบสำเร็จ
   };
+  
 
   const onFailure = (res) => {
     console.log("failed", res);
@@ -47,14 +58,31 @@ function Login() {
       return false;
     }
   };
-  const savePhoneNumber = () => {
-    // รอเก็บเบอร์เข้า data base
-    console.log("Phone Number saved:", userPhoneNumber);
+  
 
-    setShowPhoneNumberModal(false);
-    // ถ้ามีเบอร์ใน data base แล้วให้ navigate ไปยังหน้าของ User/Admin
-    // navigate("/HomeUser"); 
+  const savePhoneNumber = () => {
+    fetch('http://localhost:3001/api/user/phone', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: profile.email, // หรือจะส่ง userId หรืออื่น ๆ ที่เกี่ยวข้องกับผู้ใช้
+        phoneNumber: userPhoneNumber,
+      }),
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log('Phone number saved successfully');
+        setShowPhoneNumberModal(false);
+      } else {
+        console.error('Failed to save phone number');
+      }
+    })
+    .catch(error => console.error('Error saving phone number:', error));
   };
+  
+  
 
   const openPhoneNumberModal = () => {
     if (!checkAdmin() && isLoggedIn) {
@@ -112,11 +140,7 @@ function Login() {
           Welcome admin
         </Link>
         <span className="logout-button">
-          <GoogleLogout
-            clientId={clientId}
-            buttonText="Log out"
-            onLogoutSuccess={logOut}
-          />
+          <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
         </span>
       </div>
     );
@@ -131,25 +155,23 @@ function Login() {
           <p>Email: {profile.email}</p>
           {!checkAdmin() && (
             <>
-              <p>Phone Number: {userPhoneNumber}</p>
-              {!checkAdmin() && (
-                showPhoneNumberModal && (
-                  <div className="modal">
-                    <div className="modal-content">
-                      <h2>กรุณากรอกเบอร์โทรศัพท์</h2>
-                      <input
-                        type="text"
-                        placeholder="Phone Number"
-                        value={userPhoneNumber}
-                        onChange={(e) => setUserPhoneNumber(e.target.value)}
-                      />
-                      <div className="modal-actions">
-                        <button onClick={savePhoneNumber}>Save</button>
-                        <button onClick={closePhoneNumberModal}>Cancel</button>
-                      </div>
+              {/* <p>Phone Number: {userPhoneNumber}</p> */}
+              {showPhoneNumberModal && (
+                <div className="modal">
+                  <div className="modal-content">
+                    <h2>กรุณากรอกเบอร์โทรศัพท์</h2>
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      value={userPhoneNumber}
+                      onChange={(e) => setUserPhoneNumber(e.target.value)}
+                    />
+                    <div className="modal-actions">
+                      <button onClick={savePhoneNumber}>Save</button>
+                      <button onClick={closePhoneNumberModal}>Cancel</button>
                     </div>
                   </div>
-                )
+                </div>
               )}
             </>
           )}
@@ -167,7 +189,7 @@ function Login() {
       </div>
     );
   }
-
+  
 
 
   function LoginPage() {

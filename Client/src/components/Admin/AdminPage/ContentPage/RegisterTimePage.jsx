@@ -84,8 +84,13 @@ function RegisterTimePage() {
   const handleConfirmButtonClick = async () => {
     if (closingTime <= openingTime) {
       setError('เวลาปิดการลงทะเบียนต้องมาทีหลังเวลาเปิดการลงทะเบียน');
-      showErrorMessage();
-    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: error
+      });
+    }
+    else {
       hideErrorMessage();
       console.log('open:', openingTime);
       console.log('close: ', closingTime);
@@ -122,34 +127,16 @@ function RegisterTimePage() {
   };
   
 
-  const showErrorMessage = () => {
-    const alertContainer = document.getElementById('alert-container');
-    if (alertContainer) {
-      alertContainer.classList.add('show');
-    }
-  };
 
-  const hideErrorMessage = () => {
-    const alertContainer = document.getElementById('alert-container');
-    if (alertContainer) {
-      alertContainer.classList.remove('show');
-    }
-  };
+
+
 
   return (
     <div className="register-rounded-rectangle">
       <p className="converted-time">{convertToThaiTime(currentDateTime)}</p>
       <p className="registration-text">เลือกเวลาเปิด / ปิดการลงทะเบียน</p>
 
-      {/* Alert Container */}
-      <div id="alert-container" className={`alert-container ${error ? 'show' : ''}`}>
-        <div className="alert-content">
-          {error && <p className="error-message">{error}</p>}
-          <button className="close-button" onClick={hideErrorMessage}>
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
-        </div>
-      </div>
+
 
       <div className="date-picker-container">
         <div className="open-datepicker-container">

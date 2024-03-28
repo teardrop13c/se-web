@@ -1,4 +1,4 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
 }
@@ -63,16 +63,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 10px;
-margin: auto;
-}
-
-.open-datepicker-container{
-  margin: auto;
-}
-
-.close-datepicker-container{
-  margin: auto;
-  margin-top: 50px;
 }
 
 .to-text {
@@ -90,13 +80,11 @@ color: #555;
 .opening-time-icon-container {
   right: 724px; 
   transform: translateY(-50%);
-  margin: auto;
 }
 
 .closing-time-icon-container {
   right: 470px; 
   transform: translateY(-50%);
-  margin: auto;
 }
 
 .time-schedule-icon {
