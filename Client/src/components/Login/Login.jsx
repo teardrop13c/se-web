@@ -17,18 +17,40 @@ function Login() {
   const profile = useSelector((state) => state.auth.profile);
   const [showPhoneNumberModal, setShowPhoneNumberModal] = useState(false);
   const [userPhoneNumber, setUserPhoneNumber] = useState("");
-  const [openingTime, setOpeningTime] = useState(null);
-  const [closingTime, setClosingTime] = useState(null);
+  const [isPhoneNumberFetched, setIsPhoneNumberFetched] = useState(false);
 
-
-  const fetchPhoneNumber = () => {
-    fetch(`http://localhost:3001/api/user/phone/${profile.email}`)
-      .then(response => response.json())
-      .then(data => {
-        setUserPhoneNumber(data.phoneNumber); // กำหนด Phone Number ที่ได้จากฐานข้อมูลให้กับ state
-      })
-      .catch(error => console.error('Error fetching phone number:', error));
+  const onSuccess = (res) => {
+    dispatch(whenLogin(res.profileObj));
+    setShowPhoneNumberModal(true);
+    fetchPhoneNumber(); // เรียกใช้ฟังก์ชัน fetchPhoneNumber หลังจากเข้าสู่ระบบสำเร็จ
   };
+  
+  useEffect(() => {
+    const fetchPhoneNumber = async () => {
+      try {
+        if (isLoggedIn && profile && profile.email) {
+          const response = await fetch(`http://localhost:3001/api/user/phone/${profile.email}`);
+          if (response.ok) {
+            const data = await response.json();
+            if (data.phoneNumber) {
+              setUserPhoneNumber(data.phoneNumber);
+              setIsPhoneNumberFetched(true);
+            } else {
+              setIsPhoneNumberFetched(false);
+            }
+          } else {
+            throw new Error('Failed to fetch phone number');
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching phone number:', error);
+        setIsPhoneNumberFetched(false);
+      }
+    };
+  
+    fetchPhoneNumber();
+  }, [isLoggedIn, profile]);
+
   useEffect(() => {
     const initClient = () => {
       gapi.client.init({
@@ -39,10 +61,7 @@ function Login() {
     gapi.load("client:auth2", initClient);
   }, []);
 
-  const onSuccess = (res) => {
-    dispatch(whenLogin(res.profileObj));
-    setShowPhoneNumberModal(true); // ตั้งค่าเป็น true เพื่อให้แสดงหน้าต่าง input หลังจากการเข้าสู่ระบบสำเร็จ
-  };
+
   
 
   const onFailure = (res) => {
@@ -230,27 +249,29 @@ function Login() {
           LoginPage()
         )}
 
-        {!checkAdmin() && showPhoneNumberModal && (
-          <div className="modal">
-            <div className="modal-content">
-              <h2 className="phone-instruction">กรุณากรอกเบอร์โทรศัพท์</h2>
-              <input
-                type="text"
-                placeholder="Phone Number"
-                value={userPhoneNumber}
-                onChange={(e) => setUserPhoneNumber(e.target.value)}
-              />
-              <div className="modal-actions">
-                <button onClick={savePhoneNumber}>Save</button>
-                <button onClick={closePhoneNumberModal}>Cancel</button>
-              </div>
-            </div>
-          </div>
-        )}
+{isLoggedIn && profile && !checkAdmin() && !isPhoneNumberFetched && userPhoneNumber === '' && (
+  <div className="modal">
+    <div className="modal-content">
+      <h2 className="phone-instruction">กรุณากรอกเบอร์โทรศัพท์</h2>
+      <input
+        type="text"
+        placeholder="Phone Number"
+        value={userPhoneNumber}
+        onChange={(e) => setUserPhoneNumber(e.target.value)}
+      />
+      <div className="modal-actions">
+        <button onClick={savePhoneNumber}>Save</button>
+        <button onClick={closePhoneNumberModal}>Cancel</button>
+      </div>
+    </div>
+  </div>
+)}
+
       </div>
     </div>
     </div>
   );
-}
+  }
+
 
 export default Login;
