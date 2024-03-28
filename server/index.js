@@ -243,32 +243,6 @@ app.put('/update', (req, res) => {
 });
 
 
-
-// app.delete('/delete/:subject_ID', (req, res) => {
-//     const subject_ID = req.params.subject_ID;
-
-//     if (!subject_ID) {
-//         console.error('Error: No subject_ID parameter provided in the DELETE request.');
-//         return res.status(400).json({ error: 'No subject_ID parameter provided' });
-//     }
-
-    
-//     db.query("DELETE FROM course WHERE subject_ID = ?", subject_ID, (err, result) => {
-//         if (err) {
-//             console.error(err);
-//             return res.status(500).json({ error: 'Error deleting data' });
-//         }
-
-//         if (result.affectedRows === 0) {
-//             console.error(`No record found with subject_ID: ${subject_ID}`);
-//             return res.status(404).json({ error: 'No record found for deletion' });
-//         }
-
-//         console.log('Data deleted successfully');
-//         return res.json({ message: 'Data deleted successfully' });
-//     });
-// });
-
 app.delete('/delete/:subject_ID', (req, res) => {
     const subject_ID = req.params.subject_ID;
 
@@ -308,7 +282,7 @@ app.delete('/delete/:subject_ID', (req, res) => {
         });          
     });
 });
-
+/////////////////////////////////////////////////
 
 /////////////////date and time///////////////////
 app.post('/api/timeData', async (req, res) => {
@@ -504,6 +478,69 @@ app.get(`/schedule/user_reg`, (req, res) => {
         return res.json(result);
     });
 });
+
+app.post('/schedule/newdata', (req, res) => {
+    const newData = req.body;
+    // ทำการประมวลผลข้อมูล newData ที่ถูกส่งมาจาก React frontend ได้ตามที่คุณต้องการทำ
+    console.log('Received new data:', newData);
+
+    const sqlSetNum = "SET @num := 0;";
+    const sqlUpdateIdCourse = "UPDATE course SET id_course = @num := (@num+1);";
+    const sqlResetAutoIncrement = "ALTER TABLE course AUTO_INCREMENT = 1;";
+    const sqlInsertData = `INSERT INTO user_complete (subjectReg_id, credite, lec_group, lab_group, major_year, student_year, day, time_start_end, room_id, typeSubject,user_name, user_email) 
+    VALUES ('${newData.subjectReg_id}', '${newData.credite}', '${newData.lec_group}', '${newData.lab_group}', '${newData.major_year}', '${newData.student_year}', 
+    '${newData.day}', '${newData.time_start_end}', '${newData.room_id}', '${newData.typeSubject}', '${newData.user_name}','${newData.user_email}')`;
+
+    // ทำการ execute คำสั่ง SQL ตามลำดับ
+    db.query(sqlSetNum, (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Error setting id_course");
+            return;
+        }
+        console.log("id_course set successfully");
+
+        db.query(sqlUpdateIdCourse, (err, result) => {
+            if (err) {
+                console.log(err);
+                res.status(500).send("Error updating id_course");
+                return;
+            }
+            console.log("id_course updated successfully");
+
+            db.query(sqlResetAutoIncrement, (err, result) => {
+                if (err) {
+                    console.log(err);
+                    res.status(500).send("Error setting AUTO_INCREMENT");
+                    return;
+                }
+                console.log("AUTO_INCREMENT set successfully");
+
+                db.query(sqlInsertData, (err, result) => {
+                    if (err) {
+                        console.error('Error inserting data into MySQL:', err);
+                        res.status(500).send('Error inserting data into MySQL');
+                        return;
+                    }
+                    console.log('Data inserted into MySQL successfully:', result);
+                    // ส่งข้อความตอบกลับไปยัง React frontend เมื่อข้อมูลถูกแทรกเรียบร้อยแล้ว
+                    res.status(200).send('Data inserted into MySQL successfully');
+                });
+            });
+        });
+    });
+});
+
+app.get(`/schedule/user_complete`, (req, res) => {
+    const sql = `SELECT * FROM user_complete`;
+
+    db.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+
+
 
 ////////////////////////////////////////
 
