@@ -17,14 +17,12 @@ function Clock() {
   }
 
   return (
-    <div className="background">
-      <div className="rounded-rectangle">
-        <div className="clock">
-          <h5 className="welcome">ยินดีต้อนรับเข้าสู่ระบบลงทะเบียนการสอน</h5>
-          <h5 className="clock-heading">Current Time:</h5>
-          <div className="clock-time">{time.toLocaleTimeString()}</div>
-        </div>
-      </div>
+    <div className="rounded-rectangle">
+    <div className="clock">
+      <h1 className="welcome">ยินดีต้อนรับเข้าสู่ระบบลงทะเบียนการสอน</h1>
+      <h1 className="clock-heading">Current Time:</h1>
+      <div className="clock-time">{time.toLocaleTimeString()}</div>
+    </div>
     </div>
   );
 }
