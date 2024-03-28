@@ -4,7 +4,8 @@ import AdminMenu from "../AdminMenu/AdminMenu";
 import NewsContent from "./ContentPage/NewsContent";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
-
+import { useDispatch } from "react-redux";
+import { setOnReg } from "../../../../Store/varSlice";
 function News() {
   //auth
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -12,7 +13,7 @@ function News() {
   if (!isLoggedIn || (profile?.name !== 'Admin007')) {
     return <Login />;
   }
-  
+
   return (
     <section id="main-layout">
       <Navbar />

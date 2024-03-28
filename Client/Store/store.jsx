@@ -1,10 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import authReducer from './authSlice'; 
-
+import authReducer from './authSlice.jsx'; 
+import varReducer from './varSlice.jsx';
 export const store = configureStore({
   reducer: {
     auth: authReducer, 
+    var: varReducer
   },
-  middleware: getDefaultMiddleware => getDefaultMiddleware(), 
-  devTools: process.env.NODE_ENV !== 'production', 
 });

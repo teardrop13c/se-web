@@ -12,7 +12,6 @@ function HomeAdmin() {
   if (!isLoggedIn || (profile?.name !== 'Admin007')) {
     return <Login />;
   }
-
   
   return (
     <section id="main-layout">

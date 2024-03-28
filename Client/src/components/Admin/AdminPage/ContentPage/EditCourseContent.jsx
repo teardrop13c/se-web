@@ -49,7 +49,7 @@ function EditCourseContent() {
   const columns = [
     { title: 'NO', dataIndex: 'id_course', key: 'id_course' },
     { title: 'รหัสวิชา', dataIndex: 'subject_ID', key: 'subject_ID' },
-    { title: 'ชื่อวิชา', dataIndex: 'subjact_name', key: 'subjact_name' }, // เปลี่ยนตรงนี้
+    { title: 'ชื่อวิชา', dataIndex: 'subject_name', key: 'subject_name' }, // เปลี่ยนตรงนี้
     { title: 'หน่วยกิจ', dataIndex: 'credite', key: 'credite' }, // เปลี่ยนตรงนี้
     { title: 'ประเภทวิชา', dataIndex: 'typeSubject', key: 'typeSubject' },
     {
