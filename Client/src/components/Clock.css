@@ -24,5 +24,8 @@
 
 .rounded-rectangle{
   padding: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   margin-top: 200px;
+  opacity: 0.8;
 }
