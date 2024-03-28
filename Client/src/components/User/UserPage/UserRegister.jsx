@@ -4,6 +4,7 @@ import UserMenu from '../UserMenu/UserMenu'
 import RegisterContent from './ContentPage/RegisterContent'
 import { useSelector } from 'react-redux';
 import Login from "../../Login/Login";
+import Axios from 'axios';
 import HomeUser from './HomeUser';
 function UserRegister() {
   //authuser
@@ -17,6 +18,7 @@ function UserRegister() {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
+
   useEffect(() => {
     const fetchTimes = async () => {
       try {
