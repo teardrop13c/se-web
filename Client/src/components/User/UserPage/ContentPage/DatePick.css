@@ -48,6 +48,11 @@
     color: #ffffff;
   }
 
-  td {
-    background-color: #ffffff;
+
+  .titleTable, .titleTable2{
+    padding: 20px;
   }
+
+  .titleTable, .mon, .tues, .wed, .thu, .fri, .sat, .sun {
+    padding-right: 30px;
+  } 
