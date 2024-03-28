@@ -11,7 +11,6 @@ function HomeUser() {
     return <Login />;
   }
 
-  
   return (
     <section id="main-layout">
       <Navbar />

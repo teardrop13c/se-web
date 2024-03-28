@@ -84,3 +84,15 @@
 .user-name {
   margin: 0;
 }
+
+.email-frame {
+  font-size: 20px;
+  padding: 10px; /* Increase padding to add space */
+  border-radius: 5px;
+  position: absolute;
+  top: 220px;
+  left: 70%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column; /* Stack user names vertically */
+}

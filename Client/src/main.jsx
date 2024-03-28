@@ -16,59 +16,60 @@ import Login from './components/Login/Login'
 import UserDatePick from './components/User/UserPage/UserDatePick.jsx'
 import { store } from '../Store/store'
 import { Provider } from 'react-redux'
+import RegisterTimePage from './components/Admin/AdminPage/ContentPage/RegisterTimePage.jsx'
 const router = createBrowserRouter([
 
   // ***** Login Page ***** //
   {
-    path:"/",
+    path: "/",
     element: <Login />
   },
-  
+
   // ***** Admin Page ***** //
   {
-    path:"/HomeAdmin",
+    path: "/HomeAdmin",
     element: <HomeAdmin />
   },
   {
-    path:"Schedule",
+    path: "Schedule",
     element: <Schedule />
   },
   {
-    path:"Namelist",
+    path: "Namelist",
     element: <NameList />
   },
   {
-    path:"EditCourse",
+    path: "EditCourse",
     element: <EditCourse />
   },
   {
-    path:"News",
+    path: "News",
     element: <News />
   },
   {
-    path:"RegisterTime",
+    path: "RegisterTime",
     element: <RegisterTime />
   },
 
   // ***** User Page ***** //
   {
-    path:"HomeUser",
+    path: "HomeUser",
     element: <HomeUser />
   },
   {
-    path:"UserSchedule",
+    path: "UserSchedule",
     element: <UserSchedule />
   },
   {
-    path:"UserDatePick",
+    path: "UserDatePick",
     element: <UserDatePick />
   },
   {
-    path:"UserRegister",
+    path: "UserRegister",
     element: <UserRegister />
   },
   {
-    path:"UserNews",
+    path: "UserNews",
     element: <UserNews />
   },
 ])
@@ -76,7 +77,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
+      {/* <RegisterTimePage/> */}
     </Provider>
   </React.StrictMode>,
 )
