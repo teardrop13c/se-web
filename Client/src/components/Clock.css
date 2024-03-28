@@ -14,18 +14,4 @@
 .welcome {
     font-size: 36px;
     color: #333;
-    margin-bottom: 50px;
-}
-
-.background{
-  background-image: url(https://www.src.ku.ac.th/th/tp/img/kusrc.jpg);
-  background-size:cover;
-}
-
-.rounded-rectangle{
-  padding: 100px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  margin-top: 200px;
-  opacity: 0.8;
 }
