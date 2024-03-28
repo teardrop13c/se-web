@@ -332,6 +332,15 @@ app.post('/uploads', (req, res) => {
 });
 }); 
 
+app.get('/course_show', (req, res) => {
+    const sql = "SELECT * FROM course";
+
+    db.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+
 //////////////////////////////////////////////////////////////////////////
 //// DB to back/////
 app.get('/users', (req, res) => {
@@ -360,7 +369,35 @@ app.post('/api/registration', (req, res) => {
 });
   
 ///////////////////////////////////
+//////////////schedule-admin////////////
+app.get('/schedule/users/admins', (req, res) => {
+    const sql = "SELECT * FROM user";
 
+    db.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+
+app.get(`/schedule/useravailability/`, (req, res) => {
+    const sql = `SELECT * FROM useravailability`;
+
+    db.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+
+app.get(`/schedule/user_reg`, (req, res) => {
+    const sql = `SELECT * FROM user_reg`;
+
+    db.query(sql, (err, result) => {
+        if (err) return res.json(err);
+        return res.json(result);
+    });
+});
+
+////////////////////////////////////////
 
 // เริ่มต้นเซิร์ฟเวอร์ด้วยการรอการเชื่อมต่อผ่านพอร์ต 3001
 app.listen('3001', () => {
