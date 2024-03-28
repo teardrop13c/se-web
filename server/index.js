@@ -16,7 +16,6 @@ const db = mysql.createConnection({
     user: 'root',
     password: '',
     database: 'kusrc_course',
-    port: '3307'
 })
 
 
