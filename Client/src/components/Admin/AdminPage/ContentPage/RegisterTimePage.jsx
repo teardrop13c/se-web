@@ -14,7 +14,12 @@ const showErrorMessage = () => {
     text: error
   });
 };
-
+const hideErrorMessage = () => {
+  const alertContainer = document.getElementById('alert-container');
+  if (alertContainer) {
+    alertContainer.classList.remove('show');
+  }
+};
 function RegisterTimePage() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [openingTime, setOpeningTime] = useState(new Date());
