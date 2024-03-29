@@ -1,29 +1,5 @@
 /* EditCourseContent.css */
 
-.rounded-rectangle {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.file-upload {
-  margin-bottom: 20px;
-}
-
-.csv-table {
-  margin-bottom: 20px;
-}
-
-.data-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/* EditCourseContent.css */
-
 /* Rounded rectangle style */
 .rounded-rectangle {
   border: 1px solid #ccc;
@@ -32,19 +8,29 @@
   margin: 20px;
 }
 
-/* File upload style */
 .file-upload {
-  margin-bottom: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px; /* ปรับขนาด font size */
+  cursor: pointer;
+  display: grid; /* เพื่อใช้ grid layout */
+  place-items: center;
 }
+
 
 /* CSV table style */
 .csv-table {
-  margin-bottom: 20px;
+  margin-top: 100px;
+  /* ขยับตารางไปด้านล่าง 20px */
+  margin-left: 15px;
+  /* ขยับตารางไปด้านขวา 50px */
+  margin-right: 15px;
 }
 
 /* Data form style */
 .data-form {
-  margin-bottom: 20px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* Buttons style */
@@ -60,7 +46,7 @@
 
 .data-form {
   display: none;
-  position: fixed;
+  position: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -74,7 +60,7 @@
   display: block;
 }
 .data-form-popup {
-  position: fixed;
+  position: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -83,4 +69,10 @@
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+.faculty-text {
+  text-align: center;
+  font-size: 40px;
+  position: absolute; 
 }

@@ -160,6 +160,41 @@ function EditCourseContent() {
     form.resetFields();
 };
 
+const handleDeleteAllData = () => {
+  Swal.fire({
+    icon: 'warning',
+    title: 'คุณแน่ใจหรือไม่?',
+    text: 'คุณต้องการลบข้อมูลทั้งหมดใช่หรือไม่?',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'ใช่, ฉันต้องการลบ!',
+    cancelButtonText: 'ยกเลิก'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch('http://localhost:3001/all', {
+        method: 'DELETE'
+      })
+      .then(data => {
+        console.log(data);
+        setTableData([]);
+        Swal.fire({
+          icon: 'success',
+          title: 'การลบข้อมูลทั้งหมดเสร็จสมบูรณ์',
+          text: 'ข้อมูลทั้งหมดได้รับการลบเรียบร้อยแล้ว!',
+        });
+      })
+      .catch(error => {
+        console.error(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'ข้อผิดพลาดในการลบข้อมูล',
+          text: 'เกิดข้อผิดพลาดในการลบข้อมูล โปรดลองอีกครั้ง!',
+        });
+      });
+    }
+  });
+};
 
   return (
     <div className="rounded-rectangle">
@@ -169,32 +204,41 @@ function EditCourseContent() {
         </Upload>
       </div>
 
+      <div className="action-buttons">
+        <Button type="primary" danger onClick={handleDeleteAllData}>
+          ลบข้อมูลทั้งหมด
+        </Button>
+      </div>
+
       <div className="csv-table">
         <Table dataSource={courses} columns={columns} rowKey="id_course" />
       </div>
-
-      {isEditMode && (
-        <div className="data-form-popup">
-          <Form form={form} onFinish={handleFinish}>
-            <Form.Item label="รหัสวิชา" name="รหัสวิชา">
-              <Input />
-            </Form.Item>
-            <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
-              <Input />
-            </Form.Item>
-            <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
-              <Input />
-            </Form.Item>
-            <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
-              <Input />
-            </Form.Item>
-            <Button type="primary" htmlType="submit">
-              บันทึกการแก้ไข
-            </Button>
-          </Form>
+        <div className="csv-table">
+          <Table dataSource={courses} columns={columns} rowKey="id_course" />
         </div>
-      )}
-    </div>
+
+        {isEditMode && (
+          <div className="data-form-popup">
+            <Form form={form} onFinish={handleFinish}>
+              <Form.Item label="รหัสวิชา" name="รหัสวิชา">
+                <Input />
+              </Form.Item>
+              <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
+                <Input />
+              </Form.Item>
+              <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
+                <Input />
+              </Form.Item>
+              <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
+                <Input />
+              </Form.Item>
+              <Button type="primary" htmlType="submit">
+                บันทึกการแก้ไข
+              </Button>
+            </Form>
+          </div>
+        )}
+      </div>
   );
 }
 

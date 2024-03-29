@@ -4,8 +4,12 @@ import UserMenu from "../UserMenu/UserMenu"
 import { useSelector } from 'react-redux';
 import "./UserSchedule.css"
 import Login from "../../Login/Login";
+<<<<<<< HEAD
 import  Axios  from "axios";
 import Card from "antd/es/card/Card";
+=======
+import UserScheduleContent from "./ContentPage/UserScheduleContent";
+>>>>>>> master
 
 const UserSchedule = () => {
   //authuser
@@ -34,6 +38,7 @@ const UserSchedule = () => {
     <section id="main-layout">
       <Navbar />
       <UserMenu />
+<<<<<<< HEAD
       <div>
         <h1>ตารางสอน</h1>
         {userCompleteData.map((userData, index) => (
@@ -43,6 +48,9 @@ const UserSchedule = () => {
         ))}
 
       </div>
+=======
+      <UserScheduleContent/>
+>>>>>>> master
     </section>
   );
 };
