@@ -12,9 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
-    host: "localhost",
     user: 'root',
-    password: '',
+    host: "localhost",
+    password: '12345678',
     database: 'kusrc_course',
 })
 
@@ -152,7 +152,7 @@ app.get('/registerteacher', (req, res) => {
 /////////////////////// create //////////////////////////////////////
 
 app.post('/create', (req, res) => { 
-    const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, user_email} = req.body;
+    const { subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking,student_year, user_email} = req.body;
     // เรียกใช้คำสั่ง SQL เพื่อตั้งค่า reg_id
     db.query("SET @num := 0;", (err, result) => {
         if (err) {
@@ -175,8 +175,8 @@ app.post('/create', (req, res) => {
                         } else {
                             console.log("AUTO_INCREMENT set successfully");
                             // เรียกใช้คำสั่ง SQL เพื่อเพิ่มข้อมูล
-                            db.query("INSERT INTO user_reg (subjectReg_id, lec_num, lab_num, major_year, roomReg_ranking, user_email) VALUES (?,?,?,?,?,?)",
-                                [subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, user_email],
+                            db.query("INSERT INTO user_reg (subjectReg_id, lec_group, lab_group, major_year, roomReg_ranking, student_year, user_email) VALUES (?,?,?,?,?,?,?)",
+                                [subjectReg_id, lec_group, lab_group, major_year.join(','), roomReg_ranking.join(','),student_year.join(','), user_email],
                                 (err, result) => {
                                     if (err) {
                                         console.log(err);
@@ -242,6 +242,16 @@ app.put('/update', (req, res) => {
     });
 });
 
+app.delete('/delete/:reg_id', (req, res) => {
+    const reg_id = req.params.reg_id;
+    db.query("DELETE FROM user_reg WHERE reg_id = ?", reg_id, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
 
 app.delete('/delete/:subject_ID', (req, res) => {
     const subject_ID = req.params.subject_ID;
@@ -282,6 +292,8 @@ app.delete('/delete/:subject_ID', (req, res) => {
         });          
     });
 });
+
+
 /////////////////////////////////////////////////
 
 /////////////////date and time///////////////////
