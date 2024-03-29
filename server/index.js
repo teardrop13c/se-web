@@ -12,9 +12,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
-    user: 'root',
     host: "localhost",
-    password: '12345678',
+    user: 'root',
+    password: '',
     database: 'kusrc_course',
 })
 
