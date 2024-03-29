@@ -282,6 +282,24 @@ app.delete('/delete/:subject_ID', (req, res) => {
         });          
     });
 });
+
+app.delete('/all', (req, res) => {
+    const sql = 'DELETE FROM course';
+    
+    db.query(sql, function(error, results, fields) {
+        if (error) {
+            console.error('เกิดข้อผิดพลาดในการลบข้อมูล: ' + error.message);
+            res.status(500).send('เกิดข้อผิดพลาดในการลบข้อมูล: ' + error.message);
+            return;
+        }
+        console.log('ลบข้อมูลทั้งหมดเรียบร้อยแล้ว');
+        res.status(200).send('ลบข้อมูลทั้งหมดเรียบร้อยแล้ว');
+    });
+});
+
+
+
+
 /////////////////////////////////////////////////
 
 /////////////////date and time///////////////////
