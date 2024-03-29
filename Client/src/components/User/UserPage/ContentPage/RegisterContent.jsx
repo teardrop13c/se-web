@@ -39,7 +39,7 @@ function RegisterContent() {
         setData(uniqueData);
         const cascaderOptions = uniqueData.map((item) => ({
           value: item.subject_ID,
-          label: `${item.subject_ID} - ${item.subjact_name} - ${item.credite}`,
+          label: `${item.subject_ID} - ${item.subject_name} - ${item.credite}`,
           key: item.subject_ID, // ใช้ subject_ID เป็น key ที่ไม่ซ้ำกัน
         }));
         setOptions(cascaderOptions);

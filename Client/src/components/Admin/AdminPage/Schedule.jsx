@@ -433,6 +433,7 @@ function Schedule() {
           dataSource={newData}
           columns={columns}
           pagination={false}
+          width='50%'
         />
         <Button type="primary" onClick={exportToXlsx}>ส่งออกเป็น Excel</Button>
       </div>
