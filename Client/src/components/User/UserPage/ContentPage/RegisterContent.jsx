@@ -39,7 +39,7 @@ function RegisterContent() {
         setData(uniqueData);
         const cascaderOptions = uniqueData.map((item) => ({
           value: item.subject_ID,
-          label: `${item.subject_ID} - ${item.subjact_name} - ${item.credite}`,
+          label: `${item.subject_ID} - ${item.subject_name} - ${item.credite}`,
           key: item.subject_ID, // ใช้ subject_ID เป็น key ที่ไม่ซ้ำกัน
         }));
         setOptions(cascaderOptions);
@@ -49,7 +49,7 @@ function RegisterContent() {
 
   const findSubjectNameById = (subjectId) => {
     const subject = data.find((item) => item.subject_ID === subjectId);
-    return subject ? subject.subjact_name : "";
+    return subject ? subject.subject_name : "";
   };
 
   const onChange = (value) => {
@@ -57,7 +57,7 @@ function RegisterContent() {
       const subjectID = value[0];
       const subjectName = findSubjectNameById(subjectID, data);
       const subjectLabel = data.find((item) => item.subject_ID === subjectID);
-      const label = `${subjectLabel.subject_ID} - ${subjectLabel.subjact_name} - ${subjectLabel.credite}`;
+      const label = `${subjectLabel.subject_ID} - ${subjectLabel.subject_name} - ${subjectLabel.credite}`;
       setLabelString(label);
       console.log("Subject ID:", subjectID);
       console.log("Subject Name:", subjectName);
@@ -68,21 +68,16 @@ function RegisterContent() {
   const [subjectReg_id, setSubjectReg_id] = useState("");
   const [lec_group, setLec_group] = useState(0);
   const [lab_group, setLab_group] = useState(0);
-  const [major_year, setMajor_year] = useState("");
+  const [major_year, setMajor_year] = useState([]);
   const [roomReg_ranking, setRoomReg_ranking] = useState("");
   const [user_email, setUser_email] = useState("");
   const [newSubjectReg_id, setNewSubjectReg_id] = useState(0);
   const [registerteacherList, setRegisterteacherList] = useState([]);
-  const [lec_num, setLec_num] = useState(0);
-  const [lab_num, setLab_num] = useState(0);
   const [major, setMajor] = useState([]);
-  const [regYear, setRegYear] = useState([]);
-  const {room1, setRoom1} = useState("");
-  const {room2, setRoom2} = useState("");
-  const {room3, setRoom3} = useState("");
+  const [student_year, setStudent_year] = useState([]);
 
   const getRegister = () => {
-    Axios.get("http://localhost:3001/register")
+    Axios.get("http://localhost:3001/registerteacher")
       .then((response) => {
         setRegisterteacherList(response.data);
       })
@@ -106,6 +101,7 @@ function RegisterContent() {
       lec_group: lec_group,
       lab_group: lab_group,
       major_year: major_year,
+      student_year: student_year,
       roomReg_ranking: roomReg_ranking,
       user_email: profile.email,
     })
@@ -151,12 +147,12 @@ function RegisterContent() {
   };
 
 
-  const handleChangeMajor = (major) => {
-    setMajor(major);
+  const handleChangeMajor = (major_year) => {
+    setMajor_year(major_year);
   };
 
-  const handleChangeYear = (regYear) => {
-    setRegYear(regYear);
+  const handleChangeYear = (student_year) => {
+    setStudent_year(student_year);
   };
 
   const handleChange = (value) => {
@@ -170,7 +166,7 @@ function RegisterContent() {
         <Col span={4}>
           <h3>ปีการศึกษา</h3>
           <Form>
-            <Input placeholder="ปีการศึกษา" disabled />
+            <Input placeholder="ปีการศึกษา 2567s" disabled />
           </Form>
         </Col>
         <Col span={4}>
@@ -205,7 +201,7 @@ function RegisterContent() {
               <Input 
                 placeholder="ใส่จำนวนนิสิต" 
                 onChange={(event) => {
-                  setLec_num(event.target.value)
+                  setLec_group(event.target.value)
               }}
               />
             </Form>
@@ -216,7 +212,7 @@ function RegisterContent() {
               <Input 
                 placeholder="ใส่จำนวนนิสิต" 
                 onChange={(event) => {
-                  setLab_num(event.target.value)
+                  setLab_group(event.target.value)
               }}
               />
             </Form>
@@ -229,12 +225,12 @@ function RegisterContent() {
                 style={{ width: "100%" }}
                 placeholder="เลือกสาขา"
                 onChange={handleChangeMajor}
-                value={major}
+                value={major_year}
               >
-                <Option value="item1">T12</Option>
-                <Option value="item2">T13</Option>
-                <Option value="item3">T14</Option>
-                <Option value="item4">T15</Option>
+                <Option value="T12">T12</Option>
+                <Option value="T13">T13</Option>
+                <Option value="T14">T14</Option>
+                <Option value="T15">T15</Option>
               </Select>
             </Form>
           </Col>
@@ -246,12 +242,12 @@ function RegisterContent() {
                 style={{ width: "100%" }}
                 placeholder="เลือกชั้นปี"
                 onChange={handleChangeYear}
-                value={regYear}
+                value={student_year}
               >
-                <Option value="item1">ปี 1</Option>
-                <Option value="item2">ปี 2</Option>
-                <Option value="item3">ปี 3</Option>
-                <Option value="item4">ปี 4</Option>
+                <Option value="ปี 1">ปี 1</Option>
+                <Option value="ปี 2">ปี 2</Option>
+                <Option value="ปี 3">ปี 3</Option>
+                <Option value="ปี 4">ปี 4</Option>
               </Select>
             </Form>
           </Col>
@@ -260,49 +256,22 @@ function RegisterContent() {
         <h3>อันดับห้องปฎิบัติ</h3>
         <Row gutter={16} style={{ flexDirection: "row" }}>
           <Col span={3}>
-            <Form>
-              <Select 
-                style={{ width: "100%" }} 
-                placeholder="เลือกห้องที่ 1"
-                onChange={(event) => {
-                  setRoom1(event.target.value)
-              }}
-                >
-                  <Option value="item1">Lab com 2</Option>
-                  <Option value="item2">Lab com 3</Option>
-                  <Option value="item3">Lab com DAT</Option>
-              </Select>
-            </Form>
-          </Col>
-          <Col span={3}>
-            <Form>
-              <Select 
-                style={{ width: "100%" }} 
-                placeholder="เลือกห้องที่ 2"
-                onChange={(event) => {
-                  setRoom2(event.target.value)
-              }}
-              >
-                <Option value="item1">Lab com 2</Option>
-                <Option value="item2">Lab com 3</Option>
-                <Option value="item3">Lab com DAT</Option>
-              </Select>
-            </Form>
-          </Col>
-          <Col span={3}>
-            <Form>
-              <Select 
-                style={{ width: "100%" }} 
-                placeholder="เลือกห้องที่ 3"
-                onChange={(event) => {
-                  setRoom3(event.target.value)
-              }}
-              >
-                <Option value="item1">Lab com 2</Option>
-                <Option value="item2">Lab com 3</Option>
-                <Option value="item3">Lab com DAT</Option>
-              </Select>
-            </Form>
+          <Select placeholder="เลือกห้องที่ต้องการ 3 ลำดับ"
+                span={6}
+                onChange={(value) => {
+                  setRoomReg_ranking(value)
+                }}
+                style={{
+                  width: 200,
+                }}
+                mode="multiple"
+                options={[
+                  { value: "Labcom 23" },
+                  { value: "Labcom DAT" },
+                  { value: "Labcom 2" },
+                ]}
+              />
+
           </Col>
         </Row>
         <br />
@@ -315,14 +284,12 @@ function RegisterContent() {
         return (
           <Card style={{ background: "#d9d9d9" }} key={index}>
             <div className="employee card">
-              <p>วิชา : {val.subject}</p>
-              <p>บรรยายและจำนานนิสิต : {val.lec_num}</p>
-              <p>ปฎิบัติและจำนวนนิสิต : {val.lab_num}</p>
-              <p>สาขา : {val.major}</p>
-              <p>ชั้นปี : {val.regYear}</p>
-              <p>ห้องปฎิบัติ 1 : {val.room1}</p>
-              <p>ห้องปฎิบัติ 1 : {val.room2}</p>
-              <p>ห้องปฎิบัติ 1 : {val.room3}</p>
+              <p>วิชา : {val.subjectReg_id}</p>
+              <p>บรรยายและจำนานนิสิต : {val.lec_group}</p>
+              <p>ปฎิบัติและจำนวนนิสิต : {val.lab_group}</p>
+              <p>สาขา : {val.major_year}</p>
+              <p>ชั้นปี : {val.student_year}</p>
+              <p>อันดับห้องปฎิบัติ : {val.roomReg_ranking}</p>
               <Button
                 danger
                 onClick={() => {

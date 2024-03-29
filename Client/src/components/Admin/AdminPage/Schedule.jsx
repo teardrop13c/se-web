@@ -5,7 +5,7 @@ import { Button, Modal, Select ,Table, message } from 'antd';
 import "./Schedule.css";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
-import * as XLSX from 'xlsx';
+// import * as XLSX from 'xlsx';
 
 function Schedule() {
 
@@ -433,6 +433,7 @@ function Schedule() {
           dataSource={newData}
           columns={columns}
           pagination={false}
+          width='50%'
         />
         <Button type="primary" onClick={exportToXlsx}>ส่งออกเป็น Excel</Button>
       </div>

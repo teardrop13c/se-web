@@ -160,16 +160,59 @@ function EditCourseContent() {
     form.resetFields();
 };
 
+const handleDeleteAllData = () => {
+  Swal.fire({
+    icon: 'warning',
+    title: 'คุณแน่ใจหรือไม่?',
+    text: 'คุณต้องการลบข้อมูลทั้งหมดใช่หรือไม่?',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'ใช่, ฉันต้องการลบ!',
+    cancelButtonText: 'ยกเลิก'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch('http://localhost:3001/all', {
+        method: 'DELETE'
+      })
+      .then(data => {
+        console.log(data);
+        setTableData([]);
+        Swal.fire({
+          icon: 'success',
+          title: 'การลบข้อมูลทั้งหมดเสร็จสมบูรณ์',
+          text: 'ข้อมูลทั้งหมดได้รับการลบเรียบร้อยแล้ว!',
+        });
+      })
+      .catch(error => {
+        console.error(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'ข้อผิดพลาดในการลบข้อมูล',
+          text: 'เกิดข้อผิดพลาดในการลบข้อมูล โปรดลองอีกครั้ง!',
+        });
+      });
+    }
+  });
+};
 
   return (
     <div className="rounded-rectangle">
-      <p className="faculty-text">หลักสูตร</p>
-        <div className="file-upload">
-          <Upload {...props}>
-            <Button icon={<UploadOutlined />}>Click to Upload</Button>
-          </Upload>
-        </div>
+      <div className="file-upload">
+        <Upload {...props}>
+          <Button icon={<UploadOutlined />}>Click to Upload</Button>
+        </Upload>
+      </div>
 
+      <div className="action-buttons">
+        <Button type="primary" danger onClick={handleDeleteAllData}>
+          ลบข้อมูลทั้งหมด
+        </Button>
+      </div>
+
+      <div className="csv-table">
+        <Table dataSource={courses} columns={columns} rowKey="id_course" />
+      </div>
         <div className="csv-table">
           <Table dataSource={courses} columns={columns} rowKey="id_course" />
         </div>
