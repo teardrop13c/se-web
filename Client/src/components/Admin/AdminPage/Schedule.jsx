@@ -5,7 +5,7 @@ import { Button, Modal, Select ,Table, message } from 'antd';
 import "./Schedule.css";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
-// import * as XLSX from 'xlsx';
+import * as XLSX from 'xlsx';
 
 function Schedule() {
 
@@ -358,6 +358,22 @@ function Schedule() {
                 <Select.Option value="13:00 - 16:00">13.00 - 16.00</Select.Option>
                 <Select.Option value="16:00 - 19:00">16.00 - 19.00</Select.Option>
                 <Select.Option value="16:30 - 19:30">16.30 - 19.30</Select.Option>
+              </Select>
+              <br />
+              <label htmlFor="lectureSection" className='label-1' >หมู่บรรยาย</label>
+              <Select id="lectureSection" style={{ width: '100%' }} onChange={value => setSelectedLectureSection(value)}>
+                <Select.Option value="800">800</Select.Option>
+                <Select.Option value="801">801</Select.Option>
+                <Select.Option value="802">802</Select.Option>
+                <Select.Option value="803">803</Select.Option>
+              </Select>
+              <br />
+              <label htmlFor="PracticeSection" className='label-1' >หมู่ปฎิบัติ</label>
+              <Select id="PracticeSection" style={{ width: '100%' }} onChange={value => setSelectedPracticeSection(value)}>
+                <Select.Option value="830">830</Select.Option>
+                <Select.Option value="831">831</Select.Option>
+                <Select.Option value="832">832</Select.Option>
+                <Select.Option value="833">833</Select.Option>
               </Select>
               <br />
               <label htmlFor="room" className='label-1' >ห้องเรียน:</label>

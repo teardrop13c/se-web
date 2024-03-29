@@ -4,12 +4,8 @@ import UserMenu from "../UserMenu/UserMenu"
 import { useSelector } from 'react-redux';
 import "./UserSchedule.css"
 import Login from "../../Login/Login";
-<<<<<<< HEAD
-import  Axios  from "axios";
-import Card from "antd/es/card/Card";
-=======
+import { Axios } from "axios";
 import UserScheduleContent from "./ContentPage/UserScheduleContent";
->>>>>>> master
 
 const UserSchedule = () => {
   //authuser
@@ -38,19 +34,7 @@ const UserSchedule = () => {
     <section id="main-layout">
       <Navbar />
       <UserMenu />
-<<<<<<< HEAD
-      <div>
-        <h1>ตารางสอน</h1>
-        {userCompleteData.map((userData, index) => (
-          <Card style={{ background: "#d9d9d9" }}>
-            วิชา {userData.subjectReg_id} {userData.day} ห้อง {userData.room_id} สาขาที่เปิด {userData.major_year} ชั้นปีที่เปิด {userData.student_year}
-          </Card>
-        ))}
-
-      </div>
-=======
       <UserScheduleContent/>
->>>>>>> master
     </section>
   );
 };

@@ -55,7 +55,7 @@ app.post('/api/profile', (req, res) => {
     }
 });
 //ดึง user
-app.get('/api/profile', (req,res) => {
+app.get('/api2/profile', (req,res) => {
     db.query("SELECT * FROM user", (err,result) => {
         if(err) {
             console.log(err);
@@ -322,8 +322,6 @@ app.delete('/delete/:subject_ID', (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-=======
 app.delete('/all', (req, res) => {
     const sql = 'DELETE FROM course';
     
@@ -340,7 +338,6 @@ app.delete('/all', (req, res) => {
 
 
 
->>>>>>> master
 
 /////////////////////////////////////////////////
 
