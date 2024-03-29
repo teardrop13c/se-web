@@ -322,8 +322,6 @@ app.delete('/delete/:subject_ID', (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-=======
 app.delete('/all', (req, res) => {
     const sql = 'DELETE FROM course';
     
@@ -340,7 +338,6 @@ app.delete('/all', (req, res) => {
 
 
 
->>>>>>> master
 
 /////////////////////////////////////////////////
 
