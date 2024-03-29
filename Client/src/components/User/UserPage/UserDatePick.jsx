@@ -42,9 +42,9 @@ function UserDatePick() {
     return <Login />;
   }
 
-  else if (!(currentDateTime >= new Date(openingTime) && currentDateTime <= new Date(closingTime))) {
-    return <HomeUser />;
-  }
+  // else if (!(currentDateTime >= new Date(openingTime) && currentDateTime <= new Date(closingTime))) {
+  //   return <HomeUser />;
+  // }
   return (
     <section id="main-layout">
       <Navbar />
