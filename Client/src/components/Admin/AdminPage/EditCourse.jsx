@@ -5,6 +5,7 @@ import EditCourseContent from "./ContentPage/EditCourseContent";
 import { useSelector } from 'react-redux'; 
 import Login from "../../Login/Login";
 
+
 function EditCourse() {
   //auth
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);

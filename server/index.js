@@ -66,10 +66,10 @@ app.get('/api/profile', (req,res) => {
 });  
 ////////////////////////////////////////////
 
-app.delete('/delete/:user_email/:user_name', (req, res) => {
-    const email = req.params.user_email;
-    const name = req.params.user_name;
-    db.query("DELETE FROM user WHERE user_email = ? AND user_name = ?", [email, name], (err,result) => {
+//ลบข้อมูลuser
+app.delete('/delete:user_email', (req, res) => {
+    const { user_email, user_name } = req.body;
+    db.query("DELETE FROM user WHERE user_email = ? AND user_name = ?", [user_email, user_name], (err,result) => {
         if(err) {
             console.log(err);
             res.status(500).send("error deleting the user.");
@@ -77,7 +77,38 @@ app.delete('/delete/:user_email/:user_name', (req, res) => {
             res.send(result);
         }
     })
-})
+  })
+//
+//แก้ไขเบอร์
+app.put('/edit', (req, res) => {
+    const { user_phone, user_email } = req.body; // เพิ่ม user_email เพื่อใช้ในการอ้างอิงข้อมูลที่จะแก้ไข
+    
+    // Log the received update request data
+    console.log('Received update request with data:', req.body);
+
+    // Ensure all required fields are present
+    if (!user_phone || !user_email) {
+        return res.status(400).json({ error: 'Missing required fields for update' });
+    }
+
+    // Construct the SQL query
+    const updateQuery = `
+        UPDATE user 
+        SET user_phone = ? 
+        WHERE user_email = ?`;
+
+    // Execute the update query
+    db.query(updateQuery, [user_phone, user_email], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Error updating data', details: err.message });
+        }
+
+        // Log success message and respond to the client
+        console.log('Data updated successfully');
+        res.json({ message: 'Data updated successfully' });
+    });
+});
 
 /// เก็บ Phone Number ///
 app.post('/api/user/phone', (req, res) => {
@@ -201,8 +232,6 @@ app.post('/create', (req, res) => {
 
 
 //// CRUD //////
-
-
 app.put('/update', (req, res) => {
     const { id_course, รหัสวิชา, ชื่อวิชา, หน่วยกิจ, ประเภทวิชา } = req.body;
     

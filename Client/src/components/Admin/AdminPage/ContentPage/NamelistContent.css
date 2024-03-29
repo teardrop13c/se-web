@@ -10,12 +10,7 @@
   margin: 30px;
   
 }
-.namelist-divider {
-  height: 100%; /* Set height to 100% to match the container's height */
-  width: 0.5px; /* Adjust the width of the divider */
-  background-color: #000; /* Color of the dividing line */
-  margin: 0px; /* Adjust the spacing on each side of the line */
-}
+
 .moved-text {
   position: absolute;
   top: 150px; 
@@ -95,4 +90,36 @@
   transform: translateX(-50%);
   display: flex;
   flex-direction: column; /* Stack user names vertically */
+}
+
+.faculty-text {
+  text-align: center;
+  font-size: 20px;
+  position: absolute; 
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.csv-table {
+  margin-bottom: 60px;
+}
+
+.data-form-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.rounded-rectangle {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px;
 }
