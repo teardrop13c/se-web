@@ -6,6 +6,7 @@ import th from 'date-fns/locale/th';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
+import { Col, Row } from 'antd';
 
 const showErrorMessage = () => {
   Swal.fire({
@@ -14,7 +15,12 @@ const showErrorMessage = () => {
     text: error
   });
 };
-
+const hideErrorMessage = () => {
+  const alertContainer = document.getElementById('alert-container');
+  if (alertContainer) {
+    alertContainer.classList.remove('show');
+  }
+};
 function RegisterTimePage() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [openingTime, setOpeningTime] = useState(new Date());
@@ -135,42 +141,43 @@ function RegisterTimePage() {
     <div className="register-rounded-rectangle">
       <p className="converted-time">{convertToThaiTime(currentDateTime)}</p>
       <p className="registration-text">เลือกเวลาเปิด / ปิดการลงทะเบียน</p>
-
-
-
       <div className="date-picker-container">
-        <div className="open-datepicker-container">
-          <DatePicker
-            className="custom-datepicker-text"
-            selected={openingTime}
-            onChange={handleOpeningTimeChange}
-            showTimeSelect
-            timeFormat="HH:mm"
-            timeIntervals={15}
-            dateFormat="dd MMMM yyyy HH:mm "
-            locale={th}
-            ref={openingDatePickerRef}
-          />
-         
+      <Row gutter={16} style={{ flexDirection: "row" }}>
+        <Col span={10}>
+          <div className="open-datepicker-container">
+            <DatePicker
+              className="custom-datepicker-text"
+              selected={openingTime}
+              onChange={handleOpeningTimeChange}
+              showTimeSelect
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              dateFormat="dd MMMM yyyy HH:mm "
+              locale={th}
+              ref={openingDatePickerRef}
+            />
         </div>
-        <span className="to-text"> ถึง </span>
-        <div className="close-datepicker-container">
-          <DatePicker
-            className="custom-datepicker-text"
-            selected={closingTime}
-            onChange={handleClosingTimeChange}
-            showTimeSelect
-            timeFormat="HH:mm"
-            timeIntervals={15}
-            dateFormat="dd MMMM yyyy HH:mm "
-            locale={th}
-            ref={closingDatePickerRef}
-          />
-              <button className="confirm-button" onClick={handleConfirmButtonClick}>
-        
-        ยืนยัน
-      </button>
-        </div>
+        </Col>
+        <h2 className="to-text"> ถึง </h2>
+        <Col span={10}>
+          <div className="close-datepicker-container">
+            <DatePicker
+              className="custom-datepicker-text"
+              selected={closingTime}
+              onChange={handleClosingTimeChange}
+              showTimeSelect
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              dateFormat="dd MMMM yyyy HH:mm "
+              locale={th}
+              ref={closingDatePickerRef}
+            />
+          </div>    
+          </Col>
+          <Col span={2}>
+            <button className="confirm-button" onClick={handleConfirmButtonClick}> ยืนยัน </button>
+          </Col>
+        </Row>
       </div>
     </div>
   );
