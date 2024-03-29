@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Select } from 'antd';
+import { Button, Select, message } from 'antd';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import './DatePick.css';
@@ -22,7 +22,7 @@ function DatePick() {
 
   function sendDataToServer(timeArray) {
     if (!Array.isArray(timeArray) || timeArray.length === 0) {
-      console.error('Error sending data: Empty or invalid time array');
+      message.error('Error sending data: Empty or invalid time array');
       return;
     }
     console.log('Data to be sent:', { timeArray: timeArray });
@@ -33,6 +33,7 @@ function DatePick() {
       },
       body: JSON.stringify({ timeArray: timeArray })
     })
+    message.success("sucessfully");
   }
 
   function setTimeData(selectedDay, selectedTime) {

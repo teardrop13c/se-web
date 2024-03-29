@@ -8,7 +8,7 @@ import {
   Cascader,
   Select,
   Divider,
-  Space,
+  message,
 } from "antd";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -78,8 +78,10 @@ function RegisterContent() {
 
   const getRegister = () => {
     Axios.get("http://localhost:3001/registerteacher")
-      .then((response) => {
-        setRegisterteacherList(response.data);
+      .then((response) => {const filteredData = response.data.filter(item => item.user_email === profile.email);
+ 
+        setRegisterteacherList(filteredData);
+
       })
       .catch((error) => {
         console.log(error);
@@ -92,7 +94,7 @@ function RegisterContent() {
 
   const addRegister = () => {
     if (!labelString || !lec_group || !lab_group || !roomReg_ranking || !profile.email ) {
-      console.log('โปรดกรอกข้อมูลให้ครบทุกช่อง');
+      message.error('โปรดกรอกข้อมูลให้ครบทุกช่อง');
       return; // หยุดการทำงานทันทีถ้าข้อมูลไม่ครบ
     }
 
@@ -107,6 +109,7 @@ function RegisterContent() {
     })
       .then(() => {
         getRegister();
+        message.success("successfully")
       })
       .catch((error) => {
         console.log("เกิดข้อผิดพลาดในการบันทึกข้อมูล:", error);

@@ -21,14 +21,14 @@ function NamelistContent() {
   const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/profile')
+    fetch('http://localhost:3001/api2/profile')
       .then(response => response.json())
       .then(data => {
         setUserList(data);
         setTableData(data); // ตั้งค่า tableData ที่นี่
       })
       .catch(error => console.error('Error fetching user:', error));
-  }, []);
+  }, [userList]);
 
   const columns = [
     { title: 'ชื่อ', dataIndex: 'user_name', key: 'user_name' },
@@ -115,12 +115,12 @@ const handleUpdateData = (values) => {
           text: 'ข้อมูลได้รับการลบเรียบร้อยแล้ว!',
         });
           // Refetch data to update userList after deletion
-        fetch('http://localhost:3001/api/profile')
+        /*fetch('http://localhost:3001/api2/profile')
           .then(response => response.json())
           .then(data => {
             setUserList(data);
           })
-          .catch(error => console.error('Error fetching user:', error));
+          .catch(error => console.error('Error fetching user:', error));*/
       })
       .catch(error => {
         console.error(error);

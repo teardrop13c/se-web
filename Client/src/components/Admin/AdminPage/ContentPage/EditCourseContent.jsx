@@ -40,11 +40,11 @@ function EditCourseContent() {
     fetch('http://localhost:3001/course_show')
       .then(response => response.json())
       .then(data => {
-          setCourses(data);
-          setTableData(data); // ตั้งค่า tableData ที่นี่
+        setCourses(data);
+        setTableData(data); // ตั้งค่า tableData ที่นี่
       })
       .catch(error => console.error('Error fetching courses:', error));
-}, [tableData, courses]);
+  }, [tableData, courses]);
 
   const columns = [
     { title: 'NO', dataIndex: 'id_course', key: 'id_course' },
@@ -102,10 +102,10 @@ function EditCourseContent() {
 
   const handleUpdateData = (values) => {
     if (!tableData) {
-        console.error('tableData is not defined');
-        return;
+      console.error('tableData is not defined');
+      return;
     }
-    
+
     const updatedData = tableData.map((data) =>
       data.id_course === formData.id_course ? { ...data, ...values } : data
     );
@@ -130,58 +130,22 @@ function EditCourseContent() {
       });
 
     form.resetFields();
-};
+  };
 
   const handleDeleteData = (record) => {
     console.log('Deleting record:', record);
 
     axios.delete(`http://localhost:3001/delete/${record.subject_ID}`)
-        .then(response => {
-            console.log(response.data);
-            // Update frontend state after successful deletion
-            const updatedData = tableData.filter(item => item.subject_ID !== record.subject_ID);
-            setTableData(updatedData);
+      .then(response => {
+        console.log(response.data);
+        // Update frontend state after successful deletion
+        const updatedData = tableData.filter(item => item.subject_ID !== record.subject_ID);
+        setTableData(updatedData);
 
-            Swal.fire({
-                icon: 'success',
-                title: 'การลบข้อมูลเสร็จสมบูรณ์',
-                text: 'ข้อมูลได้รับการลบเรียบร้อยแล้ว!',
-            });
-        })
-        .catch(error => {
-            console.error(error);
-            Swal.fire({
-                icon: 'error',
-                title: 'ข้อผิดพลาดในการลบข้อมูล',
-                text: 'เกิดข้อผิดพลาดในการลบข้อมูล โปรดลองอีกครั้ง!',
-            });
-        });
-
-    form.resetFields();
-};
-
-const handleDeleteAllData = () => {
-  Swal.fire({
-    icon: 'warning',
-    title: 'คุณแน่ใจหรือไม่?',
-    text: 'คุณต้องการลบข้อมูลทั้งหมดใช่หรือไม่?',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'ใช่, ฉันต้องการลบ!',
-    cancelButtonText: 'ยกเลิก'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      fetch('http://localhost:3001/all', {
-        method: 'DELETE'
-      })
-      .then(data => {
-        console.log(data);
-        setTableData([]);
         Swal.fire({
           icon: 'success',
-          title: 'การลบข้อมูลทั้งหมดเสร็จสมบูรณ์',
-          text: 'ข้อมูลทั้งหมดได้รับการลบเรียบร้อยแล้ว!',
+          title: 'การลบข้อมูลเสร็จสมบูรณ์',
+          text: 'ข้อมูลได้รับการลบเรียบร้อยแล้ว!',
         });
       })
       .catch(error => {
@@ -192,9 +156,45 @@ const handleDeleteAllData = () => {
           text: 'เกิดข้อผิดพลาดในการลบข้อมูล โปรดลองอีกครั้ง!',
         });
       });
-    }
-  });
-};
+
+    form.resetFields();
+  };
+
+  const handleDeleteAllData = () => {
+    Swal.fire({
+      icon: 'warning',
+      title: 'คุณแน่ใจหรือไม่?',
+      text: 'คุณต้องการลบข้อมูลทั้งหมดใช่หรือไม่?',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'ใช่, ฉันต้องการลบ!',
+      cancelButtonText: 'ยกเลิก'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch('http://localhost:3001/all', {
+          method: 'DELETE'
+        })
+          .then(data => {
+            console.log(data);
+            setTableData([]);
+            Swal.fire({
+              icon: 'success',
+              title: 'การลบข้อมูลทั้งหมดเสร็จสมบูรณ์',
+              text: 'ข้อมูลทั้งหมดได้รับการลบเรียบร้อยแล้ว!',
+            });
+          })
+          .catch(error => {
+            console.error(error);
+            Swal.fire({
+              icon: 'error',
+              title: 'ข้อผิดพลาดในการลบข้อมูล',
+              text: 'เกิดข้อผิดพลาดในการลบข้อมูล โปรดลองอีกครั้ง!',
+            });
+          });
+      }
+    });
+  };
 
   return (
     <div className="rounded-rectangle">
@@ -213,32 +213,29 @@ const handleDeleteAllData = () => {
       <div className="csv-table">
         <Table dataSource={courses} columns={columns} rowKey="id_course" />
       </div>
-        <div className="csv-table">
-          <Table dataSource={courses} columns={columns} rowKey="id_course" />
-        </div>
 
-        {isEditMode && (
-          <div className="data-form-popup">
-            <Form form={form} onFinish={handleFinish}>
-              <Form.Item label="รหัสวิชา" name="รหัสวิชา">
-                <Input />
-              </Form.Item>
-              <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
-                <Input />
-              </Form.Item>
-              <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
-                <Input />
-              </Form.Item>
-              <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
-                <Input />
-              </Form.Item>
-              <Button type="primary" htmlType="submit">
-                บันทึกการแก้ไข
-              </Button>
-            </Form>
-          </div>
-        )}
-      </div>
+      {isEditMode && (
+        <div className="data-form-popup">
+          <Form form={form} onFinish={handleFinish}>
+            <Form.Item label="รหัสวิชา" name="รหัสวิชา">
+              <Input />
+            </Form.Item>
+            <Form.Item label="ชื่อวิชา" name="ชื่อวิชา">
+              <Input />
+            </Form.Item>
+            <Form.Item label="หน่วยกิจ" name="หน่วยกิจ">
+              <Input />
+            </Form.Item>
+            <Form.Item label="ประเภทวิชา" name="ประเภทวิชา">
+              <Input />
+            </Form.Item>
+            <Button type="primary" htmlType="submit">
+              บันทึกการแก้ไข
+            </Button>
+          </Form>
+        </div>
+      )}
+    </div>
   );
 }
 
