@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: 'root',
     password: '',
-    database: 'kusrc_course',
+    database: 'kusrc_course'
 })
 
 
@@ -447,27 +447,42 @@ app.post('/api/registration', (req, res) => {
     const formattedDateOpen = moment(openingTime).tz('Asia/Bangkok').format('YYYY-MM-DD HH:mm:ss');
     const formattedDateClose = moment(closingTime).tz('Asia/Bangkok').format('YYYY-MM-DD HH:mm:ss');
 
-    // ใช้ luxon สำหรับการจัดการเวลาและการแปลงเวลา
-    const parsedOpeningTime = DateTime.fromISO(openingTime).setZone('Asia/Bangkok');
-    const parsedClosingTime = DateTime.fromISO(closingTime).setZone('Asia/Bangkok');
-    
-    console.log('Received openingTime:', formattedDateOpen);
-    console.log('Received closingTime:', formattedDateClose);
-
-    db.query("INSERT INTO regStart_end (timeStart, timeEnd) VALUES (?, ?)", [formattedDateOpen, formattedDateClose], (err, result) => {
+    // ตรวจสอบว่ามีข้อมูลอยู่ในฐานข้อมูลหรือไม่
+    db.query("SELECT * FROM regstart_end", (err, result) => {
         if (err) {
-            console.error('Error inserting data:', err);
-            return res.status(500).send('Failed to insert data');
+            console.error('Error fetching data:', err);
+            return res.status(500).send('Failed to fetch data');
+        }
+        
+        if (result.length === 0) {
+            // ถ้าไม่มีข้อมูลให้ทำการเพิ่มข้อมูล
+            db.query("INSERT INTO regstart_end (timeStart, timeEnd) VALUES (?, ?)", [formattedDateOpen, formattedDateClose], (err, result) => {
+                if (err) {
+                    console.error('Error inserting data:', err);
+                    return res.status(500).send('Failed to insert data');
+                } else {
+                    console.log('Data inserted successfully');
+                    return res.status(200).send('Data inserted successfully');
+                }
+            });
         } else {
-            console.log('Data inserted successfully');
-            return res.status(200).send('Data inserted successfully');
+            // ถ้ามีข้อมูลให้ทำการอัปเดต
+            db.query("UPDATE regstart_end SET timeStart = ?, timeEnd = ?", [formattedDateOpen, formattedDateClose], (err, result) => {
+                if (err) {
+                    console.error('Error updating data:', err);
+                    return res.status(500).send('Failed to update data');
+                } else {
+                    console.log('Data updated successfully');
+                    return res.status(200).send('Data updated successfully');
+                }
+            });
         }
     });
 });
 ///////////////////////////////////
 //////////////Get opening closing ////////////
 app.get('/getTimes', (req, res) => {
-    const sql = 'SELECT * FROM regStart_end';
+    const sql = 'SELECT * FROM regstart_end';
     
     db.query(sql, (err, result) => {
       if (err) {
@@ -477,7 +492,7 @@ app.get('/getTimes', (req, res) => {
       return res.status(200).json(result);
     });
   });
-
+//
   
 ///////////////////////////////////
 //////////////schedule-admin////////////
